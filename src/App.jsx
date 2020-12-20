@@ -1,5 +1,11 @@
 import React from "react";
-import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+  Link,
+  Redirect,
+} from "react-router-dom";
 
 import Home from "./pages/Home";
 
@@ -11,6 +17,7 @@ export default function App() {
           <Switch>
             <Route path="/">
               <Home />
+              <Redirect to="/" />
             </Route>
           </Switch>
         </div>
@@ -18,34 +25,3 @@ export default function App() {
     </div>
   );
 }
-
-// import React from "react";
-// import {
-//   BrowserRouter as Router,
-//   Switch,
-//   Route,
-//   Redirect,
-// } from "react-router-dom";
-
-// import Home from "./pages/Home";
-// import Listing from "./pages/Listing";
-
-// export default function App() {
-//   return (
-//     <>
-//       <Router>
-//         {/* <Switch>
-//           <Route exact path="/" component={Home} />
-//           <Route exact path="/listing" component={Listing} />
-
-//           <Redirect to="/" />
-//         </Switch> */}
-//         <Switch>
-//           <Route path="/">
-//             <Home />
-//           </Route>
-//         </Switch>
-//       </Router>
-//     </>
-//   );
-// }
