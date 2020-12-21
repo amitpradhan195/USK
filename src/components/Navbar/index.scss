@@ -1,0 +1,20 @@
+$black: #313131;
+$white: #ffffff;
+$primary: #28c092;
+
+.navbar {
+  height: 90px;
+  ul {
+    li {
+      a {
+        font-size: 1rem !important;
+        text-transform: capitalize !important;
+        margin: 0 0 0 15px !important;
+        color: $white !important;
+        &:hover {
+          color: $primary !important;
+        }
+      }
+    }
+  }
+}
