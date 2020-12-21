@@ -5,13 +5,14 @@ import "../node_modules/bootstrap/dist/js/bootstrap.bundle.js";
 
 import Navbar from "./components/Navbar";
 import Home from "./pages/Home";
+import Footer from "./components/Footer";
 
 export default function App() {
   return (
     <>
-      <Navbar />
+      {/* <Navbar /> */}
       <Switch>
-        <Route exact path="/" component={Home} />
+        <Route exact path="/" component={Footer} />
         // redirect to home if the url is messed up
         <Redirect to="/" />
       </Switch>

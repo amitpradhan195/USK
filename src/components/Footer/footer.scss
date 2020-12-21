@@ -1,0 +1,26 @@
+$primarybg: #1d1d21;
+$primarytxt: #707070;
+
+.footer {
+  //   background-color: $primarybg !important;
+  .map-image {
+    width: 94%;
+    height: 320px;
+    border-radius: 16px;
+  }
+  .footer-info {
+    border-right: 3px solid $primarytxt;
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  .footer-info {
+    border-right: none !important;
+  }
+}
+
+@media only screen and (max-width: 1004px) {
+  .footer-info {
+    border-right: none !important;
+  }
+}
