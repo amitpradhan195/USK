@@ -3,7 +3,10 @@ import "./footer.css";
 import mapimage from "../../assets/office.PNG";
 import { NavLink } from "react-router-dom";
 
-export default function index() {
+import { Map, InfoWindow, Marker, GoogleApiWrapper } from "google-maps-react";
+// import FacebookIcon from "@material-ui/icons/Facebook";
+
+export default function Footer() {
   return (
     <>
       <footer className="bg-light text-lg-start footer">
@@ -11,6 +14,18 @@ export default function index() {
           <div className="row">
             <div className="col-lg-6 col-md-12 mb-4 mb-md-0 footer-info pr-lg-3 pb-md-3 pb-sm-3">
               <img className="map-image" src={mapimage} alt="map" />
+              {/* <Map google={this.props.google} zoom={14}>
+                <Marker
+                  onClick={this.onMarkerClick}
+                  name={"Current location"}
+                />
+
+                <InfoWindow onClose={this.onInfoWindowClose}>
+                  <div>
+                    <h1>{this.state.selectedPlace.name}</h1>
+                  </div>
+                </InfoWindow>
+              </Map> */}
 
               <h5 className="pt-3">Head Office</h5>
               <h6>Airport, Kathmandu</h6>
@@ -35,7 +50,7 @@ export default function index() {
                   </NavLink>
                 </li>
               </ul>
-              <h5>Find Us On</h5>
+              <h5>Find Us On: </h5>
             </div>
           </div>
         </div>
@@ -43,3 +58,7 @@ export default function index() {
     </>
   );
 }
+
+// export default GoogleApiWrapper({
+//   apiKey: "AIzaSyC7W6tR69P7duXtfn-3hiXo7yEQ1NYVLQQ",
+// })(Footer);

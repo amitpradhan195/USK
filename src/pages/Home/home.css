@@ -34,8 +34,13 @@
   transition: all 0.1s ease;
 }
 
-.nav-container ul {
-  border: 1px solid red;
+.nav-container ul li.active-link {
+  font-size: 20px;
+}
+
+.nav-container ul li.active-link a {
+  background-color: #28c092;
+  color: #ffffff;
 }
 
 @media only screen and (max-width: 767px) {
@@ -74,8 +79,6 @@
   to {
     width: 0;
     height: 0;
-    -webkit-transition: 10s;
-    transition: 10s;
     overflow: hidden;
   }
 }
@@ -84,9 +87,13 @@
   to {
     width: 0;
     height: 0;
-    -webkit-transition: 10s;
-    transition: 10s;
     visibility: hidden;
   }
+}
+
+.featured-title {
+  width: 90px;
+  border-bottom: 3px solid #28c092;
+  margin: 0 auto;
 }
 /*# sourceMappingURL=home.css.map */

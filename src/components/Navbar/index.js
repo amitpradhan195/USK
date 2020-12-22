@@ -23,7 +23,7 @@ export default function Navbar() {
           </button>
 
           <div className="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul className="navbar-nav mr-auto mb-2 mb-lg-0">
+            <ul className="navbar-nav mr-sm-auto mb-2 mb-lg-0">
               <li className="nav-item">
                 <NavLink
                   activeClassName="menu_active"

@@ -10,12 +10,13 @@ import Footer from "./components/Footer";
 export default function App() {
   return (
     <>
-      {/* <Navbar /> */}
+      <Navbar />
       <Switch>
-        <Route exact path="/" component={Footer} />
+        <Route exact path="/" component={Home} />
         // redirect to home if the url is messed up
         <Redirect to="/" />
       </Switch>
+      <Footer />
     </>
   );
 }

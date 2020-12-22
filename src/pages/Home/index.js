@@ -75,20 +75,55 @@ export default function Home() {
           ></span>
         </a>
       </div>
+
+      {/* home navigation section */}
       <section className="nav-container">
         <div className="col-12 mx-auto">
-          <ul className="nav nav-pills nav-fill p-4">
-            <li className="nav-item">
-              <a className="nav-link" href="#">
+          <ul className="nav nav-pills nav-fill ">
+            <li className="nav-item active-link ">
+              <a className="nav-link p-3" href="">
                 FOR SELL
               </a>
             </li>
             <li className="nav-item">
-              <a className="nav-link" href="#">
+              <a className="nav-link p-3" href="/">
                 FOR RENT
               </a>
             </li>
           </ul>
+        </div>
+      </section>
+
+      <section className="featured-container">
+        <h4 className="text-center pt-5">Featured Properties</h4>
+        <div className="featured-title mb-5"></div>
+
+        <div className="featured-card">
+          <div class="container-fluid pb-5 about-myjob">
+            <div class="row">
+              <div class="col-10 mx-auto">
+                <div class="row gy-5">
+                  <div class="col-md-4 col-10 mx-auto">
+                    <div class="card shadow about-card">
+                      <div class="card-body"></div>
+                    </div>
+                  </div>
+
+                  <div class="col-md-4 col-10 mx-auto">
+                    <div class="card shadow about-card">
+                      <div class="card-body"></div>
+                    </div>
+                  </div>
+
+                  <div class="col-md-4 col-10 mx-auto">
+                    <div class="card shadow about-card">
+                      <div class="card-body"></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </section>
     </>

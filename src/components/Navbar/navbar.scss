@@ -28,11 +28,35 @@ $primary: #28c092;
 @media only screen and (max-width: 767px) {
   .navbar-nav {
     background: rgba(0, 0, 0, 0.5);
-    padding: 10px;
     border-radius: 16px;
     a {
       font-size: 14px;
       font-weight: normal;
+    }
+
+    li {
+      .nav-link {
+        text-align: right !important;
+        padding-right: 10px;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 1004px) {
+  .navbar-nav {
+    background: rgba(0, 0, 0, 0.5);
+    border-radius: 16px;
+    a {
+      font-size: 14px;
+      font-weight: normal;
+    }
+
+    li {
+      .nav-link {
+        text-align: right !important;
+        padding-right: 10px;
+      }
     }
   }
 }

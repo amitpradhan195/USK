@@ -1,3 +1,7 @@
+$primary: #28c092;
+$secondary: #c8f4cc;
+$white: #ffffff;
+
 @keyframes slideInFromLeft {
   0% {
     transform: translateX(-100%);
@@ -22,7 +26,13 @@
 
 .nav-container {
   ul {
-    border: 1px solid red;
+    li.active-link {
+      font-size: 20px;
+      a {
+        background-color: $primary;
+        color: $white;
+      }
+    }
   }
 }
 
@@ -66,7 +76,6 @@
   to {
     width: 0;
     height: 0;
-    transition: 10s;
     overflow: hidden;
   }
 }
@@ -74,7 +83,12 @@
   to {
     width: 0;
     height: 0;
-    transition: 10s;
     visibility: hidden;
   }
+}
+
+.featured-title {
+  width: 90px;
+  border-bottom: 3px solid $primary;
+  margin: 0 auto;
 }
