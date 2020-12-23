@@ -20,6 +20,12 @@
   line-height: 0.3;
 }
 
+.activenav {
+  background-color: #1d1d21;
+  -webkit-transition: 1s;
+  transition: 1s;
+}
+
 @media only screen and (max-width: 767px) {
   .navbar-nav {
     background: rgba(0, 0, 0, 0.5);

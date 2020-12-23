@@ -1,11 +1,31 @@
 import React from "react";
+import { useState, useEffect } from "react";
 import { NavLink } from "react-router-dom";
 import "../../css/style.css";
 
 export default function Navbar() {
+  const [navbar, setNavbar] = useState(false);
+
+  const changeBg = () => {
+    // console.log(window.scrollY);
+    if (window.scrollY > 400) {
+      setNavbar(true);
+    } else {
+      setNavbar(false);
+    }
+  };
+
+  window.addEventListener("scroll", changeBg);
+
   return (
     <>
-      <nav className="navbar navbar-expand-lg navbar-dark fixed-top nav">
+      <nav
+        className={
+          navbar
+            ? "navbar activenav navbar-expand-lg navbar-dark fixed-top nav"
+            : "navbar navbar-expand-lg navbar-dark fixed-top nav"
+        }
+      >
         <div className="container">
           <NavLink className="navbar-brand text-light" to="/">
             LOGO
@@ -57,7 +77,12 @@ export default function Navbar() {
             </ul>
             <ul className="navbar-nav ml-auto ml-auto mb-2 mb-lg-0">
               <li className="nav-item">
-                <NavLink className="nav-link" to="/">
+                <NavLink
+                  activeClassName="menu_active"
+                  exact
+                  className="nav-link"
+                  to="#"
+                >
                   Career
                 </NavLink>
               </li>
