@@ -4,35 +4,33 @@ $white: #ffffff;
 $salered: #e94646;
 $green: #34b849;
 
-.featured-card {
-  .card {
-    border: none;
-    border-radius: 14px;
-    .card-body {
-      img {
-        border-radius: 14px;
-        width: 100%;
-      }
-      .icon {
-        padding: 0 2px 0 0;
-      }
-      .viewdetails {
-        background-color: $primary !important;
-        color: $white;
-        border-radius: 16px !important;
-      }
-      .tag {
-        position: absolute;
-        top: 25px;
-        left: 25px;
-        color: $white;
-        font-size: 12px;
-        background: $green;
-        padding: 5px 7px;
-        display: inline-block;
-        border-radius: 6px;
-        z-index: 3;
-      }
+.card {
+  border: none;
+  border-radius: 14px;
+  .card-body {
+    img {
+      border-radius: 14px;
+      width: 100%;
+    }
+    .icon {
+      padding: 0 2px 0 0;
+    }
+    .viewdetails {
+      background-color: $primary !important;
+      color: $white;
+      border-radius: 16px !important;
+    }
+    .tag {
+      position: absolute;
+      top: 25px;
+      left: 25px;
+      color: $white;
+      font-size: 12px;
+      background: $green;
+      padding: 5px 7px;
+      display: inline-block;
+      border-radius: 6px;
+      z-index: 3;
     }
   }
 }

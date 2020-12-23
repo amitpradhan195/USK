@@ -6,6 +6,8 @@ import slider2 from "../../assets/slider2.jpg";
 import slider3 from "../../assets/slider3.jpg";
 
 import "./home.css";
+import Card from "../../components/Card";
+import CData from "../../Data/Carddata";
 
 export default function Home() {
   const [isHide, setisHide] = useState(true);
@@ -93,6 +95,36 @@ export default function Home() {
           </ul>
         </div>
       </section>
+      {/* featured */}
+      <section className="featured-container pt-5 mb-5">
+        <h4 className="text-center">Featured Properties</h4>
+        <div className="featured-title"></div>
+      </section>
+      {/* featured card */}
+      <div className="container-fluid pb-5 about-myjob">
+        <div className="row">
+          <div className="col-10 mx-auto">
+            <div className="row gy-5">
+              {CData.map((value, indno) => {
+                return (
+                  <Card
+                    key={indno}
+                    imgsrc={value.imgsrc}
+                    tag={value.tag}
+                    css={value.css}
+                    prop={value.prop}
+                    location={value.location}
+                    bed={value.bed}
+                    kitchen={value.kitchen}
+                    bath={value.bath}
+                    contact={value.contact}
+                  />
+                );
+              })}
+            </div>
+          </div>
+        </div>
+      </div>
     </>
   );
 }
