@@ -15,6 +15,7 @@
 .featured-card .card .card-body .viewdetails {
   background-color: #28c092 !important;
   color: #ffffff;
+  border-radius: 16px !important;
 }
 
 .featured-card .card .card-body .tag {
