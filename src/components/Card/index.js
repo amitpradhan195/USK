@@ -37,7 +37,7 @@ const Card = (props) => {
                 <span className="icon">
                   <MdLocationOn />
                 </span>
-                {props.location}
+                <small>{props.location}</small>
               </p>
               {/* feature */}
               <div className="facilities row pb-3 pt-4">
@@ -45,13 +45,13 @@ const Card = (props) => {
                   <span className="pr-2">
                     <FaBed />
                   </span>
-                  {props.bed} Bedrooms
+                  <small>{props.bed} Bedrooms</small>
                 </div>
                 <div className="col-md-5 mx-auto">
                   <span className="pr-2">
                     <GiKnifeFork />
                   </span>
-                  {props.kitchen} Kitchen
+                  <small>{props.kitchen} Kitchen</small>
                 </div>
               </div>
 
@@ -60,13 +60,13 @@ const Card = (props) => {
                   <span className="pr-2">
                     <FaBath />
                   </span>
-                  {props.bath} Bathroom
+                  <small>{props.bath} Bathroom</small>
                 </div>
                 <div className="col-md-5 mx-auto">
                   <span className="pr-2">
                     <FaPhoneAlt />
                   </span>
-                  {props.contact}
+                  <small>{props.contact}</small>
                 </div>
               </div>
               {/* feature end */}
