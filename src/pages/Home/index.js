@@ -134,7 +134,7 @@ export default function Home() {
           className="btn btn-lg btn-primary mt-3 btnbuilt shadow"
           to="#"
         >
-          Chick Here
+          Click Here
         </NavLink>
       </div>
     </>
