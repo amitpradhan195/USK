@@ -1,0 +1,19 @@
+$primary: #28c092;
+$secondary: #c8f4cc;
+$white: #ffffff;
+
+.featured-card {
+  .card {
+    border: none;
+    border-radius: 14px;
+    .card-body {
+      img {
+        border-radius: 14px;
+        width: 100%;
+      }
+      .icon {
+        padding: 0 2px 0 0;
+      }
+    }
+  }
+}

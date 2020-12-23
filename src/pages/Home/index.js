@@ -93,39 +93,6 @@ export default function Home() {
           </ul>
         </div>
       </section>
-
-      <section className="featured-container">
-        <h4 className="text-center pt-5">Featured Properties</h4>
-        <div className="featured-title mb-5"></div>
-
-        <div className="featured-card">
-          <div class="container-fluid pb-5 about-myjob">
-            <div class="row">
-              <div class="col-10 mx-auto">
-                <div class="row gy-5">
-                  <div class="col-md-4 col-10 mx-auto">
-                    <div class="card shadow about-card">
-                      <div class="card-body"></div>
-                    </div>
-                  </div>
-
-                  <div class="col-md-4 col-10 mx-auto">
-                    <div class="card shadow about-card">
-                      <div class="card-body"></div>
-                    </div>
-                  </div>
-
-                  <div class="col-md-4 col-10 mx-auto">
-                    <div class="card shadow about-card">
-                      <div class="card-body"></div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
     </>
   );
 }
