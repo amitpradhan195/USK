@@ -8,6 +8,7 @@ import slider3 from "../../assets/slider3.jpg";
 import "./home.css";
 import Card from "../../components/Card";
 import CData from "../../Data/Carddata";
+import { NavLink } from "react-router-dom";
 
 export default function Home() {
   const [isHide, setisHide] = useState(true);
@@ -124,6 +125,17 @@ export default function Home() {
             </div>
           </div>
         </div>
+      </div>
+      {/* build your home */}
+      <div class="d-flex justify-content-center flex-column align-items-center pb-5">
+        <h3>Do you want to built your home ?</h3>
+        <NavLink
+          type="button"
+          className="btn btn-lg btn-primary mt-3 btnbuilt shadow"
+          to="#"
+        >
+          Chick Here
+        </NavLink>
       </div>
     </>
   );

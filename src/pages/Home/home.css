@@ -96,4 +96,10 @@
   border-bottom: 3px solid #28c092;
   margin: 0 auto;
 }
+
+.btnbuilt {
+  background-color: #28c092 !important;
+  border-radius: 16px;
+  border: none;
+}
 /*# sourceMappingURL=home.css.map */

@@ -32,7 +32,7 @@ export default function Footer() {
                 </InfoWindow>
               </Map> */}
 
-                <h5 className="pt-3">Head Office</h5>
+                <h3 className="pt-3">Head Office</h3>
                 <h6>Airport, Kathmandu</h6>
                 <h6>Phone: 9851125478, 9851236547</h6>
               </div>
@@ -41,21 +41,21 @@ export default function Footer() {
                 <ul className="list-unstyled mb-0">
                   <li>
                     <NavLink to="#!" className="a">
-                      <h5>About Us</h5>
+                      <h2>About Us</h2>
                     </NavLink>
                   </li>
                   <li>
                     <NavLink to="#!" className="a">
-                      <h5>Our Agents</h5>
+                      <h2>Our Agents</h2>
                     </NavLink>
                   </li>
                   <li>
                     <NavLink to="#!" className="a">
-                      <h5>FAQ</h5>
+                      <h2>FAQ</h2>
                     </NavLink>
                   </li>
                 </ul>
-                <h5>Find Us On: </h5>
+                <h2>Find Us On: </h2>
                 <ul class="list-unstyled body-list-social">
                   <li class="body-list-item1 pr-3">
                     <NavLink to="#!" target="_blank">
@@ -68,6 +68,9 @@ export default function Footer() {
                     </NavLink>
                   </li>
                 </ul>
+                <h4>
+                  <small>Mail: moysti@gmail.com</small>
+                </h4>
               </div>
             </div>
           </div>
