@@ -48,7 +48,7 @@ export default function index() {
                             Sinamangal, Kathmandu
                           </p>
 
-                          <div className="facilities">hello how are you</div>
+                          <div className="facilities">hello how are you ?</div>
 
                           <NavLink
                             type="button"

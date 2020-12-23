@@ -4,6 +4,7 @@ $primarytxt: #707070;
 .footer {
   background-color: $primarybg !important;
   background-size: contain;
+  color: $primarytxt !important;
   .map-image {
     width: 94%;
     height: 320px;
@@ -29,6 +30,10 @@ $primarytxt: #707070;
     left: 0;
     font-size: 20px;
     cursor: pointer;
+  }
+
+  a {
+    color: $primarytxt !important;
   }
 }
 

@@ -1,6 +1,7 @@
 .footer {
   background-color: #1d1d21 !important;
   background-size: contain;
+  color: #707070 !important;
 }
 
 .footer .map-image {
@@ -28,6 +29,10 @@
   left: 0;
   font-size: 20px;
   cursor: pointer;
+}
+
+.footer a {
+  color: #707070 !important;
 }
 
 @media only screen and (max-width: 767px) {

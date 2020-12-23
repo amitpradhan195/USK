@@ -12,12 +12,12 @@ import { Map, InfoWindow, Marker, GoogleApiWrapper } from "google-maps-react";
 
 export default function Footer() {
   return (
-    <IconContext.Provider value={{ color: "#28c092", size: "50px" }}>
+    <IconContext.Provider value={{ color: "#28c092", size: "40px" }}>
       <>
-        <footer className="bg-light text-light text-lg-start footer">
+        <footer className="bg-light text-lg-start footer">
           <div className="container p-4">
             <div className="row">
-              <div className="col-lg-6 col-md-12 mb-4 mb-md-0 footer-info pr-lg-3 pb-md-3 pb-sm-3">
+              <div className="col-lg-6 col-md-12 mb-4 mb-md-0 footer-info pr-lg-3 pb-md-3 pb-sm-3 pt-3">
                 <img className="map-image" src={mapimage} alt="map" />
                 {/* <Map google={this.props.google} zoom={14}>
                 <Marker
@@ -40,24 +40,24 @@ export default function Footer() {
               <div className="col-lg-6 col-md-12 mb-4 mb-md-0 pl-lg-5 pt-md-3 pt-sm-3">
                 <ul className="list-unstyled mb-0">
                   <li>
-                    <NavLink to="#!" className="text-light">
+                    <NavLink to="#!" className="a">
                       <h5>About Us</h5>
                     </NavLink>
                   </li>
                   <li>
-                    <NavLink to="#!" className="text-light">
+                    <NavLink to="#!" className="a">
                       <h5>Our Agents</h5>
                     </NavLink>
                   </li>
                   <li>
-                    <NavLink to="#!" className="text-light">
+                    <NavLink to="#!" className="a">
                       <h5>FAQ</h5>
                     </NavLink>
                   </li>
                 </ul>
                 <h5>Find Us On: </h5>
                 <ul class="list-unstyled body-list-social">
-                  <li class="body-list-item1">
+                  <li class="body-list-item1 pr-3">
                     <NavLink to="#!" target="_blank">
                       <FaFacebook />
                     </NavLink>
