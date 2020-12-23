@@ -1,5 +1,5 @@
 import React from "react";
-import "./footer.css";
+import "../../css/style.css";
 import mapimage from "../../assets/office.PNG";
 import { NavLink } from "react-router-dom";
 
@@ -56,8 +56,8 @@ export default function Footer() {
                   </li>
                 </ul>
                 <h2>Find Us On: </h2>
-                <ul class="list-unstyled body-list-social">
-                  <li class="body-list-item1 pr-3">
+                <ul className="list-unstyled body-list-social">
+                  <li className="body-list-item1 pr-3">
                     <NavLink to="#!" target="_blank">
                       <FaFacebook />
                     </NavLink>

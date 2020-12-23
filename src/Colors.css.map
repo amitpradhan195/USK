@@ -2,8 +2,8 @@
     "version": 3,
     "mappings": "",
     "sources": [
-        "index.module.scss"
+        "Colors.scss"
     ],
     "names": [],
-    "file": "index.module.css"
+    "file": "Colors.css"
 }

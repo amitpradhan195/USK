@@ -1,13 +1,11 @@
 import React, { useEffect, useState } from "react";
-import LightSpeed from "react-reveal/LightSpeed";
-import Fade from "react-reveal/Fade";
 import slider1 from "../../assets/slider1.jpg";
 import slider2 from "../../assets/slider2.jpg";
 import slider3 from "../../assets/slider3.jpg";
 
-import "./home.css";
+import "../../css/style.css";
 import Card from "../../components/Card";
-import CData from "../../Data/Carddata";
+import CData from "../../data/Carddata";
 import { NavLink } from "react-router-dom";
 
 export default function Home() {
@@ -84,12 +82,12 @@ export default function Home() {
         <div className="col-12 mx-auto">
           <ul className="nav nav-pills nav-fill ">
             <li className="nav-item active-link ">
-              <a className="nav-link p-3" href="">
+              <a className="nav-link p-3" to="/">
                 FOR SELL
               </a>
             </li>
             <li className="nav-item">
-              <a className="nav-link p-3" href="/">
+              <a className="nav-link p-3" to="/">
                 FOR RENT
               </a>
             </li>
@@ -127,7 +125,7 @@ export default function Home() {
         </div>
       </div>
       {/* build your home */}
-      <div class="d-flex justify-content-center flex-column align-items-center pb-5">
+      <div className="d-flex justify-content-center flex-column align-items-center pb-5">
         <h3>Do you want to built your home ?</h3>
         <NavLink
           type="button"

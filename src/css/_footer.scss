@@ -1,17 +1,16 @@
-$primarybg: #1d1d21;
-$primarytxt: #707070;
+@import "./colors";
 
 .footer {
-  background-color: $primarybg !important;
+  background-color: $fprimarybg !important;
   background-size: contain;
-  color: $primarytxt !important;
+  color: $fprimarytxt !important;
   .map-image {
     width: 94%;
     height: 320px;
     border-radius: 16px;
   }
   .footer-info {
-    border-right: 3px solid $primarytxt;
+    border-right: 3px solid $fprimarytxt;
   }
   .body-list-social {
     li {
@@ -33,7 +32,7 @@ $primarytxt: #707070;
   }
 
   a {
-    color: $primarytxt !important;
+    color: $fprimarytxt !important;
   }
 }
 

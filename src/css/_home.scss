@@ -1,46 +1,37 @@
-@-webkit-keyframes slideInFromLeft {
-  0% {
-    -webkit-transform: translateX(-100%);
-            transform: translateX(-100%);
-  }
-  100% {
-    -webkit-transform: translateX(0);
-            transform: translateX(0);
-  }
-}
+@import "./colors";
 
 @keyframes slideInFromLeft {
   0% {
-    -webkit-transform: translateX(-100%);
-            transform: translateX(-100%);
+    transform: translateX(-100%);
   }
   100% {
-    -webkit-transform: translateX(0);
-            transform: translateX(0);
+    transform: translateX(0);
   }
 }
 
 .carousel-item {
   width: 100vw;
   height: 100vh;
+  // min-height: 300px;
+  .carousel-caption {
+    bottom: 330px;
+    // color: black;
+    animation: 1s ease-out 0s 1 slideInFromLeft;
+    padding: 30px;
+    transition: all 0.1s ease;
+  }
 }
 
-.carousel-item .carousel-caption {
-  bottom: 330px;
-  -webkit-animation: 1s ease-out 0s 1 slideInFromLeft;
-          animation: 1s ease-out 0s 1 slideInFromLeft;
-  padding: 30px;
-  -webkit-transition: all 0.1s ease;
-  transition: all 0.1s ease;
-}
-
-.nav-container ul li.active-link {
-  font-size: 20px;
-}
-
-.nav-container ul li.active-link a {
-  background-color: #28c092;
-  color: #ffffff;
+.nav-container {
+  ul {
+    li.active-link {
+      font-size: 20px;
+      a {
+        background-color: $primary;
+        color: $cwhite;
+      }
+    }
+  }
 }
 
 @media only screen and (max-width: 767px) {
@@ -54,6 +45,10 @@
     width: 100vw;
     height: auto;
   }
+  // .carousel-caption {
+  //   bottom: 430px !important;
+  //   // color: black;
+  // }
 }
 
 @media only screen and (max-width: 1004px) {
@@ -64,17 +59,17 @@
 }
 
 .carousel-caption h1 {
+  -moz-animation: cssAnimation 0s ease-in 5s forwards;
   /* Firefox */
   -webkit-animation: cssAnimation 0s ease-in 5s forwards;
   /* Safari and Chrome */
+  -o-animation: cssAnimation 0s ease-in 5s forwards;
   /* Opera */
   animation: cssAnimation 0s ease-in 5s forwards;
   -webkit-animation-fill-mode: forwards;
   animation-fill-mode: forwards;
-  -webkit-transition: all 0.1s ease;
   transition: all 0.1s ease;
 }
-
 @keyframes cssAnimation {
   to {
     width: 0;
@@ -82,7 +77,6 @@
     overflow: hidden;
   }
 }
-
 @-webkit-keyframes cssAnimation {
   to {
     width: 0;
@@ -93,13 +87,16 @@
 
 .featured-title {
   width: 90px;
-  border-bottom: 3px solid #28c092;
+  border-bottom: 3px solid $primary;
   margin: 0 auto;
 }
 
 .btnbuilt {
-  background-color: #28c092 !important;
+  background-color: $primary !important;
   border-radius: 16px;
   border: none;
+  &:hover {
+    background-color: $secondary !important;
+    color: $cblack;
+  }
 }
-/*# sourceMappingURL=home.css.map */

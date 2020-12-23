@@ -11,7 +11,7 @@ import { GiKnifeFork } from "react-icons/gi";
 import { FaBath } from "react-icons/fa";
 import { FaPhoneAlt } from "react-icons/fa";
 
-import "./Card.css";
+import "../../css/style.css";
 import { NavLink } from "react-router-dom";
 
 export default function Card(props) {

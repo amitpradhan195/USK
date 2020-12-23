@@ -1,6 +1,4 @@
-$black: #313131;
-$white: #ffffff;
-$primary: #28c092;
+@import "./colors";
 
 .navbar {
   height: 90px;
@@ -11,7 +9,7 @@ $primary: #28c092;
         font-size: 1rem !important;
         text-transform: capitalize !important;
         margin: 0 0 0 15px !important;
-        color: $white !important;
+        color: $cwhite !important;
         &:hover {
           color: $primary !important;
         }
