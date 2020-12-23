@@ -7,7 +7,12 @@ import { FaBeer } from "react-icons/fa";
 
 import { IconContext } from "react-icons";
 import { MdLocationOn } from "react-icons/md";
+import { FaBed } from "react-icons/fa";
+import { GiKnifeFork } from "react-icons/gi";
+import { FaBath } from "react-icons/fa";
+
 import "./Card.css";
+import { NavLink } from "react-router-dom";
 
 export default function index() {
   return (
@@ -30,6 +35,9 @@ export default function index() {
                             className="d-block w-100"
                             src={slider1}
                           />
+                          <div className="tag shadow" name="ppfor">
+                            For Sale
+                          </div>
                           <h4 className=" text-center text-capitalize font-weight-bold pt-3">
                             4 BHK Flat
                           </h4>
@@ -40,14 +48,15 @@ export default function index() {
                             Sinamangal, Kathmandu
                           </p>
 
-                          <div class="d-flex justify-content-center"></div>
+                          <div className="facilities">hello how are you</div>
 
-                          <button
+                          <NavLink
                             type="button"
-                            class="btn btn-primary d-flex align-items-center"
+                            className="btn btn-lg btn-block shadow mt-3 viewdetails"
+                            to="#"
                           >
-                            Primary
-                          </button>
+                            View Details
+                          </NavLink>
                         </div>
                       </div>
                     </div>

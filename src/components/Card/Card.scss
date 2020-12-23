@@ -1,6 +1,8 @@
 $primary: #28c092;
 $secondary: #c8f4cc;
 $white: #ffffff;
+$salered: #e94646;
+$green: #34b849;
 
 .featured-card {
   .card {
@@ -13,6 +15,22 @@ $white: #ffffff;
       }
       .icon {
         padding: 0 2px 0 0;
+      }
+      .viewdetails {
+        background-color: $primary !important;
+        color: $white;
+      }
+      .tag {
+        position: absolute;
+        top: 25px;
+        left: 25px;
+        color: $white;
+        font-size: 12px;
+        background: $green;
+        padding: 5px 7px;
+        display: inline-block;
+        border-radius: 6px;
+        z-index: 3;
       }
     }
   }

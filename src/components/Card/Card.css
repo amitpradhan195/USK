@@ -11,4 +11,22 @@
 .featured-card .card .card-body .icon {
   padding: 0 2px 0 0;
 }
+
+.featured-card .card .card-body .viewdetails {
+  background-color: #28c092 !important;
+  color: #ffffff;
+}
+
+.featured-card .card .card-body .tag {
+  position: absolute;
+  top: 25px;
+  left: 25px;
+  color: #ffffff;
+  font-size: 12px;
+  background: #34b849;
+  padding: 5px 7px;
+  display: inline-block;
+  border-radius: 6px;
+  z-index: 3;
+}
 /*# sourceMappingURL=Card.css.map */
