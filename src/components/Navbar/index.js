@@ -1,5 +1,5 @@
 import React from "react";
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import { NavLink } from "react-router-dom";
 import "../../css/style.css";
 
@@ -7,7 +7,6 @@ export default function Navbar() {
   const [navbar, setNavbar] = useState(false);
 
   const changeBg = () => {
-    // console.log(window.scrollY);
     if (window.scrollY > 400) {
       setNavbar(true);
     } else {
