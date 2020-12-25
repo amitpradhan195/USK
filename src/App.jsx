@@ -14,11 +14,11 @@ export default function App() {
     <>
       <Navbar />
       <Switch>
-        <Route exact path="/" component={Home} />
+        <Route exact path="/" component={Details} />
         // redirect to home if the url is messed up
         <Redirect to="/" />
       </Switch>
-      <Footer />
+      {/* <Footer /> */}
     </>
   );
 }
