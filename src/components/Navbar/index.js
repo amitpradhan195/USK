@@ -7,7 +7,7 @@ export default function Navbar() {
   const [navbar, setNavbar] = useState(false);
 
   const changeBg = () => {
-    if (window.scrollY > 400) {
+    if (window.scrollY > 100) {
       setNavbar(true);
     } else {
       setNavbar(false);
