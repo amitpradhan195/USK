@@ -6,18 +6,19 @@ import { NavLink } from "react-router-dom";
 import { IconContext } from "react-icons";
 import { FaFacebook } from "react-icons/fa";
 import { FaInstagramSquare } from "react-icons/fa";
+import { FaLinkedinIn } from "react-icons/fa";
 
 import { Map, InfoWindow, Marker, GoogleApiWrapper } from "google-maps-react";
 // import FacebookIcon from "@material-ui/icons/Facebook";
 
 export default function Footer() {
   return (
-    <IconContext.Provider value={{ color: "#28c092", size: "40px" }}>
+    <IconContext.Provider value={{ color: "#28c092", size: "25px" }}>
       <>
-        <footer className="bg-light text-lg-start footer mt-4">
-          <div className="container p-4">
-            <div className="row">
-              <div className="col-lg-6 col-md-12 mb-4 mb-md-0 footer-info pr-lg-3 pb-md-3 pb-sm-3 pt-3">
+        <footer className="text-lg-start footer mt-4 pt-3 pb-3">
+          <div class="container p-4">
+            <div class="row">
+              <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
                 <img className="map-image" src={mapimage} alt="map" />
                 {/* <Map google={this.props.google} zoom={14}>
                 <Marker
@@ -35,42 +36,61 @@ export default function Footer() {
                 <h3 className="pt-3">Head Office</h3>
                 <h6>Airport, Kathmandu</h6>
                 <h6>Phone: 9851125478, 9851236547</h6>
+                <h6>Mail: moysti@gmail.com</h6>
               </div>
 
-              <div className="col-lg-6 col-md-12 mb-4 mb-md-0 pl-lg-5 pt-md-3 pt-sm-3">
+              <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
                 <ul className="list-unstyled mb-0">
                   <li>
                     <NavLink to="#!" className="a">
-                      <h2>About Us</h2>
+                      <h3>About Us</h3>
                     </NavLink>
                   </li>
                   <li>
                     <NavLink to="#!" className="a">
-                      <h2>Our Agents</h2>
+                      <h3>FAQ</h3>
+                    </NavLink>
+                  </li>
+                </ul>
+              </div>
+
+              <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+                <h3 class="text-uppercase">Service</h3>
+
+                <ul className="list-unstyled mb-0">
+                  <li>
+                    <NavLink to="#!" className="a">
+                      Finance
                     </NavLink>
                   </li>
                   <li>
                     <NavLink to="#!" className="a">
-                      <h2>FAQ</h2>
+                      Career
                     </NavLink>
                   </li>
                 </ul>
-                <h2>Find Us On: </h2>
-                <ul className="list-unstyled body-list-social">
-                  <li className="body-list-item1 pr-3">
-                    <NavLink to="#!" target="_blank">
-                      <FaFacebook />
+              </div>
+
+              <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+                <h3 class="text-uppercase">Social</h3>
+
+                <ul className="list-unstyled mb-0">
+                  <li className="pb-3">
+                    <NavLink to="#!">
+                      <FaFacebook /> Facebook
                     </NavLink>
                   </li>
-                  <li>
-                    <NavLink to="#!" target="_blank">
-                      <FaInstagramSquare />
+                  <li className="pb-3">
+                    <NavLink to="#!">
+                      <FaInstagramSquare /> Instagram
+                    </NavLink>
+                  </li>
+                  <li className="pb-3">
+                    <NavLink to="#!">
+                      <FaLinkedinIn /> LinkedIn
                     </NavLink>
                   </li>
                 </ul>
-                <h4>
-                  <small>Mail: moysti@gmail.com</small>
-                </h4>
               </div>
             </div>
           </div>

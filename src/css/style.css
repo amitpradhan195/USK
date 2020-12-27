@@ -211,8 +211,7 @@
 }
 
 .footer .map-image {
-  width: 94%;
-  height: 320px;
+  width: 100%;
   border-radius: 16px;
 }
 
