@@ -289,6 +289,34 @@
   line-height: 200px;
 }
 
+.filter-section a {
+  background-color: #34b849;
+}
+
+.filter-section a:hover {
+  background-color: #67bf75;
+  color: #313131 !important;
+  -webkit-transition: 1s;
+  transition: 1s;
+}
+
+.btnblue {
+  background-color: #1b7fd7 !important;
+}
+
+.btnblue:hover {
+  background-color: #70a9db !important;
+}
+
+.btndark {
+  background-color: #313131 !important;
+}
+
+.btndark:hover {
+  background-color: #585555 !important;
+  color: #ffffff !important;
+}
+
 .details-banner {
   width: 100%;
   height: 200px;

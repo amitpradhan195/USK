@@ -11,3 +11,29 @@
     line-height: 200px;
   }
 }
+
+.filter-section {
+  a {
+    background-color: $cgreen;
+    &:hover {
+      background-color: $cgreenhover;
+      color: $cblack !important;
+      transition: 1s;
+    }
+  }
+}
+
+.btnblue {
+  background-color: $cblue !important;
+  &:hover {
+    background-color: $cbluehover !important;
+  }
+}
+
+.btndark {
+  background-color: $cblack !important;
+  &:hover {
+    background-color: $cblackhover !important;
+    color: $cwhite !important;
+  }
+}

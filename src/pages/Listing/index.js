@@ -1,7 +1,11 @@
 import React from "react";
+import { NavLink } from "react-router-dom";
+
 import "../../css/style.css";
 import CData from "../../data/Listings";
 import Card from "../../components/Card";
+// import Btn from "../../components/ListingBtn";
+// import BtnData from "../../data/Listingbtn";
 
 export default function index() {
   return (
@@ -12,11 +16,65 @@ export default function index() {
         </div>
       </section>
       {/* filter section */}
-      <section className="filter-section">
-        <div className="container">
+      <section className="filter-section pt-4">
+        <div className="container col-10">
           <div className="row">
-            <div className="col-lg-6 order-1"></div>
-            <div className="col-lg-6 order-2"></div>
+            <div className="col-lg-6 order-1">
+              <NavLink
+                type="button"
+                className="btn btn-lg btn-block text-light shadow mt-3 viewdetails"
+                to="/details"
+              >
+                Sale
+              </NavLink>
+            </div>
+            <div className="col-lg-6 order-2">
+              <NavLink
+                type="button"
+                className="btn btn-lg btn-block text-light shadow mt-3 viewdetails"
+                to="/details"
+              >
+                Rent
+              </NavLink>
+            </div>
+          </div>
+          <div className="row">
+            <div className="col-lg-3 order-1">
+              <NavLink
+                type="button"
+                className="btn btn-lg btn-block text-light shadow mt-3 viewdetails btnblue"
+                to="/details"
+              >
+                Land
+              </NavLink>
+            </div>
+            <div className="col-lg-3 order-1">
+              <NavLink
+                type="button"
+                className="btn btn-lg btn-block text-light shadow mt-3 viewdetails btnblue"
+                to="/details"
+              >
+                Flat
+              </NavLink>
+            </div>
+            <div className="col-lg-3 order-1">
+              <NavLink
+                type="button"
+                className="btn btn-lg btn-block text-light shadow mt-3 viewdetails btndark"
+                to="/details"
+              >
+                Bulding
+              </NavLink>
+            </div>
+            <div className="col-lg-3 order-1">
+              <NavLink
+                type="button"
+                className="btn btn-lg btn-block text-light shadow mt-3 viewdetails btndark"
+                to="/details"
+              >
+                Commercial
+              </NavLink>
+            </div>
           </div>
         </div>
       </section>
