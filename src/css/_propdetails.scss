@@ -64,6 +64,22 @@
   }
 }
 
+.propertyInformation {
+  .propertyInformation-container {
+    p {
+      color: $paragraph !important;
+    }
+  }
+}
+
+.mapInformation {
+  .mapInformation-container {
+    img {
+      height: 400px;
+      border-radius: 16px;
+    }
+  }
+}
 // @media only screen and (max-width: 1004px) {
 //   .image-thumbnails {
 //     overflow: auto !important;

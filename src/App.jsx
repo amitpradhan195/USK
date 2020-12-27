@@ -18,7 +18,7 @@ export default function App() {
         // redirect to home if the url is messed up
         <Redirect to="/" />
       </Switch>
-      {/* <Footer /> */}
+      <Footer />
     </>
   );
 }

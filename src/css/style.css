@@ -306,4 +306,13 @@
 .features .feature-container .features-list li {
   display: inline-block;
 }
+
+.propertyInformation .propertyInformation-container p {
+  color: #808182 !important;
+}
+
+.mapInformation .mapInformation-container img {
+  height: 400px;
+  border-radius: 16px;
+}
 /*# sourceMappingURL=style.css.map */
