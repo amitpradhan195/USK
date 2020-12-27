@@ -1,20 +1,21 @@
-.navbar {
+.navbarunactive {
   height: 90px;
   letter-spacing: 1.5px;
+  color: #ffffff !important;
 }
 
-.navbar ul li a {
+.navbarunactive ul li a {
   font-size: 1rem !important;
   text-transform: capitalize !important;
   margin: 0 0 0 15px !important;
   color: #ffffff !important;
 }
 
-.navbar ul li a:hover {
+.navbarunactive ul li a:hover {
   color: #28c092 !important;
 }
 
-.navbar .navbar-toggler {
+.navbarunactive .navbar-toggler {
   padding: 1px 5px;
   font-size: 18px;
   line-height: 0.3;
@@ -24,6 +25,29 @@
   background-color: #1d1d21;
   -webkit-transition: 1s;
   transition: 1s;
+  height: 90px;
+  letter-spacing: 1.5px;
+}
+
+.activenav ul li a {
+  font-size: 1rem !important;
+  text-transform: capitalize !important;
+  margin: 0 0 0 15px !important;
+  color: #707070 !important;
+}
+
+.activenav ul li a:hover {
+  color: #28c092 !important;
+}
+
+.activenav .navbar-toggler {
+  padding: 1px 5px;
+  font-size: 18px;
+  line-height: 0.3;
+}
+
+.activenav .navbar-brand {
+  color: #707070 !important;
 }
 
 @media only screen and (max-width: 767px) {

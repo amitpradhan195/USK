@@ -22,11 +22,11 @@ export default function Navbar() {
         className={
           navbar
             ? "navbar activenav navbar-expand-lg navbar-dark fixed-top nav"
-            : "navbar navbar-expand-lg navbar-dark fixed-top nav"
+            : "navbar navbarunactive navbar-expand-lg navbar-dark fixed-top nav"
         }
       >
         <div className="container">
-          <NavLink className="navbar-brand text-light" to="/">
+          <NavLink className="navbar-brand" to="/">
             LOGO
           </NavLink>
           <button
