@@ -43,11 +43,12 @@ export default function Details() {
   return (
     <IconContext.Provider value={{ color: "#28c092", size: "25px" }}>
       <>
-        <div className="details-banner">
+        <section className="details-banner">
           <div className="container col-10 text-light">
             <h2 className="text-center">Property Details</h2>
           </div>
-        </div>
+        </section>
+        {/* slider */}
         <section className="container col-10">
           <section className="d-flex align-items-center details-container mb-3">
             <div className="container-fluid">

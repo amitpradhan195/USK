@@ -48,7 +48,7 @@ export default function Navbar() {
                   activeClassName="menu_active"
                   exact
                   className="nav-link"
-                  to="#"
+                  to="/listings"
                 >
                   Properties
                 </NavLink>

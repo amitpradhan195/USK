@@ -1,0 +1,13 @@
+@import "./colors";
+
+.details-banner {
+  width: 100%;
+  height: 200px;
+  display: inline-block;
+  background-image: url("../assets/blurry.jpg");
+  background-repeat: no-repeat;
+  background-position: cover;
+  h2 {
+    line-height: 200px;
+  }
+}
