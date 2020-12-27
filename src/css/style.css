@@ -299,54 +299,11 @@
   cursor: pointer !important;
 }
 
-@media only screen and (max-width: 1004px) {
-  .image-thumbnails {
-    overflow: auto !important;
-    width: 100px !important;
-    max-height: 150px !important;
-  }
-  .image-thumbnails .thumbnail {
-    -o-object-fit: cover;
-       object-fit: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    width: 150px !important;
-    height: 100% !important;
-    opacity: 0.5;
-    border-radius: 16px;
-  }
-  .image-thumbnails .image-list li {
-    display: inline !important;
-    margin: 0;
-    padding: 0;
-    cursor: pointer;
-  }
+.contact-info .contact-info-container {
+  border-bottom: 2px solid #707070;
 }
 
-@media only screen and (max-width: 764px) {
-  .image-thumbnails {
-    overflow: auto !important;
-    width: 150px !important;
-    max-height: 150px !important;
-  }
-  .image-thumbnails .thumbnail {
-    -o-object-fit: cover;
-       object-fit: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    width: 150px !important;
-    height: 100% !important;
-    opacity: 0.5;
-    border-radius: 16px;
-  }
-  .image-thumbnails .image-list li {
-    display: inline !important;
-    margin: 0;
-    padding: 0;
-    cursor: pointer !important;
-  }
-  .image-thumbnails .image-list li img {
-    cursor: pointer !important;
-  }
+.features .feature-container .features-list li {
+  display: inline-block;
 }
 /*# sourceMappingURL=style.css.map */
