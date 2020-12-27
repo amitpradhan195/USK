@@ -216,7 +216,7 @@ export default function Details() {
             </div>
           </section>
           {/* map information */}
-          <section className="mapInformation pb-4">
+          <section className="mapInformation pb-5">
             <div className="mapInformation-container">
               <h4>Map View</h4>
               <img src={mapimage} alt="place" />
