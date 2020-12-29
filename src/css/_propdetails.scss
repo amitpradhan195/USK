@@ -14,13 +14,12 @@
 }
 
 .details-container {
-  // .main {
   .track {
     ul {
       position: relative;
       list-style-type: none;
       padding: 0;
-      height: 400px;
+      height: 460px;
       width: 100%;
       li {
         position: absolute;
@@ -37,14 +36,13 @@
         }
         img {
           width: 100%;
-          height: 100%;
+          height: 460px;
           border-radius: 16px;
           object-fit: cover;
         }
       }
     }
   }
-  // }
 }
 
 .slides {
@@ -59,6 +57,9 @@
       height: 100%;
       border-radius: 16px;
       object-fit: cover;
+      &:hover {
+        opacity: 0.5;
+      }
     }
   }
 }
@@ -70,6 +71,17 @@
   }
   .slides {
     grid-gap: 10px;
+  }
+  .details-container {
+    .track {
+      ul {
+        li {
+          img {
+            height: 100%;
+          }
+        }
+      }
+    }
   }
 }
 

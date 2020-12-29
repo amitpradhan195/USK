@@ -305,7 +305,7 @@
 }
 
 .btnblue {
-  background-color: #1b7fd7 !important;
+  background-color: #313131 !important;
 }
 
 .btnblue:hover {
@@ -317,8 +317,7 @@
 }
 
 .btndark:hover {
-  background-color: #585555 !important;
-  color: #ffffff !important;
+  background-color: #70a9db !important;
 }
 
 .details-banner {
@@ -338,7 +337,7 @@
   position: relative;
   list-style-type: none;
   padding: 0;
-  height: 400px;
+  height: 460px;
   width: 100%;
 }
 
@@ -362,7 +361,7 @@
 
 .details-container .track ul li img {
   width: 100%;
-  height: 100%;
+  height: 460px;
   border-radius: 16px;
   -o-object-fit: cover;
      object-fit: cover;
@@ -389,6 +388,10 @@
      object-fit: cover;
 }
 
+.slides a img:hover {
+  opacity: 0.5;
+}
+
 @media (max-width: 600px) {
   .main {
     width: 100%;
@@ -396,6 +399,9 @@
   }
   .slides {
     grid-gap: 10px;
+  }
+  .details-container .track ul li img {
+    height: 100%;
   }
 }
 
