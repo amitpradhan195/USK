@@ -1,10 +1,10 @@
 import React, { useEffect, useState, classList } from "react";
 import "../../css/style.css";
-import slider1 from "../../assets/slider1.jpg";
-import slider2 from "../../assets/slider2.jpg";
-import slider3 from "../../assets/slider3.jpg";
-import slider4 from "../../assets/slider4.jpg";
-import slider5 from "../../assets/slider5.jfif";
+import slider1 from "../../assets/s1.jpg";
+import slider2 from "../../assets/s2.jpg";
+import slider3 from "../../assets/s3.jpg";
+import slider4 from "../../assets/s4.jpg";
+import slider5 from "../../assets/s5.jpg";
 import { IconContext } from "react-icons";
 import { MdLocationOn } from "react-icons/md";
 import { FaPhoneAlt } from "react-icons/fa";
@@ -50,58 +50,45 @@ export default function Details() {
         </section>
         {/* slider */}
         <section className="container col-10">
-          <section className="d-flex align-items-center details-container mb-3">
+          <section className="d-flex align-items-center details-container mt-5 mb-5">
             <div className="container-fluid">
               <div className="row">
-                <div>
-                  <div className="row">
-                    <div className="col-md-10 order-1 order-lg-1 d-flex justify-content-center flex-column main-image">
-                      <img
-                        className="featured mb-4 mt-4"
-                        src={slider1}
-                        alt="main-image"
-                      />
-                    </div>
-
-                    <div className="col-lg-2 order-2 order-lg-2 image-thumbnails">
-                      <ul class="list-unstyled image-list">
-                        <li class="body-list-item1">
-                          <img
-                            className="thumbnail mt-4 activepic"
-                            src={slider1}
-                            alt="main-image"
-                          />
-                        </li>
-                        <li class="body-list-item1">
-                          <img
-                            className="thumbnail mt-4"
-                            src={slider2}
-                            alt="main-image"
-                          />
-                        </li>
-                        <li class="body-list-item1">
-                          <img
-                            className="thumbnail mt-4"
-                            src={slider3}
-                            alt="main-image"
-                          />
-                        </li>
-                        <li class="body-list-item1">
-                          <img
-                            className="thumbnail mt-4"
-                            src={slider4}
-                            alt="main-image"
-                          />
-                        </li>
-                        <li class="body-list-item1">
-                          <img
-                            className="thumbnail mt-4"
-                            src={slider5}
-                            alt="main-image"
-                          />
-                        </li>
-                      </ul>
-                    </div>
+                <div className="main">
+                  <div className="order-1 order-lg-1 track">
+                    <ul>
+                      <li id="slide1">
+                        <img src={slider1} alt="slider_image" />
+                      </li>
+                      <li id="slide2">
+                        <img src={slider2} alt="slider_image" />
+                      </li>
+                      <li id="slide3">
+                        <img src={slider3} alt="slider_image" />
+                      </li>
+                      <li id="slide4">
+                        <img src={slider4} alt="slider_image" />
+                      </li>
+                      <li id="slide5">
+                        <img src={slider5} alt="slider_image" />
+                      </li>
+                    </ul>
+                  </div>
+                  <div className="order-2 order-lg-2 slides">
+                    <a href="#slide1">
+                      <img src={slider1} alt="slider_image" />
+                    </a>
+                    <a href="#slide2">
+                      <img src={slider2} alt="slider_image" />
+                    </a>
+                    <a href="#slide3">
+                      <img src={slider3} alt="slider_image" />
+                    </a>
+                    <a href="#slide4">
+                      <img src={slider4} alt="slider_image" />
+                    </a>
+                    <a href="#slide5">
+                      <img src={slider5} alt="slider_image" />
+                    </a>
                   </div>
                 </div>
               </div>

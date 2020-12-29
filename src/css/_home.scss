@@ -75,6 +75,7 @@
     width: 0;
     height: 0;
     overflow: hidden;
+    transition: overflow 7s ease;
   }
 }
 @-webkit-keyframes cssAnimation {
@@ -82,6 +83,7 @@
     width: 0;
     height: 0;
     visibility: hidden;
+    transition: visibility 7s ease;
   }
 }
 

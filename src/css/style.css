@@ -162,6 +162,8 @@
     width: 0;
     height: 0;
     overflow: hidden;
+    -webkit-transition: overflow 7s ease;
+    transition: overflow 7s ease;
   }
 }
 
@@ -170,6 +172,8 @@
     width: 0;
     height: 0;
     visibility: hidden;
+    -webkit-transition: visibility 7s ease;
+    transition: visibility 7s ease;
   }
 }
 
@@ -330,37 +334,69 @@
   line-height: 200px;
 }
 
-.details-container .main-image .featured {
-  max-width: 100% !important;
-  max-height: 600px !important;
-  -o-object-fit: cover !important;
-     object-fit: cover !important;
-  background-repeat: no-repeat;
-  background-position: center;
-  border-radius: 16px;
-}
-
-.details-container .image-thumbnails {
-  overflow: auto !important;
-}
-
-.details-container .image-thumbnails .thumbnail {
-  -o-object-fit: cover;
-     object-fit: cover;
-  background-position: center;
-  background-repeat: no-repeat;
+.details-container .track ul {
+  position: relative;
+  list-style-type: none;
+  padding: 0;
+  height: 400px;
   width: 100%;
-  height: 100px !important;
-  opacity: 0.5;
-  border-radius: 16px;
 }
 
-.details-container .image-thumbnails .activepic {
+.details-container .track ul li {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 400px;
+  opacity: 0;
+  -webkit-transition: opacity 0.7s ease;
+  transition: opacity 0.7s ease;
+}
+
+.details-container .track ul li:first-child {
   opacity: 1;
 }
 
-.details-container ul li {
-  cursor: pointer !important;
+.details-container .track ul li:target {
+  opacity: 1;
+}
+
+.details-container .track ul li img {
+  width: 100%;
+  height: 100%;
+  border-radius: 16px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.slides {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[5];
+      grid-template-columns: repeat(5, 1fr);
+  grid-gap: 20px;
+}
+
+.slides a {
+  border: 2px solid #fff;
+  height: 100px;
+}
+
+.slides a img {
+  width: 100%;
+  height: 100%;
+  border-radius: 16px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+@media (max-width: 600px) {
+  .main {
+    width: 100%;
+    margin: 60px auto;
+  }
+  .slides {
+    grid-gap: 10px;
+  }
 }
 
 .contact-info .contact-info-container {
