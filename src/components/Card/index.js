@@ -16,7 +16,7 @@ import { NavLink } from "react-router-dom";
 
 export default function Card(props) {
   return (
-    <IconContext.Provider value={{ color: "#28c092", size: "20px" }}>
+    <IconContext.Provider value={{ color: "#707070", size: "20px" }}>
       <>
         <div className="col-md-4 col-10 mx-auto">
           <div className="card shadow about-card">

@@ -96,7 +96,7 @@ export default function Home() {
       </section>
       {/* featured */}
       <section className="featured-container pt-5 mb-5">
-        <h4 className="text-center">Featured Properties</h4>
+        <h4 className="text-center heading-text">Featured Properties</h4>
         <div className="featured-title"></div>
       </section>
       {/* featured card */}
@@ -125,8 +125,8 @@ export default function Home() {
         </div>
       </div>
       {/* build your home */}
-      <div className="d-flex justify-content-center flex-column align-items-center pb-5">
-        <h3>Do you want to built your home ?</h3>
+      <div className="d-flex justify-content-center flex-column align-items-center pb-5 heading-text">
+        <h4>Do you want to built your home ?</h4>
         <NavLink
           type="button"
           className="btn btn-lg btn-primary mt-3 btnbuilt shadow"

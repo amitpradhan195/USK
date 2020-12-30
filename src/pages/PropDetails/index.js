@@ -41,11 +41,11 @@ export default function Details() {
   // window.addEventListener("mouseover", selectPic);
 
   return (
-    <IconContext.Provider value={{ color: "#28c092", size: "25px" }}>
+    <IconContext.Provider value={{ color: "#707070", size: "25px" }}>
       <>
         <section className="details-banner">
           <div className="container col-10 text-light">
-            <h2 className="text-center">Property Details</h2>
+            <h2 className="text-center heading-text">Property Details</h2>
           </div>
         </section>
         {/* slider */}

@@ -9,6 +9,7 @@ import Home from "./pages/Home";
 import Details from "./pages/PropDetails";
 import Footer from "./components/Footer";
 import Listings from "./pages/Listing";
+import Faq from "./pages/FAQ";
 
 export default function App() {
   return (
@@ -18,6 +19,7 @@ export default function App() {
         <Route exact path="/" component={Home} />
         <Route exact path="/details" component={Details} />
         <Route exact path="/listings" component={Listings} />
+        <Route exact path="/faq" component={Faq} />
         // redirect to home if the url is messed up
         <Redirect to="/" />
       </Switch>
