@@ -59,7 +59,7 @@ export default function Footer() {
 
                 <ul className="list-unstyled mb-0">
                   <li>
-                    <NavLink to="#!" className="a">
+                    <NavLink to="/finance" className="a">
                       Finance
                     </NavLink>
                   </li>

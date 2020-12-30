@@ -1,82 +1,16 @@
-import React, { useEffect, useState } from "react";
-import slider1 from "../../assets/slider1.jpg";
-import slider2 from "../../assets/slider2.jpg";
-import slider3 from "../../assets/slider3.jpg";
+import React from "react";
 
 import "../../css/style.css";
 import Card from "../../components/Card";
 import CData from "../../data/Carddata";
 import { NavLink } from "react-router-dom";
+import Finance from "../../components/Finance";
+import HomeSlider from "../../components/HomeSlider";
 
 export default function Home() {
-  const [isHide, setisHide] = useState(true);
-
-  useEffect(() => {
-    setTimeout(() => {
-      setisHide(false);
-    }, 5000);
-  }, []);
-
   return (
     <>
-      <div
-        className="carousel slide"
-        data-ride="carousel"
-        id="carouselExampleIndicators"
-      >
-        <ol className="carousel-indicators">
-          <li
-            className="active"
-            data-slide-to="0"
-            data-target="#carouselExampleIndicators"
-          ></li>
-          <li data-slide-to="1" data-target="#carouselExampleIndicators"></li>
-          <li data-slide-to="2" data-target="#carouselExampleIndicators"></li>
-        </ol>
-        <div className="carousel-inner">
-          <div className="carousel-item active">
-            <img alt="First slide" className="d-block w-100" src={slider1} />
-            <div className="carousel-caption d-none d-md-block">
-              {/* {isHide && (
-                <LightSpeed left>
-                  <Fade> */}
-              <h1>LET'S FIND YOUR PROPERTY...</h1>
-              {/* </Fade>
-                </LightSpeed>
-              )} */}
-            </div>
-          </div>
-          <div className="carousel-item">
-            <img alt="Second slide" className="d-block w-100" src={slider2} />
-          </div>
-          <div className="carousel-item">
-            <img alt="Third slide" className="d-block w-100" src={slider3} />
-          </div>
-        </div>
-        <a
-          className="carousel-control-prev"
-          data-slide="prev"
-          href="#carouselExampleIndicators"
-          role="button"
-        >
-          <span
-            aria-hidden="true"
-            className="carousel-control-prev-icon"
-          ></span>
-        </a>
-        <a
-          className="carousel-control-next"
-          data-slide="next"
-          href="#carouselExampleIndicators"
-          role="button"
-        >
-          <span
-            aria-hidden="true"
-            className="carousel-control-next-icon"
-          ></span>
-        </a>
-      </div>
-
+      <HomeSlider></HomeSlider>
       {/* home navigation section */}
       <section className="nav-container">
         <div className="col-12 mx-auto">
@@ -94,11 +28,13 @@ export default function Home() {
           </ul>
         </div>
       </section>
+
       {/* featured */}
       <section className="featured-container pt-5 mb-5">
         <h4 className="text-center heading-text">Featured Properties</h4>
         <div className="featured-title"></div>
       </section>
+
       {/* featured card */}
       <div className="container-fluid pb-5 about-myjob">
         <div className="row">
@@ -124,9 +60,10 @@ export default function Home() {
           </div>
         </div>
       </div>
+
       {/* build your home */}
-      <div className="d-flex justify-content-center flex-column align-items-center pb-5 heading-text">
-        <h4>Do you want to built your home ?</h4>
+      <div className="d-flex justify-content-center flex-column align-items-center pb-5 pt-5 ">
+        <h4 className="heading-text">Do you want to built your home ?</h4>
         <NavLink
           type="button"
           className="btn btn-lg btn-primary mt-3 btnbuilt shadow"
@@ -135,6 +72,13 @@ export default function Home() {
           Click Here
         </NavLink>
       </div>
+
+      {/* financial alliance */}
+      <section className="featured-container pt-5 mb-5">
+        <h4 className="text-center heading-text">Finance Alliances</h4>
+        <div className="featured-title"></div>
+      </section>
+      <Finance></Finance>
     </>
   );
 }
