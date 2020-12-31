@@ -26,13 +26,15 @@
 .btnblue {
   background-color: $cblack !important;
   &:hover {
-    background-color: $cbluehover !important;
+    color: $cwhite !important;
+    background-color: $lhoverbgblack !important;
   }
 }
 
 .btndark {
   background-color: $cblack !important;
   &:hover {
-    background-color: $cbluehover !important;
+    color: $cwhite !important;
+    background-color: $lhoverbgblack !important;
   }
 }

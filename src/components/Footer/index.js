@@ -15,7 +15,7 @@ export default function Footer() {
   return (
     <IconContext.Provider value={{ color: "#28c092", size: "25px" }}>
       <>
-        <footer className="text-lg-start footer mt-4 pt-3 pb-3">
+        <footer className="text-lg-start footer mt-4 pt-1 pb-3">
           <div class="container p-4">
             <div class="row">
               <div class="col-lg-3 col-md-6 mb-4 mb-md-0">

@@ -45,7 +45,7 @@ export default function Details() {
       <>
         <section className="details-banner">
           <div className="container col-10 text-light">
-            <h2 className="text-center heading-text">Property Details</h2>
+            {/* <h2 className="text-center heading-text">Property Details</h2> */}
           </div>
         </section>
         {/* slider */}

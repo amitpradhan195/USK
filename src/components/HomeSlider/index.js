@@ -49,28 +49,6 @@ export default function HomeSlider() {
             <img alt="Third slide" className="d-block w-100" src={slider3} />
           </div>
         </div>
-        <a
-          className="carousel-control-prev"
-          data-slide="prev"
-          href="#carouselExampleIndicators"
-          role="button"
-        >
-          <span
-            aria-hidden="true"
-            className="carousel-control-prev-icon"
-          ></span>
-        </a>
-        <a
-          className="carousel-control-next"
-          data-slide="next"
-          href="#carouselExampleIndicators"
-          role="button"
-        >
-          <span
-            aria-hidden="true"
-            className="carousel-control-next-icon"
-          ></span>
-        </a>
       </div>
     </>
   );

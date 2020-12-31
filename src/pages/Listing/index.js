@@ -12,7 +12,7 @@ export default function index() {
     <>
       <section className="details-banner">
         <div className="container col-10 text-light">
-          <h2 className="text-center">Property Listings</h2>
+          {/* <h2 className="text-center">Property Listings</h2> */}
         </div>
       </section>
       {/* filter section */}

@@ -6,6 +6,7 @@ import CData from "../../data/Carddata";
 import { NavLink } from "react-router-dom";
 import Finance from "../../components/Finance";
 import HomeSlider from "../../components/HomeSlider";
+import DreamModal from "../../components/DreamHouse";
 
 export default function Home() {
   return (
@@ -64,13 +65,14 @@ export default function Home() {
       {/* build your home */}
       <div className="d-flex justify-content-center flex-column align-items-center pb-5 pt-5 ">
         <h4 className="heading-text">Do you want to built your home ?</h4>
-        <NavLink
+        {/* <NavLink
           type="button"
           className="btn btn-lg btn-primary mt-3 btnbuilt shadow"
           to="#"
         >
           Click Here
-        </NavLink>
+        </NavLink> */}
+        <DreamModal></DreamModal>
       </div>
 
       {/* financial alliance */}

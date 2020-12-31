@@ -6,7 +6,7 @@ import FinanceData from "../../data/finance";
 export default function Finance() {
   return (
     <>
-      <div className="container">
+      <div className="container-finance">
         {FinanceData.map((value, indno) => {
           return (
             <FinanceCard

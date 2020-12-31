@@ -3,13 +3,13 @@
 .footer {
   background-color: $fprimarybg !important;
   background-size: contain;
-  color: $fprimarytxt !important;
+  color: $gwhite !important;
   .map-image {
     width: 100%;
     border-radius: 16px;
   }
   .footer-info {
-    border-right: 3px solid $fprimarytxt;
+    border-right: 3px solid $gwhite;
   }
   .body-list-social {
     li {
@@ -31,7 +31,7 @@
   }
 
   a {
-    color: $fprimarytxt !important;
+    color: $gwhite !important;
   }
 }
 

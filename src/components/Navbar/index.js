@@ -1,6 +1,8 @@
 import React from "react";
 import { useState } from "react";
 import { NavLink } from "react-router-dom";
+import Requirements from "../../components/Requirements";
+
 import "../../css/style.css";
 
 export default function Navbar() {
@@ -18,6 +20,7 @@ export default function Navbar() {
 
   return (
     <>
+      <Requirements></Requirements>
       <nav
         className={
           navbar
@@ -68,6 +71,8 @@ export default function Navbar() {
                   activeClassName="menu_active"
                   exact
                   className="nav-link"
+                  data-toggle="modal"
+                  data-target="#exampleModal1"
                   to="#"
                 >
                   Requirements
