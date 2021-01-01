@@ -5,7 +5,7 @@ import { NavLink } from "react-router-dom";
 
 import { IconContext } from "react-icons";
 import { FaFacebook } from "react-icons/fa";
-import { FaInstagramSquare } from "react-icons/fa";
+import { FaInstagram } from "react-icons/fa";
 import { FaLinkedinIn } from "react-icons/fa";
 
 import { Map, InfoWindow, Marker, GoogleApiWrapper } from "google-maps-react";
@@ -79,8 +79,8 @@ export default function Footer() {
                     <IconContext.Provider
                       value={{ color: "#166FE5", size: "25px" }}
                     >
-                      <FaFacebook />
-                    </IconContext.Provider>{" "}
+                      <FaFacebook className="mr-2" />
+                    </IconContext.Provider>
                     Facebook
                   </NavLink>
                 </li>
@@ -89,7 +89,7 @@ export default function Footer() {
                     <IconContext.Provider
                       value={{ color: "#F54D53", size: "25px" }}
                     >
-                      <FaInstagramSquare />
+                      <FaInstagram className="mr-2" />
                     </IconContext.Provider>
                     Instagram
                   </NavLink>
@@ -99,7 +99,7 @@ export default function Footer() {
                     <IconContext.Provider
                       value={{ color: "#0A66C2", size: "25px" }}
                     >
-                      <FaLinkedinIn />
+                      <FaLinkedinIn className="mr-2" />
                     </IconContext.Provider>
                     LinkedIn
                   </NavLink>
