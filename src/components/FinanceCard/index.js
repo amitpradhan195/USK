@@ -1,7 +1,7 @@
 import React from "react";
 import "../../css/style.css";
 
-export default function index(props) {
+export default function FinanceCard(props) {
   return (
     <>
       <div className="card">

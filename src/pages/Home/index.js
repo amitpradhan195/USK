@@ -76,10 +76,6 @@ export default function Home() {
       </div>
 
       {/* financial alliance */}
-      <section className="featured-container pt-5 mb-5">
-        <h4 className="text-center heading-text">Finance Alliances</h4>
-        <div className="featured-title"></div>
-      </section>
       <Finance></Finance>
     </>
   );

@@ -7,6 +7,7 @@ import { IconContext } from "react-icons";
 import { FaFacebook } from "react-icons/fa";
 import { FaInstagram } from "react-icons/fa";
 import { FaLinkedinIn } from "react-icons/fa";
+import { VscDebugBreakpointLog } from "react-icons/vsc";
 
 import { Map, InfoWindow, Marker, GoogleApiWrapper } from "google-maps-react";
 // import FacebookIcon from "@material-ui/icons/Facebook";
@@ -59,11 +60,17 @@ export default function Footer() {
               <ul className="list-unstyled mb-0">
                 <li>
                   <NavLink to="/finance" className="a">
+                    <IconContext.Provider value={{ color: "#F54D53" }}>
+                      <VscDebugBreakpointLog className="mr-2" />
+                    </IconContext.Provider>
                     Finance
                   </NavLink>
                 </li>
                 <li>
                   <NavLink to="#!" className="a">
+                    <IconContext.Provider value={{ color: "#F54D53" }}>
+                      <VscDebugBreakpointLog className="mr-2" />
+                    </IconContext.Provider>
                     Career
                   </NavLink>
                 </li>

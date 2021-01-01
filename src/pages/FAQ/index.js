@@ -8,9 +8,7 @@ export default function index() {
     <>
       <div>
         <section className="details-banner">
-          <div className="container col-10 text-light">
-            <h2 className="text-center heading-text">FAQ</h2>
-          </div>
+          <div className="container col-10 text-light"></div>
         </section>
         <section className="container-fluid section-faq">
           <div className="row">

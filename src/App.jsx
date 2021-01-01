@@ -10,7 +10,7 @@ import Details from "./pages/PropDetails";
 import Footer from "./components/Footer";
 import Listings from "./pages/Listing";
 import Faq from "./pages/FAQ";
-import Finance from "./components/Finance";
+import Finance from "./pages/Finance";
 
 export default function App() {
   return (
