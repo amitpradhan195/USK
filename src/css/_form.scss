@@ -1,0 +1,16 @@
+@import "./colors";
+
+input:focus {
+  box-shadow: none !important;
+  border: 2px solid $btnhover !important;
+}
+
+textarea:focus {
+  box-shadow: none !important;
+  border: 2px solid $btnhover !important;
+}
+
+select:focus {
+  box-shadow: none !important;
+  border: 2px solid $btnhover !important;
+}

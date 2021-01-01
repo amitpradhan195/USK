@@ -6,6 +6,7 @@ import { TextField } from "formik-material-ui";
 import * as Yup from "yup";
 import { makeStyles } from "@material-ui/core";
 import { Button } from "bootstrap";
+import "../../css/style.css";
 
 const classStyle = makeStyles((theme) => ({
   form: {
@@ -45,6 +46,7 @@ export default function DHouse() {
             <div className="modal-body">
               <h4 className="text-center">Send Us Your Requirements</h4>
               <form className="p-5">
+                {/* property for */}
                 <label className="mb-2">Property For:</label>
                 <div className="form-group col-lg-4 mb-3">
                   <div className="form-check form-check-inline">
@@ -84,6 +86,7 @@ export default function DHouse() {
                     </label>
                   </div>
                 </div>
+                {/* property type */}
                 <label className="mb-2">Property Type:</label>
                 <div className="form-group col-lg-8 mb-3">
                   <div className="form-check form-check-inline">
@@ -135,6 +138,7 @@ export default function DHouse() {
                     </label>
                   </div>
                 </div>
+                {/* location */}
                 <label className="mb-2">Location:</label>
                 <input
                   type="text"
@@ -142,6 +146,7 @@ export default function DHouse() {
                   id="formGroupExampleInput"
                   placeholder="Nayabazar, Kathmandu"
                 ></input>
+                {/* price */}
                 <div className="row mb-3">
                   <div className="form-group col-lg-2">
                     <p>Price:</p>
@@ -158,7 +163,7 @@ export default function DHouse() {
                     <input type="text" className="form-control" id="inputZip" />
                   </div>
                 </div>
-
+                {/* bedroom */}
                 <div className="row">
                   <div className="form-group col-lg-2">
                     <p>Bedroom:</p>
@@ -203,7 +208,7 @@ export default function DHouse() {
                     </div>
                   </div>
                 </div>
-
+                {/* parking */}
                 <label className="mb-2">Parking Area</label>
                 <div className="form-group col-lg-8">
                   <div className="form-check form-check-inline">

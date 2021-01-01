@@ -5,6 +5,7 @@ import { Field, Form, Formik } from "formik";
 import { TextField } from "formik-material-ui";
 import * as Yup from "yup";
 import { makeStyles } from "@material-ui/core";
+import "../../css/style.css";
 
 const classStyle = makeStyles((theme) => ({
   form: {
@@ -62,30 +63,20 @@ export default function DHouse() {
                 }}
               </Formik> */}
               <form className="p-5">
-                <label className="mb-2">Property For:</label>
-                <div className="form-group col-lg-4 mb-3">
-                  <div className="form-check form-check-inline">
-                    <input
-                      className="form-check-input"
-                      type="radio"
-                      name="inlineRadioOptions"
-                      id="inlineRadio1"
-                      value="Buy"
-                    />
-                    <label className="form-check-label" for="inlineRadio1">
-                      Buy
-                    </label>
-                  </div>
+                <label className="mb-2 font-weight-bold">
+                  Select Your House Type:
+                </label>
+                <div className="form-group col-lg-6 mb-3">
                   <div className="form-check form-check-inline">
                     <input
                       className="form-check-input"
                       type="radio"
                       name="inlineRadioOptions"
                       id="inlineRadio2"
-                      value="Rent"
+                      value="Townhouse"
                     />
                     <label className="form-check-label" for="inlineRadio2">
-                      Rent
+                      Townhouse
                     </label>
                   </div>
                   <div className="form-check form-check-inline">
@@ -94,14 +85,24 @@ export default function DHouse() {
                       type="radio"
                       name="inlineRadioOptions"
                       id="inlineRadio3"
-                      value="Sale"
+                      value="Commercial"
                     />
                     <label className="form-check-label" for="inlineRadio3">
-                      Sale
+                      Commercial
                     </label>
                   </div>
                 </div>
-                <label className="mb-2">Property Type:</label>
+                {/* select location */}
+
+                <div class="form-group col-md-6 mb-3">
+                  <label className="font-weight-bold">Select Location:</label>
+                  <select id="inputState" class="form-control">
+                    <option selected>Choose...</option>
+                    <option>...</option>
+                  </select>
+                </div>
+                {/* area coverage */}
+                <label className="font-weight-bold">Area Coverage:</label>
                 <div className="form-group col-lg-8 mb-3">
                   <div className="form-check form-check-inline">
                     <input
@@ -109,10 +110,10 @@ export default function DHouse() {
                       type="radio"
                       name="inlineRadioOptions"
                       id="inlineRadio1"
-                      value="Room"
+                      value="3 Aana"
                     />
                     <label className="form-check-label" for="inlineRadio1">
-                      Room
+                      3 Aana
                     </label>
                   </div>
                   <div className="form-check form-check-inline">
@@ -121,10 +122,10 @@ export default function DHouse() {
                       type="radio"
                       name="inlineRadioOptions"
                       id="inlineRadio2"
-                      value="Flat"
+                      value="4 Aana"
                     />
                     <label className="form-check-label" for="inlineRadio2">
-                      Flat
+                      4 Aana
                     </label>
                   </div>
                   <div className="form-check form-check-inline">
@@ -133,10 +134,10 @@ export default function DHouse() {
                       type="radio"
                       name="inlineRadioOptions"
                       id="inlineRadio3"
-                      value="Bulding"
+                      value="6 Aana"
                     />
                     <label className="form-check-label" for="inlineRadio3">
-                      Bulding
+                      6 Aana
                     </label>
                   </div>
                   <div className="form-check form-check-inline">
@@ -145,53 +146,32 @@ export default function DHouse() {
                       type="radio"
                       name="inlineRadioOptions"
                       id="inlineRadio3"
-                      value="Land"
+                      value="More"
                     />
                     <label className="form-check-label" for="inlineRadio3">
-                      Land
+                      More
                     </label>
                   </div>
                 </div>
-                <label className="mb-2">Location:</label>
-                <input
-                  type="text"
-                  className="form-control mb-3"
-                  id="formGroupExampleInput"
-                  placeholder="Nayabazar, Kathmandu"
-                ></input>
-                <div className="row mb-3">
-                  <div className="form-group col-lg-2">
-                    <p>Price:</p>
-                  </div>
 
-                  <div className="form-group col-lg-4">
-                    <input
-                      type="text"
-                      className="form-control"
-                      id="inputCity"
-                    />
-                  </div>
-                  <div className="form-group col-lg-4">
-                    <input type="text" className="form-control" id="inputZip" />
-                  </div>
-                </div>
-
+                {/* rooms in each floor */}
+                <label className="font-weight-bold">Rooms in Each Floor:</label>
                 <div className="row">
                   <div className="form-group col-lg-2">
                     <p>Bedroom:</p>
                   </div>
 
-                  <div className="form-group col-lg-4">
+                  <div className="form-group col-lg-6">
                     <div className="form-check form-check-inline">
                       <input
                         className="form-check-input"
                         type="radio"
                         name="inlineRadioOptions"
                         id="inlineRadio1"
-                        value="1"
+                        value="1 Room"
                       />
                       <label className="form-check-label" for="inlineRadio1">
-                        1
+                        1 Room
                       </label>
                     </div>
                     <div className="form-check form-check-inline">
@@ -200,10 +180,10 @@ export default function DHouse() {
                         type="radio"
                         name="inlineRadioOptions"
                         id="inlineRadio2"
-                        value="2"
+                        value="2 Rooms"
                       />
                       <label className="form-check-label" for="inlineRadio2">
-                        2
+                        2 Rooms
                       </label>
                     </div>
                     <div className="form-check form-check-inline">
@@ -212,17 +192,83 @@ export default function DHouse() {
                         type="radio"
                         name="inlineRadioOptions"
                         id="inlineRadio3"
-                        value="2+"
+                        value="3 Rooms"
                       />
                       <label className="form-check-label" for="inlineRadio3">
-                        2+
+                        3 Rooms
                       </label>
                     </div>
                   </div>
                 </div>
+                {/* kitchen */}
+                <div className="row">
+                  <div className="form-group col-lg-2">
+                    <p>Kitchen:</p>
+                  </div>
 
-                <label className="mb-2">Parking Area</label>
-                <div className="form-group col-lg-8">
+                  <div className="form-group col-lg-6">
+                    <div className="form-check form-check-inline">
+                      <input
+                        className="form-check-input"
+                        type="radio"
+                        name="inlineRadioOptions"
+                        id="inlineRadio1"
+                        value="Only 1"
+                      />
+                      <label className="form-check-label" for="inlineRadio1">
+                        Only 1
+                      </label>
+                    </div>
+                    <div className="form-check form-check-inline">
+                      <input
+                        className="form-check-input"
+                        type="radio"
+                        name="inlineRadioOptions"
+                        id="inlineRadio2"
+                        value="1 Each Floor"
+                      />
+                      <label className="form-check-label" for="inlineRadio2">
+                        1 Each Floor
+                      </label>
+                    </div>
+                  </div>
+                </div>
+                {/* bathroom */}
+                <div className="row">
+                  <div className="form-group col-lg-2">
+                    <p>Bathroom:</p>
+                  </div>
+
+                  <div className="form-group col-lg-6">
+                    <div className="form-check form-check-inline">
+                      <input
+                        className="form-check-input"
+                        type="radio"
+                        name="inlineRadioOptions"
+                        id="inlineRadio1"
+                        value="Only 1"
+                      />
+                      <label className="form-check-label" for="inlineRadio1">
+                        Only 1
+                      </label>
+                    </div>
+                    <div className="form-check form-check-inline">
+                      <input
+                        className="form-check-input"
+                        type="radio"
+                        name="inlineRadioOptions"
+                        id="inlineRadio2"
+                        value="1 Each Floor"
+                      />
+                      <label className="form-check-label" for="inlineRadio2">
+                        1 Each Floor
+                      </label>
+                    </div>
+                  </div>
+                </div>
+                {/* parking */}
+                <label className="font-weight-bold">Parking Area</label>
+                <div className="form-group col-lg-8 mb-3">
                   <div className="form-check form-check-inline">
                     <input
                       className="form-check-input"
@@ -272,7 +318,50 @@ export default function DHouse() {
                     </label>
                   </div>
                 </div>
+                {/* Tell us more */}
+                <div className="row mb-3">
+                  <div className="form-group col-lg-4">
+                    <p className="font-weight-bold">Tell Us More:</p>
+                  </div>
 
+                  <div className="form-group col-lg-6">
+                    <textarea
+                      class="form-control"
+                      id="exampleFormControlTextarea1"
+                      rows="3"
+                    ></textarea>
+                  </div>
+                </div>
+                {/* fullname */}
+                <div className="row mb-3">
+                  <div className="form-group col-lg-4">
+                    <p className="font-weight-bold">Full Name: </p>
+                  </div>
+
+                  <div className="form-group col-lg-4">
+                    <input type="text" className="form-control" />
+                  </div>
+                </div>
+                {/* phone no */}
+                <div className="row mb-3">
+                  <div className="form-group col-lg-4">
+                    <p className="font-weight-bold">Phone Number: </p>
+                  </div>
+
+                  <div className="form-group col-lg-4">
+                    <input type="text" className="form-control" />
+                  </div>
+                </div>
+                {/* budget */}
+                <div className="row">
+                  <div className="form-group col-lg-4">
+                    <p className="font-weight-bold">Budget (in Rs):</p>
+                  </div>
+
+                  <div className="form-group col-lg-4">
+                    <input type="text" className="form-control" />
+                  </div>
+                </div>
                 <button
                   type="button"
                   className="btn btn-lg btn-primary mt-4 btnbuilt shadow"
