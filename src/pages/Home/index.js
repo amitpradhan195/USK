@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 
 import "../../css/style.css";
 import Card from "../../components/Card";
@@ -9,6 +9,9 @@ import HomeSlider from "../../components/HomeSlider";
 import DreamModal from "../../components/DreamHouse";
 
 export default function Home() {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   return (
     <>
       <HomeSlider></HomeSlider>

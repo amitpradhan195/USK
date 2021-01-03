@@ -21,6 +21,9 @@ import { FaParking } from "react-icons/fa";
 import mapimage from "../../assets/office.PNG";
 
 export default function Details() {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   const [activeStatues, setActiveStatus] = useState(false);
 
   let thumbnails = document.getElementsByClassName("thumbnail");

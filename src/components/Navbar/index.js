@@ -1,7 +1,8 @@
 import React from "react";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { NavLink } from "react-router-dom";
 import Requirements from "../../components/Requirements";
+import Career from "../../components/Career";
 
 import "../../css/style.css";
 
@@ -9,7 +10,7 @@ export default function Navbar() {
   const [navbar, setNavbar] = useState(false);
 
   const changeBg = () => {
-    if (window.scrollY > 400) {
+    if (window.scrollY > 220) {
       setNavbar(true);
     } else {
       setNavbar(false);
@@ -21,6 +22,7 @@ export default function Navbar() {
   return (
     <>
       <Requirements></Requirements>
+      <Career></Career>
       <nav
         className={
           navbar
@@ -61,7 +63,7 @@ export default function Navbar() {
                   activeClassName="menu_active"
                   exact
                   className="nav-link"
-                  to="#"
+                  to="/finance"
                 >
                   Finance
                 </NavLink>
@@ -85,6 +87,8 @@ export default function Navbar() {
                   activeClassName="menu_active"
                   exact
                   className="nav-link"
+                  data-toggle="modal"
+                  data-target="#exampleModal2"
                   to="#"
                 >
                   Career

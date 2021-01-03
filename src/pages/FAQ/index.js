@@ -1,9 +1,12 @@
-import React from "react";
+import React, { useEffect } from "react";
 import "../../css/style.css";
 import FaqCard from "../../components/FAQCard";
 import FaqData from "../../data/Faqdata";
 
-export default function index() {
+export default function Faq() {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   return (
     <>
       <div>

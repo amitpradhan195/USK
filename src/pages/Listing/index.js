@@ -1,13 +1,14 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { NavLink } from "react-router-dom";
 
 import "../../css/style.css";
 import CData from "../../data/Listings";
 import Card from "../../components/Card";
-// import Btn from "../../components/ListingBtn";
-// import BtnData from "../../data/Listingbtn";
 
-export default function index() {
+export default function Listing() {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   return (
     <>
       <section className="details-banner">
@@ -21,66 +22,39 @@ export default function index() {
           <div className="row">
             <div className="col-10 mx-auto">
               <div className="row gy-5">
-                <div className="col-lg-6 order-1">
-                  <NavLink
-                    type="button"
-                    className="btn btn-lg btn-block text-light shadow mt-3 viewdetails"
-                    to="/details"
-                  >
-                    Sale
-                  </NavLink>
-                </div>
-                <div className="col-lg-6 order-2">
-                  <NavLink
-                    type="button"
-                    className="btn btn-lg btn-block text-light shadow mt-3 viewdetails"
-                    to="/details"
-                  >
-                    Rent
-                  </NavLink>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div className="row">
-            <div className="col-10 mx-auto">
-              <div className="row gy-5">
-                <div className="col-lg-3 order-1">
-                  <NavLink
-                    type="button"
-                    className="btn btn-lg btn-block text-light shadow mt-3 viewdetails btnblue"
-                    to="/details"
-                  >
-                    Land
-                  </NavLink>
-                </div>
-                <div className="col-lg-3 order-1">
-                  <NavLink
-                    type="button"
-                    className="btn btn-lg btn-block text-light shadow mt-3 viewdetails btnblue"
-                    to="/details"
-                  >
-                    Flat
-                  </NavLink>
-                </div>
-                <div className="col-lg-3 order-1">
-                  <NavLink
-                    type="button"
-                    className="btn btn-lg btn-block text-light shadow mt-3 viewdetails btndark"
-                    to="/details"
-                  >
-                    Bulding
-                  </NavLink>
-                </div>
-                <div className="col-lg-3 order-1">
-                  <NavLink
-                    type="button"
-                    className="btn btn-lg btn-block text-light shadow mt-3 viewdetails btndark"
-                    to="/details"
-                  >
-                    Commercial
-                  </NavLink>
-                </div>
+                <ul class="nav">
+                  <li class="nav-item bg-light">
+                    <form class="form-inline">
+                      <div class="form-group">
+                        <select class="custom-select form-control">
+                          <option selected>Popular</option>
+                          <option value="1">Sale</option>
+                          <option value="2">Rent</option>
+                        </select>
+                      </div>
+                    </form>
+                  </li>
+                  <li class="nav-item bg-light">
+                    <a class="nav-link bg-light text-dark" href="#">
+                      Land
+                    </a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link bg-light text-dark" href="#">
+                      Flat
+                    </a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link bg-light text-dark" href="#">
+                      Bulding
+                    </a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link bg-light text-dark" href="#">
+                      Commercial
+                    </a>
+                  </li>
+                </ul>
               </div>
             </div>
           </div>

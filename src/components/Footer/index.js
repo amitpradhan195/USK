@@ -7,6 +7,7 @@ import { IconContext } from "react-icons";
 import { FaFacebook } from "react-icons/fa";
 import { FaInstagram } from "react-icons/fa";
 import { FaLinkedinIn } from "react-icons/fa";
+import { FaTwitter } from "react-icons/fa";
 import { VscDebugBreakpointLog } from "react-icons/vsc";
 
 import { Map, InfoWindow, Marker, GoogleApiWrapper } from "google-maps-react";
@@ -109,6 +110,16 @@ export default function Footer() {
                       <FaLinkedinIn className="mr-2" />
                     </IconContext.Provider>
                     LinkedIn
+                  </NavLink>
+                </li>
+                <li className="pb-3">
+                  <NavLink to="#!">
+                    <IconContext.Provider
+                      value={{ color: "#1C9CEA", size: "25px" }}
+                    >
+                      <FaTwitter className="mr-2" />
+                    </IconContext.Provider>
+                    Twitter
                   </NavLink>
                 </li>
               </ul>
