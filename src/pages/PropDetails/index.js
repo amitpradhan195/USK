@@ -207,8 +207,10 @@ export default function Details() {
               </p>
             </div>
           </section>
+          {/* reactplayer  */}
           <section className="propertyVideo pb-5">
             <ReactPlayer
+              width="auto"
               controls
               url="https://www.youtube.com/watch?v=M5hQ5KOOOoc"
             />
