@@ -241,7 +241,7 @@
 }
 
 .footer .map-image {
-  width: 100%;
+  width: 90%;
   border-radius: 16px;
 }
 
@@ -518,6 +518,7 @@
   background-color: aliceblue;
   width: 284px;
   margin: 20px;
+  cursor: pointer;
   overflow: hidden;
   -webkit-box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
           box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);

@@ -40,7 +40,7 @@ export default function Footer() {
               <h6>Mail: moysti@gmail.com</h6>
             </div>
 
-            <div className="col-lg-3 col-md-6 mb-4 mb-md-0 pl-5">
+            <div className="col-lg-3 col-md-6 mb-4 mb-md-0">
               <ul className="list-unstyled mb-0">
                 <li>
                   <NavLink to="/about" className="a">
