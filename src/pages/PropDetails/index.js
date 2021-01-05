@@ -1,4 +1,4 @@
-import React, { useEffect, useState, classList } from "react";
+import React, { useEffect, useState } from "react";
 import "../../css/style.css";
 import slider1 from "../../assets/s1.jpg";
 import slider2 from "../../assets/s2.jpg";
@@ -19,6 +19,7 @@ import { FaWifi } from "react-icons/fa";
 import { FaLightbulb } from "react-icons/fa";
 import { FaParking } from "react-icons/fa";
 import mapimage from "../../assets/office.PNG";
+import ReactPlayer from "react-player";
 
 export default function Details() {
   useEffect(() => {
@@ -191,7 +192,7 @@ export default function Details() {
             </div>
           </section>
           {/* property information */}
-          <section className="propertyInformation pb-4">
+          <section className="propertyInformation pb-2">
             <div className="propertyInformation-container">
               <h4>More Information</h4>
               <p className="text-justify">
@@ -205,6 +206,12 @@ export default function Details() {
                 Pellentesque dui dui, auctor ut diam at, egestas vehicula metus.
               </p>
             </div>
+          </section>
+          <section className="propertyVideo pb-5">
+            <ReactPlayer
+              controls
+              url="https://www.youtube.com/watch?v=M5hQ5KOOOoc"
+            />
           </section>
           {/* map information */}
           <section className="mapInformation pb-5">
