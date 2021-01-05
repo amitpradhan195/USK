@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from "react";
 import "../../css/style.css";
-import slider1 from "../../assets/s1.jpg";
 import slider2 from "../../assets/s2.jpg";
 import slider3 from "../../assets/s3.jpg";
 import slider4 from "../../assets/s4.jpg";
@@ -61,7 +60,7 @@ export default function Details() {
                   <div className="order-1 order-lg-1 track">
                     <ul>
                       <li id="slide1">
-                        <img src={slider1} alt="slider_image" />
+                        <img src={slider3} alt="slider_image" />
                       </li>
                       <li id="slide2">
                         <img src={slider2} alt="slider_image" />
@@ -75,11 +74,14 @@ export default function Details() {
                       <li id="slide5">
                         <img src={slider5} alt="slider_image" />
                       </li>
+                      <li id="slide6">
+                        <img src={slider4} alt="slider_image" />
+                      </li>
                     </ul>
                   </div>
                   <div className="order-2 order-lg-2 slides">
                     <a href="#slide1">
-                      <img src={slider1} alt="slider_image" />
+                      <img src={slider3} alt="slider_image" />
                     </a>
                     <a href="#slide2">
                       <img src={slider2} alt="slider_image" />
@@ -92,6 +94,9 @@ export default function Details() {
                     </a>
                     <a href="#slide5">
                       <img src={slider5} alt="slider_image" />
+                    </a>
+                    <a href="#slide6">
+                      <img src={slider4} alt="slider_image" />
                     </a>
                   </div>
                 </div>
