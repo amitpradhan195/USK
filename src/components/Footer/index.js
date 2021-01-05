@@ -68,7 +68,12 @@ export default function Footer() {
                   </NavLink>
                 </li>
                 <li>
-                  <NavLink to="#!" className="a">
+                  <NavLink
+                    className="a"
+                    data-toggle="modal"
+                    data-target="#exampleModal2"
+                    to="#"
+                  >
                     <IconContext.Provider value={{ color: "#F54D53" }}>
                       <VscDebugBreakpointLog className="mr-2" />
                     </IconContext.Provider>
