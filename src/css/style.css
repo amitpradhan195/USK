@@ -149,10 +149,10 @@
 
 .carousel-caption h1 {
   /* Firefox */
-  -webkit-animation: cssAnimation 0s ease-in 5s forwards;
+  -webkit-animation: cssAnimation 0s ease-in 2.5s forwards;
   /* Safari and Chrome */
   /* Opera */
-  animation: cssAnimation 0s ease-in 5s forwards;
+  animation: cssAnimation 0s ease-in 2.5s forwards;
   -webkit-animation-fill-mode: forwards;
   animation-fill-mode: forwards;
   -webkit-transition: all 0.1s ease;

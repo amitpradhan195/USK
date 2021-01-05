@@ -10,7 +10,7 @@ export default function HomeSlider() {
   useEffect(() => {
     setTimeout(() => {
       setisHide(false);
-    }, 5000);
+    }, 2000);
   }, []);
 
   return (
@@ -19,6 +19,7 @@ export default function HomeSlider() {
         className="carousel slide"
         data-ride="carousel"
         id="carouselExampleIndicators"
+        data-interval="3000"
       >
         <ol className="carousel-indicators">
           <li
