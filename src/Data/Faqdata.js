@@ -1,28 +1,28 @@
 const Faqdata = [
   {
-    questions: "What is USK.com?",
+    questions: "What is USK.com ?",
     ans:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam felis urna,vehicula sit amet ligula vel, cursus viverra erat. In in nunc non odio dapibus maximus id id nibh. Maecenas vitae ipsum dictum, bibendum purus sed, blandit ligula. Donec quis mauris diam. Aenean ligula augue, cursus ut sollicitudin quis, tincidunt et velit.",
+      "USK.com is a web portal, which gives rental solution online. In USK.com we can buy or rent property.",
   },
   {
-    questions: "Why do I choose USK for Rent?",
+    questions: "Why do I choose USK for Rent ?",
     ans:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam felis urna, vehicula sit amet ligula vel, cursus viverra erat. In in nunc non odio dapibus maximus id id nibh. Maecenas vitae ipsum dictum, bibendum purus sed, blandit ligula. Donec quis mauris diam. Aenean ligula augue, cursus ut sollicitudin quis, tincidunt et velit.",
-  },
-  {
-    questions: "Why do I choose USK for BUY ?",
-    ans:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam felis urna, vehicula sit amet ligula vel, cursus viverra erat. In in nunc non odio dapibus maximus id id nibh. Maecenas vitae ipsum dictum, bibendum purus sed, blandit ligula. Donec quis mauris diam. Aenean ligula augue, cursus ut sollicitudin quis, tincidunt et velit.",
-  },
-  {
-    questions: "How buy prpcess work ?",
-    ans:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam felis urna, vehicula sit amet ligula vel, cursus viverra erat. In in nunc non odio dapibus maximus id id nibh. Maecenas vitae ipsum dictum, bibendum purus sed, blandit ligula. Donec quis mauris diam. Aenean ligula augue, cursus ut sollicitudin quis, tincidunt et velit.",
+      " USK.com  is nation’s leading online rental solution. Till date we have provided fruitful servicesto more than 1000 plus people at the very short period of time. USK.com offers tenants to set preferences as per the required location, budget, etc. criteria. So, choose USK.com to find the right property at the right time..",
   },
   {
     questions: "Why do I choose USK for BUY ?",
     ans:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam felis urna, vehicula sit amet ligula vel, cursus viverra erat. In in nunc non odio dapibus maximus id id nibh. Maecenas vitae ipsum dictum, bibendum purus sed, blandit ligula. Donec quis mauris diam. Aenean ligula augue, cursus ut sollicitudin quis, tincidunt et velit.",
+      " USK.com is nation’s leading online real estate solution provider. Varieties of properties are listed in USK.com, which offers buyers to get profitable deal. So you can choose USK.com to select right property for deal",
+  },
+  {
+    questions: "How buy process work ?",
+    ans:
+      "Buyers will search the property in USK.com and they apply for the property. Our representative will coordinate for field visit. Finally buyer and owner will deal for sale.",
+  },
+  {
+    questions: "How rent process work ?",
+    ans:
+      "Tenants will search the property in USK.com and they apply for the property. Our representative will coordinate for field visit. Finally tenant and owner will deal for rent.",
   },
 ];
 

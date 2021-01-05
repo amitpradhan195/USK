@@ -43,7 +43,7 @@ export default function Footer() {
             <div class="col-lg-3 col-md-6 mb-4 mb-md-0 pl-5">
               <ul className="list-unstyled mb-0">
                 <li>
-                  <NavLink to="#!" className="a">
+                  <NavLink to="/about" className="a">
                     <h4>About Us</h4>
                   </NavLink>
                 </li>
