@@ -22,37 +22,41 @@ export default function Listing() {
           <div className="row">
             <div className="col-10 mx-auto">
               <div className="row gy-5">
-                <ul class="nav">
-                  <li class="nav-item bg-light">
-                    <form class="form-inline">
-                      <div class="form-group">
-                        <select class="custom-select form-control">
+                <ul className="nav">
+                  <li className="nav-item bg-light">
+                    <form className="form-inline">
+                      <div className="form-group">
+                        <select className="custom-select form-control">
                           <option selected>Popular</option>
-                          <option value="1">Sale</option>
-                          <option value="2">Rent</option>
+                          <option value="1" to="#!">
+                            Sale
+                          </option>
+                          <option value="2" to="#!">
+                            Rent
+                          </option>
                         </select>
                       </div>
                     </form>
                   </li>
-                  <li class="nav-item bg-light">
-                    <a class="nav-link bg-light text-dark" href="#">
+                  <li className="nav-item bg-light">
+                    <NavLink className="nav-link bg-light text-dark" to="#!">
                       Land
-                    </a>
+                    </NavLink>
                   </li>
-                  <li class="nav-item">
-                    <a class="nav-link bg-light text-dark" href="#">
+                  <li className="nav-item">
+                    <NavLink className="nav-link bg-light text-dark" to="#!">
                       Flat
-                    </a>
+                    </NavLink>
                   </li>
-                  <li class="nav-item">
-                    <a class="nav-link bg-light text-dark" href="#">
+                  <li className="nav-item">
+                    <NavLink className="nav-link bg-light text-dark" to="#!">
                       Bulding
-                    </a>
+                    </NavLink>
                   </li>
-                  <li class="nav-item">
-                    <a class="nav-link bg-light text-dark" href="#">
+                  <li className="nav-item">
+                    <NavLink className="nav-link bg-light text-dark" to="#!">
                       Commercial
-                    </a>
+                    </NavLink>
                   </li>
                 </ul>
               </div>

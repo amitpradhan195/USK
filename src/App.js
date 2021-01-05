@@ -1,7 +1,7 @@
 import React from "react";
 import { Redirect, Route, Switch } from "react-router-dom";
 import "../node_modules/bootstrap/dist/css/bootstrap.min.css";
-import "../node_modules/bootstrap/dist/js/bootstrap.bundle.js";
+import "bootstrap/dist/js/bootstrap.bundle";
 import "boxicons";
 
 import Navbar from "./components/Navbar";
@@ -24,7 +24,6 @@ export default function App() {
         <Route exact path="/faq" component={Faq} />
         <Route exact path="/finance" component={Finance} />
         <Route exact path="/about" component={About} />
-        // redirect to home if the url is messed up
         <Redirect to="/" />
       </Switch>
       <Footer />

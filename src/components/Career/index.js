@@ -17,14 +17,17 @@ export default function CareerModal() {
               <form className="p-5 was-validated">
                 {/* upload */}
                 <label className="mb-2">Send Your CV:</label>
-                <div class="custom-file">
+                <div className="custom-file">
                   <input
                     type="file"
-                    class="custom-file-input"
+                    className="custom-file-input"
                     id="validatedCustomFile"
                     required
                   />
-                  <label class="custom-file-label" for="validatedCustomFile">
+                  <label
+                    className="custom-file-label"
+                    for="validatedCustomFile"
+                  >
                     Choose file...
                   </label>
                 </div>

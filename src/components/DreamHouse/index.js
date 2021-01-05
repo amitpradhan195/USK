@@ -94,9 +94,9 @@ export default function DHouse() {
                 </div>
                 {/* select location */}
 
-                <div class="form-group col-md-6 mb-3">
+                <div className="form-group col-md-6 mb-3">
                   <label className="font-weight-bold">Select Location:</label>
-                  <select id="inputState" class="form-control">
+                  <select id="inputState" className="form-control">
                     <option selected>Choose...</option>
                     <option>...</option>
                   </select>
@@ -326,7 +326,7 @@ export default function DHouse() {
 
                   <div className="form-group col-lg-6">
                     <textarea
-                      class="form-control"
+                      className="form-control"
                       id="exampleFormControlTextarea1"
                       rows="3"
                     ></textarea>

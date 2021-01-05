@@ -68,13 +68,6 @@ export default function Home() {
       {/* build your home */}
       <div className="d-flex justify-content-center flex-column align-items-center pb-5 pt-5 ">
         <h4 className="heading-text">Do you want to built your home ?</h4>
-        {/* <NavLink
-          type="button"
-          className="btn btn-lg btn-primary mt-3 btnbuilt shadow"
-          to="#"
-        >
-          Click Here
-        </NavLink> */}
         <DreamModal></DreamModal>
       </div>
 
