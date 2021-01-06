@@ -206,6 +206,13 @@
   width: 100%;
 }
 
+.card .card-body img:hover {
+  -webkit-transform: scale(1.06);
+          transform: scale(1.06);
+  -webkit-transition: 1s;
+  transition: 1s;
+}
+
 .card .card-body .icon {
   padding: 0 2px 0 0;
 }

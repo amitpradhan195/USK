@@ -16,7 +16,7 @@ import { Map, InfoWindow, Marker, GoogleApiWrapper } from "google-maps-react";
 export default function Footer() {
   return (
     <>
-      <footer className="text-lg-start footer mt-4 pt-1 pb-3">
+      <footer className="text-lg-start footer mt-4 pt-1 pb-1">
         <div className="container p-4">
           <div className="row">
             <div className="col-lg-3 col-md-6 mb-4 mb-md-0">
@@ -131,6 +131,9 @@ export default function Footer() {
             </div>
           </div>
         </div>
+        <p class="copyright text-center">
+          All right reserved | USK Estate &copy; {new Date().getFullYear()}
+        </p>
       </footer>
     </>
   );

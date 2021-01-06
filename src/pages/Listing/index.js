@@ -4,6 +4,7 @@ import { NavLink } from "react-router-dom";
 import "../../css/style.css";
 import CData from "../../data/Listings";
 import Card from "../../components/Card";
+import { BiDownArrow } from "react-icons/bi";
 
 export default function Listing() {
   useEffect(() => {
@@ -27,7 +28,11 @@ export default function Listing() {
                     <form className="form-inline">
                       <div className="form-group">
                         <select className="custom-select form-control">
-                          <option selected>Popular</option>
+                          <BiDownArrow />
+
+                          <option selected disabled>
+                            Select &nabla;
+                          </option>
                           <option value="1" to="#!">
                             Sale
                           </option>

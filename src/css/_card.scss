@@ -7,6 +7,10 @@
     img {
       border-radius: 14px;
       width: 100%;
+      &:hover {
+        transform: scale(1.06);
+        transition: 1s;
+      }
     }
     .icon {
       padding: 0 2px 0 0;
