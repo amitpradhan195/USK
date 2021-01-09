@@ -44,7 +44,7 @@ export default function Home() {
         <h4 className="text-center heading-text" data-aos="fade-down">
           Featured Properties
         </h4>
-        <div className="featured-title"></div>
+        <div className="featured-title" data-aos="fade-right"></div>
       </section>
 
       {/* featured card */}
@@ -75,7 +75,9 @@ export default function Home() {
 
       {/* build your home */}
       <div className="d-flex justify-content-center flex-column align-items-center pb-5 pt-5 ">
-        <h4 className="heading-text">Do you want to built your home ?</h4>
+        <h4 className="heading-text" data-aos="fade-down">
+          Do you want to built your home ?
+        </h4>
         <DreamModal></DreamModal>
       </div>
 

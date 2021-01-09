@@ -5,7 +5,7 @@ import "../../css/style.css";
 export default function FinanceCard(props) {
   return (
     <>
-      <div className="card">
+      <div className="card" data-aos="fade-down">
         <NavLink to="/finance">
           <div className="imgBx">
             <img src={props.imgsrc} alt={props.imgsrc}></img>

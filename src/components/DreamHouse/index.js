@@ -26,6 +26,7 @@ export default function DHouse() {
   return (
     <>
       <button
+        data-aos="fade-right"
         type="button"
         className="btn btn-lg btn-primary mt-3 btnbuilt shadow"
         data-toggle="modal"
