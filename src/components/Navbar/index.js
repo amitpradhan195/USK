@@ -35,7 +35,7 @@ export default function Navbar() {
             LOGO
           </NavLink>
           <button
-            className="navbar-toggler navbar-toggler-light ml-auto "
+            className="navbar-toggler collapsed navbar-toggler-light ml-auto "
             type="button"
             data-toggle="collapse"
             data-target="#navbarSupportedContent"

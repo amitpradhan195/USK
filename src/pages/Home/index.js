@@ -7,6 +7,9 @@ import { NavLink } from "react-router-dom";
 import Finance from "../../components/Finance";
 import HomeSlider from "../../components/HomeSlider";
 import DreamModal from "../../components/DreamHouse";
+import home1 from "../../assets/home1.png";
+import home2 from "../../assets/home2.png";
+
 import AOS from "aos";
 // import "aos/dist/aos.css";
 
@@ -75,10 +78,23 @@ export default function Home() {
       </div>
 
       {/* build your home */}
-      <div className="d-flex justify-content-center flex-column align-items-center pb-5 pt-5 ">
+      <div className="d-flex justify-content-center flex-column align-items-center pb-5 pt-5 buildHouse">
         <h4 className="heading-text" data-aos="fade-down">
           Do you want to built your home ?
         </h4>
+        <img
+          className="mt-2"
+          src={home1}
+          alt="home picture"
+          data-aos="fade-down"
+        />
+        <img
+          className="mb-2"
+          src={home2}
+          alt="home picture"
+          data-aos="fade-up"
+        />
+
         <DreamModal></DreamModal>
       </div>
 

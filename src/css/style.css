@@ -196,6 +196,11 @@
   color: #ffffff;
 }
 
+.buildHouse img {
+  width: 200px !important;
+  height: 100 !important;
+}
+
 .card {
   border: none;
   border-radius: 14px;
