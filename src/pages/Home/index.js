@@ -7,10 +7,16 @@ import { NavLink } from "react-router-dom";
 import Finance from "../../components/Finance";
 import HomeSlider from "../../components/HomeSlider";
 import DreamModal from "../../components/DreamHouse";
+import AOS from "aos";
+// import "aos/dist/aos.css";
 
 export default function Home() {
   useEffect(() => {
     window.scrollTo(0, 0);
+    AOS.init({
+      duration: 1000,
+      anchorPlacement: "top-bottom",
+    });
   }, []);
   return (
     <>
@@ -35,7 +41,9 @@ export default function Home() {
 
       {/* featured */}
       <section className="featured-container pt-5 mb-5">
-        <h4 className="text-center heading-text">Featured Properties</h4>
+        <h4 className="text-center heading-text" data-aos="fade-down">
+          Featured Properties
+        </h4>
         <div className="featured-title"></div>
       </section>
 
