@@ -45,24 +45,6 @@ export default function DHouse() {
           <div className="modal-content">
             <div className="modal-body">
               <h4 className="text-center">Build Your Dream House</h4>
-              {/* <Formik>
-                {(formik) => {
-                  return (
-                    <Form>
-                      <Field
-                        component={TextField}
-                        label="Full Name"
-                        name="name"
-                        type="text"
-                        variant="outlined"
-                        margin="normal"
-                        fullWidth
-                        autoFocus
-                      />
-                    </Form>
-                  );
-                }}
-              </Formik> */}
               <form className="p-5">
                 <label className="mb-2 font-weight-bold">
                   Select Your House Type:
@@ -72,9 +54,10 @@ export default function DHouse() {
                     <input
                       className="form-check-input"
                       type="radio"
-                      name="inlineRadioOptions"
+                      name="ht"
                       id="inlineRadio2"
                       value="Townhouse"
+                      checked
                     />
                     <label className="form-check-label" for="inlineRadio2">
                       Townhouse
@@ -84,7 +67,7 @@ export default function DHouse() {
                     <input
                       className="form-check-input"
                       type="radio"
-                      name="inlineRadioOptions"
+                      name="ht"
                       id="inlineRadio3"
                       value="Commercial"
                     />
@@ -109,9 +92,10 @@ export default function DHouse() {
                     <input
                       className="form-check-input"
                       type="radio"
-                      name="inlineRadioOptions"
+                      name="Area Coverage"
                       id="inlineRadio1"
                       value="3 Aana"
+                      checked
                     />
                     <label className="form-check-label" for="inlineRadio1">
                       3 Aana
@@ -121,7 +105,7 @@ export default function DHouse() {
                     <input
                       className="form-check-input"
                       type="radio"
-                      name="inlineRadioOptions"
+                      name="Area Coverage"
                       id="inlineRadio2"
                       value="4 Aana"
                     />
@@ -133,7 +117,7 @@ export default function DHouse() {
                     <input
                       className="form-check-input"
                       type="radio"
-                      name="inlineRadioOptions"
+                      name="Area Coverage"
                       id="inlineRadio3"
                       value="6 Aana"
                     />
@@ -145,7 +129,7 @@ export default function DHouse() {
                     <input
                       className="form-check-input"
                       type="radio"
-                      name="inlineRadioOptions"
+                      name="Area Coverage"
                       id="inlineRadio3"
                       value="More"
                     />
@@ -167,9 +151,10 @@ export default function DHouse() {
                       <input
                         className="form-check-input"
                         type="radio"
-                        name="inlineRadioOptions"
+                        name="Bedroom"
                         id="inlineRadio1"
                         value="1 Room"
+                        checked
                       />
                       <label className="form-check-label" for="inlineRadio1">
                         1 Room
@@ -179,7 +164,7 @@ export default function DHouse() {
                       <input
                         className="form-check-input"
                         type="radio"
-                        name="inlineRadioOptions"
+                        name="Bedroom"
                         id="inlineRadio2"
                         value="2 Rooms"
                       />
@@ -191,7 +176,7 @@ export default function DHouse() {
                       <input
                         className="form-check-input"
                         type="radio"
-                        name="inlineRadioOptions"
+                        name="Bedroom"
                         id="inlineRadio3"
                         value="3 Rooms"
                       />
@@ -212,9 +197,10 @@ export default function DHouse() {
                       <input
                         className="form-check-input"
                         type="radio"
-                        name="inlineRadioOptions"
+                        name="Kitchen"
                         id="inlineRadio1"
                         value="Only 1"
+                        checked
                       />
                       <label className="form-check-label" for="inlineRadio1">
                         Only 1
@@ -224,7 +210,7 @@ export default function DHouse() {
                       <input
                         className="form-check-input"
                         type="radio"
-                        name="inlineRadioOptions"
+                        name="Kitchen"
                         id="inlineRadio2"
                         value="1 Each Floor"
                       />
@@ -245,9 +231,10 @@ export default function DHouse() {
                       <input
                         className="form-check-input"
                         type="radio"
-                        name="inlineRadioOptions"
+                        name="Bathroom"
                         id="inlineRadio1"
                         value="Only 1"
+                        checked
                       />
                       <label className="form-check-label" for="inlineRadio1">
                         Only 1
@@ -257,7 +244,7 @@ export default function DHouse() {
                       <input
                         className="form-check-input"
                         type="radio"
-                        name="inlineRadioOptions"
+                        name="Bathroom"
                         id="inlineRadio2"
                         value="1 Each Floor"
                       />
@@ -274,9 +261,10 @@ export default function DHouse() {
                     <input
                       className="form-check-input"
                       type="radio"
-                      name="inlineRadioOptions"
+                      name="Parking Area"
                       id="inlineRadio1"
                       value="Bike Only"
+                      checked
                     />
                     <label className="form-check-label" for="inlineRadio1">
                       Bike Only
@@ -286,7 +274,7 @@ export default function DHouse() {
                     <input
                       className="form-check-input"
                       type="radio"
-                      name="inlineRadioOptions"
+                      name="Parking Area"
                       id="inlineRadio2"
                       value="Car Only"
                     />
@@ -298,7 +286,7 @@ export default function DHouse() {
                     <input
                       className="form-check-input"
                       type="radio"
-                      name="inlineRadioOptions"
+                      name="Parking Area"
                       id="inlineRadio3"
                       value="Both"
                     />
@@ -310,7 +298,7 @@ export default function DHouse() {
                     <input
                       className="form-check-input"
                       type="radio"
-                      name="inlineRadioOptions"
+                      name="Parking Area"
                       id="inlineRadio3"
                       value="None"
                     />
