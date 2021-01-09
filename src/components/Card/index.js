@@ -69,7 +69,7 @@ export default function Card(props) {
               <NavLink
                 type="button"
                 className="btn btn-lg btn-block shadow mt-3 viewdetails"
-                to="/details"
+                to={"/details/" + props.id}
               >
                 View Details
               </NavLink>

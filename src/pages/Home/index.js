@@ -56,6 +56,7 @@ export default function Home() {
                 return (
                   <Card
                     key={indno}
+                    id={value.id}
                     imgsrc={value.imgsrc}
                     tag={value.tag}
                     css={value.css}

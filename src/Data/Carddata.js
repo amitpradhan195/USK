@@ -4,6 +4,7 @@ import prop3 from "../assets/slider3.jpg";
 
 const Carddata = [
   {
+    id: 1,
     imgsrc: prop1,
     tag: "For Sell",
     css: { background: "#e94646" },
@@ -15,6 +16,7 @@ const Carddata = [
     contact: 9685214537,
   },
   {
+    id: 2,
     imgsrc: prop2,
     tag: "For Rent",
     css: { background: "#34b849" },
@@ -26,6 +28,7 @@ const Carddata = [
     contact: 9685742135,
   },
   {
+    id: 3,
     imgsrc: prop3,
     tag: "For Rent",
     css: { background: "#34b849" },

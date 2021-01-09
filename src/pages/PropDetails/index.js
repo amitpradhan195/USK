@@ -20,29 +20,13 @@ import { FaParking } from "react-icons/fa";
 import mapimage from "../../assets/office.PNG";
 import ReactPlayer from "react-player";
 
-export default function Details() {
+export default function Details(props) {
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
-  const [activeStatues, setActiveStatus] = useState(false);
 
-  let thumbnails = document.getElementsByClassName("thumbnail");
-  let activepic = document.getElementsByClassName("activepic");
-
-  // const selectPic = () => {
-  //   for (var i = 0; i < thumbnails.length; i++) {
-  //     console.log(activepic);
-  //     if (activepic.length > 0) {
-  //       activepic[0].classList.remove("activepic");
-  //     }
-
-  //     this.classList.add("activepic");
-  //     document.getElementsByClassName("featured").src = this.src;
-  //   }
-  // };
-
-  // window.addEventListener("mouseover", selectPic);
-
+  const pID = props.match.params.id;
+  console.log(pID);
   return (
     <IconContext.Provider value={{ color: "#707070", size: "25px" }}>
       <>
@@ -108,7 +92,7 @@ export default function Details() {
             <div className="contact-info-container pb-3">
               <div className="row">
                 <div className="col-md-7 order-1 order-lg-1">
-                  <h2 className="text-uppercase">4-Bhk House</h2>
+                  <h2 className="text-uppercase">{pID.prop}</h2>
                   <p>
                     <span className="icon pr-1">
                       <MdLocationOn />

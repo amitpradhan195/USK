@@ -13,7 +13,7 @@
 // }
 
 .accordion-item {
-  background-color: #263042;
+  background-color: #757780;
   border-radius: 0.4rem;
   margin-bottom: 1rem;
   padding: 1rem;
@@ -22,7 +22,7 @@
     font-size: 1.6rem;
     color: rgba(255, 255, 255, 0.8);
     text-decoration: none;
-    background-color: #283042;
+    background-color: #757780;
     width: 100%;
     display: flex;
     align-items: center;
@@ -33,7 +33,7 @@
     max-height: 0;
     overflow: hidden;
     position: relative;
-    background-color: #212838;
+    background-color: #57595f;
     transition: max-height 650ms;
     &::before {
       content: "";
@@ -47,7 +47,10 @@
     }
   }
 }
-
+.accordion-item h5 {
+  color: #f9f9f9;
+  font-size: 1rem;
+}
 .answer p {
   color: aliceblue;
   padding: 2rem;
