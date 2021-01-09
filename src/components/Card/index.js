@@ -15,7 +15,7 @@ export default function Card(props) {
     <IconContext.Provider value={{ color: "#707070", size: "20px" }}>
       <>
         <div className="col-md-4 col-10 mx-auto">
-          <div className="card shadow about-card">
+          <div className="card shadow about-card" data-aos="fade-down">
             <div className="card-body">
               {/* title */}
               <img
