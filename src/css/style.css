@@ -515,7 +515,7 @@
 
 .container-finance {
   position: relative;
-  width: 90%;
+  width: auto;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -548,7 +548,7 @@
           justify-content: center;
   -webkit-box-align: center;
       -ms-flex-align: center;
-          align-items: center;
+          /* align-items: center; */
 }
 
 .container-finance .card img {

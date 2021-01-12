@@ -3,6 +3,7 @@ import { useState, useEffect } from "react";
 import { NavLink } from "react-router-dom";
 import Requirements from "../../components/Requirements";
 import Career from "../../components/Career";
+import logo from "../../assets/logo_USK.png";
 
 import "../../css/style.css";
 
@@ -10,7 +11,7 @@ export default function Navbar() {
   const [navbar, setNavbar] = useState(false);
 
   const changeBg = () => {
-    if (window.scrollY > 220) {
+    if (window.scrollY > 0) {
       setNavbar(true);
     } else {
       setNavbar(false);
@@ -32,7 +33,7 @@ export default function Navbar() {
       >
         <div className="container">
           <NavLink className="navbar-brand" to="/">
-            LOGO
+            <img alt="logo" src={logo} width="100px"/>
           </NavLink>
           <button
             className="navbar-toggler collapsed navbar-toggler-light ml-auto "

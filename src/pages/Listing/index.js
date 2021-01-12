@@ -5,10 +5,15 @@ import "../../css/style.css";
 import CData from "../../data/Listings";
 import Card from "../../components/Card";
 import { BiDownArrow } from "react-icons/bi";
+import AOS from "aos";
 
 export default function Listing() {
   useEffect(() => {
     window.scrollTo(0, 0);
+    AOS.init({
+      duration: 1000,
+      anchorPlacement: "top-bottom",
+    });
   }, []);
   return (
     <>

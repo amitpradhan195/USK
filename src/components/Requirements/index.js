@@ -1,11 +1,6 @@
 import React from "react";
 import "../../css/style.css";
-import { MdClose } from "react-icons/md";
-import { Field, Form, Formik } from "formik";
-import { TextField } from "formik-material-ui";
-import * as Yup from "yup";
 import { makeStyles } from "@material-ui/core";
-import { Button } from "bootstrap";
 import "../../css/style.css";
 
 const classStyle = makeStyles((theme) => ({
