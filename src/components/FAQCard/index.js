@@ -5,7 +5,7 @@ export default function Faq(props) {
   return (
     <>
       <div className="accordion-item mt-3" id="question1">
-        <a className="accordion-link" herf="#question1">
+        <a className="accordion-link" href="#question1">
           <h5>{props.question}</h5>
         </a>
         <div className="answer">

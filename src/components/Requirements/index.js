@@ -1,34 +1,10 @@
 import React from "react";
 import "../../css/style.css";
-import { makeStyles } from "@material-ui/core";
 import "../../css/style.css";
 
-const classStyle = makeStyles((theme) => ({
-  form: {
-    width: "100%",
-  },
-  formDropdown: {
-    width: "100%",
-  },
-  headingText: {
-    display: "inline-block",
-  },
-  submit: {},
-}));
-
 export default function DHouse() {
-  const classes = classStyle();
-
   return (
     <>
-      {/* <button
-        type="button"
-        className="btn btn-lg btn-primary mt-3 btnbuilt shadow"
-        data-toggle="modal"
-        data-target="#exampleModal"
-      >
-        Click Here
-      </button> */}
       <div
         className="modal fade"
         id="exampleModal1"

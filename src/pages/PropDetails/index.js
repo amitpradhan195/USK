@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect } from "react";
 import "../../css/style.css";
 import slider2 from "../../assets/s2.jpg";
 import slider3 from "../../assets/s3.jpg";
@@ -13,7 +13,7 @@ import { GiKnifeFork } from "react-icons/gi";
 import { FaBath } from "react-icons/fa";
 import { ImDroplet } from "react-icons/im";
 import { FaCar } from "react-icons/fa";
-import { RiBikeFill, RiMotorbikeFill } from "react-icons/ri";
+import { RiBikeFill } from "react-icons/ri";
 import { FaWifi } from "react-icons/fa";
 import { FaLightbulb } from "react-icons/fa";
 import { FaParking } from "react-icons/fa";

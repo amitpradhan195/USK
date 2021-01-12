@@ -1,9 +1,7 @@
 import React, { useEffect } from "react";
-
 import "../../css/style.css";
 import Card from "../../components/Card";
 import CData from "../../data/Carddata";
-import { NavLink } from "react-router-dom";
 import Finance from "../../components/Finance";
 import HomeSlider from "../../components/HomeSlider";
 import DreamModal from "../../components/DreamHouse";
@@ -29,12 +27,12 @@ export default function Home() {
         <div className="col-12 mx-auto">
           <ul className="nav nav-pills nav-fill ">
             <li className="nav-item active-link ">
-              <a className="nav-link p-3" to="/">
+              <a className="nav-link p-3" href="/">
                 FOR SELL
               </a>
             </li>
             <li className="nav-item">
-              <a className="nav-link p-3" to="/">
+              <a className="nav-link p-3" href="/">
                 FOR RENT
               </a>
             </li>
@@ -85,13 +83,13 @@ export default function Home() {
         <img
           className="mt-2"
           src={home1}
-          alt="home picture"
+          alt="home pic"
           data-aos="fade-down"
         />
         <img
           className="mb-2"
           src={home2}
-          alt="home picture"
+          alt="home pic"
           data-aos="fade-up"
         />
 

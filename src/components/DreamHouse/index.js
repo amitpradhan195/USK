@@ -1,27 +1,8 @@
 import React from "react";
 import "../../css/style.css";
-import { MdClose } from "react-icons/md";
-import { Field, Form, Formik } from "formik";
-import { TextField } from "formik-material-ui";
-import * as Yup from "yup";
-import { makeStyles } from "@material-ui/core";
 import "../../css/style.css";
 
-const classStyle = makeStyles((theme) => ({
-  form: {
-    width: "100%",
-  },
-  formDropdown: {
-    width: "100%",
-  },
-  headingText: {
-    display: "inline-block",
-  },
-  submit: {},
-}));
-
 export default function DHouse() {
-  const classes = classStyle();
 
   return (
     <>

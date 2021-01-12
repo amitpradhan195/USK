@@ -1,15 +1,13 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect } from "react";
 import slider1 from "../../assets/slider1.jpg";
 import slider2 from "../../assets/slider2.jpg";
 import slider3 from "../../assets/slider3.jpg";
 import "../../css/style.css";
 
 export default function HomeSlider() {
-  const [isHide, setisHide] = useState(true);
 
   useEffect(() => {
     setTimeout(() => {
-      setisHide(false);
     }, 2000);
   }, []);
 

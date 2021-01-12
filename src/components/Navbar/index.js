@@ -1,5 +1,5 @@
 import React from "react";
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import { NavLink } from "react-router-dom";
 import Requirements from "../../components/Requirements";
 import Career from "../../components/Career";

@@ -10,9 +10,6 @@ import { FaLinkedinIn } from "react-icons/fa";
 import { FaTwitter } from "react-icons/fa";
 import { VscDebugBreakpointLog } from "react-icons/vsc";
 
-import { Map, InfoWindow, Marker, GoogleApiWrapper } from "google-maps-react";
-// import FacebookIcon from "@material-ui/icons/Facebook";
-
 export default function Footer() {
   return (
     <>

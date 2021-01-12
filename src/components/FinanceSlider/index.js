@@ -1,4 +1,4 @@
-import { InputLabel, Slider, TextField, Typography } from "@material-ui/core";
+import { Slider, TextField, Typography } from "@material-ui/core";
 import InputAdornment from '@material-ui/core/InputAdornment';
 import React, { useState, useEffect } from "react";
 import "./index.css";
