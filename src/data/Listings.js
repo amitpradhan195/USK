@@ -5,7 +5,7 @@ import prop3 from "../assets/slider3.jpg";
 const ListingData = [
   {
     imgsrc: prop1,
-    tag: "For Sell",
+    tag: "For Sale",
     css: { background: "#e94646" },
     prop: "5 BHK Flat",
     location: "Nayabazar, Kathmandu",
@@ -49,8 +49,8 @@ const ListingData = [
   },
   {
     imgsrc: prop3,
-    tag: "For Rent",
-    css: { background: "#34b849" },
+    tag: "For Sale",
+    css: { background: "#e94646" },
     prop: "4 BHK Flat",
     location: "Sinamangal, Kathmandu",
     bed: 4,
@@ -93,8 +93,8 @@ const ListingData = [
   },
   {
     imgsrc: prop2,
-    tag: "For Rent",
-    css: { background: "#34b849" },
+    tag: "For Sale",
+    css: { background: "#e94646" },
     prop: "8 BHK Bonglow",
     location: "Balwatar, Kathmandu",
     bed: 8,

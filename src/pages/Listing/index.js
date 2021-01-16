@@ -1,6 +1,5 @@
 import React, { useEffect } from "react";
 import { NavLink } from "react-router-dom";
-
 import "../../css/style.css";
 import CData from "../../data/Listings";
 import Card from "../../components/Card";

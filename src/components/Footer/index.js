@@ -128,7 +128,7 @@ export default function Footer() {
             </div>
           </div>
         </div>
-        <p class="copyright text-center">
+        <p className="copyright text-center">
           All right reserved | USK Estate &copy; {new Date().getFullYear()}
         </p>
       </footer>

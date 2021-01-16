@@ -1,8 +1,42 @@
-import React from "react";
+import React, { useState } from "react";
 import "../../css/style.css";
-import "../../css/style.css";
+import emailjs from 'emailjs-com';
+import NumberFormat from "react-number-format";
 
 export default function DHouse() {
+  const [values, setValues] = useState({
+    rbPF:'Buy',
+    rbPT:'Room',
+    rbBedroom:'1',
+    rbPA:'BikeOnly',
+    location:'',
+    budget:'',
+    customerName:'',
+    contactNo:''
+  })
+
+  function onValueChange(e){
+    setValues({
+      ...values,
+      [e.target.name]: e.target.value,
+    });
+    console.log(e.target.value)
+  }
+
+  function sendRequirement(e){
+    console.log(e.target);
+    e.preventDefault();
+    emailjs.sendForm('service_3d6e0nk', 'template_6r4yi8f', e.target, 'user_y3XRw7kDDXVaGOnG4ggqv')
+      .then((result) => {
+          alert("Thankyou! We got you requirements. We will contact you soon.")
+          console.log(result.text);
+          window.location.reload();
+      }, (error) => {
+          alert("Please! Make sure you are connected to the internet.")
+          console.log(error.text);
+    });
+  }
+
   return (
     <>
       <div
@@ -16,185 +50,142 @@ export default function DHouse() {
           <div className="modal-content">
             <div className="modal-body">
               <h4 className="text-center">Send Us Your Requirements</h4>
-              <form className="p-5">
+              <form className="pl-5 pt-2" onSubmit={sendRequirement}>
                 {/* property for */}
-                <label className="mb-2">Property For:</label>
-                <div className="form-group col-lg-4 mb-3">
-                  <div className="form-check form-check-inline">
-                    <input
-                      className="form-check-input"
-                      type="radio"
-                      name="pf"
-                      id="inlineRadio1"
-                      value="Buy"
-                      checked
+                <label>Property For :</label>
+                <div className="form-group mb-3 ml-3">
+                  <input 
+                    className="form-check-input" 
+                    type="radio" 
+                    id="pf1" 
+                    value="Buy" 
+                    name="rbPF" 
+                    onClick={onValueChange}
+                    defaultChecked
+                    /> 
+                  <label className="form-check-label mr-3 ml-1" for="pf1">Buy</label>
+                  <input 
+                    className="form-check-input" 
+                    type="radio" 
+                    id="pf2" 
+                    value="Rent" 
+                    name="rbPF" 
+                    onClick={onValueChange}
                     />
-                    <label className="form-check-label" for="inlineRadio1">
-                      Buy
-                    </label>
-                  </div>
-                  <div className="form-check form-check-inline">
-                    <input
-                      className="form-check-input"
-                      type="radio"
-                      name="pf"
-                      id="inlineRadio2"
-                      value="Rent"
+                  <label className="form-check-label mr-3 ml-1" for="pf2">Rent</label>
+                  <input 
+                    className="form-check-input" 
+                    type="radio" 
+                    id="pf3" 
+                    value="Sale" 
+                    name="rbPF" 
+                    onClick={onValueChange}
                     />
-                    <label className="form-check-label" for="inlineRadio2">
-                      Rent
-                    </label>
-                  </div>
-                  <div className="form-check form-check-inline">
-                    <input
-                      className="form-check-input"
-                      type="radio"
-                      name="pf"
-                      id="inlineRadio3"
-                      value="Sale"
-                    />
-                    <label className="form-check-label" for="inlineRadio3">
-                      Sale
-                    </label>
-                  </div>
+                  <label className="form-check-label mr-3 ml-1" for="pf3">Sale</label>
                 </div>
+
                 {/* property type */}
-                <label className="mb-2">Property Type:</label>
-                <div className="form-group col-lg-8 mb-3">
-                  <div className="form-check form-check-inline">
+                <label>Property Type :</label>
+                <div className="form-group mb-3 ml-3">
                     <input
                       className="form-check-input"
                       type="radio"
-                      name="pt"
-                      id="inlineRadio1"
+                      name="rbPT"
+                      id="pt1"
                       value="Room"
-                      checked
+                      onClick={onValueChange}
+                      defaultChecked
                     />
-                    <label className="form-check-label" for="inlineRadio1">
-                      Room
-                    </label>
-                  </div>
-                  <div className="form-check form-check-inline">
+                    <label className="form-check-label mr-3 ml-1" for="pt1">Room</label>
+
                     <input
                       className="form-check-input"
                       type="radio"
-                      name="pt"
-                      id="inlineRadio2"
+                      name="rbPT"
+                      id="pt2"
                       value="Flat"
+                      onClick={onValueChange}
                     />
-                    <label className="form-check-label" for="inlineRadio2">
-                      Flat
-                    </label>
-                  </div>
-                  <div className="form-check form-check-inline">
+                    <label className="form-check-label mr-3 ml-1" for="pt2">Flat</label>
                     <input
                       className="form-check-input"
                       type="radio"
-                      name="pt"
-                      id="inlineRadio3"
+                      name="rbPT"
+                      id="pt3"
                       value="Bulding"
+                      onClick={onValueChange}
                     />
-                    <label className="form-check-label" for="inlineRadio3">
-                      Bulding
-                    </label>
-                  </div>
-                  <div className="form-check form-check-inline">
+                    <label className="form-check-label mr-3 ml-1" for="pt3">Bulding</label>
                     <input
                       className="form-check-input"
                       type="radio"
-                      name="pt"
-                      id="inlineRadio4"
+                      name="rbPT"
+                      id="pt4"
                       value="Land"
+                      onClick={onValueChange}
                     />
-                    <label className="form-check-label" for="inlineRadio3">
-                      Land
-                    </label>
-                  </div>
+                    <label className="form-check-label" for="pt4">Land</label>
                 </div>
-                {/* location */}
-                <label className="mb-2">Location:</label>
-                <input
-                  type="text"
-                  className="form-control mb-3"
-                  id="formGroupExampleInput"
-                  placeholder="Nayabazar, Kathmandu"
-                ></input>
-                {/* price */}
-                <div className="row mb-3">
-                  <div className="form-group col-lg-2">
-                    <p>Price:</p>
-                  </div>
 
-                  <div className="form-group col-lg-4">
-                    <input
-                      type="text"
-                      className="form-control"
-                      id="inputCity"
-                    />
-                  </div>
-                  <div className="form-group col-lg-4">
-                    <input type="text" className="form-control" id="inputZip" />
-                  </div>
-                </div>
                 {/* bedroom */}
-                <div className="row">
-                  <div className="form-group col-lg-2">
-                    <p>Bedroom:</p>
-                  </div>
-
-                  <div className="form-group col-lg-4">
-                    <div className="form-check form-check-inline">
-                      <input
-                        className="form-check-input"
-                        type="radio"
-                        name="Bedroom"
-                        id="inlineRadio1"
-                        value="1"
-                        checked
-                      />
-                      <label className="form-check-label" for="inlineRadio1">
-                        1
-                      </label>
-                    </div>
-                    <div className="form-check form-check-inline">
-                      <input
-                        className="form-check-input"
-                        type="radio"
-                        name="Bedroom"
-                        id="inlineRadio2"
-                        value="2"
-                      />
-                      <label className="form-check-label" for="inlineRadio2">
-                        2
-                      </label>
-                    </div>
-                    <div className="form-check form-check-inline">
-                      <input
-                        className="form-check-input"
-                        type="radio"
-                        name="Bedroom"
-                        id="inlineRadio3"
-                        value="2+"
-                      />
-                      <label className="form-check-label" for="inlineRadio3">
-                        2+
-                      </label>
-                    </div>
-                  </div>
-                </div>
-                {/* parking */}
-                <label className="mb-2">Parking Area</label>
-                <div className="form-group col-lg-8">
+                <label>Bedroom :</label>
+                <div className="form-group mb-3 ml-3">
                   <div className="form-check form-check-inline">
                     <input
                       className="form-check-input"
                       type="radio"
-                      name="Parking Area"
-                      id="inlineRadio1"
-                      value="Bike Only"
-                      checked
+                      name="rbBedroom"
+                      id="bed1"
+                      value="1"
+                      onClick={onValueChange}
+                      defaultChecked
                     />
-                    <label className="form-check-label" for="inlineRadio1">
+                    <label className="form-check-label" for="bed1">
+                      1
+                    </label>
+                  </div>
+                  <div className="form-check form-check-inline">
+                    <input
+                      className="form-check-input"
+                      type="radio"
+                      name="rbBedroom"
+                      id="bed2"
+                      value="2"
+                      onClick={onValueChange}
+                    />
+                    <label className="form-check-label" for="bed2">
+                      2
+                    </label>
+                  </div>
+                  <div className="form-check form-check-inline">
+                    <input
+                      className="form-check-input"
+                      type="radio"
+                      name="rbBedroom"
+                      id="bed3"
+                      value="2+"
+                      onClick={onValueChange}
+                    />
+                    <label className="form-check-label" for="bed3">
+                      2+
+                    </label>
+                  </div>
+                </div>
+
+                {/* parking */}
+                <label className="form-group">Parking Area :</label>
+                <div className="form-group mb-3 ml-3">
+                  <div className="form-check form-check-inline">
+                    <input
+                      className="form-check-input"
+                      type="radio"
+                      name="rbPA"
+                      id="PA1"
+                      value="Bike Only"
+                      onClick={onValueChange}
+                      defaultChecked
+                    />
+                    <label className="form-check-label" for="PA1">
                       Bike Only
                     </label>
                   </div>
@@ -202,11 +193,12 @@ export default function DHouse() {
                     <input
                       className="form-check-input"
                       type="radio"
-                      name="Parking Area"
-                      id="inlineRadio2"
+                      name="rbPA"
+                      id="PA2"
                       value="Car Only"
+                      onClick={onValueChange}
                     />
-                    <label className="form-check-label" for="inlineRadio2">
+                    <label className="form-check-label" for="PA2">
                       Car Only
                     </label>
                   </div>
@@ -214,11 +206,12 @@ export default function DHouse() {
                     <input
                       className="form-check-input"
                       type="radio"
-                      name="Parking Area"
-                      id="inlineRadio3"
+                      name="rbPA"
+                      id="PA3"
                       value="Both"
+                      onClick={onValueChange}
                     />
-                    <label className="form-check-label" for="inlineRadio3">
+                    <label className="form-check-label" for="PA3">
                       Both
                     </label>
                   </div>
@@ -226,19 +219,93 @@ export default function DHouse() {
                     <input
                       className="form-check-input"
                       type="radio"
-                      name="Parking Area"
-                      id="inlineRadio4"
+                      name="rbPA"
+                      id="PA4"
                       value="None"
+                      onClick={onValueChange}
                     />
-                    <label className="form-check-label" for="inlineRadio3">
+                    <label className="form-check-label" for="PA4">
                       None
                     </label>
                   </div>
                 </div>
 
+                {/* location */}
+                <div className="row">
+                  <div className="form-group col-md-3 pt-2">
+                    <label>Location:</label>
+                  </div>
+                  <div className="form-group col-md-6">
+                    <input
+                      type="text"
+                      className="form-control mb-3"
+                      placeholder="e.g: Nayabazar, Kathmandu"
+                      name="location"
+                      onBlur={onValueChange}
+                      required
+                      />
+                  </div>
+                </div>
+
+                {/* price */}
+                <div className="row">
+                  <div className="form-group col-md-3 pt-2">
+                    <label>Budget:</label>
+                  </div>
+                  <div className="form-group col-lg-6">
+                    <input
+                      type='number'
+                      name="budget"
+                      className="form-control mb-3"
+                      placeholder="e.g: 100000"
+                      id="maxprice"
+                      min={10000}
+                      step={5000}
+                      onBlur={onValueChange}
+                      required
+                    />
+                  </div>
+                </div>
+
+                {/* user name */}
+                <div className="row">
+                  <div className="form-group col-md-3 pt-2">
+                    <label>Your Name:</label>
+                  </div>
+                  <div className="form-group col-md-6">
+                    <input
+                      type="text"
+                      className="form-control mb-3"
+                      placeholder="e.g: Amit Pradhan"
+                      name="customerName"
+                      onBlur={onValueChange}
+                      required
+                      />
+                  </div>
+                </div>
+
+                {/* Contact Number */}
+                <div className="row">
+                  <div className="form-group col-md-3 pt-2">
+                    <label>Contact Number:</label>
+                  </div>
+                  <div className="form-group col-md-6">
+                    <NumberFormat
+                      className="form-control mb-3"
+                      placeholder="e.g: 9812345678"
+                      name="contactNo"
+                      min={9800000000}
+                      max={9899999999}
+                      onBlur={onValueChange}
+                      required
+                      />
+                  </div>
+                </div>
+
                 <button
-                  type="button"
-                  className="btn btn-lg btn-primary mt-4 btnbuilt shadow"
+                  type="submit"
+                  value="Send"
+                  className="btn btn-lg btn-primary mt-2 btnbuilt shadow"
                 >
                   SUBMIT
                 </button>

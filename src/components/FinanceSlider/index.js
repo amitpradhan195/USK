@@ -197,7 +197,7 @@ const handleChangeCoordination = (name) => (event, value) => {
                         max={50000000}
                         value={values.amountValue}
                         name="amountValue"
-                        onChange={handleChange}
+                        onBlur={handleChange}
                         InputProps={{
                           startAdornment: <InputAdornment position="start">Rs</InputAdornment>,
                         }}
@@ -223,14 +223,13 @@ const handleChangeCoordination = (name) => (event, value) => {
                   </div>
                   <div className="col-3">
                     <Typography id="interest" gutterBottom>
-                      <TextField
+                      <NumberFormat
                         id="filled-basic"
-                        type="number"
+                        customInput={TextField}
                         label="Interest Rate" 
-                        suffix="%"
                         name="interestValue"
                         value={values.interestValue}
-                        onChange={handleChange}
+                        onBlur={handleChange}
                         InputProps={{
                           endAdornment: <InputAdornment position="end">p.a</InputAdornment>,
                         }}
@@ -254,14 +253,13 @@ const handleChangeCoordination = (name) => (event, value) => {
                   </div>
                   <div className="col-3">
                     <Typography id="years" gutterBottom>
-                      <TextField
+                      <NumberFormat
                         id="filled-basic" 
-                        type="number"
+                        customInput={TextField}
                         label="Loan Term" 
-                        suffix="years"
                         name="yearValue"
                         value={values.yearValue}
-                        onChange={handleChange}
+                        onBlur={handleChange}
                         InputProps={{
                           endAdornment: <InputAdornment position="end">years</InputAdornment>,
                         }}
@@ -270,9 +268,18 @@ const handleChangeCoordination = (name) => (event, value) => {
                   </div>
                 </div>
               </div>
-              <div className="col-4">
+              <div className="col-4 mt-5 text-center">
                 <h4 className="text-center">Monthly EMI</h4>
-                <h1 className="text-center text-danger">Rs. {emi}</h1>
+                <h1 className="text-center text-danger">
+                  <CurrencyFormat 
+                    className="pl-2 text-danger" 
+                    value={emi} 
+                    displayType={'text'}
+                    prefix={'Rs.'} 
+                    thousandSeparator={true} 
+                    thousandSpacing="2s"
+                  />
+                </h1>
                 <p>
                   Principal
                   <CurrencyFormat 
@@ -282,7 +289,7 @@ const handleChangeCoordination = (name) => (event, value) => {
                     prefix={'Rs.'} 
                     thousandSeparator={true} 
                     thousandSpacing="2s"
-                    />
+                  />
                 </p>
                 <p>
                   Interest Payable
@@ -293,7 +300,7 @@ const handleChangeCoordination = (name) => (event, value) => {
                     prefix={'Rs.'} 
                     thousandSeparator={true} 
                     thousandSpacing="2s"
-                    />
+                  />
                 </p>
                 <p>
                   Total Amount Payable
@@ -304,14 +311,14 @@ const handleChangeCoordination = (name) => (event, value) => {
                     prefix={'Rs.'} 
                     thousandSeparator={true} 
                     thousandSpacing="2s"
-                    />
+                  />
                 </p>
-                <button
+                {/* <button
                   type="button"
                   className="btn btn-lg btn-block shadow btnbuilt btn-primary"
                 >
                   Apply For Loan
-                </button>
+                </button> */}
               </div>
             </div>
           </div>

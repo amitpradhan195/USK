@@ -6,7 +6,7 @@ const Carddata = [
   {
     id: 1,
     imgsrc: prop1,
-    tag: "For Sell",
+    tag: "Sold",
     css: { background: "#e94646" },
     prop: "5 BHK Flat",
     location: "Nayabazar, Kathmandu",
@@ -30,7 +30,7 @@ const Carddata = [
   {
     id: 3,
     imgsrc: prop3,
-    tag: "For Rent",
+    tag: "Pending",
     css: { background: "#34b849" },
     prop: "4 BHK Flat",
     location: "Sinamangal, Kathmandu",
