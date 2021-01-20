@@ -1,8 +1,43 @@
-import React from "react";
+import React, { useState } from "react";
 import "../../css/style.css";
-import "../../css/style.css";
+import emailjs from 'emailjs-com';
 
 export default function DHouse() {
+  const [values, setValues] = useState({
+    rbHT:'Townhouse',
+    rbAC:'3',
+    rbBedroom:'1',
+    rbPA:'Bike Only',
+    location:'',
+    rbKitchen:'',
+    rbBathroom:'',
+    tellUsMore:'',
+    fullName:'',
+    contactNo:'',
+    budget:''
+  })
+
+  function onValueChange(e){
+    setValues({
+      ...values,
+      [e.target.name]: e.target.value,
+    });
+    console.log(e.target.value)
+  }
+
+  function sendRequirementForDreamHouse(e){
+    console.log(e.target);
+    e.preventDefault();
+    emailjs.sendForm('service_3d6e0nk', 'template_ikx1d6i', e.target, 'user_y3XRw7kDDXVaGOnG4ggqv')
+      .then((result) => {
+          alert("Thankyou! We got you requirements. We will contact you soon.")
+          console.log(result.text);
+          window.location.reload();
+      }, (error) => {
+          alert("Please! Make sure you are connected to the internet.")
+          console.log(error.text);
+    });
+  }
 
   return (
     <>
@@ -26,7 +61,7 @@ export default function DHouse() {
           <div className="modal-content">
             <div className="modal-body">
               <h4 className="text-center">Build Your Dream House</h4>
-              <form className="p-5">
+              <form className="p-5" onSubmit={sendRequirementForDreamHouse}>
                 <label className="mb-2 font-weight-bold">
                   Select Your House Type:
                 </label>
@@ -35,12 +70,13 @@ export default function DHouse() {
                     <input
                       className="form-check-input"
                       type="radio"
-                      name="ht"
-                      id="inlineRadio2"
+                      name="rbHT"
+                      id="ht1"
                       value="Townhouse"
-                      checked
+                      onClick={onValueChange}
+                      defaultChecked
                     />
-                    <label className="form-check-label" for="inlineRadio2">
+                    <label className="form-check-label" for="ht1">
                       Townhouse
                     </label>
                   </div>
@@ -48,11 +84,12 @@ export default function DHouse() {
                     <input
                       className="form-check-input"
                       type="radio"
-                      name="ht"
-                      id="inlineRadio3"
+                      name="rbHT"
+                      id="ht2"
                       value="Commercial"
+                      onClick={onValueChange}
                     />
-                    <label className="form-check-label" for="inlineRadio3">
+                    <label className="form-check-label" for="ht2">
                       Commercial
                     </label>
                   </div>
@@ -61,9 +98,11 @@ export default function DHouse() {
 
                 <div className="form-group col-md-6 mb-3">
                   <label className="font-weight-bold">Select Location:</label>
-                  <select id="inputState" className="form-control">
-                    <option selected>Choose...</option>
-                    <option>...</option>
+                  <select name="location" onClick={onValueChange} className="form-control">
+                    {/* <option selected>Choose...</option> */}
+                    <option>Kathmandu</option>
+                    <option>Lalitpur</option>
+                    <option>Bhaktapur</option>
                   </select>
                 </div>
                 {/* area coverage */}
@@ -73,12 +112,13 @@ export default function DHouse() {
                     <input
                       className="form-check-input"
                       type="radio"
-                      name="Area Coverage"
-                      id="inlineRadio1"
+                      name="rbAC"
+                      id="AC1"
                       value="3 Aana"
-                      checked
+                      onClick={onValueChange}
+                      defaultChecked
                     />
-                    <label className="form-check-label" for="inlineRadio1">
+                    <label className="form-check-label" for="AC1">
                       3 Aana
                     </label>
                   </div>
@@ -86,11 +126,12 @@ export default function DHouse() {
                     <input
                       className="form-check-input"
                       type="radio"
-                      name="Area Coverage"
-                      id="inlineRadio2"
+                      name="rbAC"
+                      id="AC2"
                       value="4 Aana"
+                      onClick={onValueChange}
                     />
-                    <label className="form-check-label" for="inlineRadio2">
+                    <label className="form-check-label" for="AC2">
                       4 Aana
                     </label>
                   </div>
@@ -98,11 +139,12 @@ export default function DHouse() {
                     <input
                       className="form-check-input"
                       type="radio"
-                      name="Area Coverage"
-                      id="inlineRadio3"
+                      name="rbAC"
+                      id="AC3"
                       value="6 Aana"
+                      onClick={onValueChange}
                     />
-                    <label className="form-check-label" for="inlineRadio3">
+                    <label className="form-check-label" for="AC3">
                       6 Aana
                     </label>
                   </div>
@@ -110,11 +152,12 @@ export default function DHouse() {
                     <input
                       className="form-check-input"
                       type="radio"
-                      name="Area Coverage"
-                      id="inlineRadio3"
+                      name="rbAC"
+                      id="AC4"
                       value="More"
+                      onClick={onValueChange}
                     />
-                    <label className="form-check-label" for="inlineRadio3">
+                    <label className="form-check-label" for="AC4">
                       More
                     </label>
                   </div>
@@ -132,12 +175,13 @@ export default function DHouse() {
                       <input
                         className="form-check-input"
                         type="radio"
-                        name="Bedroom"
-                        id="inlineRadio1"
+                        name="rbBedroom"
+                        id="bedroom1"
                         value="1 Room"
-                        checked
+                        onClick={onValueChange}
+                        defaultChecked
                       />
-                      <label className="form-check-label" for="inlineRadio1">
+                      <label className="form-check-label" for="bedroom1">
                         1 Room
                       </label>
                     </div>
@@ -145,11 +189,12 @@ export default function DHouse() {
                       <input
                         className="form-check-input"
                         type="radio"
-                        name="Bedroom"
-                        id="inlineRadio2"
+                        name="rbBedroom"
+                        id="bedroom2"
                         value="2 Rooms"
+                        onClick={onValueChange}
                       />
-                      <label className="form-check-label" for="inlineRadio2">
+                      <label className="form-check-label" for="bedroom2">
                         2 Rooms
                       </label>
                     </div>
@@ -157,12 +202,13 @@ export default function DHouse() {
                       <input
                         className="form-check-input"
                         type="radio"
-                        name="Bedroom"
-                        id="inlineRadio3"
-                        value="3 Rooms"
+                        name="rbBedroom"
+                        id="bedroom3"
+                        value="2+"
+                        onClick={onValueChange}
                       />
-                      <label className="form-check-label" for="inlineRadio3">
-                        3 Rooms
+                      <label className="form-check-label" for="bedroom3">
+                        2+
                       </label>
                     </div>
                   </div>
@@ -178,12 +224,13 @@ export default function DHouse() {
                       <input
                         className="form-check-input"
                         type="radio"
-                        name="Kitchen"
-                        id="inlineRadio1"
+                        name="rbKitchen"
+                        id="kitchen1"
                         value="Only 1"
-                        checked
+                        onClick={onValueChange}
+                        defaultChecked
                       />
-                      <label className="form-check-label" for="inlineRadio1">
+                      <label className="form-check-label" for="kitchen1">
                         Only 1
                       </label>
                     </div>
@@ -191,11 +238,12 @@ export default function DHouse() {
                       <input
                         className="form-check-input"
                         type="radio"
-                        name="Kitchen"
-                        id="inlineRadio2"
+                        name="rbKitchen"
+                        id="kitchen2"
                         value="1 Each Floor"
+                        onClick={onValueChange}
                       />
-                      <label className="form-check-label" for="inlineRadio2">
+                      <label className="form-check-label" for="kitchen2">
                         1 Each Floor
                       </label>
                     </div>
@@ -212,12 +260,13 @@ export default function DHouse() {
                       <input
                         className="form-check-input"
                         type="radio"
-                        name="Bathroom"
-                        id="inlineRadio1"
+                        name="rbBathroom"
+                        id="bathroom1"
                         value="Only 1"
-                        checked
+                        onClick={onValueChange}
+                        defaultChecked
                       />
-                      <label className="form-check-label" for="inlineRadio1">
+                      <label className="form-check-label" for="bathroom1">
                         Only 1
                       </label>
                     </div>
@@ -225,11 +274,12 @@ export default function DHouse() {
                       <input
                         className="form-check-input"
                         type="radio"
-                        name="Bathroom"
-                        id="inlineRadio2"
+                        name="rbBathroom"
+                        id="bathroom2"
                         value="1 Each Floor"
+                        onClick={onValueChange}
                       />
-                      <label className="form-check-label" for="inlineRadio2">
+                      <label className="form-check-label" for="bathroom2">
                         1 Each Floor
                       </label>
                     </div>
@@ -242,12 +292,13 @@ export default function DHouse() {
                     <input
                       className="form-check-input"
                       type="radio"
-                      name="Parking Area"
-                      id="inlineRadio1"
+                      name="rbPA"
+                      id="ParkinArea1"
                       value="Bike Only"
-                      checked
+                      onClick={onValueChange}
+                      defaultChecked
                     />
-                    <label className="form-check-label" for="inlineRadio1">
+                    <label className="form-check-label" for="ParkinArea1">
                       Bike Only
                     </label>
                   </div>
@@ -255,11 +306,12 @@ export default function DHouse() {
                     <input
                       className="form-check-input"
                       type="radio"
-                      name="Parking Area"
-                      id="inlineRadio2"
+                      name="rbPA"
+                      id="ParkinArea2"
                       value="Car Only"
+                      onClick={onValueChange}
                     />
-                    <label className="form-check-label" for="inlineRadio2">
+                    <label className="form-check-label" for="ParkinArea2">
                       Car Only
                     </label>
                   </div>
@@ -267,11 +319,12 @@ export default function DHouse() {
                     <input
                       className="form-check-input"
                       type="radio"
-                      name="Parking Area"
-                      id="inlineRadio3"
+                      name="rbPA"
+                      id="ParkinArea3"
                       value="Both"
+                      onClick={onValueChange}
                     />
-                    <label className="form-check-label" for="inlineRadio3">
+                    <label className="form-check-label" for="ParkinArea3">
                       Both
                     </label>
                   </div>
@@ -279,11 +332,12 @@ export default function DHouse() {
                     <input
                       className="form-check-input"
                       type="radio"
-                      name="Parking Area"
-                      id="inlineRadio3"
+                      name="rbPA"
+                      id="ParkinArea4"
                       value="None"
+                      onClick={onValueChange}
                     />
-                    <label className="form-check-label" for="inlineRadio3">
+                    <label className="form-check-label" for="ParkinArea4">
                       None
                     </label>
                   </div>
@@ -296,8 +350,9 @@ export default function DHouse() {
 
                   <div className="form-group col-lg-6">
                     <textarea
+                      onBlur={onValueChange}
                       className="form-control"
-                      id="exampleFormControlTextarea1"
+                      name="tellUsMore"
                       rows="3"
                     ></textarea>
                   </div>
@@ -309,7 +364,7 @@ export default function DHouse() {
                   </div>
 
                   <div className="form-group col-lg-4">
-                    <input type="text" className="form-control" />
+                    <input type="text" onBlur={onValueChange} name="fullName" className="form-control" required/>
                   </div>
                 </div>
                 {/* phone no */}
@@ -319,7 +374,7 @@ export default function DHouse() {
                   </div>
 
                   <div className="form-group col-lg-4">
-                    <input type="text" className="form-control" />
+                    <input type="number" pattern="[7-9]{1}[0-9]{9}" name="contactNo" onBlur={onValueChange} className="form-control" required/>
                   </div>
                 </div>
                 {/* budget */}
@@ -329,11 +384,20 @@ export default function DHouse() {
                   </div>
 
                   <div className="form-group col-lg-4">
-                    <input type="text" className="form-control" />
+                    <input
+                      type="number"
+                      name="budget" 
+                      onBlur={onValueChange} 
+                      className="form-control" 
+                      placeholder="e.g: 100000"
+                      min={10000}
+                      step={5000}
+                     required/>
                   </div>
                 </div>
                 <button
-                  type="button"
+                  type="submit"
+                  value="Send"
                   className="btn btn-lg btn-primary mt-4 btnbuilt shadow"
                 >
                   SUBMIT

@@ -2,18 +2,20 @@ import React, { useState } from "react";
 import "../../css/style.css";
 import emailjs from 'emailjs-com';
 import NumberFormat from "react-number-format";
+import { AiOutlineClose } from "react-icons/ai";
 
-export default function DHouse() {
+export default function Requirements() {
   const [values, setValues] = useState({
     rbPF:'Buy',
     rbPT:'Room',
     rbBedroom:'1',
-    rbPA:'BikeOnly',
+    rbPA:'Bike Only',
     location:'',
     budget:'',
     customerName:'',
     contactNo:''
-  })
+  });
+  const [showBedroom, setShowBedroom] = useState(false);
 
   function onValueChange(e){
     setValues({
@@ -21,6 +23,16 @@ export default function DHouse() {
       [e.target.name]: e.target.value,
     });
     console.log(e.target.value)
+
+    if(e.target.name==='rbPT'){
+      if(e.target.value==='Room' || e.target.value==='Land')
+      {
+        setShowBedroom(false);
+      }
+      else{
+        setShowBedroom(true);
+      }
+    }
   }
 
   function sendRequirement(e){
@@ -48,8 +60,11 @@ export default function DHouse() {
       >
         <div className="modal-dialog modal-lg">
           <div className="modal-content">
+            <div class="modal-header">
+              <h4 className="modal-title">Send Us Your Requirements</h4>
+              <AiOutlineClose fontSize="30px" data-dismiss="modal"/>
+            </div>
             <div className="modal-body">
-              <h4 className="text-center">Send Us Your Requirements</h4>
               <form className="pl-5 pt-2" onSubmit={sendRequirement}>
                 {/* property for */}
                 <label>Property For :</label>
@@ -128,6 +143,8 @@ export default function DHouse() {
                 </div>
 
                 {/* bedroom */}
+                {showBedroom ?
+                <>
                 <label>Bedroom :</label>
                 <div className="form-group mb-3 ml-3">
                   <div className="form-check form-check-inline">
@@ -171,6 +188,8 @@ export default function DHouse() {
                     </label>
                   </div>
                 </div>
+                </>
+                :''}
 
                 {/* parking */}
                 <label className="form-group">Parking Area :</label>
@@ -250,7 +269,7 @@ export default function DHouse() {
                 {/* price */}
                 <div className="row">
                   <div className="form-group col-md-3 pt-2">
-                    <label>Budget:</label>
+                    <label>Budget (in Rs):</label>
                   </div>
                   <div className="form-group col-lg-6">
                     <input
@@ -258,7 +277,6 @@ export default function DHouse() {
                       name="budget"
                       className="form-control mb-3"
                       placeholder="e.g: 100000"
-                      id="maxprice"
                       min={10000}
                       step={5000}
                       onBlur={onValueChange}

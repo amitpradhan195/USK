@@ -38,8 +38,6 @@ export default function FinanceSlider() {
       'interestPayable': interestPayableCalc,
       'totalAmountPayable': totalAmountPayableCalc
     }
-
-    console.log("Hlo I am EMI don : "+emi +";"+ interestPayableCalc +";"+ totalAmountPayableCalc);  
     return data;
   }
   
@@ -165,9 +163,9 @@ const handleChangeCoordination = (name) => (event, value) => {
     <>
       <section className="slider-section mt-5">
         <div className="container-fluid">
-          <div className="col-10 mx-auto">
+          {/* <div className="col-10 mx-auto"> */}
             <div className="row">
-              <div className="col-8">
+              <div className="col-8 pl-5">
                 <section className="featured-container">
                   <h4 className="heading-text">
                     Check interest & installment.
@@ -190,7 +188,6 @@ const handleChangeCoordination = (name) => (event, value) => {
                   <div className="col-3">
                     <Typography gutterBottom>
                       <NumberFormat
-                        // type="number"
                         customInput={TextField}
                         id="formattedAmount" 
                         label="Loan Amount"
@@ -224,7 +221,7 @@ const handleChangeCoordination = (name) => (event, value) => {
                   <div className="col-3">
                     <Typography id="interest" gutterBottom>
                       <NumberFormat
-                        id="filled-basic"
+                        id="formattedInterest"
                         customInput={TextField}
                         label="Interest Rate" 
                         name="interestValue"
@@ -254,7 +251,7 @@ const handleChangeCoordination = (name) => (event, value) => {
                   <div className="col-3">
                     <Typography id="years" gutterBottom>
                       <NumberFormat
-                        id="filled-basic" 
+                        id="formattedYear" 
                         customInput={TextField}
                         label="Loan Term" 
                         name="yearValue"
@@ -321,7 +318,7 @@ const handleChangeCoordination = (name) => (event, value) => {
                 </button> */}
               </div>
             </div>
-          </div>
+          {/* </div> */}
         </div>
       </section>
     </>
