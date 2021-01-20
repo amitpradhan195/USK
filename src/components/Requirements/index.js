@@ -25,7 +25,7 @@ export default function Requirements() {
     console.log(e.target.value)
 
     if(e.target.name==='rbPT'){
-      if(e.target.value==='Room' || e.target.value==='Land')
+      if(e.target.value==='Land')
       {
         setShowBedroom(false);
       }
