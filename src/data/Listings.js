@@ -4,9 +4,10 @@ import prop3 from "../assets/slider3.jpg";
 
 const ListingData = [
   {
+    propertyType: "Flat",
     imgsrc: prop1,
     tag: "For Sale",
-    css: { background: "#e94646" },
+    css: { background: "#34b849" },
     prop: "5 BHK Flat",
     location: "Nayabazar, Kathmandu",
     bed: 5,
@@ -15,6 +16,7 @@ const ListingData = [
     contact: 9685214537,
   },
   {
+    propertyType: "Building",
     imgsrc: prop2,
     tag: "For Rent",
     css: { background: "#34b849" },
@@ -26,10 +28,11 @@ const ListingData = [
     contact: 9685742135,
   },
   {
+    propertyType: "Land",
     imgsrc: prop3,
     tag: "For Rent",
     css: { background: "#34b849" },
-    prop: "4 BHK Flat",
+    prop: "Land",
     location: "Sinamangal, Kathmandu",
     bed: 4,
     kitchen: 2,
@@ -37,6 +40,7 @@ const ListingData = [
     contact: 9685321475,
   },
   {
+    propertyType: "Building",
     imgsrc: prop2,
     tag: "For Rent",
     css: { background: "#34b849" },
@@ -48,9 +52,10 @@ const ListingData = [
     contact: 9685742135,
   },
   {
+    propertyType: "Flat",
     imgsrc: prop3,
     tag: "For Sale",
-    css: { background: "#e94646" },
+    css: { background: "#34b849" },
     prop: "4 BHK Flat",
     location: "Sinamangal, Kathmandu",
     bed: 4,
@@ -59,6 +64,7 @@ const ListingData = [
     contact: 9685321475,
   },
   {
+    propertyType: "Building",
     imgsrc: prop2,
     tag: "For Rent",
     css: { background: "#34b849" },
@@ -70,6 +76,7 @@ const ListingData = [
     contact: 9685742135,
   },
   {
+    propertyType: "Flat",
     imgsrc: prop3,
     tag: "For Rent",
     css: { background: "#34b849" },
@@ -81,6 +88,7 @@ const ListingData = [
     contact: 9685321475,
   },
   {
+    propertyType: "Flat",
     imgsrc: prop3,
     tag: "For Rent",
     css: { background: "#34b849" },
@@ -92,9 +100,10 @@ const ListingData = [
     contact: 9685321475,
   },
   {
+    propertyType: "Building",
     imgsrc: prop2,
     tag: "For Sale",
-    css: { background: "#e94646" },
+    css: { background: "#34b849" },
     prop: "8 BHK Bonglow",
     location: "Balwatar, Kathmandu",
     bed: 8,

@@ -3,7 +3,7 @@ import { useState } from "react";
 import { NavLink } from "react-router-dom";
 import Requirements from "../../components/Requirements";
 import Career from "../../components/Career";
-import logo from "../../assets/logo_USK.png";
+import logo from "../../assets/logo_USK.jpg";
 
 import "../../css/style.css";
 
@@ -27,13 +27,13 @@ export default function Navbar() {
       <nav
         className={
           navbar
-            ? "navbar activenav navbar-expand-lg navbar-dark fixed-top nav"
-            : "navbar navbarunactive navbar-expand-lg navbar-dark fixed-top nav"
+            ? "navbar activenav navbar-expand-lg navbar-dark fixed-top nav stroke"
+            : "navbar navbarunactive navbar-expand-lg navbar-dark fixed-top nav stroke"
         }
       >
         <div className="container">
           <NavLink className="navbar-brand" to="/">
-            <img alt="logo" src={logo} width="100px"/>
+            <img alt="logo" src={logo} width="120px"/>
           </NavLink>
           <button
             className="navbar-toggler collapsed navbar-toggler-light ml-auto "
