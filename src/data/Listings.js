@@ -4,6 +4,7 @@ import prop3 from "../assets/slider3.jpg";
 
 const ListingData = [
   {
+    id: 1,
     propertyType: "Flat",
     imgsrc: prop1,
     tag: "For Sale",
@@ -16,6 +17,7 @@ const ListingData = [
     contact: 9685214537,
   },
   {
+    id: 2,
     propertyType: "Building",
     imgsrc: prop2,
     tag: "For Rent",
@@ -28,6 +30,7 @@ const ListingData = [
     contact: 9685742135,
   },
   {
+    id: 3,
     propertyType: "Land",
     imgsrc: prop3,
     tag: "For Rent",
@@ -40,6 +43,7 @@ const ListingData = [
     contact: 9685321475,
   },
   {
+    id: 4,
     propertyType: "Building",
     imgsrc: prop2,
     tag: "For Rent",
@@ -52,6 +56,7 @@ const ListingData = [
     contact: 9685742135,
   },
   {
+    id: 5,
     propertyType: "Flat",
     imgsrc: prop3,
     tag: "For Sale",
@@ -64,6 +69,7 @@ const ListingData = [
     contact: 9685321475,
   },
   {
+    id: 6,
     propertyType: "Building",
     imgsrc: prop2,
     tag: "For Rent",
@@ -76,6 +82,7 @@ const ListingData = [
     contact: 9685742135,
   },
   {
+    id: 7,
     propertyType: "Flat",
     imgsrc: prop3,
     tag: "For Rent",
@@ -88,6 +95,7 @@ const ListingData = [
     contact: 9685321475,
   },
   {
+    id: 8,
     propertyType: "Flat",
     imgsrc: prop3,
     tag: "For Rent",
@@ -100,6 +108,7 @@ const ListingData = [
     contact: 9685321475,
   },
   {
+    id: 9,
     propertyType: "Building",
     imgsrc: prop2,
     tag: "For Sale",

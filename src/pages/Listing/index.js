@@ -105,6 +105,7 @@ export default function Listing() {
                 return (
                   <Card
                     key={index}
+                    id={value.id}
                     imgsrc={value.imgsrc}
                     tag={value.tag}
                     css={value.css}
