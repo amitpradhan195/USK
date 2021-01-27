@@ -6,17 +6,11 @@ import slider4 from "../../assets/s4.jpg";
 import slider5 from "../../assets/s5.jpg";
 import { IconContext } from "react-icons";
 import { MdLocationOn } from "react-icons/md";
-import { FaPhoneAlt } from "react-icons/fa";
+import { FaPhoneAlt, FaBed, FaBath, FaCar, FaWifi, FaLightbulb, FaParking } from "react-icons/fa";
 import { IoMail } from "react-icons/io5";
-import { FaBed } from "react-icons/fa";
 import { GiKnifeFork } from "react-icons/gi";
-import { FaBath } from "react-icons/fa";
 import { ImDroplet } from "react-icons/im";
-import { FaCar } from "react-icons/fa";
 import { RiBikeFill } from "react-icons/ri";
-import { FaWifi } from "react-icons/fa";
-import { FaLightbulb } from "react-icons/fa";
-import { FaParking } from "react-icons/fa";
 import mapimage from "../../assets/office.PNG";
 import ReactPlayer from "react-player";
 

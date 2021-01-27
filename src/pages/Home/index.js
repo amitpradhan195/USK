@@ -23,7 +23,7 @@ export default function Home() {
     <>
       <HomeSlider></HomeSlider>
       {/* home navigation section */}
-      <section className="nav-container">
+      {/* <section className="nav-container">
         <div className="col-12 mx-auto">
           <ul className="nav nav-pills nav-fill ">
             <li className="nav-item active-link ">
@@ -38,7 +38,7 @@ export default function Home() {
             </li>
           </ul>
         </div>
-      </section>
+      </section> */}
 
       {/* featured */}
       <section className="featured-container pt-5 mb-5">

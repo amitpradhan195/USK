@@ -1,7 +1,6 @@
 import { Slider, TextField, Typography } from "@material-ui/core";
 import InputAdornment from '@material-ui/core/InputAdornment';
 import React, { useState, useEffect } from "react";
-import "./index.css";
 import "../../css/style.css";
 import { evaluate, round, pow } from 'mathjs';
 import NumberFormat from "react-number-format";
@@ -316,6 +315,7 @@ const handleChangeCoordination = (name) => (event, value) => {
                 >
                   Apply For Loan
                 </button> */}
+                <p className="h6 mt-2">Contact : <span className="font-weight-bold">9841504552, 9813955307</span></p>
               </div>
             </div>
           {/* </div> */}

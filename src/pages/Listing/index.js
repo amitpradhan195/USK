@@ -8,7 +8,7 @@ import AOS from "aos";
 export default function Listing() {
   const [selectPurpose, setSelectPurpose] = useState('All');
   const [selectPropertyType, setSelectPropertyType] = useState('All');
-  const [data, setData] = useState([]);
+  // const [data, setData] = useState([]);
 
   useEffect(() => {
     window.scrollTo(0, 0);
@@ -80,7 +80,7 @@ export default function Listing() {
                   </li>
                   <li className="nav-item">
                     <NavLink className="nav-link bg-light text-dark" onClick={onPropertyTypeChange('Building')} to="?building">
-                      Bulding
+                      Building
                     </NavLink>
                   </li>
                   <li className="nav-item">

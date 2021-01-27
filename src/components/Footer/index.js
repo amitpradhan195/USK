@@ -1,43 +1,42 @@
 import React from "react";
 import "../../css/style.css";
-import mapimage from "../../assets/office.PNG";
+import mapimage from "../../assets/footer_map.png";
 import { NavLink } from "react-router-dom";
-
 import { IconContext } from "react-icons";
-import { FaFacebook } from "react-icons/fa";
-import { FaInstagram } from "react-icons/fa";
-import { FaLinkedinIn } from "react-icons/fa";
-import { FaTwitter } from "react-icons/fa";
+import { FaFacebook, FaInstagram, FaLinkedinIn, FaTwitter } from "react-icons/fa";
 import { VscDebugBreakpointLog } from "react-icons/vsc";
+// import { Map, GoogleApiWrapper, Marker } from 'google-maps-react';
 
-export default function Footer() {
+export default function Footer(props) {
+  // const mapStyles = {
+  //   width: '40vh',
+  //   height: '40vh',
+  // };
   return (
     <>
       <footer className="text-lg-start footer mt-4 pt-1 pb-1">
         <div className="container p-4">
           <div className="row">
-            <div className="col-lg-3 col-md-6 mb-4 mb-md-0">
+            <div className="col-lg-6 col-md-6 mb-4 mb-md-0">
               <img className="map-image" src={mapimage} alt="map" />
-              {/* <Map google={this.props.google} zoom={14}>
-                <Marker
-                  onClick={this.onMarkerClick}
-                  name={"Current location"}
-                />
-
-                <InfoWindow onClose={this.onInfoWindowClose}>
-                  <div>
-                    <h1>{this.state.selectedPlace.name}</h1>
-                  </div>
-                </InfoWindow>
-              </Map> */}
-
-              <h4 className="pt-3">Head Office</h4>
-              <h6>Airport, Kathmandu</h6>
-              <h6>Phone: 9851125478, 9851236547</h6>
-              <h6>Mail: moysti@gmail.com</h6>
+              {/* <Map
+                google={props.google}
+                zoom={14}
+                style={mapStyles}
+                initialCenter={{ lat: 27.7200715, lng: 85.3573198 }}
+              > */}
+                {/* <Marker position={{ lat: 27.7200715, lng: 85.3573198 }} /> */}
+              {/* </Map> */}
+              
+              <div className="pt-3">
+                <h4>Head Office</h4>
+                <h6>Pipalbot, Boudha</h6>
+                <h6>Phone: 9841504552, 9813955307</h6>
+                <h6>Mail: moysti@gmail.com</h6>
+              </div>
             </div>
 
-            <div className="col-lg-3 col-md-6 mb-4 mb-md-0">
+            <div className="col-lg-2 col-md-6 mb-4 mb-md-0">
               <ul className="list-unstyled mb-0">
                 <li>
                   <NavLink to="/about" className="a">
@@ -52,7 +51,7 @@ export default function Footer() {
               </ul>
             </div>
 
-            <div className="col-lg-3 col-md-6 mb-4 mb-md-0">
+            <div className="col-lg-2 col-md-6 mb-4 mb-md-0">
               <h4 className="">Service</h4>
 
               <ul className="list-unstyled mb-0">
@@ -80,7 +79,7 @@ export default function Footer() {
               </ul>
             </div>
 
-            <div className="col-lg-3 col-md-6 mb-4 mb-md-0">
+            <div className="col-lg-2 col-md-6 mb-4 mb-md-0">
               <h4 className="">Social</h4>
 
               <ul className="list-unstyled mb-0">
@@ -137,5 +136,5 @@ export default function Footer() {
 }
 
 // export default GoogleApiWrapper({
-//   apiKey: "AIzaSyC7W6tR69P7duXtfn-3hiXo7yEQ1NYVLQQ",
+//   apiKey: "AIzaSyBlheLBggIk0p-E2fhamggFxrH5B-jAdc8",
 // })(Footer);

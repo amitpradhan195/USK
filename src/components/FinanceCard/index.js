@@ -13,8 +13,6 @@ export default function FinanceCard(props) {
           <div className="content">
             <div className="contentBx">
               <h3>{props.loan}Home Loan</h3>
-              <span>Contact: </span>
-              <span>{props.contact}</span>
             </div>
           </div>
         </NavLink>
