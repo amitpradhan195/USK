@@ -1,12 +1,8 @@
 import React from "react";
-
 import { IconContext } from "react-icons";
 import { MdLocationOn } from "react-icons/md";
-import { FaBed } from "react-icons/fa";
 import { GiKnifeFork } from "react-icons/gi";
-import { FaBath } from "react-icons/fa";
-import { FaPhoneAlt } from "react-icons/fa";
-
+import { FaBed, FaPhoneAlt, FaBath, FaParking } from "react-icons/fa";
 import "../../css/style.css";
 import { NavLink } from "react-router-dom";
 
@@ -36,34 +32,40 @@ export default function Card(props) {
                 <small>{props.location}</small>
               </p>
               {/* feature */}
-              <div className="facilities row pb-3 pt-4">
+              <div className="facilities row pb-1">
                 <div className="col-md-5 mx-auto">
                   <span className="pr-2">
                     <FaBed />
                   </span>
-                  <small>{props.bed} Bedrooms</small>
+                  <small>Bedrooms: {props.bed}</small>
                 </div>
                 <div className="col-md-5 mx-auto">
                   <span className="pr-2">
                     <GiKnifeFork />
                   </span>
-                  <small>{props.kitchen} Kitchen</small>
+                  <small>Kitchen: {props.kitchen}</small>
                 </div>
               </div>
 
-              <div className="facilities1 row pb-4">
+              <div className="facilities1 row pb-3">
                 <div className="col-md-5 mx-auto">
                   <span className="pr-2">
                     <FaBath />
                   </span>
-                  <small>{props.bath} Bathroom</small>
+                  <small>Bathroom: {props.bath}</small>
                 </div>
                 <div className="col-md-5 mx-auto">
                   <span className="pr-2">
-                    <FaPhoneAlt />
+                    <FaParking/>
                   </span>
-                  <small>{props.contact}</small>
+                  <small>Parking: {props.parking}</small>
                 </div>
+              </div>
+              <div className="text-center">
+                <span>
+                  <FaPhoneAlt className="pr-1"/>
+                  <small>{props.contact}</small>
+                </span>
               </div>
               {/* feature end */}
               <NavLink

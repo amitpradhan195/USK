@@ -6,11 +6,30 @@
   color: #ffffff !important;
 }
 
+.navbarBrandImg {
+  max-width: 6rem;
+}
+
 .navbarunactive ul li a {
   font-size: 1rem !important;
   text-transform: capitalize !important;
   margin: 0 0 0 15px !important;
   color: #ffffff !important;
+}
+
+.carouselImg{
+  width: 100%;
+  max-height: 750px;
+  background-color: black;
+}
+
+.sliderContent{
+  color:white;
+  opacity: 1.0;
+  position: absolute;
+  top: 30%;
+  text-align: center;
+  font-size: 18px;
 }
 
 /* stroke */
@@ -45,7 +64,7 @@ nav.stroke ul li a:hover:after {
 }
 
 .activenav {
-  background-color: #1d1d21;
+  background-color: #007bb4;
   -webkit-transition: 1s;
   transition: 1s;
   height: 90px;
@@ -56,7 +75,7 @@ nav.stroke ul li a:hover:after {
   font-size: 1rem !important;
   text-transform: capitalize !important;
   margin: 0 0 0 15px !important;
-  color: #707070 !important;
+  color: #ffffff !important;
 }
 
 .activenav ul li a:hover {

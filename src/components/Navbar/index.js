@@ -3,8 +3,7 @@ import { useState } from "react";
 import { NavLink } from "react-router-dom";
 import Requirements from "../../components/Requirements";
 import Career from "../../components/Career";
-import logo from "../../assets/logo_USK.jpg";
-
+import logo from "../../assets/logo_USK.png";
 import "../../css/style.css";
 
 export default function Navbar() {
@@ -33,7 +32,7 @@ export default function Navbar() {
       >
         <div className="container">
           <NavLink className="navbar-brand" to="/">
-            <img alt="logo" src={logo} width="120px"/>
+            <img alt="logo" src={logo} className="navbarBrandImg"/>
           </NavLink>
           <button
             className="navbar-toggler collapsed navbar-toggler-light ml-auto "

@@ -30,7 +30,7 @@ export default function Details(props) {
           </div>
         </section>
         {/* slider */}
-        <section className="container col-10">
+        <section className="container col-10 responsive">
           <section className="d-flex align-items-center details-container mt-5 mb-5">
             <div className="container-fluid">
               <div className="row">

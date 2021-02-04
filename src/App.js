@@ -16,7 +16,7 @@ import About from "./pages/About";
 
 export default function App() {
   return (
-    <>
+    <div className="App">
       <Navbar />
       <Switch>
         <Route exact path="/" component={Home} />
@@ -28,6 +28,6 @@ export default function App() {
         <Redirect to="/" />
       </Switch>
       <Footer />
-    </>
+    </div>
   );
 }

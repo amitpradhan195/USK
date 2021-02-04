@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from "react";
-import { NavLink } from "react-router-dom";
 import "../../css/style.css";
 import CData from "../../data/Listings";
 import Card from "../../components/Card";
@@ -8,7 +7,6 @@ import AOS from "aos";
 export default function Listing() {
   const [selectPurpose, setSelectPurpose] = useState('All');
   const [selectPropertyType, setSelectPropertyType] = useState('All');
-  // const [data, setData] = useState([]);
 
   useEffect(() => {
     window.scrollTo(0, 0);
@@ -31,62 +29,61 @@ export default function Listing() {
   return (
     <>
       <section className="details-banner">
-        <div className="container col-10 text-light">
-          {/* <h2 className="text-center">Property Listings</h2> */}
-        </div>
+
       </section>
       {/* filter section */}
       <section className="filter-section pt-4">
         <div className="container-fluid">
           <div className="row">
             <div className="col-10 mx-auto">
-              <div className="row gy-5">
-                <nav className="stroke">
-                <ul className="nav">
+              <div className="row">
+                <form className="form-inline col-md-2">
+                  <div className="form-group col-md-7">
+                    <select className="custom-select form-control browser-default text-center" name="purpose" onChange={onPurposeChange}>
+                      <option selected disabled>
+                        Select &nabla;
+                      </option>
+                      <option value="All">
+                        All
+                      </option>
+                      <option value="For Sale">
+                        For Sale
+                      </option>
+                      <option value="For Rent">
+                        For Rent
+                      </option>
+                    </select>
+                  </div>
+                </form>
+                <nav className="stroke col-md-6">
+                <ul className="nav nav-tabs">
                   <li className="nav-item bg-light">
-                    <form className="form-inline">
-                      <div className="form-group">
-                        <select className="custom-select form-control text-center" name="purpose" onChange={onPurposeChange}>
-                          {/* <option selected disabled>
-                            Select &nabla;
-                          </option> */}
-                          <option selected value="All">
-                            All
-                          </option>
-                          <option value="For Sale">
-                            For Sale
-                          </option>
-                          <option value="For Rent">
-                            For Rent
-                          </option>
-                        </select>
-                      </div>
-                    </form>
+                    
                   </li>
                   <li className="nav-item bg-light">
-                    <NavLink className="nav-link bg-light text-dark" onClick={onPropertyTypeChange('All')} to="?land">
+                    <a className="nav-link active bg-light text-dark" onClick={onPropertyTypeChange('All')} to="?land">
                       All
-                    </NavLink>
+                    </a>
                   </li>
                   <li className="nav-item bg-light">
-                    <NavLink className="nav-link bg-light text-dark" onClick={onPropertyTypeChange('Land')} to="?land">
+                    <a className="nav-link bg-light text-dark" onClick={onPropertyTypeChange('Land')} to="?land">
                       Land
-                    </NavLink>
+                    </a>
                   </li>
                   <li className="nav-item">
-                    <NavLink className="nav-link bg-light text-dark" onClick={onPropertyTypeChange('Flat')} to="?flat">
+                    <a className="nav-link bg-light text-dark" onClick={onPropertyTypeChange('Flat')} to="?flat">
                       Flat
-                    </NavLink>
+                    </a>
                   </li>
                   <li className="nav-item">
-                    <NavLink className="nav-link bg-light text-dark" onClick={onPropertyTypeChange('Building')} to="?building">
+                    <a className="nav-link bg-light text-dark" onClick={onPropertyTypeChange('Building')} to="?building">
                       Building
-                    </NavLink>
+                    </a>
                   </li>
                   <li className="nav-item">
-                    <NavLink className="nav-link bg-light text-dark" onClick={onPropertyTypeChange('Commercial')} to="?commercial">
+                    <a className="nav-link bg-light text-dark" onClick={onPropertyTypeChange('Commercial')} to="?commercial">
                       Commercial
-                    </NavLink>
+                    </a>
                   </li>
                 </ul>
                 </nav>
@@ -115,6 +112,7 @@ export default function Listing() {
                     kitchen={value.kitchen}
                     bath={value.bath}
                     contact={value.contact}
+                    parking={value.parking}
                   />
                 );
             }): (selectPurpose==="All" || selectPropertyType==="All"? 

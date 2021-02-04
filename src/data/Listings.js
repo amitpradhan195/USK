@@ -14,7 +14,8 @@ const ListingData = [
     bed: 5,
     kitchen: 2,
     bath: 2,
-    contact: 9685214537,
+    parking: 'Yes',
+    contact: '9841504552/9813955307',
   },
   {
     id: 2,
@@ -27,7 +28,8 @@ const ListingData = [
     bed: 8,
     kitchen: 2,
     bath: 2,
-    contact: 9685742135,
+    parking: 'Yes',
+    contact: '9841504552/9813955307',
   },
   {
     id: 3,
@@ -40,7 +42,8 @@ const ListingData = [
     bed: 4,
     kitchen: 2,
     bath: 2,
-    contact: 9685321475,
+    parking: 'No',
+    contact: '9841504552/9813955307',
   },
   {
     id: 4,
@@ -53,7 +56,8 @@ const ListingData = [
     bed: 8,
     kitchen: 2,
     bath: 2,
-    contact: 9685742135,
+    parking: 'Yes',
+    contact: '9841504552/9813955307',
   },
   {
     id: 5,
@@ -66,7 +70,8 @@ const ListingData = [
     bed: 4,
     kitchen: 2,
     bath: 2,
-    contact: 9685321475,
+    parking: 'Yes',
+    contact: '9841504552/9813955307',
   },
   {
     id: 6,
@@ -79,7 +84,8 @@ const ListingData = [
     bed: 8,
     kitchen: 2,
     bath: 2,
-    contact: 9685742135,
+    parking: 'Yes',
+    contact: '9841504552/9813955307',
   },
   {
     id: 7,
@@ -92,7 +98,8 @@ const ListingData = [
     bed: 4,
     kitchen: 2,
     bath: 2,
-    contact: 9685321475,
+    parking: 'No',
+    contact: '9841504552/9813955307',
   },
   {
     id: 8,
@@ -105,7 +112,8 @@ const ListingData = [
     bed: 4,
     kitchen: 2,
     bath: 2,
-    contact: 9685321475,
+    parking: 'Yes',
+    contact: '9841504552/9813955307',
   },
   {
     id: 9,
@@ -118,7 +126,8 @@ const ListingData = [
     bed: 8,
     kitchen: 2,
     bath: 2,
-    contact: 9685742135,
+    parking: 'Yes',
+    contact: '9841504552/9813955307',
   },
 ];
 
