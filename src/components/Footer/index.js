@@ -17,7 +17,7 @@ export default function Footer(props) {
       <footer className="text-lg-start footer mt-4 pt-1 pb-1">
         <div className="container p-4">
           <div className="row">
-            <div className="col-lg-6 col-md-6 mb-4 mb-md-0">
+            <div className="col-md-5">
               <img className="map-image" src={mapimage} alt="map" />
               {/* <Map
                 google={props.google}
@@ -28,7 +28,7 @@ export default function Footer(props) {
                 {/* <Marker position={{ lat: 27.7200715, lng: 85.3573198 }} /> */}
               {/* </Map> */}
               
-              <div className="pt-3">
+              <div className="pt-3 pb-4">
                 <h4>Head Office</h4>
                 <h6>Pipalbot, Boudha</h6>
                 <h6>Phone: 9841504552, 9813955307</h6>
@@ -36,7 +36,7 @@ export default function Footer(props) {
               </div>
             </div>
 
-            <div className="col-lg-2 col-md-6 mb-4 mb-md-0">
+            <div className="col-md-2 pb-5">
               <ul className="list-unstyled mb-0">
                 <li>
                   <NavLink to="/about" className="a">
@@ -51,7 +51,7 @@ export default function Footer(props) {
               </ul>
             </div>
 
-            <div className="col-lg-2 col-md-6 mb-4 mb-md-0">
+            <div className="col-md-2 pb-4">
               <h4 className="">Service</h4>
 
               <ul className="list-unstyled mb-0">
@@ -79,7 +79,7 @@ export default function Footer(props) {
               </ul>
             </div>
 
-            <div className="col-lg-2 col-md-6 mb-4 mb-md-0">
+            <div className="col-md-3 pb-4">
               <h4 className="">Social</h4>
 
               <ul className="list-unstyled mb-0">

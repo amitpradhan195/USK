@@ -39,7 +39,7 @@ export default function Listing() {
               <div className="row">
                 <form className="form-inline col-md-2">
                   <div className="form-group col-md-7">
-                    <select className="custom-select form-control browser-default text-center" name="purpose" onChange={onPurposeChange}>
+                    <select className="custom-select form-control browser-default" name="purpose" onChange={onPurposeChange}>
                       <option selected disabled>
                         Select &nabla;
                       </option>
@@ -61,7 +61,7 @@ export default function Listing() {
                     
                   </li>
                   <li className="nav-item bg-light">
-                    <a className="nav-link active bg-light text-dark" onClick={onPropertyTypeChange('All')} to="?land">
+                    <a className="nav-link active bg-light text-dark" onClick={onPropertyTypeChange('All')} to="?all">
                       All
                     </a>
                   </li>

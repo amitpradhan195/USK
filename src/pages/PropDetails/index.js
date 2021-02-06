@@ -6,7 +6,7 @@ import slider4 from "../../assets/s4.jpg";
 import slider5 from "../../assets/s5.jpg";
 import { IconContext } from "react-icons";
 import { MdLocationOn } from "react-icons/md";
-import { FaPhoneAlt, FaBed, FaBath, FaCar, FaWifi, FaLightbulb, FaParking } from "react-icons/fa";
+import { FaPhoneAlt, FaBed, FaBath, FaCar, FaWifi, FaLightbulb } from "react-icons/fa";
 import { IoMail } from "react-icons/io5";
 import { GiKnifeFork } from "react-icons/gi";
 import { ImDroplet } from "react-icons/im";
@@ -23,18 +23,14 @@ export default function Details(props) {
   console.log(pID);
   return (
     <IconContext.Provider value={{ color: "#707070", size: "25px" }}>
-      <>
         <section className="details-banner">
-          <div className="container col-10 text-light">
-            {/* <h2 className="text-center heading-text">Property Details</h2> */}
-          </div>
+          
         </section>
         {/* slider */}
-        <section className="container col-10 responsive">
+        <section className="container">
           <section className="d-flex align-items-center details-container mt-5 mb-5">
             <div className="container-fluid">
               <div className="row">
-                <div className="main">
                   <div className="order-1 order-lg-1 track">
                     <ul>
                       <li id="slide1">
@@ -77,7 +73,6 @@ export default function Details(props) {
                       <img src={slider4} alt="slider_image" />
                     </a>
                   </div>
-                </div>
               </div>
             </div>
           </section>
@@ -116,56 +111,50 @@ export default function Details(props) {
           {/* features */}
           <section className="features mb-4">
             <div className="feature-container">
-              <ul className="list-unstyled features-list">
-                <li className="pr-5">
+              <ul className="list-unstyled features-list row">
+                <li className="col-md-2">
                   <p className="text-center">
                     <FaBed />
                   </p>
                   <p className="text-center">2 Bedrooms</p>
                 </li>
-                <li className="pr-5">
+                <li className="col-md-2">
                   <p className="text-center">
                     <GiKnifeFork />
                   </p>
                   <p className="text-center">1 Kitchen</p>
                 </li>
-                <li className="pr-5">
+                <li className="col-md-2">
                   <p className="text-center">
                     <FaBath />
                   </p>
                   <p className="text-center">1 Bathroom</p>
                 </li>
-                <li className="pr-5">
+                <li className="col-md-2">
+                  <p className="text-center">
+                    <FaCar />
+                  </p>
+                  <p className="text-center">Car Parking</p>
+                </li>
+                <li className="col-md-2">
+                  <p className="text-center">
+                    <RiBikeFill />
+                  </p>
+                  <p className="text-center">Bike parking</p>
+                </li>
+                <li className="col-md-2">
                   <p className="text-center">
                     <ImDroplet />
                   </p>
                   <p className="text-center">Water Supply</p>
                 </li>
-                <li className="pr-5">
+                <li className="col-md-2">
                   <p className="text-center">
                     <FaLightbulb />
                   </p>
                   <p className="text-center">Electricity</p>
                 </li>
-                <li className="pr-5">
-                  <p className="text-center">
-                    <FaParking />
-                  </p>
-                  <p className="text-center">4 Parking</p>
-                </li>
-                <li className="pr-5">
-                  <p className="text-center">
-                    <FaCar />
-                  </p>
-                  <p className="text-center">2 Car Parking</p>
-                </li>
-                <li className="pr-5">
-                  <p className="text-center">
-                    <RiBikeFill />
-                  </p>
-                  <p className="text-center">2 Bike parking</p>
-                </li>
-                <li className="pr-5">
+                <li className="col-md-2">
                   <p className="text-center">
                     <FaWifi />
                   </p>
@@ -206,7 +195,6 @@ export default function Details(props) {
             </div>
           </section>
         </section>
-      </>
     </IconContext.Provider>
   );
 }
