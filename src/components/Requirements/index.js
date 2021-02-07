@@ -54,13 +54,13 @@ export default function Requirements() {
       <div
         className="modal fade"
         id="exampleModal1"
-        tabindex="-1"
+        tabIndex="-1"
         aria-labelledby="exampleModalLabel"
         aria-hidden="true"
       >
         <div className="modal-dialog modal-lg">
           <div className="modal-content">
-            <div class="modal-header">
+            <div className="modal-header">
               <h4 className="modal-title">Send Us Your Requirements</h4>
               <AiOutlineClose fontSize="30px" data-dismiss="modal"/>
             </div>
@@ -78,7 +78,7 @@ export default function Requirements() {
                     onClick={onValueChange}
                     defaultChecked
                     /> 
-                  <label className="form-check-label mr-3 ml-1" for="pf1">Buy</label>
+                  <label className="form-check-label mr-3 ml-1" htmlFor="pf1">Buy</label>
                   <input 
                     className="form-check-input" 
                     type="radio" 
@@ -87,7 +87,7 @@ export default function Requirements() {
                     name="rbPF" 
                     onClick={onValueChange}
                     />
-                  <label className="form-check-label mr-3 ml-1" for="pf2">Rent</label>
+                  <label className="form-check-label mr-3 ml-1" htmlFor="pf2">Rent</label>
                   <input 
                     className="form-check-input" 
                     type="radio" 
@@ -96,7 +96,7 @@ export default function Requirements() {
                     name="rbPF" 
                     onClick={onValueChange}
                     />
-                  <label className="form-check-label mr-3 ml-1" for="pf3">Sale</label>
+                  <label className="form-check-label mr-3 ml-1" htmlFor="pf3">Sale</label>
                 </div>
 
                 {/* property type */}
@@ -111,7 +111,7 @@ export default function Requirements() {
                       onClick={onValueChange}
                       defaultChecked
                     />
-                    <label className="form-check-label mr-3 ml-1" for="pt1">Room</label>
+                    <label className="form-check-label mr-3 ml-1" htmlFor="pt1">Room</label>
 
                     <input
                       className="form-check-input"
@@ -121,7 +121,7 @@ export default function Requirements() {
                       value="Flat"
                       onClick={onValueChange}
                     />
-                    <label className="form-check-label mr-3 ml-1" for="pt2">Flat</label>
+                    <label className="form-check-label mr-3 ml-1" htmlFor="pt2">Flat</label>
                     <input
                       className="form-check-input"
                       type="radio"
@@ -130,7 +130,7 @@ export default function Requirements() {
                       value="Bulding"
                       onClick={onValueChange}
                     />
-                    <label className="form-check-label mr-3 ml-1" for="pt3">Bulding</label>
+                    <label className="form-check-label mr-3 ml-1" htmlFor="pt3">Bulding</label>
                     <input
                       className="form-check-input"
                       type="radio"
@@ -139,7 +139,7 @@ export default function Requirements() {
                       value="Land"
                       onClick={onValueChange}
                     />
-                    <label className="form-check-label" for="pt4">Land</label>
+                    <label className="form-check-label" htmlFor="pt4">Land</label>
                 </div>
 
                 {/* bedroom */}
@@ -157,7 +157,7 @@ export default function Requirements() {
                       onClick={onValueChange}
                       defaultChecked
                     />
-                    <label className="form-check-label" for="bed1">
+                    <label className="form-check-label" htmlFor="bed1">
                       1
                     </label>
                   </div>
@@ -170,7 +170,7 @@ export default function Requirements() {
                       value="2"
                       onClick={onValueChange}
                     />
-                    <label className="form-check-label" for="bed2">
+                    <label className="form-check-label" htmlFor="bed2">
                       2
                     </label>
                   </div>
@@ -183,7 +183,7 @@ export default function Requirements() {
                       value="2+"
                       onClick={onValueChange}
                     />
-                    <label className="form-check-label" for="bed3">
+                    <label className="form-check-label" htmlFor="bed3">
                       2+
                     </label>
                   </div>
@@ -204,7 +204,7 @@ export default function Requirements() {
                       onClick={onValueChange}
                       defaultChecked
                     />
-                    <label className="form-check-label" for="PA1">
+                    <label className="form-check-label" htmlFor="PA1">
                       Bike Only
                     </label>
                   </div>
@@ -217,7 +217,7 @@ export default function Requirements() {
                       value="Car Only"
                       onClick={onValueChange}
                     />
-                    <label className="form-check-label" for="PA2">
+                    <label className="form-check-label" htmlFor="PA2">
                       Car Only
                     </label>
                   </div>
@@ -230,7 +230,7 @@ export default function Requirements() {
                       value="Both"
                       onClick={onValueChange}
                     />
-                    <label className="form-check-label" for="PA3">
+                    <label className="form-check-label" htmlFor="PA3">
                       Both
                     </label>
                   </div>
@@ -243,7 +243,7 @@ export default function Requirements() {
                       value="None"
                       onClick={onValueChange}
                     />
-                    <label className="form-check-label" for="PA4">
+                    <label className="form-check-label" htmlFor="PA4">
                       None
                     </label>
                   </div>

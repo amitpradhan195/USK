@@ -6,35 +6,29 @@ export default function CareerModal() {
       <div
         className="modal fade"
         id="exampleModal2"
-        tabindex="-1"
+        tabIndex="-1"
         aria-labelledby="exampleModalLabel"
         aria-hidden="true"
       >
-        <div className="modal-dialog modal-lg">
+        <div className="modal-dialog modal-md">
           <div className="modal-content">
             <div className="modal-body">
-              <h4 className="text-center">Work at USK</h4>
-              <form className="p-5 was-validated">
+              <h3 className="text-center">Send Your CV</h3>
+              <form className="pl-5 pt-3 was-validated">
                 {/* upload */}
-                <label className="mb-2">Send Your CV:</label>
-                <div className="custom-file">
+                {/* <label className="mb-2 h3" style={{fontWeight:'bold', color:'#273746'}}>Send Your CV:</label> */}
+                <div className="custom-file pb-2">
                   <input
                     type="file"
                     className="custom-file-input"
                     id="validatedCustomFile"
                     required
                   />
-                  <label
-                    className="custom-file-label"
-                    for="validatedCustomFile"
-                  >
-                    Choose file...
-                  </label>
                 </div>
-
+                <p><span style={{fontWeight:'bold', color:'#E74C3C'}}>Note:</span> Only PDF file acceptable. </p>
                 <button
                   type="button"
-                  className="btn btn-lg btn-primary mt-4 btnbuilt shadow"
+                  className="btn btn-lg btn-primary btnbuilt shadow"
                 >
                   SUBMIT
                 </button>
