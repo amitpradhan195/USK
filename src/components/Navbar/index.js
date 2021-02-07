@@ -3,7 +3,7 @@ import { useState } from "react";
 import { NavLink } from "react-router-dom";
 import Requirements from "../../components/Requirements";
 import Career from "../../components/Career";
-import logo from "../../assets/logo_USK.png";
+import logo from "../../assets/logo_US.png";
 import "../../css/style.css";
 
 export default function Navbar() {

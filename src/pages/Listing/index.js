@@ -61,27 +61,27 @@ export default function Listing() {
                     
                   </li>
                   <li className="nav-item bg-light">
-                    <a className="nav-link active bg-light text-dark" onClick={onPropertyTypeChange('All')} to="?all">
+                    <a className="nav-link active bg-light text-dark" onClick={onPropertyTypeChange('All')} href="?all">
                       All
                     </a>
                   </li>
                   <li className="nav-item bg-light">
-                    <a className="nav-link bg-light text-dark" onClick={onPropertyTypeChange('Land')} to="?land">
+                    <a className="nav-link bg-light text-dark" onClick={onPropertyTypeChange('Land')} href="?land">
                       Land
                     </a>
                   </li>
                   <li className="nav-item">
-                    <a className="nav-link bg-light text-dark" onClick={onPropertyTypeChange('Flat')} to="?flat">
+                    <a className="nav-link bg-light text-dark" onClick={onPropertyTypeChange('Flat')} href="?flat">
                       Flat
                     </a>
                   </li>
                   <li className="nav-item">
-                    <a className="nav-link bg-light text-dark" onClick={onPropertyTypeChange('Building')} to="?building">
+                    <a className="nav-link bg-light text-dark" onClick={onPropertyTypeChange('Building')} href="?building">
                       Building
                     </a>
                   </li>
                   <li className="nav-item">
-                    <a className="nav-link bg-light text-dark" onClick={onPropertyTypeChange('Commercial')} to="?commercial">
+                    <a className="nav-link bg-light text-dark" onClick={onPropertyTypeChange('Commercial')} href="?commercial">
                       Commercial
                     </a>
                   </li>
