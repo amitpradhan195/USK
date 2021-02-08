@@ -58,7 +58,7 @@ export default function Footer(props) {
                 <li>
                   <NavLink to="/finance" className="a">
                     <IconContext.Provider value={{ color: "#F54D53" }}>
-                      <VscDebugBreakpointLog className="mr-2" />
+                      <VscDebugBreakpointLog className="me-2" />
                     </IconContext.Provider>
                     Finance
                   </NavLink>
@@ -71,7 +71,7 @@ export default function Footer(props) {
                     to="#career"
                   >
                     <IconContext.Provider value={{ color: "#F54D53" }}>
-                      <VscDebugBreakpointLog className="mr-2" />
+                      <VscDebugBreakpointLog className="me-2" />
                     </IconContext.Provider>
                     Career
                   </NavLink>
@@ -88,7 +88,7 @@ export default function Footer(props) {
                     <IconContext.Provider
                       value={{ color: "#166FE5", size: "25px" }}
                     >
-                      <FaFacebook className="mr-2" />
+                      <FaFacebook className="me-2" />
                     </IconContext.Provider>
                     Facebook
                   </NavLink>
@@ -98,7 +98,7 @@ export default function Footer(props) {
                     <IconContext.Provider
                       value={{ color: "#F54D53", size: "25px" }}
                     >
-                      <FaInstagram className="mr-2" />
+                      <FaInstagram className="me-2" />
                     </IconContext.Provider>
                     Instagram
                   </NavLink>
@@ -108,7 +108,7 @@ export default function Footer(props) {
                     <IconContext.Provider
                       value={{ color: "#0A66C2", size: "25px" }}
                     >
-                      <FaLinkedinIn className="mr-2" />
+                      <FaLinkedinIn className="me-2" />
                     </IconContext.Provider>
                     LinkedIn
                   </NavLink>
@@ -118,7 +118,7 @@ export default function Footer(props) {
                     <IconContext.Provider
                       value={{ color: "#1C9CEA", size: "25px" }}
                     >
-                      <FaTwitter className="mr-2" />
+                      <FaTwitter className="me-2" />
                     </IconContext.Provider>
                     Twitter
                   </NavLink>

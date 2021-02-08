@@ -11,13 +11,14 @@ export default function Card(props) {
     <IconContext.Provider value={{ color: "#707070", size: "20px" }}>
       <>
         <div className="col-md-4 pb-5">
-          <div className="card shadow about-card" data-aos="fade-down">
+          <div className="card shadow" data-aos="fade-down">
             <div className="card-body">
               {/* title */}
               <img
                 alt={props.imgsrc}
                 className="d-block"
-                src={props.imgsrc}
+                // src={props.imgsrc}
+                src={`propertyImages/${props.imgsrc}`}
               />
               <div className="tag shadow" name="ppfor" style={props.css}>
                 {props.tag}
@@ -34,13 +35,13 @@ export default function Card(props) {
               {/* feature */}
               <div className="row pb-1">
                 <div className="col-md-6 mx-auto">
-                  <span className="p-2">
+                  <span className="pe-2">
                     <FaBed />
                   </span>
                   <small>Bedrooms: <span style={{fontWeight:'bold'}}>{props.bed}</span></small>
                 </div>
                 <div className="col-md-6 mx-auto">
-                  <span className="p-2">
+                  <span className="pe-2">
                     <GiKnifeFork />
                   </span>
                   <small>Kitchen: <span style={{fontWeight:'bold'}}>{props.kitchen}</span></small>
@@ -49,13 +50,13 @@ export default function Card(props) {
 
               <div className="row pb-3">
                 <div className=" col-md-6 mx-auto">
-                  <span className="p-2">
+                  <span className="pe-2">
                     <FaBath />
                   </span>
                   <small>Bathroom: <span style={{fontWeight:'bold'}}>{props.bath}</span></small>
                 </div>
                 <div className="col-md-6 mx-auto">
-                  <span className="p-2">
+                  <span className="pe-2">
                     <FaParking/>
                   </span>
                   <small>Parking: <span style={{fontWeight:'bold'}}>{props.parking}</span></small>
@@ -63,7 +64,7 @@ export default function Card(props) {
               </div>
               <div className="text-center">
                 <span>
-                  <FaPhoneAlt className="pr-1"/>
+                  <FaPhoneAlt className="pe-1"/>
                   <small>{props.contact}</small>
                 </span>
               </div>

@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import "../../css/style.css";
 import slider2 from "../../assets/s2.jpg";
 import slider3 from "../../assets/s3.jpg";
@@ -13,14 +13,24 @@ import { ImDroplet } from "react-icons/im";
 import { RiBikeFill } from "react-icons/ri";
 import mapimage from "../../assets/office.PNG";
 import ReactPlayer from "react-player";
+import cardData from "../../data/Listings";
 
 export default function Details(props) {
+  const pID = props.match.params.id;
+  const [details, setDetails] = useState({});
+
   useEffect(() => {
     window.scrollTo(0, 0);
-  }, []);
+    cardData.filter(details=>details.id==pID)
+      .map((filteredDetails)=>{
+        setDetails(filteredDetails);
+        // return filteredDetails
+      })  
+  }, [pID]);
+  
+  // console.log(pID);
+  console.log(details);
 
-  const pID = props.match.params.id;
-  console.log(pID);
   return (
     <IconContext.Provider value={{ color: "#707070", size: "25px" }}>
         <section className="details-banner">
@@ -80,30 +90,28 @@ export default function Details(props) {
           <section className="contact-info pb-4">
             <div className="contact-info-container pb-3">
               <div className="row">
-                <div className="col-md-7 order-1 order-lg-1">
-                  <h2 className="text-uppercase">{pID.prop}</h2>
+                <div className="col-md-9">
+                  <h2 className="text-uppercase">{details.prop}</h2>
                   <p>
-                    <span className="icon pr-1">
+                    <span className="icon pe-1">
                       <MdLocationOn />
                     </span>
                     <small>Dillibazar, kathmandu</small>
                   </p>
                 </div>
-                <div className="col-md-5 order-2 order-lg-2">
-                  <div className="float-lg-right float-sm-left float-md-left">
+                <div className="col-md-3 text-right">
                     <p>
-                      <span className="icon pr-1">
+                      <span className="icon pe-1">
                         <FaPhoneAlt />
                       </span>
-                      <small>9869032514</small>
+                      <small>{details.contact}</small>
                     </p>
                     <p>
-                      <span className="icon pr-1">
+                      <span className="icon pe-1">
                         <IoMail />
                       </span>
-                      <small>abc123@gmail.com</small>
+                      <small>theusgroup@gmail.com</small>
                     </p>
-                  </div>
                 </div>
               </div>
             </div>
@@ -116,49 +124,49 @@ export default function Details(props) {
                   <p className="text-center">
                     <FaBed />
                   </p>
-                  <p className="text-center">2 Bedrooms</p>
+                  <p className="text-center"><span className="facility">{details.bed}</span> Bedrooms</p>
                 </li>
                 <li className="col-md-2">
                   <p className="text-center">
                     <GiKnifeFork />
                   </p>
-                  <p className="text-center">1 Kitchen</p>
+                  <p className="text-center"><span className="facility">{details.kitchen}</span> Kitchen</p>
                 </li>
                 <li className="col-md-2">
                   <p className="text-center">
                     <FaBath />
                   </p>
-                  <p className="text-center">1 Bathroom</p>
+                  <p className="text-center"><span className="facility">{details.bath}</span> Bathroom</p>
                 </li>
                 <li className="col-md-2">
                   <p className="text-center">
                     <FaCar />
                   </p>
-                  <p className="text-center">Car Parking</p>
+                  <p className="text-center">Car Parking: <span className="facility">{details.carParking}</span></p>
                 </li>
                 <li className="col-md-2">
                   <p className="text-center">
                     <RiBikeFill />
                   </p>
-                  <p className="text-center">Bike parking</p>
+                  <p className="text-center">Bike parking: <span className="facility">{details.bikeParking}</span></p>
                 </li>
                 <li className="col-md-2">
                   <p className="text-center">
                     <ImDroplet />
                   </p>
-                  <p className="text-center">Water Supply</p>
+                  <p className="text-center">Water Supply: <span className="facility">{details.waterSupply}</span></p>
                 </li>
                 <li className="col-md-2">
                   <p className="text-center">
                     <FaLightbulb />
                   </p>
-                  <p className="text-center">Electricity</p>
+                  <p className="text-center">Electricity: <span className="facility">{details.electricity}</span></p>
                 </li>
                 <li className="col-md-2">
                   <p className="text-center">
                     <FaWifi />
                   </p>
-                  <p className="text-center">Internet</p>
+                  <p className="text-center">Internet: <span className="facility">{details.internet}</span></p>
                 </li>
               </ul>
             </div>
@@ -184,7 +192,7 @@ export default function Details(props) {
             <ReactPlayer
               width="auto"
               controls
-              url="https://www.youtube.com/watch?v=M5hQ5KOOOoc"
+              url={details.url}
             />
           </section>
           {/* map information */}

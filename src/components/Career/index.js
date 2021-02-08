@@ -18,7 +18,7 @@ export default function CareerModal() {
               <AiOutlineClose fontSize="30px" data-bs-dismiss="modal" role="button"/>
             </div>
             <div className="modal-body">
-              <form className="pl-5 pt-3 was-validated">
+              <form className="pt-3 was-validated">
                 {/* upload */}
                 <div className="custom-file pb-2">
                   <input
@@ -31,7 +31,7 @@ export default function CareerModal() {
                 <p><span style={{fontWeight:'bold', color:'#E74C3C'}}>Note:</span> Only PDF file acceptable. </p>
                 <button
                   type="button"
-                  className="btn btn-lg btn-primary btnbuilt shadow"
+                  className="btn btn-lg btn-primary btnbuilt shadow w-100"
                 >
                   SUBMIT
                 </button>

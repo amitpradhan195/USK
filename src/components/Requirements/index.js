@@ -15,7 +15,7 @@ export default function Requirements() {
     customerName:'',
     contactNo:''
   });
-  const [showBedroom, setShowBedroom] = useState(false);
+  const [showBedroom, setShowBedroom] = useState(true);
 
   function onValueChange(e){
     setValues({
@@ -52,7 +52,7 @@ export default function Requirements() {
   return (
     <>
       <div
-        className="modal"
+        className="modal fade"
         id="requirementsModal"
         tabIndex="-1"
         aria-labelledby="requirementsModalLabel"
@@ -68,40 +68,49 @@ export default function Requirements() {
               <form className="pl-5 pt-2" onSubmit={sendRequirement}>
                 {/* property for */}
                 <label>Property For :</label>
-                <div className="form-group mb-3 ml-3">
-                  <input 
-                    className="form-check-input" 
-                    type="radio" 
-                    id="pf1" 
-                    value="Buy" 
-                    name="rbPF" 
-                    onClick={onValueChange}
-                    defaultChecked
-                    /> 
-                  <label className="form-check-label mr-3 ml-1" htmlFor="pf1">Buy</label>
-                  <input 
-                    className="form-check-input" 
-                    type="radio" 
-                    id="pf2" 
-                    value="Rent" 
-                    name="rbPF" 
-                    onClick={onValueChange}
-                    />
-                  <label className="form-check-label mr-3 ml-1" htmlFor="pf2">Rent</label>
-                  <input 
-                    className="form-check-input" 
-                    type="radio" 
-                    id="pf3" 
-                    value="Sale" 
-                    name="rbPF" 
-                    onClick={onValueChange}
-                    />
-                  <label className="form-check-label mr-3 ml-1" htmlFor="pf3">Sale</label>
+                <div className="form-group mb-3 ms-3">
+                  <div className="form-check form-check-inline">
+                    <input 
+                      className="form-check-input" 
+                      type="radio" 
+                      id="pf1" 
+                      value="Buy" 
+                      name="rbPF" 
+                      onClick={onValueChange}
+                      defaultChecked
+                      /> 
+                    <label className="form-check-label" htmlFor="pf1">Buy</label>
+                  </div>
+
+                  <div className="form-check form-check-inline">
+                    <input 
+                      className="form-check-input" 
+                      type="radio" 
+                      id="pf2" 
+                      value="Rent" 
+                      name="rbPF" 
+                      onClick={onValueChange}
+                      />
+                    <label className="form-check-label" htmlFor="pf2">Rent</label>
+                  </div>
+                  
+                  <div className="form-check form-check-inline">
+                    <input 
+                      className="form-check-input" 
+                      type="radio" 
+                      id="pf3" 
+                      value="Sale" 
+                      name="rbPF" 
+                      onClick={onValueChange}
+                      />
+                    <label className="form-check-label" htmlFor="pf3">Sale</label>
+                  </div>
                 </div>
 
                 {/* property type */}
                 <label>Property Type :</label>
-                <div className="form-group mb-3 ml-3">
+                <div className="form-group mb-3 ms-3">
+                <div className="form-check form-check-inline">
                     <input
                       className="form-check-input"
                       type="radio"
@@ -111,8 +120,10 @@ export default function Requirements() {
                       onClick={onValueChange}
                       defaultChecked
                     />
-                    <label className="form-check-label mr-3 ml-1" htmlFor="pt1">Room</label>
+                    <label className="form-check-label" htmlFor="pt1">Room</label>
+                  </div>
 
+                  <div className="form-check form-check-inline">
                     <input
                       className="form-check-input"
                       type="radio"
@@ -121,7 +132,10 @@ export default function Requirements() {
                       value="Flat"
                       onClick={onValueChange}
                     />
-                    <label className="form-check-label mr-3 ml-1" htmlFor="pt2">Flat</label>
+                    <label className="form-check-label" htmlFor="pt2">Flat</label>
+                  </div>
+
+                  <div className="form-check form-check-inline">
                     <input
                       className="form-check-input"
                       type="radio"
@@ -130,7 +144,10 @@ export default function Requirements() {
                       value="Bulding"
                       onClick={onValueChange}
                     />
-                    <label className="form-check-label mr-3 ml-1" htmlFor="pt3">Bulding</label>
+                    <label className="form-check-label" htmlFor="pt3">Bulding</label>
+                  </div>
+
+                  <div className="form-check form-check-inline">
                     <input
                       className="form-check-input"
                       type="radio"
@@ -140,13 +157,14 @@ export default function Requirements() {
                       onClick={onValueChange}
                     />
                     <label className="form-check-label" htmlFor="pt4">Land</label>
+                  </div>
                 </div>
 
                 {/* bedroom */}
                 {showBedroom ?
                 <>
                 <label>Bedroom :</label>
-                <div className="form-group mb-3 ml-3">
+                <div className="form-group mb-3 ms-3">
                   <div className="form-check form-check-inline">
                     <input
                       className="form-check-input"
@@ -193,7 +211,7 @@ export default function Requirements() {
 
                 {/* parking */}
                 <label className="form-group">Parking Area :</label>
-                <div className="form-group mb-3 ml-3">
+                <div className="form-group mb-3 ms-3">
                   <div className="form-check form-check-inline">
                     <input
                       className="form-check-input"

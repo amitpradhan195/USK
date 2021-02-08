@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 import "../../css/style.css";
 import emailjs from 'emailjs-com';
+import NumberFormat from "react-number-format";
+import { AiOutlineClose } from "react-icons/ai";
 
 export default function DHouse() {
   const [values, setValues] = useState({
@@ -45,23 +47,26 @@ export default function DHouse() {
         data-aos="fade-right"
         type="button"
         className="btn btn-lg btn-primary mt-3 btnbuilt shadow"
-        data-toggle="modal"
-        data-target="#exampleModal"
+        data-bs-toggle="modal"
+        data-bs-target="#dreamhouseModal"
       >
         Click Here
       </button>
       <div
         className="modal fade"
-        id="exampleModal"
+        id="dreamhouseModal"
         tabIndex="-1"
-        aria-labelledby="exampleModalLabel"
+        aria-labelledby="dreamhouseModalLabel"
         aria-hidden="true"
       >
         <div className="modal-dialog modal-lg">
           <div className="modal-content">
             <div className="modal-body">
-              <h4 className="text-center">Build Your Dream House</h4>
-              <form className="p-5" onSubmit={sendRequirementForDreamHouse}>
+              <div className="modal-header">
+                <h4 className="modal-title text-center">Build Your Dream House</h4>
+                <AiOutlineClose fontSize="30px" data-bs-dismiss="modal" role="button"/>
+              </div>
+              <form className="p-3" onSubmit={sendRequirementForDreamHouse}>
                 <label className="mb-2 font-weight-bold">
                   Select Your House Type:
                 </label>
@@ -354,6 +359,7 @@ export default function DHouse() {
                       className="form-control"
                       name="tellUsMore"
                       rows="3"
+                      placeholder="Type here for more...."
                     ></textarea>
                   </div>
                 </div>
@@ -362,9 +368,8 @@ export default function DHouse() {
                   <div className="form-group col-lg-4">
                     <p className="font-weight-bold">Full Name: </p>
                   </div>
-
                   <div className="form-group col-lg-4">
-                    <input type="text" onBlur={onValueChange} name="fullName" className="form-control" required/>
+                    <input type="text" onBlur={onValueChange} name="fullName" placeholder="Enter full name" className="form-control" required/>
                   </div>
                 </div>
                 {/* phone no */}
@@ -374,7 +379,16 @@ export default function DHouse() {
                   </div>
 
                   <div className="form-group col-lg-4">
-                    <input type="number" pattern="[7-9]{1}[0-9]{9}" name="contactNo" onBlur={onValueChange} className="form-control" required/>
+                    <NumberFormat
+                      className="form-control"
+                      placeholder="e.g: 9812345678"
+                      name="contactNo"
+                      min={9800000000}
+                      max={9899999999}
+                      onBlur={onValueChange}
+                      required
+                      />
+                    {/* <input type="number" pattern="[7-9]{1}[0-9]{9}" name="contactNo" placeholder="Enter contact number" onBlur={onValueChange} className="form-control" required/> */}
                   </div>
                 </div>
                 {/* budget */}

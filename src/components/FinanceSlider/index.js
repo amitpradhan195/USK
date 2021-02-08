@@ -162,9 +162,9 @@ const handleChangeCoordination = (name) => (event, value) => {
     <>
       <section className="slider-section mt-5">
         <div className="container-fluid">
-          {/* <div className="col-10 mx-auto"> */}
+          <div className="col-10 mx-auto">
             <div className="row">
-              <div className="col-8 pl-5">
+              <div className="col-md-8 pl-5">
                 <section className="featured-container">
                   <h4 className="heading-text">
                     Check interest & installment.
@@ -172,7 +172,7 @@ const handleChangeCoordination = (name) => (event, value) => {
                   <p>Find out how much would you need to pay monthly ?</p>
                 </section>
                 <div className="row">
-                  <div className="col-8 mt-3">
+                  <div className="col-md-9 mt-3">
                     <Slider
                       value={values.amountValue}
                       step={1}
@@ -184,7 +184,7 @@ const handleChangeCoordination = (name) => (event, value) => {
                       valueLabelDisplay="auto"
                     />
                   </div>
-                  <div className="col-3">
+                  <div className="col-md-3">
                     <Typography gutterBottom>
                       <NumberFormat
                         customInput={TextField}
@@ -206,7 +206,7 @@ const handleChangeCoordination = (name) => (event, value) => {
                 <br/>
                 {/* Interest rate */}
                 <div className="row">
-                  <div className="col-8 mt-3">
+                  <div className="col-md-9 mt-3">
                     <Slider
                       value={values.interestValue}
                       step={0.1}
@@ -217,7 +217,7 @@ const handleChangeCoordination = (name) => (event, value) => {
                       onChange={handleChangeCoordination('interestValue')}
                     />
                   </div>
-                  <div className="col-3">
+                  <div className="col-md-3">
                     <Typography id="interest" gutterBottom>
                       <NumberFormat
                         id="formattedInterest"
@@ -236,7 +236,7 @@ const handleChangeCoordination = (name) => (event, value) => {
                 <br/>
                 {/* loan term */}
                 <div className="row">
-                  <div className="col-8 mt-3">
+                  <div className="col-md-9 mt-3">
                     <Slider
                       value={values.yearValue}
                       step={1}
@@ -247,7 +247,7 @@ const handleChangeCoordination = (name) => (event, value) => {
                       onChange={handleChangeCoordination('yearValue')}
                     />
                   </div>
-                  <div className="col-3">
+                  <div className="col-md-3">
                     <Typography id="years" gutterBottom>
                       <NumberFormat
                         id="formattedYear" 
@@ -264,11 +264,11 @@ const handleChangeCoordination = (name) => (event, value) => {
                   </div>
                 </div>
               </div>
-              <div className="col-4 mt-5 text-center">
+              <div className="col-md-4 mt-5 text-center">
                 <h4 className="text-center">Monthly EMI</h4>
                 <h1 className="text-center text-danger">
                   <CurrencyFormat 
-                    className="pl-2 text-danger" 
+                    className="text-danger" 
                     value={emi} 
                     displayType={'text'}
                     prefix={'Rs.'} 
@@ -279,7 +279,7 @@ const handleChangeCoordination = (name) => (event, value) => {
                 <p>
                   Principal
                   <CurrencyFormat 
-                    className="pl-2 text-danger" 
+                    className="text-danger" 
                     value={values.amountValue} 
                     displayType={'text'}
                     prefix={'Rs.'} 
@@ -290,7 +290,7 @@ const handleChangeCoordination = (name) => (event, value) => {
                 <p>
                   Interest Payable
                   <CurrencyFormat 
-                    className="pl-2 text-danger" 
+                    className="text-danger" 
                     value={interestPayable} 
                     displayType={'text'}
                     prefix={'Rs.'} 
@@ -301,7 +301,7 @@ const handleChangeCoordination = (name) => (event, value) => {
                 <p>
                   Total Amount Payable
                   <CurrencyFormat 
-                    className="pl-2 text-danger" 
+                    className="text-danger" 
                     value={totalAmountPayable} 
                     displayType={'text'}
                     prefix={'Rs.'} 
@@ -318,7 +318,7 @@ const handleChangeCoordination = (name) => (event, value) => {
                 <p className="h6 mt-2">Contact : <span className="font-weight-bold">9841504552, 9813955307</span></p>
               </div>
             </div>
-          {/* </div> */}
+          </div>
         </div>
       </section>
     </>

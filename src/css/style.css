@@ -28,8 +28,7 @@
   opacity: 1.0;
   position: absolute;
   top: 30%;
-  text-align: center;
-  font-size: 18px;
+  /* text-align: center; */
 }
 
 /* stroke */
@@ -117,11 +116,11 @@ nav.stroke ul li a:hover:after {
 
 .carousel-item {
   width: 100vw;
-  height: 100vh;
+  max-height: 100vh;
 }
 
 .carousel-item .carousel-caption {
-  bottom: 330px;
+  /* bottom: 330px; */
   -webkit-animation: 1s ease-out 0s 1 slideInFromLeft;
           animation: 1s ease-out 0s 1 slideInFromLeft;
   padding: 30px;
@@ -177,8 +176,8 @@ nav.stroke ul li a:hover:after {
 }
 
 .btnbuilt {
-  background-color: #707070 !important;
-  border-radius: 16px;
+  background-color: #2E4053 !important;
+  border-radius: 10px;
   border: none;
 }
 
@@ -500,13 +499,11 @@ nav.stroke ul li a:hover:after {
           justify-content: center;
   -webkit-box-align: center;
       -ms-flex-align: center;
-          /* align-items: center; */
 }
 
 .container-finance .card img {
   width: 100%;
-  /* max-width: 200px; */
-  height: 150px;
+  max-height: 150px;
   display: block;
   -o-object-fit: cover;
      object-fit: cover;
@@ -634,6 +631,10 @@ select:focus {
 }
 /*# sourceMappingURL=style.css.map */
 
+.facility{
+  font-weight: bold;
+  color: #2E4053;
+}
 
 
 
@@ -698,6 +699,14 @@ select:focus {
     padding: 0;
     height: 460px;
     width: 100%;
+  }
+  .sliderContent{
+    color:white;
+    opacity: 1.0;
+    position: absolute;
+    top: 50%;
+    text-align: center;
+    font-size: 18px;
   }
 }
 
