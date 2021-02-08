@@ -24,7 +24,7 @@ export default function Details(props) {
     cardData.filter(details=>details.id==pID)
       .map((filteredDetails)=>{
         setDetails(filteredDetails);
-        // return filteredDetails
+        return filteredDetails
       })  
   }, [pID]);
   
