@@ -33,67 +33,68 @@ export default function Listing() {
       </section>
       {/* filter section */}
       <section className="filter-section pt-4">
-        <div className="container-fluid">
+        <div className="container">
           <div className="row">
-            <div className="col-10 mx-auto">
-              <div className="row">
-                <form className="form-inline col-md-2">
-                  <div className="form-group col-md-7">
-                    <select className="custom-select form-control browser-default" name="purpose" onChange={onPurposeChange}>
-                      <option selected disabled>
-                        Select &nabla;
-                      </option>
-                      <option value="All">
-                        All
-                      </option>
-                      <option value="For Sale">
-                        For Sale
-                      </option>
-                      <option value="For Rent">
-                        For Rent
-                      </option>
-                    </select>
-                  </div>
-                </form>
-                <nav className="stroke col-md-6">
+            <form className="col-md-4">
+            <div className="input-group mb-3">
+              <div className="input-group-prepend">
+                <label className="input-group-text" htmlFor="inputGroupSelect01">Purpose</label>
+              </div>
+              <select className="custom-select w-50" style={{backgroundColor:'#F8F9F9', borderColor:'#EAECEE'}} defaultValue="Select" name="purpose" onChange={onPurposeChange}>
+                <option value="Select" disabled>
+                  Select 
+                </option>
+                <option value="All">
+                  All
+                </option>
+                <option value="For Sale">
+                  For Sale
+                </option>
+                <option value="For Rent">
+                  For Rent
+                </option>
+              </select>
+            </div>
+            </form>
+            <div className="col-md-8" >
+              <nav className="stroke">
                 <ul className="nav nav-tabs">
                   <li className="nav-item bg-light">
                     
                   </li>
                   <li className="nav-item bg-light">
-                    <a className="nav-link active bg-light text-dark" onClick={onPropertyTypeChange('All')} href="?all">
+                    <a className="nav-link active bg-light text-dark" onClick={onPropertyTypeChange('All')} href="#all">
                       All
                     </a>
                   </li>
                   <li className="nav-item bg-light">
-                    <a className="nav-link bg-light text-dark" onClick={onPropertyTypeChange('Land')} href="?land">
+                    <a className="nav-link bg-light text-dark" onClick={onPropertyTypeChange('Land')} href="#land">
                       Land
                     </a>
                   </li>
                   <li className="nav-item">
-                    <a className="nav-link bg-light text-dark" onClick={onPropertyTypeChange('Flat')} href="?flat">
+                    <a className="nav-link bg-light text-dark" onClick={onPropertyTypeChange('Flat')} href="#flat">
                       Flat
                     </a>
                   </li>
                   <li className="nav-item">
-                    <a className="nav-link bg-light text-dark" onClick={onPropertyTypeChange('Building')} href="?building">
+                    <a className="nav-link bg-light text-dark" onClick={onPropertyTypeChange('Building')} href="#building">
                       Building
                     </a>
                   </li>
                   <li className="nav-item">
-                    <a className="nav-link bg-light text-dark" onClick={onPropertyTypeChange('Commercial')} href="?commercial">
+                    <a className="nav-link bg-light text-dark" onClick={onPropertyTypeChange('Commercial')} href="#commercial">
                       Commercial
                     </a>
                   </li>
                 </ul>
-                </nav>
-              </div>
+              </nav>
             </div>
           </div>
         </div>
       </section>
       {/* prop listings */}
-      <div className="container-fluid pb-5 about-myjob pt-5">
+      <div className="container-fluid pb-5 about-myjob pt-2">
         <div className="row">
           <div className="col-10 mx-auto">
             <div className="row gy-5">

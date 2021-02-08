@@ -1,22 +1,25 @@
 import React from "react";
+import { AiOutlineClose } from "react-icons/ai";
 
 export default function CareerModal() {
   return (
     <>
       <div
         className="modal fade"
-        id="exampleModal2"
+        id="careerModal"
         tabIndex="-1"
-        aria-labelledby="exampleModalLabel"
+        aria-labelledby="careerModalLabel"
         aria-hidden="true"
       >
         <div className="modal-dialog modal-md">
           <div className="modal-content">
+            <div className="modal-header">
+              <h3 className="modal-title text-center">Send Your CV</h3>
+              <AiOutlineClose fontSize="30px" data-bs-dismiss="modal" role="button"/>
+            </div>
             <div className="modal-body">
-              <h3 className="text-center">Send Your CV</h3>
               <form className="pl-5 pt-3 was-validated">
                 {/* upload */}
-                {/* <label className="mb-2 h3" style={{fontWeight:'bold', color:'#273746'}}>Send Your CV:</label> */}
                 <div className="custom-file pb-2">
                   <input
                     type="file"

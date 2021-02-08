@@ -35,10 +35,10 @@ export default function Navbar() {
             <img alt="logo" src={logo} className="navbarBrandImg"/>
           </NavLink>
           <button
-            className="navbar-toggler collapsed navbar-toggler-light ml-auto "
+            className="navbar-toggler navbar-toggler-light"
             type="button"
-            data-toggle="collapse"
-            data-target="#navbarSupportedContent"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarSupportedContent"
             aria-controls="navbarSupportedContent"
             aria-expanded="false"
             aria-label="Toggle navigation"
@@ -47,7 +47,7 @@ export default function Navbar() {
           </button>
 
           <div className="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul className="navbar-nav mr-sm-auto mb-2 mb-lg-0">
+            <ul className="navbar-nav">
               <li className="nav-item">
                 <NavLink
                   activeClassName="menu_active"
@@ -73,9 +73,9 @@ export default function Navbar() {
                   activeClassName="menu_active"
                   exact
                   className="nav-link"
-                  data-toggle="modal"
-                  data-target="#exampleModal1"
-                  to="#"
+                  data-bs-toggle="modal"
+                  data-bs-target="#requirementsModal"
+                  to="#requirements"
                 >
                   Requirements
                 </NavLink>
@@ -87,9 +87,9 @@ export default function Navbar() {
                   activeClassName="menu_active"
                   exact
                   className="nav-link"
-                  data-toggle="modal"
-                  data-target="#exampleModal2"
-                  to="#"
+                  data-bs-toggle="modal"
+                  data-bs-target="#careerModal"
+                  to="#career"
                 >
                   Career
                 </NavLink>

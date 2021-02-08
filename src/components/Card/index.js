@@ -10,13 +10,13 @@ export default function Card(props) {
   return (
     <IconContext.Provider value={{ color: "#707070", size: "20px" }}>
       <>
-        <div className="col-md-4 col-10 mx-auto">
+        <div className="col-md-4 pb-5">
           <div className="card shadow about-card" data-aos="fade-down">
             <div className="card-body">
               {/* title */}
               <img
                 alt={props.imgsrc}
-                className="d-block w-100"
+                className="d-block"
                 src={props.imgsrc}
               />
               <div className="tag shadow" name="ppfor" style={props.css}>
@@ -32,33 +32,33 @@ export default function Card(props) {
                 <small>{props.location}</small>
               </p>
               {/* feature */}
-              <div className="facilities row pb-1">
-                <div className="col-md-5 mx-auto">
-                  <span className="pr-2">
+              <div className="row pb-1">
+                <div className="col-md-6 mx-auto">
+                  <span className="p-2">
                     <FaBed />
                   </span>
-                  <small>Bedrooms: {props.bed}</small>
+                  <small>Bedrooms: <span style={{fontWeight:'bold'}}>{props.bed}</span></small>
                 </div>
-                <div className="col-md-5 mx-auto">
-                  <span className="pr-2">
+                <div className="col-md-6 mx-auto">
+                  <span className="p-2">
                     <GiKnifeFork />
                   </span>
-                  <small>Kitchen: {props.kitchen}</small>
+                  <small>Kitchen: <span style={{fontWeight:'bold'}}>{props.kitchen}</span></small>
                 </div>
               </div>
 
-              <div className="facilities1 row pb-3">
-                <div className="col-md-5 mx-auto">
-                  <span className="pr-2">
+              <div className="row pb-3">
+                <div className=" col-md-6 mx-auto">
+                  <span className="p-2">
                     <FaBath />
                   </span>
-                  <small>Bathroom: {props.bath}</small>
+                  <small>Bathroom: <span style={{fontWeight:'bold'}}>{props.bath}</span></small>
                 </div>
-                <div className="col-md-5 mx-auto">
-                  <span className="pr-2">
+                <div className="col-md-6 mx-auto">
+                  <span className="p-2">
                     <FaParking/>
                   </span>
-                  <small>Parking: {props.parking}</small>
+                  <small>Parking: <span style={{fontWeight:'bold'}}>{props.parking}</span></small>
                 </div>
               </div>
               <div className="text-center">
@@ -70,7 +70,7 @@ export default function Card(props) {
               {/* feature end */}
               <NavLink
                 type="button"
-                className="btn btn-lg btn-block shadow mt-3 viewdetails"
+                className="btn btn-lg w-100 btn-block shadow mt-3 viewdetails"
                 to={"/details/" + props.id}
               >
                 View Details

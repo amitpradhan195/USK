@@ -52,17 +52,17 @@ export default function Requirements() {
   return (
     <>
       <div
-        className="modal fade"
-        id="exampleModal1"
+        className="modal"
+        id="requirementsModal"
         tabIndex="-1"
-        aria-labelledby="exampleModalLabel"
+        aria-labelledby="requirementsModalLabel"
         aria-hidden="true"
       >
         <div className="modal-dialog modal-lg">
           <div className="modal-content">
             <div className="modal-header">
               <h4 className="modal-title">Send Us Your Requirements</h4>
-              <AiOutlineClose fontSize="30px" data-dismiss="modal"/>
+              <AiOutlineClose fontSize="30px" data-bs-dismiss="modal" role="button"/>
             </div>
             <div className="modal-body">
               <form className="pl-5 pt-2" onSubmit={sendRequirement}>

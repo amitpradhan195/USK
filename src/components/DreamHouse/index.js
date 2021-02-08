@@ -53,7 +53,7 @@ export default function DHouse() {
       <div
         className="modal fade"
         id="exampleModal"
-        tabindex="-1"
+        tabIndex="-1"
         aria-labelledby="exampleModalLabel"
         aria-hidden="true"
       >
@@ -76,7 +76,7 @@ export default function DHouse() {
                       onClick={onValueChange}
                       defaultChecked
                     />
-                    <label className="form-check-label" for="ht1">
+                    <label className="form-check-label" htmlFor="ht1">
                       Townhouse
                     </label>
                   </div>
@@ -89,7 +89,7 @@ export default function DHouse() {
                       value="Commercial"
                       onClick={onValueChange}
                     />
-                    <label className="form-check-label" for="ht2">
+                    <label className="form-check-label" htmlFor="ht2">
                       Commercial
                     </label>
                   </div>
@@ -118,7 +118,7 @@ export default function DHouse() {
                       onClick={onValueChange}
                       defaultChecked
                     />
-                    <label className="form-check-label" for="AC1">
+                    <label className="form-check-label" htmlFor="AC1">
                       3 Aana
                     </label>
                   </div>
@@ -131,7 +131,7 @@ export default function DHouse() {
                       value="4 Aana"
                       onClick={onValueChange}
                     />
-                    <label className="form-check-label" for="AC2">
+                    <label className="form-check-label" htmlFor="AC2">
                       4 Aana
                     </label>
                   </div>
@@ -144,7 +144,7 @@ export default function DHouse() {
                       value="6 Aana"
                       onClick={onValueChange}
                     />
-                    <label className="form-check-label" for="AC3">
+                    <label className="form-check-label" htmlFor="AC3">
                       6 Aana
                     </label>
                   </div>
@@ -157,7 +157,7 @@ export default function DHouse() {
                       value="More"
                       onClick={onValueChange}
                     />
-                    <label className="form-check-label" for="AC4">
+                    <label className="form-check-label" htmlFor="AC4">
                       More
                     </label>
                   </div>
@@ -181,7 +181,7 @@ export default function DHouse() {
                         onClick={onValueChange}
                         defaultChecked
                       />
-                      <label className="form-check-label" for="bedroom1">
+                      <label className="form-check-label" htmlFor="bedroom1">
                         1 Room
                       </label>
                     </div>
@@ -194,7 +194,7 @@ export default function DHouse() {
                         value="2 Rooms"
                         onClick={onValueChange}
                       />
-                      <label className="form-check-label" for="bedroom2">
+                      <label className="form-check-label" htmlFor="bedroom2">
                         2 Rooms
                       </label>
                     </div>
@@ -207,7 +207,7 @@ export default function DHouse() {
                         value="2+"
                         onClick={onValueChange}
                       />
-                      <label className="form-check-label" for="bedroom3">
+                      <label className="form-check-label" htmlFor="bedroom3">
                         2+
                       </label>
                     </div>
@@ -230,7 +230,7 @@ export default function DHouse() {
                         onClick={onValueChange}
                         defaultChecked
                       />
-                      <label className="form-check-label" for="kitchen1">
+                      <label className="form-check-label" htmlFor="kitchen1">
                         Only 1
                       </label>
                     </div>
@@ -243,7 +243,7 @@ export default function DHouse() {
                         value="1 Each Floor"
                         onClick={onValueChange}
                       />
-                      <label className="form-check-label" for="kitchen2">
+                      <label className="form-check-label" htmlFor="kitchen2">
                         1 Each Floor
                       </label>
                     </div>
@@ -266,7 +266,7 @@ export default function DHouse() {
                         onClick={onValueChange}
                         defaultChecked
                       />
-                      <label className="form-check-label" for="bathroom1">
+                      <label className="form-check-label" htmlFor="bathroom1">
                         Only 1
                       </label>
                     </div>
@@ -279,7 +279,7 @@ export default function DHouse() {
                         value="1 Each Floor"
                         onClick={onValueChange}
                       />
-                      <label className="form-check-label" for="bathroom2">
+                      <label className="form-check-label" htmlFor="bathroom2">
                         1 Each Floor
                       </label>
                     </div>
@@ -298,7 +298,7 @@ export default function DHouse() {
                       onClick={onValueChange}
                       defaultChecked
                     />
-                    <label className="form-check-label" for="ParkinArea1">
+                    <label className="form-check-label" htmlFor="ParkinArea1">
                       Bike Only
                     </label>
                   </div>
@@ -311,7 +311,7 @@ export default function DHouse() {
                       value="Car Only"
                       onClick={onValueChange}
                     />
-                    <label className="form-check-label" for="ParkinArea2">
+                    <label className="form-check-label" htmlFor="ParkinArea2">
                       Car Only
                     </label>
                   </div>
@@ -324,7 +324,7 @@ export default function DHouse() {
                       value="Both"
                       onClick={onValueChange}
                     />
-                    <label className="form-check-label" for="ParkinArea3">
+                    <label className="form-check-label" htmlFor="ParkinArea3">
                       Both
                     </label>
                   </div>
@@ -337,7 +337,7 @@ export default function DHouse() {
                       value="None"
                       onClick={onValueChange}
                     />
-                    <label className="form-check-label" for="ParkinArea4">
+                    <label className="form-check-label" htmlFor="ParkinArea4">
                       None
                     </label>
                   </div>
