@@ -42,10 +42,7 @@ export default function Listing() {
               <div className="input-group-prepend">
                 <label className="input-group-text" htmlFor="inputGroupSelect01">Purpose</label>
               </div>
-              <select className="custom-select w-50" style={{backgroundColor:'#F8F9F9', borderColor:'#EAECEE'}} defaultValue="Select" name="purpose" onChange={onPurposeChange}>
-                <option value="Select" disabled>
-                  Select 
-                </option>
+              <select className="custom-select w-50" style={{backgroundColor:'#F8F9F9', borderColor:'#EAECEE'}} defaultValue="All" name="purpose" onChange={onPurposeChange}>
                 <option value="All">
                   All
                 </option>
@@ -59,33 +56,30 @@ export default function Listing() {
             </div>
             </form>
             <div className="col-md-8" >
-              <nav className="stroke">
-                <ul className="nav nav-tabs">
-                  <li className="nav-item bg-light">
-                    
-                  </li>
-                  <li className="nav-item bg-light">
-                    <a className="nav-link active bg-light text-dark" onClick={onPropertyTypeChange('All')} href="#all">
+              <nav className="listingsNavTab">
+                <ul className="nav nav-tabs" id="myTab" role="tablist">
+                  <li className="nav-item" role="presentation">
+                    <a className="nav-link active text-dark" id="all-tab" data-bs-toggle="tab" role="tab" aria-controls="all" aria-selected="true" onClick={onPropertyTypeChange('All')} href="#all">
                       All
                     </a>
                   </li>
-                  <li className="nav-item bg-light">
-                    <a className="nav-link bg-light text-dark" onClick={onPropertyTypeChange('Land')} href="#land">
+                  <li className="nav-item" role="presentation">
+                    <a className="nav-link text-dark" id="land-tab" data-bs-toggle="tab" role="tab" aria-controls="land" aria-selected="false" onClick={onPropertyTypeChange('Land')} href="#land">
                       Land
                     </a>
                   </li>
-                  <li className="nav-item">
-                    <a className="nav-link bg-light text-dark" onClick={onPropertyTypeChange('Flat')} href="#flat">
+                  <li className="nav-item" role="presentation">
+                    <a className="nav-link text-dark" id="flat-tab" data-bs-toggle="tab" role="tab" aria-controls="flat" aria-selected="false" onClick={onPropertyTypeChange('Flat')} href="#flat">
                       Flat
                     </a>
                   </li>
-                  <li className="nav-item">
-                    <a className="nav-link bg-light text-dark" onClick={onPropertyTypeChange('Building')} href="#building">
+                  <li className="nav-item" role="presentation">
+                    <a className="nav-link text-dark" id="building-tab" data-bs-toggle="tab" role="tab" aria-controls="building" aria-selected="false" onClick={onPropertyTypeChange('Building')} href="#building">
                       Building
                     </a>
                   </li>
-                  <li className="nav-item">
-                    <a className="nav-link bg-light text-dark" onClick={onPropertyTypeChange('Commercial')} href="#commercial">
+                  <li className="nav-item" role="presentation">
+                    <a className="nav-link text-dark" id="commercial-tab" data-bs-toggle="tab" role="tab" aria-controls="commercial" aria-selected="false" onClick={onPropertyTypeChange('Commercial')} href="#commercial">
                       Commercial
                     </a>
                   </li>
@@ -101,27 +95,33 @@ export default function Listing() {
           <div className="col-10 mx-auto">
             <div className="row gy-5">
               {selectPurpose==="All" && selectPropertyType==="All" ? 
-              CData.map((value, index) => {
-                return (
-                  <Card
-                    key={index}
-                    id={value.id}
-                    imgsrc={value.imgsrc}
-                    tag={value.tag}
-                    css={value.css}
-                    prop={value.prop}
-                    location={value.location}
-                    bed={value.bed}
-                    kitchen={value.kitchen}
-                    bath={value.bath}
-                    contact={value.contact}
-                    parking={value.parking}
-                  />
-                );
+              CData.map((value, index, arr) => {
+                  console.log("value : "+value)
+                  return arr ?  
+                  (
+                    <Card
+                      key={index}
+                      id={value.id}
+                      imgsrc={value.imgsrc}
+                      tag={value.tag}
+                      css={value.css}
+                      prop={value.prop}
+                      location={value.location}
+                      bed={value.bed}
+                      kitchen={value.kitchen}
+                      bath={value.bath}
+                      contact={value.contact}
+                      parking={value.parking}
+                      />
+                    ):(
+                      <h3>No results found</h3>
+                      )
             }): (selectPurpose==="All" || selectPropertyType==="All"? 
               CData.filter(filteredData => filteredData.tag===selectPurpose || filteredData.propertyType===selectPropertyType)
-                .map((value, index) => {
-                  return (
+              .map((value, index, arr) => {
+                console.log("value : "+value)
+                return arr.length  >= 1 ? 
+                  (
                     <Card
                       key={index}
                       imgsrc={value.imgsrc}
@@ -133,12 +133,16 @@ export default function Listing() {
                       kitchen={value.kitchen}
                       bath={value.bath}
                       contact={value.contact}
-                    />
-                  );
+                      />
+                    ):(
+                      <h3>No results found</h3>
+                      )
               }):
               CData.filter(filteredData => filteredData.tag===selectPurpose && filteredData.propertyType===selectPropertyType)
-                .map((value, index) => {
-                  return (
+                .map((value, index, arr) => {
+                  console.log("value : "+value)
+                  return arr.length >= 1 ? 
+                  (
                     <Card
                       key={index}
                       imgsrc={value.imgsrc}
@@ -151,7 +155,9 @@ export default function Listing() {
                       bath={value.bath}
                       contact={value.contact}
                     />
-                  );
+                    ):(
+                    <h3>No results found</h3>
+                  )
               })
               )
             }
