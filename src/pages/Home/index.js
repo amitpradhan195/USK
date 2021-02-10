@@ -60,7 +60,7 @@ export default function Home() {
 
       {/* build your home */}
       <div className="d-flex justify-content-center flex-column align-items-center pb-5 pt-5 buildHouse">
-        <h4 className="heading-text" data-aos="fade-down">
+        <h4 className="heading-text text-center" data-aos="fade-down">
           Do you want to built your home ?
         </h4>
         <img

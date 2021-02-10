@@ -28,7 +28,6 @@
   opacity: 1.0;
   position: absolute;
   top: 30%;
-  /* text-align: center; */
 }
 
 /* stroke */
@@ -201,10 +200,11 @@ nav.stroke ul li a:hover:after {
 }
 
 .card .card-body img:hover {
-  -webkit-transform: scale(1.06);
+  /* -webkit-transform: scale(1.06);
           transform: scale(1.06);
   -webkit-transition: 1s;
-  transition: 1s;
+  transition: 1s; */
+  transform: scale(1.05);
 }
 
 .card .card-body .icon {
@@ -595,29 +595,26 @@ select:focus {
 
 /* Start of About Us */
 .about-section {
-  margin-top: 55px;
-  background: url("../assets/slider1.jpg") no-repeat left;
-  background-size: 58%;
+  text-align: center;
+  background: url("../assets/slider4.jpeg") no-repeat left;
+  background-size: 50%;
   background-color: #fafafa;
   overflow: hidden;
-  padding: 75px 0;
 }
 
 .inner-container {
-  width: 55%;
-  float: right;
+  width: 100%;
   background-color: #fafafa;
-  padding: 150px;
+  padding: 40px 20px 0px 20px;
 }
 
 .inner-container h1 {
-  margin-bottom: 30px;
-  font-size: 30px;
-  font-weight: 900;
+  font-size: 2em;
+  font-weight: 600;
 }
 
 .inner-container .about-text {
-  font-size: 13px;
+  font-size: 0.9em;
   color: #545454;
   line-height: 30px;
   text-align: justify;
@@ -693,6 +690,19 @@ select:focus {
         grid-template-columns: repeat(6, 1fr);
     grid-gap: 20px;
   }
+  /* Start of About Us */
+  .inner-container {
+    width: 50%;
+    float: right;
+    background-color: #fafafa;
+    padding: 40px 20px 20px 20px;
+  }
+
+  .inner-container h1 {
+    margin-bottom: 30px;
+    font-size: 2em;
+    font-weight: 600;
+  }
 }
 
 @media only screen and (min-width: 1000px) {
@@ -714,58 +724,19 @@ select:focus {
     text-align: center;
     font-size: 18px;
   }
-}
 
-@media only screen and (max-width: 600px) {
-  .about-section {
-    padding: 0;
-  }
+    /* Start of About Us */
   .inner-container {
-    padding: 60px;
+    width: 55%;
+    float: right;
+    background-color: #fafafa;
+    padding: 80px 40px 40px 40px;
   }
-  .slides {
-    grid-gap: 2px;
-  }
-}
 
-@media only screen and (max-width: 768px) {
-  .navbar-nav {
-    background: rgba(0, 0, 0, 0.5);
-    border-radius: 16px;
-  }
-  .navbar-nav a {
-    font-size: 14px;
-    font-weight: normal;
-  }
-  .navbar-nav li .nav-link {
-    text-align: right !important;
-    padding-right: 10px;
-  }
-  .carousel-control-prev {
-    display: none !important;
-  }
-  .carousel-control-next {
-    display: none !important;
-  }
-  .carousel-item {
-    width: 100vw;
-    height: auto;
-  }
-  .footer-info {
-    border-right: none !important;
-  }
-  .slides {
-    grid-gap: 2px;
-  }
-}
-
-@media screen and (max-width: 1000px) {
-  .about-section {
-    background-size: 100%;
-    padding: 100px 40px;
-  }
-  .inner-container {
-    width: 100%;
+  .inner-container h1 {
+    margin-bottom: 30px;
+    font-size: 2em;
+    font-weight: 600;
   }
 }
 
@@ -789,10 +760,7 @@ select:focus {
   .footer-info {
     border-right: none !important;
   }
-}
-
-@media screen and (max-width: 1200px) {
-  .inner-container {
-    padding: 80px;
+  .slides {
+    grid-gap: 2px;
   }
 }

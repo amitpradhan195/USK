@@ -7,7 +7,6 @@ import { IoMail } from "react-icons/io5";
 import { GiKnifeFork } from "react-icons/gi";
 import { ImDroplet } from "react-icons/im";
 import { RiBikeFill } from "react-icons/ri";
-import mapimage from "../../assets/office.PNG";
 import ReactPlayer from "react-player";
 import cardData from "../../data/Listings";
 
@@ -23,7 +22,6 @@ export default function Details(props) {
         return filteredDetails
       })  
   }, [pID]);
-  
   // console.log(pID);
   console.log(details);
 
@@ -40,43 +38,43 @@ export default function Details(props) {
                   <div className="order-1 order-lg-1 track">
                     <ul>
                       <li id="slide1">
-                        <img src={"/propertyImages/s2.jpg"} alt="slider_image" />
+                        <img src="/propertyImages/slider1.jpg" className="img-thumbnail"  alt="slider_image" />
                       </li>
                       <li id="slide2">
-                        <img src="/propertyImages/s3.jpg" alt="slider_image" />
+                        <img src="/propertyImages/s3.jpg" className="img-thumbnail" alt="slider_image" />
                       </li>
                       <li id="slide3">
-                        <img src="/propertyImages/s4.jpg" alt="slider_image" />
+                        <img src="/propertyImages/s4.jpg" className="img-thumbnail" alt="slider_image" />
                       </li>
                       <li id="slide4">
-                        <img src="/propertyImages/s5.jpg" alt="slider_image" />
+                        <img src="/propertyImages/s5.jpg" className="img-thumbnail" alt="slider_image" />
                       </li>
                       <li id="slide5">
-                        <img src="/propertyImages/s2.jpg" alt="slider_image" />
+                        <img src="/propertyImages/slider1.jpg" className="img-thumbnail" alt="slider_image" />
                       </li>
                       <li id="slide6">
-                        <img src="/propertyImages/s3.jpg" alt="slider_image" />
+                        <img src="/propertyImages/s3.jpg" className="img-thumbnail" alt="slider_image" />
                       </li>
                     </ul>
                   </div>
                   <div className="order-2 order-lg-2 slides">
                     <a href="#slide1">
-                      <img src="/propertyImages/s2.jpg" alt="slider_image" />
+                      <img src="/propertyImages/slider1.jpg" className="img-thumbnail" alt="slider_image" />
                     </a>
                     <a href="#slide2">
-                      <img src="/propertyImages/s3.jpg" alt="slider_image" />
+                      <img src="/propertyImages/s3.jpg" className="img-thumbnail" alt="slider_image" />
                     </a>
                     <a href="#slide3">
-                      <img src="/propertyImages/s4.jpg" alt="slider_image" />
+                      <img src="/propertyImages/s4.jpg" className="img-thumbnail" alt="slider_image" />
                     </a>
                     <a href="#slide4">
-                      <img src="/propertyImages/s5.jpg" alt="slider_image" />
+                      <img src="/propertyImages/s5.jpg" className="img-thumbnail" alt="slider_image" />
                     </a>
                     <a href="#slide5">
-                      <img src="/propertyImages/s2.jpg" alt="slider_image" />
+                      <img src="/propertyImages/slider1.jpg" className="img-thumbnail" alt="slider_image" />
                     </a>
                     <a href="#slide6">
-                      <img src="/propertyImages/s3.jpg" alt="slider_image" />
+                      <img src="/propertyImages/s3.jpg" className="img-thumbnail" alt="slider_image" />
                     </a>
                   </div>
               </div>
@@ -195,7 +193,7 @@ export default function Details(props) {
           <section className="mapInformation pb-5">
             <div className="mapInformation-container">
               <h4>Map View</h4>
-              <img src={mapimage} alt="place" />
+              <img src="/propertyImages/office.png" alt="place" />
             </div>
           </section>
         </section>

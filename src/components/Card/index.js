@@ -14,12 +14,16 @@ export default function Card(props) {
           <div className="card shadow" data-aos="fade-down">
             <div className="card-body">
               {/* title */}
-              <img
-                alt={props.imgsrc}
-                className="d-block"
-                // src="propertyImages/s2.jpg"
-                src={`propertyImages/${props.imgsrc}`}
-              />
+              <NavLink
+                to={"/details/" + props.id}
+              >
+                <img
+                  alt={props.imgsrc}
+                  className="d-block"
+                  // src="propertyImages/s2.jpg"
+                  src={`propertyImages/${props.imgsrc}`}
+                />
+              </NavLink>
               <div className="tag shadow" name="ppfor" style={props.css}>
                 {props.tag}
               </div>
