@@ -11,6 +11,9 @@ export default function FinanceAlliance() {
       anchorPlacement: "top-bottom",
     });
   }, []);
+  window.addEventListener('load', AOS.refresh);
+
+
   return (
     <>
       <section className="details-banner">

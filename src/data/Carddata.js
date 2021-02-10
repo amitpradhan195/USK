@@ -1,11 +1,7 @@
-import prop1 from "../assets/slider1.jpg";
-import prop2 from "../assets/slider2.jpg";
-import prop3 from "../assets/slider3.jpg";
-
 const Carddata = [
   {
     id: 1,
-    imgsrc: prop1,
+    imgsrc: "slider1.jpg",
     tag: "Sold",
     css: { background: "#e94646" },
     prop: "5 BHK Flat",
@@ -18,7 +14,7 @@ const Carddata = [
   },
   {
     id: 2,
-    imgsrc: prop2,
+    imgsrc: "slider2.jpg",
     tag: "For Rent",
     css: { background: "#34b849" },
     prop: "8 BHK Bonglow",
@@ -31,7 +27,7 @@ const Carddata = [
   },
   {
     id: 3,
-    imgsrc: prop3,
+    imgsrc: "slider3.jpg",
     tag: "Pending",
     css: { background: "#D3BC15" },
     prop: "4 BHK Flat",

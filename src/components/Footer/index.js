@@ -128,7 +128,9 @@ export default function Footer(props) {
           </div>
         </div>
         <p className="copyright text-center">
-          All right reserved | USK Estate &copy; {new Date().getFullYear()}
+          All right reserved | US group Estate &copy; {new Date().getFullYear()}
+          <br/>
+          Designed by @<a href="https://zoektech.com/" target="_blank" rel="noopener noreferrer">Zoek Tech</a>
         </p>
       </footer>
     </>

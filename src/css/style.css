@@ -120,9 +120,8 @@ nav.stroke ul li a:hover:after {
 }
 
 .carousel-item .carousel-caption {
-  /* bottom: 330px; */
   -webkit-animation: 1s ease-out 0s 1 slideInFromLeft;
-          animation: 1s ease-out 0s 1 slideInFromLeft;
+  animation: 1s ease-out 0s 1 slideInFromLeft;
   padding: 30px;
   -webkit-transition: all 0.1s ease;
   transition: all 0.1s ease;
@@ -623,6 +622,13 @@ select:focus {
   line-height: 30px;
   text-align: justify;
   margin-bottom: 40px;
+}
+
+.availableNote{
+  color: "#2C3E50";
+  font-weight: bold;
+  font-family: "Roboto", sans-serif !important;
+  text-align: center;
 }
 
 /* End of About US */

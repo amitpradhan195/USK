@@ -17,6 +17,7 @@ export default function Home() {
       anchorPlacement: "top-bottom",
     });
   }, []);
+  window.addEventListener('load', AOS.refresh);
   return (
     <>
       <HomeSlider></HomeSlider>
@@ -76,6 +77,8 @@ export default function Home() {
         />
 
         <DreamModal></DreamModal>
+        <p data-aos="fade-left" className="mt-2 availableNote">Opportunity avaliable for people outside nepal</p>
+
       </div>
 
       {/* financial alliance */}

@@ -1,9 +1,5 @@
 import React, { useEffect, useState } from "react";
 import "../../css/style.css";
-import slider2 from "../../assets/s2.jpg";
-import slider3 from "../../assets/s3.jpg";
-import slider4 from "../../assets/s4.jpg";
-import slider5 from "../../assets/s5.jpg";
 import { IconContext } from "react-icons";
 import { MdLocationOn } from "react-icons/md";
 import { FaPhoneAlt, FaBed, FaBath, FaCar, FaWifi, FaLightbulb } from "react-icons/fa";
@@ -44,43 +40,43 @@ export default function Details(props) {
                   <div className="order-1 order-lg-1 track">
                     <ul>
                       <li id="slide1">
-                        <img src={slider3} alt="slider_image" />
+                        <img src={"/propertyImages/s2.jpg"} alt="slider_image" />
                       </li>
                       <li id="slide2">
-                        <img src={slider2} alt="slider_image" />
+                        <img src="/propertyImages/s3.jpg" alt="slider_image" />
                       </li>
                       <li id="slide3">
-                        <img src={slider3} alt="slider_image" />
+                        <img src="/propertyImages/s4.jpg" alt="slider_image" />
                       </li>
                       <li id="slide4">
-                        <img src={slider4} alt="slider_image" />
+                        <img src="/propertyImages/s5.jpg" alt="slider_image" />
                       </li>
                       <li id="slide5">
-                        <img src={slider5} alt="slider_image" />
+                        <img src="/propertyImages/s2.jpg" alt="slider_image" />
                       </li>
                       <li id="slide6">
-                        <img src={slider4} alt="slider_image" />
+                        <img src="/propertyImages/s3.jpg" alt="slider_image" />
                       </li>
                     </ul>
                   </div>
                   <div className="order-2 order-lg-2 slides">
                     <a href="#slide1">
-                      <img src={slider3} alt="slider_image" />
+                      <img src="/propertyImages/s2.jpg" alt="slider_image" />
                     </a>
                     <a href="#slide2">
-                      <img src={slider2} alt="slider_image" />
+                      <img src="/propertyImages/s3.jpg" alt="slider_image" />
                     </a>
                     <a href="#slide3">
-                      <img src={slider3} alt="slider_image" />
+                      <img src="/propertyImages/s4.jpg" alt="slider_image" />
                     </a>
                     <a href="#slide4">
-                      <img src={slider4} alt="slider_image" />
+                      <img src="/propertyImages/s5.jpg" alt="slider_image" />
                     </a>
                     <a href="#slide5">
-                      <img src={slider5} alt="slider_image" />
+                      <img src="/propertyImages/s2.jpg" alt="slider_image" />
                     </a>
                     <a href="#slide6">
-                      <img src={slider4} alt="slider_image" />
+                      <img src="/propertyImages/s3.jpg" alt="slider_image" />
                     </a>
                   </div>
               </div>

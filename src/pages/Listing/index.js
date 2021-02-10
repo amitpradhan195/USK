@@ -15,6 +15,8 @@ export default function Listing() {
       anchorPlacement: "top-bottom",
     });
   }, []);
+  window.addEventListener('load', AOS.refresh);
+
 
   function onPurposeChange(e){
     setSelectPurpose(e.target.value);
