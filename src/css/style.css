@@ -152,7 +152,7 @@ nav.stroke ul li a:hover:after {
     width: 0;
     height: 0;
     position: relative;
-    overflow: hidden;
+    overflow-x: hidden;
     -webkit-transition: overflow 7s ease;
     transition: overflow 7s ease;
   }
