@@ -27,33 +27,31 @@ export default function Details(props) {
 
   return (
     <IconContext.Provider value={{ color: "#707070", size: "25px" }}>
-        <section className="details-banner">
-          
-        </section>
+        <section className="details-banner"></section>
         {/* slider */}
         <section className="container">
-          <section className="d-flex align-items-center details-container mt-5 mb-5">
+          <section className="d-flex align-items-center details-container mb-5">
             <div className="container-fluid">
               <div className="row">
                   <div className="order-1 order-lg-1 track">
                     <ul>
                       <li id="slide1">
-                        <img src="/propertyImages/slider1.jpg" className="img-thumbnail"  alt="slider_image" />
+                        <img src="/propertyImages/slider1.jpg" className="img-thumbnail img-fluid"  alt="slider_image" />
                       </li>
                       <li id="slide2">
-                        <img src="/propertyImages/s3.jpg" className="img-thumbnail" alt="slider_image" />
+                        <img src="/propertyImages/s3.jpg" className="img-thumbnail img-fluid" alt="slider_image" />
                       </li>
                       <li id="slide3">
-                        <img src="/propertyImages/s4.jpg" className="img-thumbnail" alt="slider_image" />
+                        <img src="/propertyImages/s4.jpg" className="img-thumbnail img-fluid" alt="slider_image" />
                       </li>
                       <li id="slide4">
-                        <img src="/propertyImages/s5.jpg" className="img-thumbnail" alt="slider_image" />
+                        <img src="/propertyImages/s5.jpg" className="img-thumbnail img-fluid" alt="slider_image" />
                       </li>
                       <li id="slide5">
-                        <img src="/propertyImages/slider1.jpg" className="img-thumbnail" alt="slider_image" />
+                        <img src="/propertyImages/slider1.jpg" className="img-thumbnail img-fluid" alt="slider_image" />
                       </li>
                       <li id="slide6">
-                        <img src="/propertyImages/s3.jpg" className="img-thumbnail" alt="slider_image" />
+                        <img src="/propertyImages/s3.jpg" className="img-thumbnail img-fluid" alt="slider_image" />
                       </li>
                     </ul>
                   </div>

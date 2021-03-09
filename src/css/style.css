@@ -7,14 +7,14 @@
 }
 
 .navbarBrandImg {
-  max-width: 6rem;
+  max-width: 3rem;
 }
 
 .navbarunactive ul li a {
   font-size: 1rem !important;
   text-transform: capitalize !important;
   margin: 0 0 0 15px !important;
-  color: #ffffff !important;
+  color: #000000 !important;
 }
 
 .carouselImg{
@@ -73,7 +73,7 @@ nav.stroke ul li a:hover:after {
 }
 
 .navbarunactive ul li a:hover {
-  color: #28c092 !important;
+  color: #ffffff !important;
 }
 
 .navbarunactive .navbar-toggler {
@@ -221,11 +221,10 @@ nav.stroke ul li a:hover:after {
 }
 
 .card .card-body img:hover {
-  /* -webkit-transform: scale(1.06);
+  -webkit-transform: scale(1.06);
           transform: scale(1.06);
-  -webkit-transition: 1s;
-  transition: 1s; */
-  transform: scale(1.05);
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
 }
 
 .card .card-body .icon {
@@ -233,14 +232,16 @@ nav.stroke ul li a:hover:after {
 }
 
 .card .card-body .viewdetails {
-  background-color: #2E4053 !important;
+  /* background-color: #2E4053 !important; */
   /* background-color: #707070 !important; */
+  background-color: rgb(46, 64, 83);
   color: #ffffff;
   border-radius: 16px !important;
 }
 
 .card .card-body .viewdetails:hover {
-  background-color: #969595 !important;
+  /* background-color: #1A5276 !important; */
+  background-color: rgb(26, 82, 118);
   color: #ffffff;
 }
 
@@ -326,16 +327,15 @@ nav.stroke ul li a:hover:after {
   width: 100%;
   height: 100px;
   display: inline-block;
-  background-color: #2E4053;
-  color: #fafafa;
+
+  color: #000000;
 }
 
-.details-banner h2 {
+/* .details-banner h2 {
   line-height: 200px;
-}
+} */
 
 .details-container .track ul {
-  position: relative;
   list-style-type: none;
   padding: 0;
   height: 210px;
@@ -695,6 +695,9 @@ select:focus {
 }
 
 @media only screen and (min-width: 600px) {
+  .navbarBrandImg {
+    max-width: 5rem;
+  }  
   .slides {
     grid-gap: 2px;
   }

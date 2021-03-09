@@ -29,6 +29,7 @@ export default function Navbar() {
             ? "navbar activenav navbar-expand-lg navbar-dark fixed-top nav stroke"
             : "navbar navbarunactive navbar-expand-lg navbar-dark fixed-top nav stroke"
         }
+        // className="navbar-expand-lg navbar-dark fixed-top nav stroke"
       >
         <div className="container">
           <NavLink className="navbar-brand" to="/">
