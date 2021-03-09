@@ -91,7 +91,7 @@ nav.stroke ul li a:hover:after {
 } */
 
 
-@-webkit-keyframes slideInFromLeft {
+/* @-webkit-keyframes slideInFromLeft {
   0% {
     -webkit-transform: translateX(-100%);
             transform: translateX(-100%);
@@ -100,7 +100,7 @@ nav.stroke ul li a:hover:after {
     -webkit-transform: translateX(0);
             transform: translateX(0);
   }
-}
+} */
 
 @keyframes slideInFromLeft {
   0% {
@@ -108,8 +108,8 @@ nav.stroke ul li a:hover:after {
             transform: translateX(-100%);
   }
   100% {
-    -webkit-transform: translateX(0);
-            transform: translateX(0);
+    -webkit-transform: translateX(0%);
+            transform: translateX(0%);
   }
 }
 
@@ -122,8 +122,8 @@ nav.stroke ul li a:hover:after {
   -webkit-animation: 1s ease-out 0s 1 slideInFromLeft;
   animation: 1s ease-out 0s 1 slideInFromLeft;
   padding: 30px;
-  /* -webkit-transition: all 0.1s ease;
-  transition: all 0.1s ease; */
+  -webkit-transition: all 0.1s ease;
+  transition: all 0.1s ease;
 }
 
 .nav-container ul li.active-link {
@@ -151,13 +151,14 @@ nav.stroke ul li a:hover:after {
   to {
     width: 0;
     height: 0;
+    position: relative;
     overflow: hidden;
     -webkit-transition: overflow 7s ease;
     transition: overflow 7s ease;
   }
 }
 
-@-webkit-keyframes cssAnimation {
+/* @-webkit-keyframes cssAnimation {
   to {
     width: 0;
     height: 0;
@@ -165,7 +166,7 @@ nav.stroke ul li a:hover:after {
     -webkit-transition: visibility 7s ease;
     transition: visibility 7s ease;
   }
-}
+} */
 
 .featured-title {
   width: 90px;
