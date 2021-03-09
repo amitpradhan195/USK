@@ -42,7 +42,7 @@ export default function Listing() {
               <div className="input-group-prepend">
                 <label className="input-group-text" htmlFor="inputGroupSelect01">Purpose</label>
               </div>
-              <select className="custom-select w-50" style={{backgroundColor:'#F8F9F9', borderColor:'#EAECEE'}} defaultValue="All" name="purpose" onChange={onPurposeChange}>
+              <select className="custom-select" style={{backgroundColor:'#F8F9F9', borderColor:'#EAECEE'}} defaultValue="All" name="purpose" onChange={onPurposeChange}>
                 <option value="All">
                   All
                 </option>
