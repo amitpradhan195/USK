@@ -34,7 +34,7 @@ export default function Listing() {
 
       </section>
       {/* filter section */}
-      <section className="filter-section pt-4">
+      <section className="filter-section pt-2">
         <div className="container">
           <div className="row">
             <form className="col-md-4">
@@ -55,7 +55,8 @@ export default function Listing() {
               </select>
             </div>
             </form>
-            <div className="col-md-8" >
+
+            <div className="col-md-5" >
               <nav className="listingsNavTab">
                 <ul className="nav nav-tabs" id="myTab" role="tablist">
                   <li className="nav-item" role="presentation">
@@ -90,7 +91,7 @@ export default function Listing() {
         </div>
       </section>
       {/* prop listings */}
-      <div className="container-fluid pb-5 about-myjob pt-2">
+      <div className="container-fluid pb-5 about-myjob pt-5">
         <div className="row">
           <div className="col-10 mx-auto">
             <div className="row gy-5">

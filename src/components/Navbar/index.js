@@ -1,6 +1,5 @@
 import React from "react";
 import { useState } from "react";
-import { NavLink } from "react-router-dom";
 import Requirements from "../../components/Requirements";
 import Career from "../../components/Career";
 import logo from "../../assets/logo_US.png";
@@ -26,74 +25,36 @@ export default function Navbar() {
       <nav
         className={
           navbar
-            ? "navbar activenav navbar-expand-lg navbar-dark fixed-top nav stroke"
-            : "navbar navbarunactive navbar-expand-lg navbar-dark fixed-top nav stroke"
-        }
-        // className="navbar-expand-lg navbar-dark fixed-top nav stroke"
-      >
+            ? "navbar activenav navbar-expand-lg navbar-dark fixed-top stroke"
+            : "navbar navbarunactive navbar-expand-lg navbar-light fixed-top stroke"
+        }>
         <div className="container">
-          <NavLink className="navbar-brand" to="/">
+          <a className="navbar-brand" href="/">
             <img alt="logo" src={logo} className="navbarBrandImg"/>
-          </NavLink>
-          <button
-            className="navbar-toggler navbar-toggler-light"
-            type="button"
-            data-bs-toggle="collapse"
-            data-bs-target="#navbarSupportedContent"
-            aria-controls="navbarSupportedContent"
-            aria-expanded="false"
-            aria-label="Toggle navigation"
-          >
+          </a>
+          <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span className="navbar-toggler-icon"></span>
           </button>
 
           <div className="collapse navbar-collapse" id="navbarSupportedContent">
             <ul className="navbar-nav">
               <li className="nav-item">
-                <NavLink
-                  activeClassName="menu_active"
-                  exact
-                  className="nav-link"
-                  to="/listings"
-                >
-                  Properties
-                </NavLink>
+                <a className="nav-link" href="/listings"> Properties </a>
               </li>
               <li className="nav-item">
-                <NavLink
-                  activeClassName="menu_active"
-                  exact
-                  className="nav-link"
-                  to="/finance"
-                >
-                  Finance
-                </NavLink>
+                <a className="nav-link" href="/finance"> Finance </a>
               </li>
               <li className="nav-item">
-                <NavLink
-                  activeClassName="menu_active"
-                  exact
-                  className="nav-link"
-                  data-bs-toggle="modal"
-                  data-bs-target="#requirementsModal"
-                  to="#requirements"
-                >
+                <a className="nav-link" data-bs-toggle="modal" data-bs-target="#requirementsModal" href="#requirements">
                   Requirements
-                </NavLink>
+                </a>
               </li>
             </ul>
             <ul className="navbar-nav ml-auto ml-auto mb-2 mb-lg-0">
               <li className="nav-item">
-                <NavLink
-                  activeClassName="menu_active"
-                  exact
-                  className="nav-link"
-                  data-bs-toggle="modal"
-                  data-bs-target="#careerModal"
-                  to="#career"
-                >
+                <a className="nav-link" data-bs-toggle="modal" data-bs-target="#careerModal" href="#career">
                   Career
-                </NavLink>
+                </a>
               </li>
             </ul>
           </div>

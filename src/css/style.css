@@ -30,27 +30,6 @@
   top: 30%;
 }
 
-nav.listingsNavTab ul li a{
-  position: relative;
-}
-
-nav.listingsNavTab ul li a::after{
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  margin: auto;
-  width: 0%;
-  content: '.';
-  color: transparent;
-  background: #2E4053;
-  height: 1px;
-} 
-
-nav.listingsNavTab ul li a:hover:after {
-  width: 100%;
-}
-
 /* stroke */
 nav.stroke ul li a{
   position: relative;
@@ -73,14 +52,14 @@ nav.stroke ul li a:hover:after {
 }
 
 .navbarunactive ul li a:hover {
-  color: #ffffff !important;
+  color: rgb(26, 82, 118) !important;
 }
 
-.navbarunactive .navbar-toggler {
+/* .navbarunactive .navbar-toggler {
   padding: 1px 5px;
   font-size: 18px;
   line-height: 0.3;
-}
+} */
 
 .activenav {
   background-color: #2E4053;
@@ -101,15 +80,15 @@ nav.stroke ul li a:hover:after {
   color: #28c092 !important;
 }
 
-.activenav .navbar-toggler {
+/* .activenav .navbar-toggler {
   padding: 1px 5px;
   font-size: 18px;
   line-height: 0.3;
-}
+} */
 
-.activenav .navbar-brand {
+/* .activenav .navbar-brand {
   color: #707070 !important;
-}
+} */
 
 
 @-webkit-keyframes slideInFromLeft {
@@ -234,14 +213,14 @@ nav.stroke ul li a:hover:after {
 .card .card-body .viewdetails {
   /* background-color: #2E4053 !important; */
   /* background-color: #707070 !important; */
-  background-color: rgb(46, 64, 83);
+  background-color: rgb(46, 64, 83, 0.8);
   color: #ffffff;
   border-radius: 16px !important;
 }
 
 .card .card-body .viewdetails:hover {
   /* background-color: #1A5276 !important; */
-  background-color: rgb(26, 82, 118);
+  background-color: rgb(26, 82, 118, 1);
   color: #ffffff;
 }
 
@@ -294,16 +273,10 @@ nav.stroke ul li a:hover:after {
   color: #fafafa !important;
 }
 
-/* .filter-section a {
-  background-color: #34b849;
-}
-
 .filter-section a:hover {
-  background-color: #67bf75;
-  color: #313131 !important;
-  -webkit-transition: 1s;
-  transition: 1s;
-} */
+  background-color: #ffffff;
+  color: #2471A3 !important;
+}
 
 .btnblue {
   background-color: #313131 !important;
@@ -327,7 +300,6 @@ nav.stroke ul li a:hover:after {
   width: 100%;
   height: 100px;
   display: inline-block;
-
   color: #000000;
 }
 
@@ -764,9 +736,9 @@ select:focus {
   }
 }
 
-@media only screen and (max-width: 1004px) {
+@media only screen and (max-width: 990px) {
   .navbar-nav {
-    background: rgba(0, 0, 0, 0.5);
+    background: rgb(255, 255, 255);
     border-radius: 16px;
   }
   .navbar-nav a {
