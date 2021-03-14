@@ -3,13 +3,19 @@ import slider1 from "../../assets/slider3.jpg";
 import slider2 from "../../assets/slider2.jpg";
 import slider3 from "../../assets/slider4.jpeg";
 import "../../css/style.css";
+import AOS from "aos";
 
 export default function HomeSlider() {
 
   useEffect(() => {
     setTimeout(() => {
     }, 2000);
+    // AOS.init({
+    //   duration: 1000,
+    //   anchorPlacement: "top-bottom",
+    // });
   }, []);
+  // window.addEventListener('load', AOS.refresh);
 
   return (
     <>

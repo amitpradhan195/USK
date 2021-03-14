@@ -121,7 +121,7 @@ nav.stroke ul li a:hover:after {
 .carousel-item .carousel-caption {
   -webkit-animation: 1s ease-out 0s 1 slideInFromLeft;
   animation: 1s ease-out 0s 1 slideInFromLeft;
-  padding: 30px;
+  /* padding: 30px; */
   -webkit-transition: all 0.1s ease;
   transition: all 0.1s ease;
 }
@@ -142,6 +142,8 @@ nav.stroke ul li a:hover:after {
   /* Opera */
   position: relative;
   overflow: hidden;
+  /* touch-action: none;
+  -ms-touch-action: none; */
   animation: cssAnimation 0s ease-in 2.5s forwards;
   -webkit-animation-fill-mode: forwards;
   animation-fill-mode: forwards;
