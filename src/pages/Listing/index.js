@@ -98,8 +98,7 @@ export default function Listing() {
               {selectPurpose==="All" && selectPropertyType==="All" ? 
               CData.map((value, index, arr) => {
                   console.log("value : "+value)
-                  return arr ?  
-                  (
+                  return arr &&  
                     <Card
                       key={index}
                       id={value.id}
@@ -114,15 +113,11 @@ export default function Listing() {
                       contact={value.contact}
                       parking={value.parking}
                       />
-                    ):(
-                      <h3>No results found</h3>
-                      )
             }): (selectPurpose==="All" || selectPropertyType==="All"? 
               CData.filter(filteredData => filteredData.tag===selectPurpose || filteredData.propertyType===selectPropertyType)
               .map((value, index, arr) => {
                 console.log("value : "+value)
-                return arr.length  >= 1 ? 
-                  (
+                return arr.length  >= 1 &&
                     <Card
                       key={index}
                       imgsrc={value.imgsrc}
@@ -135,15 +130,11 @@ export default function Listing() {
                       bath={value.bath}
                       contact={value.contact}
                       />
-                    ):(
-                      <h3>No results found</h3>
-                      )
               }):
               CData.filter(filteredData => filteredData.tag===selectPurpose && filteredData.propertyType===selectPropertyType)
                 .map((value, index, arr) => {
                   console.log("value : "+value)
-                  return arr.length >= 1 ? 
-                  (
+                  return arr.length >= 1 && 
                     <Card
                       key={index}
                       imgsrc={value.imgsrc}
@@ -156,12 +147,8 @@ export default function Listing() {
                       bath={value.bath}
                       contact={value.contact}
                     />
-                    ):(
-                    <h3>No results found</h3>
-                  )
-              })
-              )
-            }
+              }))}
+                <h2>No results found</h2>
             </div>
           </div>
         </div>

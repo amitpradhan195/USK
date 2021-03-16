@@ -159,13 +159,13 @@ nav.stroke ul li a:hover:after {
 .card .card-body img {
   border-radius: 14px;
   width: 100%;
+  -webkit-transition: all ease-in-out 0.4s;
+  transition: all ease-in-out 0.4s;
 }
 
 .card .card-body img:hover {
   -webkit-transform: scale(1.06);
-          transform: scale(1.06);
-  -webkit-transition: 0.5s;
-  transition: 0.5s;
+  transform: scale(1.06);
 }
 
 .card .card-body .icon {
