@@ -1,5 +1,5 @@
 import React, {Suspense, lazy} from "react";
-import { Redirect, BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import "bootstrap/dist/js/bootstrap.bundle";
 import "../node_modules/bootstrap/dist/css/bootstrap.min.css";
 import "aos/dist/aos.css";
@@ -39,7 +39,6 @@ export default function App() {
         </Switch>
         <Footer/>
       </Suspense>
-      {/* <Redirect to="/" /> */}
     </Router>
   );
 }

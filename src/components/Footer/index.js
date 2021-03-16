@@ -1,38 +1,23 @@
 import React from "react";
 import "../../css/style.css";
-import mapimage from "../../assets/footer_map.png";
 import { NavLink } from "react-router-dom";
 import { IconContext } from "react-icons";
 import { FaFacebook, FaInstagram, FaLinkedinIn, FaTwitter } from "react-icons/fa";
 import { VscDebugBreakpointLog } from "react-icons/vsc";
-// import { Map, GoogleApiWrapper, Marker } from 'google-maps-react';
 
 export default function Footer(props) {
-  // const mapStyles = {
-  //   width: '40vh',
-  //   height: '40vh',
-  // };
   return (
     <>
       <footer className="text-lg-start footer mt-4 pt-1 pb-1">
         <div className="container p-4">
           <div className="row">
             <div className="col-md-5">
-              <img className="map-image" src={mapimage} alt="map" />
-              {/* <Map
-                google={props.google}
-                zoom={14}
-                style={mapStyles}
-                initialCenter={{ lat: 27.7200715, lng: 85.3573198 }}
-              > */}
-                {/* <Marker position={{ lat: 27.7200715, lng: 85.3573198 }} /> */}
-              {/* </Map> */}
-              
+              <iframe className="map-image" title="footerMap" src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d1050.0572117778795!2d85.36415030200747!3d27.718602138871947!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2snp!4v1615866354767!5m2!1sen!2snp" style={{border:'0px'}} allowFullScreen="" loading="lazy"></iframe>
               <div className="pt-3 pb-4">
                 <h4>Head Office</h4>
                 <h6>Pipalbot, Boudha</h6>
                 <h6>Phone: 9841504552, 9813955307</h6>
-                <h6>Mail: moysti@gmail.com</h6>
+                <h6>Mail: us@gmail.com</h6>
               </div>
             </div>
 
