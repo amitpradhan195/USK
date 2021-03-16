@@ -10,13 +10,8 @@ export default function HomeSlider() {
   useEffect(() => {
     setTimeout(() => {
     }, 2000);
-    // AOS.init({
-    //   duration: 1000,
-    //   anchorPlacement: "top-bottom",
-    // });
   }, []);
-  // window.addEventListener('load', AOS.refresh);
-
+  
   return (
     <>
       <div

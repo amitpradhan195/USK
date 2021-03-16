@@ -55,12 +55,6 @@ nav.stroke ul li a:hover:after {
   color: rgb(26, 82, 118) !important;
 }
 
-/* .navbarunactive .navbar-toggler {
-  padding: 1px 5px;
-  font-size: 18px;
-  line-height: 0.3;
-} */
-
 .activenav {
   background-color: #2E4053;
   -webkit-transition: 1s;
@@ -79,28 +73,6 @@ nav.stroke ul li a:hover:after {
 .activenav ul li a:hover {
   color: #28c092 !important;
 }
-
-/* .activenav .navbar-toggler {
-  padding: 1px 5px;
-  font-size: 18px;
-  line-height: 0.3;
-} */
-
-/* .activenav .navbar-brand {
-  color: #707070 !important;
-} */
-
-
-/* @-webkit-keyframes slideInFromLeft {
-  0% {
-    -webkit-transform: translateX(-100%);
-            transform: translateX(-100%);
-  }
-  100% {
-    -webkit-transform: translateX(0);
-            transform: translateX(0);
-  }
-} */
 
 @keyframes slideInFromLeft {
   0% {
@@ -121,7 +93,6 @@ nav.stroke ul li a:hover:after {
 .carousel-item .carousel-caption {
   -webkit-animation: 1s ease-out 0s 1 slideInFromLeft;
   animation: 1s ease-out 0s 1 slideInFromLeft;
-  /* padding: 30px; */
   -webkit-transition: all 0.1s ease;
   transition: all 0.1s ease;
 }
@@ -140,11 +111,9 @@ nav.stroke ul li a:hover:after {
   -webkit-animation: cssAnimation 0s ease-in 2.5s forwards;
   /* Safari and Chrome */
   /* Opera */
+  animation: cssAnimation 0s ease-in 2.5s forwards;
   position: relative;
   overflow: hidden;
-  /* touch-action: none;
-  -ms-touch-action: none; */
-  animation: cssAnimation 0s ease-in 2.5s forwards;
   -webkit-animation-fill-mode: forwards;
   animation-fill-mode: forwards;
   -webkit-transition: all 0.1s ease;
@@ -159,16 +128,6 @@ nav.stroke ul li a:hover:after {
     transition: overflow 7s ease;
   }
 }
-
-/* @-webkit-keyframes cssAnimation {
-  to {
-    width: 0;
-    height: 0;
-    visibility: hidden;
-    -webkit-transition: visibility 7s ease;
-    transition: visibility 7s ease;
-  }
-} */
 
 .featured-title {
   width: 90px;
