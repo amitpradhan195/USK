@@ -7,16 +7,45 @@ import AOS from "aos";
 export default function Listing() {
   const [selectPurpose, setSelectPurpose] = useState('All');
   const [selectPropertyType, setSelectPropertyType] = useState('All');
+  const [filteredData, setFilteredData] = useState(null);
 
   useEffect(() => {
+    function filterData(){
+      if(selectPurpose==='All' && selectPropertyType==='All'){
+        if(CData.length>0){
+          setFilteredData(CData);
+        }
+        else{
+          setFilteredData(null);
+        }
+      }
+      else if (selectPurpose==='All' || selectPropertyType==='All'){
+        const res = CData.filter(filteredData => filteredData.tag===selectPurpose || filteredData.propertyType===selectPropertyType);
+        if(res.length>0){
+          setFilteredData(res)
+        }
+        else{
+          setFilteredData(null);
+        }
+      }
+      else{
+        const res = CData.filter(filteredData => filteredData.tag===selectPurpose && filteredData.propertyType===selectPropertyType);
+        if(res.length>0){
+          setFilteredData(res)
+        }
+        else{
+          setFilteredData(null);
+        }
+      }
+    }
+    filterData();
     window.scrollTo(0, 0);
     AOS.init({
       duration: 1000,
       anchorPlacement: "top-bottom",
     });
-  }, []);
+  },[selectPurpose, selectPropertyType]);
   window.addEventListener('load', AOS.refresh);
-
 
   function onPurposeChange(e){
     setSelectPurpose(e.target.value);
@@ -95,60 +124,27 @@ export default function Listing() {
         <div className="row">
           <div className="col-10 mx-auto">
             <div className="row gy-5">
-              {selectPurpose==="All" && selectPropertyType==="All" ? 
-              CData.map((value, index, arr) => {
-                  console.log("value : "+value)
-                  return arr &&  
-                    <Card
-                      key={index}
-                      id={value.id}
-                      imgsrc={value.imgsrc}
-                      tag={value.tag}
-                      css={value.css}
-                      prop={value.prop}
-                      location={value.location}
-                      bed={value.bed}
-                      kitchen={value.kitchen}
-                      bath={value.bath}
-                      contact={value.contact}
-                      parking={value.parking}
-                      />
-            }): (selectPurpose==="All" || selectPropertyType==="All"? 
-              CData.filter(filteredData => filteredData.tag===selectPurpose || filteredData.propertyType===selectPropertyType)
-              .map((value, index, arr) => {
-                console.log("value : "+value)
-                return arr.length  >= 1 &&
-                    <Card
-                      key={index}
-                      imgsrc={value.imgsrc}
-                      tag={value.tag}
-                      css={value.css}
-                      prop={value.prop}
-                      location={value.location}
-                      bed={value.bed}
-                      kitchen={value.kitchen}
-                      bath={value.bath}
-                      contact={value.contact}
-                      />
-              }):
-              CData.filter(filteredData => filteredData.tag===selectPurpose && filteredData.propertyType===selectPropertyType)
-                .map((value, index, arr) => {
-                  console.log("value : "+value)
-                  return arr.length >= 1 && 
-                    <Card
-                      key={index}
-                      imgsrc={value.imgsrc}
-                      tag={value.tag}
-                      css={value.css}
-                      prop={value.prop}
-                      location={value.location}
-                      bed={value.bed}
-                      kitchen={value.kitchen}
-                      bath={value.bath}
-                      contact={value.contact}
-                    />
-              }))}
-                <h2>No results found</h2>
+              {
+                filteredData!=null ?
+                  filteredData.map((value, index)=>{
+                    return <Card
+                            key={index}
+                            id={value.id}
+                            imgsrc={value.imgsrc}
+                            tag={value.tag}
+                            css={value.css}
+                            prop={value.prop}
+                            location={value.location}
+                            bed={value.bed}
+                            kitchen={value.kitchen}
+                            bath={value.bath}
+                            contact={value.contact}
+                            parking={value.parking}
+                            />
+                  })
+                :
+                  <h2 className="text-center">Sorry! No results found</h2>
+              }
             </div>
           </div>
         </div>

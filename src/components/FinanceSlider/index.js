@@ -271,40 +271,40 @@ const handleChangeCoordination = (name) => (event, value) => {
                     className="text-danger" 
                     value={emi} 
                     displayType={'text'}
-                    prefix={'Rs.'} 
+                    prefix={'Rs. '} 
                     thousandSeparator={true} 
                     thousandSpacing="2s"
                   />
                 </h1>
                 <p>
-                  Principal
+                  Principal &nbsp;
                   <CurrencyFormat 
                     className="text-danger" 
                     value={values.amountValue} 
                     displayType={'text'}
-                    prefix={'Rs.'} 
+                    prefix={'Rs. '} 
                     thousandSeparator={true} 
                     thousandSpacing="2s"
                   />
                 </p>
                 <p>
-                  Interest Payable
+                  Interest Payable &nbsp;
                   <CurrencyFormat 
                     className="text-danger" 
                     value={interestPayable} 
                     displayType={'text'}
-                    prefix={'Rs.'} 
+                    prefix={'Rs. '} 
                     thousandSeparator={true} 
                     thousandSpacing="2s"
                   />
                 </p>
                 <p>
-                  Total Amount Payable
+                  Total Amount Payable &nbsp;
                   <CurrencyFormat 
                     className="text-danger" 
                     value={totalAmountPayable} 
                     displayType={'text'}
-                    prefix={'Rs.'} 
+                    prefix={'Rs. '} 
                     thousandSeparator={true} 
                     thousandSpacing="2s"
                   />

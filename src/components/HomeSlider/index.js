@@ -30,7 +30,7 @@ export default function HomeSlider() {
         </ol>
         <div className="carousel-inner">
           <div className="carousel-item active">
-            <img alt="First slide" className="carouselImg" src={slider1} style={{backgroundColor:'black'}} />
+            <img alt="First slide" className="d-block w-100" src={slider1} style={{backgroundColor:'black'}} />
             <div className="carousel-caption sliderContent">
               <h1>LET'S FIND YOU A PROPERTY...</h1>
             </div>
