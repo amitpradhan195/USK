@@ -16,7 +16,7 @@ export default function Details(props) {
 
   useEffect(() => {
     window.scrollTo(0, 0);
-    cardData.filter(details=>details.id==pID)
+    cardData.filter(details=>details.id+''===pID)
       .map((filteredDetails)=>{
         setDetails(filteredDetails);
         return filteredDetails
