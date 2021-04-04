@@ -9,7 +9,6 @@ import { NavLink } from "react-router-dom";
 export default function Card(props) {
   return (
     <IconContext.Provider value={{ color: "#707070", size: "20px" }}>
-      <>
         <div className="col-md-4 pb-5">
           <div className="card shadow" data-aos="fade-down">
             <div className="card-body">
@@ -83,7 +82,6 @@ export default function Card(props) {
             </div>
           </div>
         </div>
-      </>
     </IconContext.Provider>
   );
 }
