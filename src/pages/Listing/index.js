@@ -68,10 +68,8 @@ export default function Listing() {
           <div className="row">
             <form className="col-md-4">
             <div className="input-group mb-3">
-              <div className="input-group-prepend">
-                <label className="input-group-text" htmlFor="inputGroupSelect01">Purpose</label>
-              </div>
-              <select className="custom-select" style={{backgroundColor:'#F8F9F9', borderColor:'#EAECEE'}} defaultValue="All" name="purpose" onChange={onPurposeChange}>
+              <label className="input-group-text" htmlFor="inputGroupSelect01">Purpose</label>
+              <select className="custom-select" defaultValue="All" name="purpose" onChange={onPurposeChange}>
                 <option value="All">
                   All
                 </option>

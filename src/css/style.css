@@ -1,9 +1,24 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+
+/*--------------------------------------------------------------
+# Navbar active nav link
+--------------------------------------------------------------*/
+.navbar__link--active {
+  /* border-bottom: 2px solid #29b6f6; */
+  background-color: #2eca6a;
+  border-radius: 5px;
+  color: white;
+  transition: .5s ease-in-out;
+}
+
+/*--------------------------------------------------------------
+# Navbar
+--------------------------------------------------------------*/
+
 .navbarunactive {
   height: 90px;
   letter-spacing: 1.5px;
-  color: #ffffff !important;
 }
 
 .navbarBrandImg {
@@ -17,14 +32,32 @@
   color: #000000 !important;
 }
 
-.sliderContent{
-  color:white;
-  opacity: 1.0;
-  position: absolute;
-  top: 30%;
+/*======================================
+//--//-->   BUTTON
+======================================*/
+
+.btn.btn-b-n {
+  background-color: #2eca6a;
+  color: #ffffff;
+  border-radius: 5px;
 }
 
-/* stroke */
+.btn.btn-b-n:hover {
+  background-color: #26a356;
+  color: #ffffff;
+}
+
+.navbar-toggle-box {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  line-height: 0;
+  padding: 10px;
+}
+
+/*======================================
+//--//-->   STROKE
+======================================*/
 nav.stroke ul li a{
   position: relative;
 }
@@ -37,23 +70,21 @@ nav.stroke ul li a:after{
   width: 0%;
   content: '.';
   color: transparent;
-  background: #aaa;
-  height: 1px;
+  background: #2eca6a;
+  height: 2px;
 }
 
 nav.stroke ul li a:hover:after {
+  transition: all .3s ease-in-out;
   width: 100%;
 }
 
-.navbarunactive ul li a:hover {
-  color: rgb(26, 82, 118) !important;
-}
 
 .activenav {
   background-color: #2E4053;
   -webkit-transition: 1s;
   transition: 1s;
-  height: 90px;
+  max-height: 90px;
   letter-spacing: 1.5px;
 }
 
@@ -62,10 +93,6 @@ nav.stroke ul li a:hover:after {
   text-transform: capitalize !important;
   margin: 0 0 0 15px !important;
   color: #000000 !important;
-}
-
-.activenav ul li a:hover {
-  color: #28c092 !important;
 }
 
 @keyframes slideInFromLeft {
@@ -79,9 +106,71 @@ nav.stroke ul li a:hover:after {
   }
 }
 
+/*======================================
+  # HAMBURGER NAVBAR
+======================================*/
+.navbar-toggler {
+  position: relative;
+}
+
+.navbar-toggler:focus,
+.navbar-toggler:active {
+  outline: 0;
+}
+
+.navbar-toggler span {
+  display: block;
+  background-color: #3d3b3b;
+  height: 3px;
+  width: 25px;
+  margin-top: 4px;
+  margin-bottom: 4px;
+  transform: rotate(0deg);
+  left: 0;
+  opacity: 1;
+}
+
+.navbar-toggler span:nth-child(1),
+.navbar-toggler span:nth-child(3) {
+  transition: transform .35s ease-in-out;
+}
+
+.navbar-toggler:not(.collapsed) span:nth-child(1) {
+  position: absolute;
+  left: 12px;
+  top: 10px;
+  transform: rotate(135deg);
+  opacity: 0.9;
+}
+
+.navbar-toggler:not(.collapsed) span:nth-child(2) {
+  height: 12px;
+  visibility: hidden;
+  background-color: transparent;
+}
+
+.navbar-toggler:not(.collapsed) span:nth-child(3) {
+  position: absolute;
+  left: 12px;
+  top: 10px;
+  transform: rotate(-135deg);
+  opacity: 0.9;
+}
+
+/*======================================
+//--//-->   Carousel
+======================================*/
+
 .carousel-item {
   width: 100vw;
   max-height: 100vh;
+}
+
+.sliderContent{
+  color:white;
+  opacity: 1.0;
+  position: absolute;
+  top: 30%;
 }
 
 .carousel-item .carousel-caption {
@@ -91,20 +180,8 @@ nav.stroke ul li a:hover:after {
   transition: all 0.1s ease;
 }
 
-.nav-container ul li.active-link {
-  font-size: 20px;
-}
-
-.nav-container ul li.active-link a {
-  background-color: #707070;
-  color: #ffffff;
-}
-
 .carousel-caption h1 {
-  /* Firefox */
   -webkit-animation: cssAnimation 0s ease-in 2.5s forwards;
-  /* Safari and Chrome */
-  /* Opera */
   animation: cssAnimation 0s ease-in 2.5s forwards;
   position: relative;
   overflow: hidden;
@@ -260,10 +337,6 @@ nav.stroke ul li a:hover:after {
   color: #000000;
 }
 
-/* .details-banner h2 {
-  line-height: 200px;
-} */
-
 .details-container .track ul {
   list-style-type: none;
   padding: 0;
@@ -288,7 +361,6 @@ nav.stroke ul li a:hover:after {
   -o-object-fit: cover;
      object-fit: cover;
 }
-
 
 .details-container .track ul li:first-child {
   opacity: 1;
@@ -582,11 +654,13 @@ select:focus {
 .heading-text {
   font-family: "Roboto", sans-serif !important;
 }
-/*# sourceMappingURL=style.css.map */
 
 .facility{
   font-weight: bold;
   color: #2E4053;
+}
+.custom-select{
+  border: 1px solid rgb(221, 221, 221);
 }
 
 
@@ -643,14 +717,12 @@ select:focus {
         grid-template-columns: repeat(6, 1fr);
     grid-gap: 20px;
   }
-  /* Start of About Us */
   .inner-container {
     width: 50%;
     float: right;
     background-color: #fafafa;
     padding: 40px 20px 20px 20px;
   }
-
   .inner-container h1 {
     margin-bottom: 30px;
     font-size: 2em;
@@ -683,15 +755,12 @@ select:focus {
     text-align: center;
     font-size: 18px;
   }
-
-    /* Start of About Us */
   .inner-container {
     width: 55%;
     float: right;
     background-color: #fafafa;
     padding: 80px 40px 40px 40px;
   }
-
   .inner-container h1 {
     margin-bottom: 30px;
     font-size: 2em;
@@ -700,9 +769,13 @@ select:focus {
 }
 
 @media only screen and (max-width: 990px) {
-  .navbar-nav {
+  .navbar-nav, .searchForm {
     background: rgb(255, 255, 255);
-    border-radius: 16px;
+    border-radius: 10px;
+    padding: 15px;
+  }
+  .activenav  .navbar-toggler span {
+    background-color: whitesmoke;
   }
   .navbar-nav a {
     font-size: 14px;

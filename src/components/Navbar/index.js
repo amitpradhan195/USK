@@ -1,9 +1,11 @@
 import React from "react";
 import { useState } from "react";
 import Requirements from "../../components/Requirements";
-import Career from "../../components/Career";
 import logo from "../../assets/logo_US.png";
 import "../../css/style.css";
+import { BiSearch } from 'react-icons/bi';
+import { MdLocationOn } from 'react-icons/md';
+import { NavLink } from "react-router-dom";
 
 export default function Navbar() {
   const [navbar, setNavbar] = useState(false);
@@ -21,42 +23,51 @@ export default function Navbar() {
   return (
     <>
       <Requirements></Requirements>
-      <Career></Career>
       <nav
         className={
           navbar
-            ? "navbar activenav navbar-expand-lg navbar-dark fixed-top stroke"
-            : "navbar navbarunactive navbar-expand-lg navbar-light fixed-top stroke"
+            ? "navbar activenav navbar-expand-lg fixed-top stroke"
+            : "navbar navbarunactive navbar-expand-lg fixed-top stroke"
         }>
         <div className="container">
           <a className="navbar-brand" href="/">
             <img alt="logo" src={logo} className="navbarBrandImg"/>
           </a>
-          <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span className="navbar-toggler-icon"></span>
+          <button className="navbar-toggler collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span></span>
+            <span></span>
+            <span></span>
           </button>
 
           <div className="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul className="navbar-nav">
+            <ul className="navbar-nav me-auto mb-2 mb-lg-0">
               <li className="nav-item">
-                <a className="nav-link" href="/listings"> Properties </a>
+                <NavLink activeClassName="navbar__link--active" className="nav-link" to="/listings"> Properties </NavLink>
               </li>
               <li className="nav-item">
-                <a className="nav-link" href="/finance"> Finance </a>
+                <NavLink activeClassName="navbar__link--active" className="nav-link" to="/finance"> Finance </NavLink>
+              </li>
+              {/* <li className="nav-item">
+                <NavLink activeClassName="navbar__link--active" className="nav-link" to="/#"> VIP </NavLink>
               </li>
               <li className="nav-item">
-                <a className="nav-link" data-bs-toggle="modal" data-bs-target="#requirementsModal" href="#requirements">
+                <NavLink activeClassName="navbar__link--active" className="nav-link" to="/#"> Dream House </NavLink>
+              </li> */}
+              <li className="nav-item">
+                <NavLink className="nav-link" data-bs-toggle="modal" data-bs-target="#requirementsModal" to="#requirements">
                   Requirements
-                </a>
+                </NavLink>
               </li>
             </ul>
-            <ul className="navbar-nav ml-auto ml-auto mb-2 mb-lg-0">
-              <li className="nav-item">
-                <a className="nav-link" data-bs-toggle="modal" data-bs-target="#careerModal" href="#career">
-                  Career
-                </a>
-              </li>
-            </ul>
+            <form className="text-end searchForm">
+                <div className="input-group mb-3">
+                  <span className="input-group-text" id="basic-addon1"><MdLocationOn size="1.5em"/></span>
+                  <input type="text" id="searchInput" className="form-control" placeholder="e.g: Kathmandu" aria-label="Kathmandu" aria-describedby="basic-addon1"/>
+                  <button type="button" className="btn btn-b-n navbar-toggle-box" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo01">
+                    <BiSearch size="1.3em"/> Search 
+                  </button>
+                </div>
+            </form>
           </div>
         </div>
       </nav>

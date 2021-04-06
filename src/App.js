@@ -6,15 +6,6 @@ import "aos/dist/aos.css";
 import "boxicons";
 import "./App.css";
 
-// import Navbar from "./components/Navbar";
-// import Home from "./pages/Home";
-// import Details from "./pages/PropDetails";
-// import Footer from "./components/Footer";
-// import Listings from "./pages/Listing";
-// import Faq from "./pages/FAQ";
-// import Finance from "./pages/Finance";
-// import About from "./pages/About";
-
 const Home = lazy(() => import('./pages/Home'));
 const Navbar = lazy(() => import('./components/Navbar'));
 const Footer = lazy(() => import('./components/Footer'));

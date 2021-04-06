@@ -19,7 +19,6 @@ export default function Card(props) {
                 <img
                   alt={props.imgsrc}
                   className="d-block"
-                  // src="propertyImages/s2.jpg"
                   src={`propertyImages/${props.imgsrc}`}
                 />
               </NavLink>
