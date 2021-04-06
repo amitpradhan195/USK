@@ -4,11 +4,16 @@
 /*--------------------------------------------------------------
 # Navbar active nav link
 --------------------------------------------------------------*/
-.navbar__link--active {
+
+.nav-link{
+  color: #000000;
+}
+
+.navbar__link--active{
   /* border-bottom: 2px solid #29b6f6; */
   background-color: #2eca6a;
+  color:white;
   border-radius: 5px;
-  color: white;
   transition: .5s ease-in-out;
 }
 
@@ -29,7 +34,6 @@
   font-size: 1rem !important;
   text-transform: capitalize !important;
   margin: 0 0 0 15px !important;
-  color: #000000 !important;
 }
 
 /*======================================

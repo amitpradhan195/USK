@@ -1,5 +1,4 @@
-import React from "react";
-import { useState } from "react";
+import React, { useState } from "react";
 import Requirements from "../../components/Requirements";
 import logo from "../../assets/logo_US.png";
 import "../../css/style.css";
@@ -47,12 +46,12 @@ export default function Navbar() {
               <li className="nav-item">
                 <NavLink activeClassName="navbar__link--active" className="nav-link" to="/finance"> Finance </NavLink>
               </li>
-              {/* <li className="nav-item">
-                <NavLink activeClassName="navbar__link--active" className="nav-link" to="/#"> VIP </NavLink>
+              <li className="nav-item">
+                <NavLink activeClassName="navbar__link--active" className="nav-link" to="/vip"> VIP </NavLink>
               </li>
               <li className="nav-item">
-                <NavLink activeClassName="navbar__link--active" className="nav-link" to="/#"> Dream House </NavLink>
-              </li> */}
+                <NavLink activeClassName="navbar__link--active" className="nav-link" to="/dream-house"> Dream House </NavLink>
+              </li>
               <li className="nav-item">
                 <NavLink className="nav-link" data-bs-toggle="modal" data-bs-target="#requirementsModal" to="#requirements">
                   Requirements
