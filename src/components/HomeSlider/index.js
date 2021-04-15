@@ -1,20 +1,20 @@
 import React, { useEffect } from "react";
 import slider1 from "../../assets/slider3.jpg";
-import slider2 from "../../assets/slider2.jpg";
-import slider3 from "../../assets/slider4.jpeg";
+import slider2 from "../../assets/slider5.jpg";
+import slider3 from "../../assets/slider6.jpg";
 import "../../css/style.css";
 
 export default function HomeSlider() {
 
-  useEffect(() => {
-    setTimeout(() => {
-    }, 2000);
-  }, []);
+  // useEffect(() => {
+  //   setTimeout(() => {
+  //   }, 2000);
+  // }, []);
   
   return (
     <>
       <div
-        className="carousel slide"
+        className="carousel slide carousel-fade"
         data-bs-ride="carousel"
         id="carouselExampleIndicators"
         data-bs-interval="3000"

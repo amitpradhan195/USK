@@ -25,8 +25,8 @@ export default function Navbar() {
       <nav
         className={
           navbar
-            ? "navbar activenav navbar-expand-lg fixed-top stroke"
-            : "navbar navbarunactive navbar-expand-lg fixed-top stroke"
+            ? "navbar activenav font-sm navbar-expand-lg fixed-top stroke"
+            : "navbar navbarunactive font-sm navbar-expand-lg fixed-top stroke"
         }>
         <div className="container">
           <a className="navbar-brand" href="/">
@@ -50,7 +50,7 @@ export default function Navbar() {
                 <NavLink activeClassName="navbar__link--active" className="nav-link" to="/vip"> VIP </NavLink>
               </li>
               <li className="nav-item">
-                <NavLink activeClassName="navbar__link--active" className="nav-link" to="/dream-house"> Dream House </NavLink>
+                <NavLink activeClassName="navbar__link--active" className="nav-link" to="/dream-house"> DreamHouse </NavLink>
               </li>
               <li className="nav-item">
                 <NavLink className="nav-link" data-bs-toggle="modal" data-bs-target="#requirementsModal" to="#requirements">
@@ -60,11 +60,11 @@ export default function Navbar() {
             </ul>
             <form className="text-end searchForm">
                 <div className="input-group mb-3">
-                  <span className="input-group-text" id="basic-addon1"><MdLocationOn size="1.5em"/></span>
-                  <input type="text" id="searchInput" className="form-control" placeholder="e.g: Kathmandu" aria-label="Kathmandu" aria-describedby="basic-addon1"/>
-                  <button type="button" className="btn btn-b-n navbar-toggle-box" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo01">
-                    <BiSearch size="1.3em"/> Search 
-                  </button>
+                  <span className="input-group-text" id="basic-addon1"><BiSearch size="1.3em"/></span>
+                  <input type="text" id="searchInput" className="" placeholder="Search" aria-label="Kathmandu" aria-describedby="basic-addon1"/>
+                  {/* <button type="button" className="btn btn-b-n navbar-toggle-box" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo01">
+                    <BiSearch size="1.3em"/>
+                  </button> */}
                 </div>
             </form>
           </div>

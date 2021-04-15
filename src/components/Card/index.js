@@ -1,86 +1,56 @@
 import React from "react";
-import { IconContext } from "react-icons";
-import { MdLocationOn } from "react-icons/md";
-import { GiKnifeFork } from "react-icons/gi";
-import { FaBed, FaPhoneAlt, FaBath, FaParking } from "react-icons/fa";
+import { BiChevronRight } from "react-icons/bi";
 import "../../css/style.css";
 import { NavLink } from "react-router-dom";
 
 export default function Card(props) {
   return (
-    <IconContext.Provider value={{ color: "#707070", size: "20px" }}>
-        <div className="col-md-4 pb-5">
-          <div className="card shadow" data-aos="fade-down">
-            <div className="card-body">
-              {/* title */}
-              <NavLink
-                to={"/details/" + props.id}
-              >
-                <img
-                  alt={props.imgsrc}
-                  className="d-block"
-                  src={`propertyImages/${props.imgsrc}`}
-                />
-              </NavLink>
-              <div className="tag shadow" name="ppfor" style={props.css}>
-                {props.tag}
-              </div>
-              <h4 className=" text-center text-capitalize font-weight-bold pt-3">
-                {props.prop}
-              </h4>
-              <p className="text-center">
-                <span className="icon">
-                  <MdLocationOn />
-                </span>
-                <small>{props.location}</small>
-              </p>
-              {/* feature */}
-              <div className="row pb-1">
-                <div className="col-md-6 mx-auto">
-                  <span className="pe-2">
-                    <FaBed />
-                  </span>
-                  <small>Bedrooms: <span style={{fontWeight:'bold'}}>{props.bed}</span></small>
+          <div className="col-md-4">
+              <div className="card-box-a card-shadow">
+                <div className="img-box-a">
+                  <img src={`propertyImages/${props.imgsrc}`} alt="imageProperty" className="img-a img-fluid"/>
                 </div>
-                <div className="col-md-6 mx-auto">
-                  <span className="pe-2">
-                    <GiKnifeFork />
-                  </span>
-                  <small>Kitchen: <span style={{fontWeight:'bold'}}>{props.kitchen}</span></small>
-                </div>
-              </div>
-
-              <div className="row pb-3">
-                <div className=" col-md-6 mx-auto">
-                  <span className="pe-2">
-                    <FaBath />
-                  </span>
-                  <small>Bathroom: <span style={{fontWeight:'bold'}}>{props.bath}</span></small>
-                </div>
-                <div className="col-md-6 mx-auto">
-                  <span className="pe-2">
-                    <FaParking/>
-                  </span>
-                  <small>Parking: <span style={{fontWeight:'bold'}}>{props.parking}</span></small>
+                <div className="card-overlay">
+                  <div className="card-overlay-a-content">
+                    <div className="card-header-a">
+                      <h2 className="card-title-a">
+                        <NavLink to={"/details/" + props.id}>{props.prop}
+                          <br /> {props.location}</NavLink>
+                      </h2>
+                    </div>
+                    <div className="card-body-a">
+                      <div className="price-box d-flex">
+                        <span className="price-a">{props.tag}</span>
+                      </div>
+                      <NavLink to={"/details/" + props.id} className="link-a">Click here to view
+                        <BiChevronRight size="1.5em"/>
+                      </NavLink>
+                    </div>
+                    <div className="card-footer-a">
+                      <ul className="card-info d-flex justify-content-around">
+                        <li className="text-center">
+                          <h4 className="card-info-title">Area</h4>
+                          <span>340m
+                            <sup>2</sup>
+                          </span>
+                        </li>
+                        <li className="text-center">
+                          <h4 className="card-info-title">Beds</h4>
+                          <span>{props.bed}</span>
+                        </li>
+                        <li className="text-center">
+                          <h4 className="card-info-title">Baths</h4>
+                          <span>{props.bath}</span>
+                        </li>
+                        <li className="text-center">
+                          <h4 className="card-info-title">Parking</h4>
+                          <span>{props.parking}</span>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
                 </div>
               </div>
-              <div className="text-center">
-                <span>
-                  <FaPhoneAlt className="pe-1"/>
-                  <small>{props.contact}</small>
-                </span>
-              </div>
-              {/* feature end */}
-              <NavLink
-                type="button"
-                className="btn btn-lg w-100 btn-block shadow mt-3 viewdetails"
-                to={"/details/" + props.id}
-              >
-                View Details
-              </NavLink>
             </div>
-          </div>
-        </div>
-    </IconContext.Provider>
   );
 }

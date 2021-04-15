@@ -6,7 +6,7 @@ import FinanceData from "../../data/finance";
 export default function Finance() {
   return (
     <>
-      <section className="featured-container pt-5 mb-5">
+      <section className="featured-container pt-2 mb-5">
         <h4 className="text-center heading-text" data-aos="fade-down">
           Finance Alliances
         </h4>

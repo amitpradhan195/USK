@@ -2,11 +2,11 @@ import React, { useState } from "react";
 import "../../css/style.css";
 import emailjs from 'emailjs-com';
 import NumberFormat from "react-number-format";
-import { AiOutlineClose } from "react-icons/ai";
+import { IoCloseSharp } from "react-icons/io5";
 
 export default function Requirements() {
   const [values, setValues] = useState({
-    rbPF:'Buy',
+    rbPF:'Rent',
     rbPT:'Room',
     rbBedroom:'1',
     rbPA:'Bike Only',
@@ -61,55 +61,75 @@ export default function Requirements() {
         <div className="modal-dialog modal-lg">
           <div className="modal-content">
             <div className="modal-header">
-              <h4 className="modal-title">Send Us Your Requirements</h4>
-              <AiOutlineClose fontSize="30px" data-bs-dismiss="modal" role="button"/>
+              <h4 className="modal-title">Send us your requirements</h4>
+              <IoCloseSharp fontSize="30px" data-bs-dismiss="modal" role="button"/>
             </div>
             <div className="modal-body">
+            <ul className="nav nav-tabs" id="myTab" role="tablist">
+              <li className="nav-item" role="presentation">
+                <button className="nav-link active" id="home-tab" data-bs-toggle="tab" data-bs-target="#home" type="button" role="tab" aria-controls="home" aria-selected="true">ROOM</button>
+              </li>
+              <li className="nav-item" role="presentation">
+                <button className="nav-link" id="profile-tab" data-bs-toggle="tab" data-bs-target="#profile" type="button" role="tab" aria-controls="profile" aria-selected="false">BUILDING</button>
+              </li>
+              <li className="nav-item" role="presentation">
+                <button className="nav-link" id="contact-tab" data-bs-toggle="tab" data-bs-target="#contact" type="button" role="tab" aria-controls="contact" aria-selected="false">FLAT</button>
+              </li>
+              <li className="nav-item" role="presentation">
+                <button className="nav-link" id="contact-tab" data-bs-toggle="tab" data-bs-target="#contact" type="button" role="tab" aria-controls="contact" aria-selected="false">LAND</button>
+              </li>
+              <li className="nav-item" role="presentation">
+                <button className="nav-link" id="contact-tab" data-bs-toggle="tab" data-bs-target="#contact" type="button" role="tab" aria-controls="contact" aria-selected="false">COMMERCIALS</button>
+              </li>
+            </ul>
               <form className="pl-5 pt-2" onSubmit={sendRequirement}>
                 {/* property for */}
-                <label>Property For :</label>
-                <div className="form-group mb-3 ms-3">
-                  <div className="form-check form-check-inline">
+                <div className="form-group m-3">
+                  {/* <div className="form-check form-check-inline">
                     <input 
                       className="form-check-input" 
                       type="radio" 
                       id="pf1" 
-                      value="Buy" 
-                      name="rbPF" 
-                      onClick={onValueChange}
-                      defaultChecked
-                      /> 
-                    <label className="form-check-label" htmlFor="pf1">Buy</label>
-                  </div>
-
-                  <div className="form-check form-check-inline">
-                    <input 
-                      className="form-check-input" 
-                      type="radio" 
-                      id="pf2" 
                       value="Rent" 
                       name="rbPF" 
                       onClick={onValueChange}
+                      defaultChecked
                       />
-                    <label className="form-check-label" htmlFor="pf2">Rent</label>
+                    <label className="form-check-label" htmlFor="pf1">Rent</label>
                   </div>
                   
                   <div className="form-check form-check-inline">
                     <input 
                       className="form-check-input" 
                       type="radio" 
-                      id="pf3" 
+                      id="pf2" 
                       value="Sale" 
                       name="rbPF" 
                       onClick={onValueChange}
                       />
-                    <label className="form-check-label" htmlFor="pf3">Sale</label>
+                    <label className="form-check-label" htmlFor="pf2">Sale</label>
+                  </div> */}
+                  {/* <div className="btn-group" role="group" aria-label="Basic radio toggle button group">
+                    <input type="radio" className="btn-check" name="btnradio" id="btnradio1" autocomplete="off" checked/>
+                    <label className="btn btn-outline-primary" for="btnradio1">RENT</label>
+
+                    <input type="radio" className="btn-check" name="btnradio" id="btnradio2" autocomplete="off"/>
+                    <label className="btn btn-outline-primary" for="btnradio2">SALE</label>
+                  </div> */}
+
+                  <div className="row checkbutton" role="group">
+                    <div className="col-md-6">
+                      <button type="button" className="btn btn-primary w-100">RENT</button>
+                    </div>
+                    <div className="col-md-6">
+                      <button type="button" className="btn btn-primary w-100">SALE</button>
+                    </div>
                   </div>
                 </div>
 
                 {/* property type */}
-                <label>Property Type :</label>
-                <div className="form-group mb-3 ms-3">
+                {/* <label>Property Type :</label> */}
+                {/* <div className="form-group m-3">
                 <div className="form-check form-check-inline">
                     <input
                       className="form-check-input"
@@ -158,7 +178,7 @@ export default function Requirements() {
                     />
                     <label className="form-check-label" htmlFor="pt4">Land</label>
                   </div>
-                </div>
+                </div> */}
 
                 {/* bedroom */}
                 {showBedroom ?
