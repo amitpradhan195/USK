@@ -18,6 +18,7 @@
   border-radius: 5px;
   transition: .5s ease-in-out;
 }
+
 .navbar__link--active:hover{
   color: white;
 }
@@ -31,7 +32,7 @@
 --------------------------------------------------------------*/
 
 .navbarunactive {
-  height: 90px;
+  max-height: 90px;
   letter-spacing: 1.5px;
 }
 
@@ -41,36 +42,27 @@
 
 .navbarunactive ul li a {
   text-transform: capitalize !important;
-  margin: 0 0 0 15px !important;
+  padding: 10px 10px 10px 10px !important;
+  margin-left: 15px;
+  /* align-items: center; */
+  font-weight: 400;
+  
 }
 
-.searchForm input{
-  width: 40%;
-  background-color: transparent;
-  border: 0;
-  border-radius: 0;
-  outline: 0;
-  border-bottom: 2px solid #03a8f45e;
-  font-size: 1.1em;
-  color: rgb(255, 249, 249);
-  padding-left: 5px;
-  -webkit-transition: width 0.4s ease-in-out;
-  transition: width 0.4s ease-in-out;
+.activenav {
+  background-color: white;
+  -webkit-transition: all 1s;
+  transition: all 1s;
+  max-height: 90px;
+  letter-spacing: 1.5px;
 }
 
-.searchForm span{
-  background-color: transparent;
-  border: 0;
-  border-radius: 0;
-  outline: 0;
-  color: rgb(255, 249, 249);
-  border-bottom: 2px solid #03a8f45e;
+.activenav ul li a {
+  text-transform: capitalize !important;
+  padding: 10px 10px 10px 10px !important;
+  font-weight: 400;
+  color: #000000 !important;
 }
-
-.searchForm input:focus{
-  width: 80%;
-}
-
 
 /*======================================
 //--//-->   STROKE
@@ -94,21 +86,6 @@ nav.stroke ul li a:after{
 nav.stroke ul li a:hover:after {
   transition: all .3s ease-in-out;
   width: 100%;
-}
-
-
-.activenav {
-  background-color: #2E4053;
-  -webkit-transition: 1s;
-  transition: 1s;
-  max-height: 90px;
-  letter-spacing: 1.5px;
-}
-
-.activenav ul li a {
-  text-transform: capitalize !important;
-  margin: 0 0 0 15px !important;
-  color: #000000 !important;
 }
 
 @keyframes slideInFromLeft {
@@ -199,15 +176,78 @@ nav.stroke ul li a:hover:after {
 /*======================================
 //--//-->   Modal
 ======================================*/
-.modal-header{
-  background-color: #7B7D7D;
+#requirementsModal .modal-header{
+  background-color: teal;
   color:white;
   text-transform: uppercase;
 }
-.checkbutton > div, .checkbutton>div>button{
-  padding:0px;
-  border:1px solid red;
+
+#requirementsModal .modal-body .modal-bg{
+  background: url("../assets/RequirementsModalBackground.jfif");
+  background-size: cover;
+  background-position:center;
+  height: 250px;
+}
+
+.checkbutton > div > button {
   border-radius: 0px;
+  height: 45px;
+  background-color: teal;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.checkbutton > div > button:hover {
+  background-color: #28c092;
+}
+
+.checkbutton > div > button:active{
+  background-color: turquoise;
+}
+
+.btnSendRequirements {
+  /* background-color: teal !important;
+  border-radius: 10px; */
+  display: inline-block;
+  border-radius: 4px;
+  background-color: #f4511e;
+  border: none;
+  color: #FFFFFF;
+  text-align: center;
+  font-size: 28px;
+  padding: 10px;
+  width: 100%;
+  transition: all 0.5s;
+  cursor: pointer;
+  /* margin: 5px; */
+  /* border: none; */
+}
+
+.btnSendRequirements span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+.btnSendRequirements span:after {
+  content: '\00bb';
+  font-size: 40px;
+  position: absolute;
+  opacity: 0;
+  top: -12px;
+  right: -20px;
+  transition: 0.5s;
+}
+
+.btnSendRequirements:hover span {
+  padding-right: 25px;
+  color: white;
+}
+
+.btnSendRequirements:hover span:after {
+  opacity: 1;
+  right: 0;
 }
 
 /*======================================
@@ -257,17 +297,6 @@ nav.stroke ul li a:hover:after {
   width: 90px;
   border-bottom: 3px solid #707070;
   margin: 0 auto;
-}
-
-.btnbuilt {
-  background-color: #2E4053 !important;
-  border-radius: 10px;
-  border: none;
-}
-
-.btnbuilt:hover {
-  background-color: #969595 !important;
-  color: #ffffff;
 }
 
 .buildHouse img {
@@ -791,7 +820,7 @@ select:focus {
   .activenav ul li a {
     text-transform: capitalize !important;
     margin: 0 0 0 15px !important;
-    color: #ffffff !important;
+    color: #000000 !important;
   }
   .slides {
     grid-gap: 5px;
@@ -826,7 +855,7 @@ select:focus {
 
 @media only screen and (max-width: 990px) {
   .navbar-nav, .searchForm {
-    background: rgb(255, 255, 255);
+    background: rgb(255, 255, 255, 0.7);
     border-radius: 10px;
     padding: 15px;
   }

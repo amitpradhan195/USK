@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import Requirements from "../../components/Requirements";
 import logo from "../../assets/logo_US.png";
 import "../../css/style.css";
+import "../../css/style.scss";
 import { BiSearch } from 'react-icons/bi';
 import { MdLocationOn } from 'react-icons/md';
 import { NavLink } from "react-router-dom";
@@ -58,15 +59,10 @@ export default function Navbar() {
                 </NavLink>
               </li>
             </ul>
-            <form className="text-end searchForm">
-                <div className="input-group mb-3">
-                  <span className="input-group-text" id="basic-addon1"><BiSearch size="1.3em"/></span>
-                  <input type="text" id="searchInput" className="" placeholder="Search" aria-label="Kathmandu" aria-describedby="basic-addon1"/>
-                  {/* <button type="button" className="btn btn-b-n navbar-toggle-box" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo01">
-                    <BiSearch size="1.3em"/>
-                  </button> */}
-                </div>
-            </form>
+            <div className="container-search">
+              <input type="text" placeholder="Search..."/>
+              <div className="search"></div>
+            </div>
           </div>
         </div>
       </nav>

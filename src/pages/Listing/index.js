@@ -119,9 +119,9 @@ export default function Listing() {
         </div>
       </section>
       {/* prop listings */}
-      <section class="property-grid grid">
-        <div class="container">
-          <div class="row">
+      <section className="property-grid grid">
+        <div className="container">
+          <div className="row">
               {
                 filteredData!=null ?
                   filteredData.map((value, index)=>{

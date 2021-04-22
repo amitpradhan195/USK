@@ -1,16 +1,10 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState, useRef } from "react";
 import "../../css/style.css";
-import Card from "../../components/Card";
-import CData from "../../data/Carddata";
-import Finance from "../../components/Finance";
 import HomeSlider from "../../components/HomeSlider";
-import DreamModal from "../../components/DreamHouse";
-import home1 from "../../assets/home1.png";
-import home2 from "../../assets/home2.png";
-import {BiCheckCircle, BiChevronRight} from 'react-icons/bi';
-import {GoLocation} from 'react-icons/go';
 import { NavLink } from "react-router-dom";
 import AOS from "aos";
+import clip from '../../assets/videos/clip.mp4';
+import "video-react/dist/video-react.css";
 
 export default function Home() {
   useEffect(() => {
@@ -21,9 +15,10 @@ export default function Home() {
     });
   }, []);
   window.addEventListener('load', AOS.refresh);
+
   return (
     <>
-      <HomeSlider></HomeSlider>
+      {/* <HomeSlider></HomeSlider> */}
       {/* featured */}
       {/* <section className="featured-container pt-3 mb-5">
         <h4 className="text-center heading-text">
@@ -31,6 +26,12 @@ export default function Home() {
         </h4>
         <div className="featured-title"></div>
       </section> */}
+
+    <section>
+      <video autoPlay muted loop className="w-100 h-100">
+        <source src={clip} type="video/mp4"/>
+      </video>
+    </section>
 
       <section className="heroCard">
           <div className="row">
@@ -110,105 +111,7 @@ export default function Home() {
               </NavLink>
             </div>
           </div>
-
-          {/* <div className="row">
-            <div className="col-lg-6 imageHero1">
-              <img src="/propertyImages/slider1.jpg" className="img-fluid shadow-lg mb-3 bg-body rounded" alt=""/>
-            </div>
-            <div className="offset-md-2 col-lg-4 content1">
-              <h1>6 BHK Flat</h1>
-              <p className="heroLocation"><GoLocation/> Kirtpur, Kathmandu</p>
-              <div>
-                <ul className="float-start">
-                  <li><span><BiCheckCircle/></span>Bedroom</li>
-                  <li><span><BiCheckCircle/></span>Bathroom</li>
-                </ul>
-                <ul>
-                  <li><span><BiCheckCircle/></span>Kitchen</li>
-                  <li><span><BiCheckCircle/></span>Parking</li>
-                </ul>
-                <NavLink to={"/details/"} className="navLink">Click here to view
-                  <BiChevronRight size="1.5em"/>
-                </NavLink>
-              </div>
-            </div>
-          </div>
-
-          <div className="row">
-            <div className="col-lg-6 imageHero">
-              <img src="/propertyImages/slider1.jpg" className="img-fluid shadow-lg mb-3 bg-body rounded" alt="featuredImage"/>
-            </div>
-            <div className="col-lg-4 offset-md-2 content">
-              <h1>7 BHK Flat</h1>
-              <p className="heroLocation"><GoLocation/> Kirtpur, Kathmandu</p>
-              <div>
-                <ul className="float-start">
-                  <li><span><BiCheckCircle/></span>Bedroom</li>
-                  <li><span><BiCheckCircle/></span>Bathroom</li>
-                </ul>
-                <ul>
-                  <li><span><BiCheckCircle/></span>Kitchen</li>
-                  <li><span><BiCheckCircle/></span>Parking</li>
-                </ul>
-                <NavLink to={"/details/"} className="navLink">Click here to view
-                  <BiChevronRight size="1.5em"/>
-                </NavLink>
-              </div>
-            </div>
-          </div> */}
       </section>
-
-      {/* featured card */}
-      {/* <div className="container-fluid pb-5 about-myjob">
-        <div className="row">
-          <div className="col-12">
-            <div className="row gy-5">
-              {CData.map((value, indno) => {
-                return (
-                  <Card
-                    key={indno}
-                    id={value.id}
-                    imgsrc={value.imgsrc}
-                    tag={value.tag}
-                    css={value.css}
-                    prop={value.prop}
-                    location={value.location}
-                    bed={value.bed}
-                    kitchen={value.kitchen}
-                    bath={value.bath}
-                    contact={value.contact}
-                    parking={value.parking}
-                  />
-                );
-              })}
-            </div>
-          </div>
-        </div>
-      </div> */}
-
-      {/* build your home */}
-      {/* <div className="d-flex justify-content-center flex-column align-items-center pb-5 pt-5 buildHouse">
-        <h4 className="heading-text text-center" data-aos="fade-down">
-          Do you want to built your home ?
-        </h4>
-        <img
-          className="mt-2"
-          src={home1}
-          alt="home pic"
-          data-aos="fade-down"
-        />
-        <img
-          className="mb-2"
-          src={home2}
-          alt="home pic"
-          data-aos="fade-up"
-        />
-
-        <DreamModal></DreamModal>
-        <p className="mt-2 availableNote">Opportunity avaliable for people outside nepal</p>
-
-      </div> */}
-
       {/* financial alliance */}
       {/* <Finance></Finance> */}
     </>

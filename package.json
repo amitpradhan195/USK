@@ -29,7 +29,9 @@
     "react-router-dom": "^5.2.0",
     "react-scripts": "4.0.1",
     "react-text-mask": "^5.4.3",
+    "sass": "^1.32.10",
     "swiper": "^6.5.3",
+    "video-react": "^0.14.1",
     "web-vitals": "^0.2.4",
     "yup": "^0.32.8"
   },

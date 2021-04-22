@@ -5,9 +5,12 @@ import { MdLocationOn } from "react-icons/md";
 import { FaPhoneAlt, FaBed, FaBath, FaCar, FaWifi, FaLightbulb } from "react-icons/fa";
 import { IoMail } from "react-icons/io5";
 import { GiKnifeFork } from "react-icons/gi";
-import { ImDroplet } from "react-icons/im";
-import { RiBikeFill } from "react-icons/ri";
-import ReactPlayer from "react-player";
+import {BiCheckCircle, BiArea, BiBuilding} from "react-icons/bi";
+// import ReactPlayer from "react-player";
+import clip from '../../assets/videos/clip.mp4';
+// import Poster from '../../assets/posterRealEstate.jfif';
+import {Player,ControlBar,BigPlayButton} from 'video-react';
+import "video-react/dist/video-react.css";
 import cardData from "../../data/Listings";
 
 export default function Details(props) {
@@ -134,64 +137,61 @@ export default function Details(props) {
                   <p className="text-center">
                     <FaCar />
                   </p>
-                  <p className="text-center">Car Parking: <span className="facility">{details.carParking}</span></p>
+                  <p className="text-center">Parking: <span className="facility">{details.parking}</span></p>
                 </li>
                 <li className="col-md-2">
                   <p className="text-center">
-                    <RiBikeFill />
+                    <BiArea />
                   </p>
-                  <p className="text-center">Bike parking: <span className="facility">{details.bikeParking}</span></p>
+                  <p className="text-center">Area: <span className="facility">340m<sup>2</sup></span></p>
                 </li>
                 <li className="col-md-2">
                   <p className="text-center">
-                    <ImDroplet />
+                    <BiBuilding />
                   </p>
-                  <p className="text-center">Water Supply: <span className="facility">{details.waterSupply}</span></p>
-                </li>
-                <li className="col-md-2">
-                  <p className="text-center">
-                    <FaLightbulb />
-                  </p>
-                  <p className="text-center">Electricity: <span className="facility">{details.electricity}</span></p>
-                </li>
-                <li className="col-md-2">
-                  <p className="text-center">
-                    <FaWifi />
-                  </p>
-                  <p className="text-center">Internet: <span className="facility">{details.internet}</span></p>
+                  <p className="text-center">No. of Story: <span className="facility">4</span></p>
                 </li>
               </ul>
             </div>
+          </section>
+
+          {/* reactplayer  */}
+          <section className="propertyVideo pb-5">
+            {/* <ReactPlayer
+              width="auto"
+              controls
+              url={details.url}
+            /> */}
+            <Player
+              muted
+              // poster={Poster}
+              src={clip}
+            >
+              <ControlBar autoHide={false}/>
+              <BigPlayButton position="center" />
+            </Player>
           </section>
           {/* property information */}
           <section className="propertyInformation pb-2">
             <div className="propertyInformation-container">
               <h4>More Information</h4>
-              <p className="text-justify">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. In
-                faucibus ac mauris eu imperdiet. Aenean tincidunt tellus quis
-                ipsum porttitor molestie. Proin mattis lacinia neque eu
-                faucibus. Vestibulum sed magna ut lacus pulvinar varius ac sit
-                amet ipsum. Aliquam erat volutpat. Vivamus rhoncus ligula at
-                tempus rhoncus. Nunc sodales sodales enim varius gravida. Mauris
-                nibh tortor, placerat sed lorem id, gravida ultricies lectus.
-                Pellentesque dui dui, auctor ut diam at, egestas vehicula metus.
+              <p className="">
+                <ul className="list-group">
+                  <li className="list-group-item"><BiCheckCircle color="green" className="me-2"/>An item</li>
+                  <li className="list-group-item"><BiCheckCircle color="green" className="me-2"/>A second item</li>
+                  <li className="list-group-item"><BiCheckCircle color="green" className="me-2"/>A third item</li>
+                  <li className="list-group-item"><BiCheckCircle color="green" className="me-2"/>A fourth item</li>
+                  <li className="list-group-item"><BiCheckCircle color="green" className="me-2"/>And a fifth one</li>
+                </ul>
               </p>
             </div>
           </section>
-          {/* reactplayer  */}
-          <section className="propertyVideo pb-5">
-            <ReactPlayer
-              width="auto"
-              controls
-              url={details.url}
-            />
-          </section>
+
           {/* map information */}
           <section className="mapInformation pb-5">
             <div className="mapInformation-container">
               <h4>Map View</h4>
-              <img src="/propertyImages/office.png" alt="place" />
+              <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d1765.9289955934978!2d85.36202048236176!3d27.721670556234532!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2snp!4v1619110445708!5m2!1sen!2snp" width="600" height="450" style={{border:0}} allowfullscreen="" loading="lazy"></iframe>
             </div>
           </section>
         </section>

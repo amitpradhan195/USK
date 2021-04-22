@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import "../../css/style.css";
 import emailjs from 'emailjs-com';
 import NumberFormat from "react-number-format";
@@ -13,10 +13,17 @@ export default function Requirements() {
     location:'',
     budget:'',
     customerName:'',
-    contactNo:''
+    contactNo:'',
   });
-  const [showBedroom, setShowBedroom] = useState(true);
 
+  const [showBedroom, setShowBedroom] = useState(true);
+  const [propertyType, setPropertyType] = useState('room');
+  
+  const onPropertyTypeChange = (name) => (e) => {
+    setPropertyType(name);
+  }
+  
+  console.log(propertyType);
   function onValueChange(e){
     setValues({
       ...values,
@@ -65,23 +72,32 @@ export default function Requirements() {
               <IoCloseSharp fontSize="30px" data-bs-dismiss="modal" role="button"/>
             </div>
             <div className="modal-body">
-            <ul className="nav nav-tabs" id="myTab" role="tablist">
-              <li className="nav-item" role="presentation">
-                <button className="nav-link active" id="home-tab" data-bs-toggle="tab" data-bs-target="#home" type="button" role="tab" aria-controls="home" aria-selected="true">ROOM</button>
-              </li>
-              <li className="nav-item" role="presentation">
-                <button className="nav-link" id="profile-tab" data-bs-toggle="tab" data-bs-target="#profile" type="button" role="tab" aria-controls="profile" aria-selected="false">BUILDING</button>
-              </li>
-              <li className="nav-item" role="presentation">
-                <button className="nav-link" id="contact-tab" data-bs-toggle="tab" data-bs-target="#contact" type="button" role="tab" aria-controls="contact" aria-selected="false">FLAT</button>
-              </li>
-              <li className="nav-item" role="presentation">
-                <button className="nav-link" id="contact-tab" data-bs-toggle="tab" data-bs-target="#contact" type="button" role="tab" aria-controls="contact" aria-selected="false">LAND</button>
-              </li>
-              <li className="nav-item" role="presentation">
-                <button className="nav-link" id="contact-tab" data-bs-toggle="tab" data-bs-target="#contact" type="button" role="tab" aria-controls="contact" aria-selected="false">COMMERCIALS</button>
-              </li>
-            </ul>
+              <div className="modal-bg"></div>
+                <div className="row checkbutton pb-3" role="group">
+                  <div className="col-md-6">
+                    <button type="button" className="btn btn-primary w-100">RENT</button>
+                  </div>
+                  <div className="col-md-6">
+                    <button type="button" className="btn btn-primary w-100">SALE</button>
+                  </div>
+                </div>
+              <ul className="nav nav-tabs" id="myTab" role="tablist">
+                <li className="nav-item" role="presentation">
+                  <button className="nav-link active" id="room-tab" data-bs-toggle="tab" data-bs-target="#room" type="button" role="tab" aria-controls="room" aria-selected="true" onClick={onPropertyTypeChange('room')}>ROOM</button>
+                </li>
+                <li className="nav-item" role="presentation">
+                  <button className="nav-link" id="building-tab" data-bs-toggle="tab" data-bs-target="#building" type="button" role="tab" aria-controls="building" aria-selected="false" onClick={onPropertyTypeChange('building')}>BUILDING</button>
+                </li>
+                <li className="nav-item" role="presentation">
+                  <button className="nav-link" id="flat-tab" data-bs-toggle="tab" data-bs-target="#flat" type="button" role="tab" aria-controls="flat" aria-selected="false" onClick={onPropertyTypeChange('flat')}>FLAT</button>
+                </li>
+                <li className="nav-item" role="presentation">
+                  <button className="nav-link" id="land-tab" data-bs-toggle="tab" data-bs-target="#land" type="button" role="tab" aria-controls="land" aria-selected="false" onClick={onPropertyTypeChange('land')}>LAND</button>
+                </li>
+                <li className="nav-item" role="presentation">
+                  <button className="nav-link" id="commercial-tab" data-bs-toggle="tab" data-bs-target="#commercial" type="button" role="tab" aria-controls="commercial" aria-selected="false" onClick={onPropertyTypeChange('commercial')}>COMMERCIALS</button>
+                </li>
+              </ul>
               <form className="pl-5 pt-2" onSubmit={sendRequirement}>
                 {/* property for */}
                 <div className="form-group m-3">
@@ -116,15 +132,6 @@ export default function Requirements() {
                     <input type="radio" className="btn-check" name="btnradio" id="btnradio2" autocomplete="off"/>
                     <label className="btn btn-outline-primary" for="btnradio2">SALE</label>
                   </div> */}
-
-                  <div className="row checkbutton" role="group">
-                    <div className="col-md-6">
-                      <button type="button" className="btn btn-primary w-100">RENT</button>
-                    </div>
-                    <div className="col-md-6">
-                      <button type="button" className="btn btn-primary w-100">SALE</button>
-                    </div>
-                  </div>
                 </div>
 
                 {/* property type */}
@@ -309,7 +316,7 @@ export default function Requirements() {
                   <div className="form-group col-md-3 pt-2">
                     <label>Budget (in Rs):</label>
                   </div>
-                  <div className="form-group col-lg-6">
+                  <div className="form-group col-md-6">
                     <input
                       type='number'
                       name="budget"
@@ -361,9 +368,11 @@ export default function Requirements() {
                 <button
                   type="submit"
                   value="Send"
-                  className="btn btn-lg btn-primary mt-2 btnbuilt shadow"
+                  className="btn mt-2 btnSendRequirements"
                 >
-                  SUBMIT
+                  <span>
+                    SEND
+                  </span>
                 </button>
               </form>
             </div>
