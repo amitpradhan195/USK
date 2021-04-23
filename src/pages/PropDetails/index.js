@@ -175,15 +175,13 @@ export default function Details(props) {
           <section className="propertyInformation pb-2">
             <div className="propertyInformation-container">
               <h4>More Information</h4>
-              <p className="">
-                <ul className="list-group">
-                  <li className="list-group-item"><BiCheckCircle color="green" className="me-2"/>An item</li>
-                  <li className="list-group-item"><BiCheckCircle color="green" className="me-2"/>A second item</li>
-                  <li className="list-group-item"><BiCheckCircle color="green" className="me-2"/>A third item</li>
-                  <li className="list-group-item"><BiCheckCircle color="green" className="me-2"/>A fourth item</li>
-                  <li className="list-group-item"><BiCheckCircle color="green" className="me-2"/>And a fifth one</li>
-                </ul>
-              </p>
+              <ul className="list-group mb-2">
+                <li className="list-group-item"><BiCheckCircle color="green" className="me-2"/>An item</li>
+                <li className="list-group-item"><BiCheckCircle color="green" className="me-2"/>A second item</li>
+                <li className="list-group-item"><BiCheckCircle color="green" className="me-2"/>A third item</li>
+                <li className="list-group-item"><BiCheckCircle color="green" className="me-2"/>A fourth item</li>
+                <li className="list-group-item"><BiCheckCircle color="green" className="me-2"/>And a fifth one</li>
+              </ul>
             </div>
           </section>
 
