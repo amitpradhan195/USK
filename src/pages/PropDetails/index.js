@@ -163,7 +163,6 @@ export default function Details(props) {
               url={details.url}
             /> */}
             <Player
-              muted
               // poster={Poster}
               src={clip}
             >

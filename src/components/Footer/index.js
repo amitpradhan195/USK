@@ -1,127 +1,61 @@
-import React from "react";
-import "../../css/style.css";
-import { NavLink } from "react-router-dom";
-import { IconContext } from "react-icons";
-import { FaFacebook, FaInstagram, FaLinkedinIn, FaTwitter } from "react-icons/fa";
-import { VscDebugBreakpointLog } from "react-icons/vsc";
+import React from 'react'
+import {RiTwitterFill, RiFacebookFill, RiLinkedinFill} from 'react-icons/ri'
+import {BiChevronRight} from 'react-icons/bi';
 
-export default function Footer(props) {
-  return (
-    <>
-      <footer className="text-lg-start footer mt-4 pt-1 pb-1">
-        <div className="container p-4">
-          <div className="row">
-            <div className="col-md-5">
-              <iframe className="map-image w-100" title="footerMap" src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d1050.0572117778795!2d85.36415030200747!3d27.718602138871947!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2snp!4v1615866354767!5m2!1sen!2snp" style={{border:'0px'}} allowFullScreen loading="lazy"></iframe>
-              <div className="pt-3 pb-4">
-                <h4>Lama Group</h4>
-                <p>Pipalbot, Boudha</p>
-                <p>Phone: 9841504552, 9813955307</p>
-                <p>Mail: lamagroup@gmail.com</p>
-              </div>
+export default function index1() {
+    return (
+        <footer id="footer">
+            <div className="footer-top">
+                <div className="container">
+                    <div className="row">
+                        <div className="col-lg-4 col-md-6">
+                            <div className="footer-info">
+                                <h3>Lamas Group</h3>
+                                <p>
+                                    Pipalbot, Boudha <br/>
+                                    Kathmandu, Nepal<br/><br/>
+                                    <strong>Phone:</strong> +977-9841504552, +977-9813955307<br/>
+                                    <strong>Email:</strong> lamasgroup@gmail.com<br/>
+                                </p>
+                                <div className="social-links mt-3">
+                                    <a href="#" className="me-2"><RiTwitterFill/></a>
+                                    <a href="#" className="me-2"><RiFacebookFill/></a>
+                                    <a href="#" className="me-2"><RiLinkedinFill/></a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div className="offset-lg-1 col-lg-2 col-md-6 footer-links">
+                            <h4>Useful Links</h4>
+                            <ul>
+                                <li><span><BiChevronRight/></span> <a href="#">Home</a></li>
+                                <li><span><BiChevronRight/></span> <a href="#">About us</a></li>
+                                <li><span><BiChevronRight/></span> <a href="#">Services</a></li>
+                                <li><span><BiChevronRight/></span> <a href="#">FAQ</a></li>
+                                <li><span><BiChevronRight/></span> <a href="#">Contact Us</a></li>
+                            </ul>
+                        </div>
+
+                        <div className="offset-lg-1 col-lg-4 col-md-6 footer-newsletter">
+                            <h4>Our Newsletter</h4>
+                            <p>Subscribe us to get notifications and be updated about us.</p>
+                            <form action="" method="">
+                                <input type="email" name="email"/>
+                                <input type="submit" value="Subscribe"/>
+                            </form>
+                        </div>
+                    </div>
+                </div>
             </div>
 
-            <div className="offset-md-1 col-md-2 pb-5">
-              <ul className="list-unstyled mb-0">
-                <li>
-                  <NavLink to="/about" className="a">
-                    <h5>About Us</h5>
-                  </NavLink>
-                </li>
-                <li>
-                  <NavLink to="/faq" className="a">
-                    <h5>FAQ</h5>
-                  </NavLink>
-                </li>
-              </ul>
+            <div className="container">
+                <div className="copyright">
+                &copy; Copyright <strong><span>Lamas Group Estate</span></strong>. All Rights Reserved
+                </div>
+                <div className="credits">
+                Designed by <a href="https://zoektech.com/">Zoek Tech</a>
+                </div>
             </div>
-
-            <div className="col-md-2 pb-4">
-              <h5 className="">Our services</h5>
-
-              <ul className="list-unstyled mb-0">
-                <li>
-                  <NavLink to="/finance" className="a">
-                    <IconContext.Provider value={{ color: "#F54D53" }}>
-                      <VscDebugBreakpointLog className="me-2" />
-                    </IconContext.Provider>
-                    Finance
-                  </NavLink>
-                </li>
-                <li>
-                  <NavLink
-                    className="a"
-                    data-bs-toggle="modal"
-                    data-bs-target="#careerModal"
-                    to="#career"
-                  >
-                    <IconContext.Provider value={{ color: "#F54D53" }}>
-                      <VscDebugBreakpointLog className="me-2" />
-                    </IconContext.Provider>
-                    Career
-                  </NavLink>
-                </li>
-              </ul>
-            </div>
-
-            <div className="col-md-2 pb-4">
-              <h5 className="">Social</h5>
-
-              <ul className="list-unstyled mb-0">
-                <li className="pb-3">
-                  <NavLink to="#!">
-                    <IconContext.Provider
-                      value={{ color: "#166FE5", size: "20px" }}
-                    >
-                      <FaFacebook className="me-2" />
-                    </IconContext.Provider>
-                    Facebook
-                  </NavLink>
-                </li>
-                <li className="pb-3">
-                  <NavLink to="#!">
-                    <IconContext.Provider
-                      value={{ color: "#F54D53", size: "20px" }}
-                    >
-                      <FaInstagram className="me-2" />
-                    </IconContext.Provider>
-                    Instagram
-                  </NavLink>
-                </li>
-                <li className="pb-3">
-                  <NavLink to="#!">
-                    <IconContext.Provider
-                      value={{ color: "#0A66C2", size: "20px" }}
-                    >
-                      <FaLinkedinIn className="me-2" />
-                    </IconContext.Provider>
-                    LinkedIn
-                  </NavLink>
-                </li>
-                <li className="pb-3">
-                  <NavLink to="#!">
-                    <IconContext.Provider
-                      value={{ color: "#1C9CEA", size: "20px" }}
-                    >
-                      <FaTwitter className="me-2" />
-                    </IconContext.Provider>
-                    Twitter
-                  </NavLink>
-                </li>
-              </ul>
-            </div>
-          </div>
-        </div>
-        <p className="copyright text-center">
-          All right reserved | Lama Group Estate &copy; {new Date().getFullYear()}
-          <br/>
-          Designed by @<a href="https://zoektech.com/" target="_blank" rel="noopener noreferrer">Zoek Tech</a>
-        </p>
-      </footer>
-    </>
-  );
+        </footer>           
+    )
 }
-
-// export default GoogleApiWrapper({
-//   apiKey: "AIzaSyBlheLBggIk0p-E2fhamggFxrH5B-jAdc8",
-// })(Footer);
