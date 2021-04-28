@@ -69,10 +69,10 @@ export default function Listing() {
           <div className="row">
             <form className="col-md-4">
             <div className="input-group mb-3">
-              <label className="input-group-text font-sm" htmlFor="inputGroupSelect01">Purpose</label>
-              <select className="custom-select font-sm" defaultValue="All" name="purpose" onChange={onPurposeChange}>
+              {/* <label className="input-group-text font-sm" htmlFor="inputGroupSelect01">Purpose</label> */}
+              <select className="custom-select listingCustomSelect font-sm w-50" defaultValue="All" name="purpose" onChange={onPurposeChange}>
                 <option value="All">
-                  All
+                  Any
                 </option>
                 <option value="For Sale">
                   For Sale
@@ -84,12 +84,12 @@ export default function Listing() {
             </div>
             </form>
 
-            <div className="col-md-5" >
+            <div className="col-md-5 mb-5" >
               <nav className="listingsNavTab">
                 <ul className="nav nav-tabs font-sm" id="myTab" role="tablist">
                   <li className="nav-item" role="presentation">
                     <a className="nav-link active" id="all-tab" data-bs-toggle="tab" role="tab" aria-controls="all" aria-selected="true" onClick={onPropertyTypeChange('All')} href="#all">
-                      All
+                      Any
                     </a>
                   </li>
                   <li className="nav-item" role="presentation">

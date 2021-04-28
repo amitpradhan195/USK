@@ -3,9 +3,8 @@ import Requirements from "../../components/Requirements";
 import logo from "../../assets/logo_US.png";
 import "../../css/style.css";
 import "../../css/style.scss";
-import { BiSearch } from 'react-icons/bi';
-import { MdLocationOn } from 'react-icons/md';
 import { NavLink } from "react-router-dom";
+import DreamHouse from "../DreamHouse/index";
 
 export default function Navbar() {
   const [navbar, setNavbar] = useState(false);
@@ -23,6 +22,8 @@ export default function Navbar() {
   return (
     <>
       <Requirements></Requirements>
+      <DreamHouse></DreamHouse>
+
       <nav
         className={
           navbar
@@ -51,7 +52,7 @@ export default function Navbar() {
                 <NavLink activeClassName="navbar__link--active" className="nav-link" to="/vip"> VIP </NavLink>
               </li>
               <li className="nav-item">
-                <NavLink activeClassName="navbar__link--active" className="nav-link" to="/dream-house"> DreamHouse </NavLink>
+                <NavLink className="nav-link" data-bs-toggle="modal" id="three" data-bs-target="#dreamhouseModal" to="#dream-house"> DreamHouse </NavLink>
               </li>
               <li className="nav-item">
                 <NavLink className="nav-link" data-bs-toggle="modal" data-bs-target="#requirementsModal" to="#requirements">

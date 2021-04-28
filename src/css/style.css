@@ -61,7 +61,7 @@
   text-transform: capitalize !important;
   padding: 10px 10px 10px 10px !important;
   font-weight: 400;
-  color: #000000 !important;
+  color: #000000;
 }
 
 /*======================================
@@ -754,6 +754,13 @@ select:focus {
 }
 
 
+/* property listing design */
+.listingCustomSelect{
+  padding: 5px;
+  text-align: center;
+}
+
+
 
 
 /* responsive using media query */
@@ -862,9 +869,6 @@ select:focus {
     background: rgb(255, 255, 255, 0.7);
     border-radius: 10px;
     padding: 15px;
-  }
-  .activenav  .navbar-toggler span {
-    background-color: whitesmoke;
   }
   .navbar-nav a {
     font-size: 14px;
@@ -989,7 +993,7 @@ select:focus {
 .price-a {
   color: #ffffff;
   padding: .6rem .8rem;
-  border: 2px solid #2eca6a;
+  border: 2px solid #787e7a;
   border-radius: 50px;
   text-transform: uppercase;
   letter-spacing: 0.030em;
@@ -999,7 +1003,7 @@ select:focus {
   width: 100%;
   position: absolute;
   z-index: 2;
-  background-color: #2eca6a;
+  background-color: #ffffff;
 }
 
 .card-info {
@@ -1014,7 +1018,7 @@ select:focus {
 }
 
 .card-info li span {
-  color: #ffffff;
+  color: #000000;
   font-size: .9rem;
 }
 
@@ -1271,7 +1275,7 @@ select:focus {
   margin-bottom: 15px;
   background: #191919;
   color: #fff;
-  border-top: 4px solid #cc1616;
+  border-top: 4px solid #ffffff;
   text-align: center;
   padding: 30px 20px;
 }
@@ -1307,8 +1311,8 @@ select:focus {
 }
 
 #footer .footer-top .social-links a:hover {
-  background: #cc1616;
-  color: #fff;
+  background: #ffffff;
+  color: rgb(0, 0, 0);
   text-decoration: none;
 }
 
@@ -1332,7 +1336,7 @@ select:focus {
 
 #footer .footer-top .footer-links ul span {
   /* padding-right: 2px; */
-  color: #ed5b5b;
+  color: #ffffff;
   font-size: 20px;
   line-height: 0.5;
 }
@@ -1355,40 +1359,39 @@ select:focus {
 }
 
 #footer .footer-top .footer-links ul a:hover {
-  color: #eb4444;
+  color: #d0d0d0;
 }
 
-#footer .footer-top .footer-newsletter form {
-  margin-top: 30px;
-  background: #fff;
-  padding: 6px 10px;
-  position: relative;
-  border-radius: 4;
+#footer .footer-top .footer-newsletter div{
+  border: 1px solid rgb(153, 153, 153);
 }
 
-#footer .footer-top .footer-newsletter form input[type="email"] {
-  border: 0;
+#footer .footer-top .footer-newsletter input[type="email"] {
+  border: none;
   padding: 4px;
-  width: calc(100% - 110px);
-}
-
-#footer .footer-top .footer-newsletter form input[type="submit"] {
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  border: 0;
-  background: none;
+  width: calc(100%-110px);
+  background-color: transparent;
+  color: white;
   font-size: 16px;
-  padding: 0 20px;
-  background: #cc1616;
-  color: #fff;
-  transition: 0.3s;
-  border-radius: 4;
 }
 
-#footer .footer-top .footer-newsletter form input[type="submit"]:hover {
-  background: #e82d2d;
+#footer .footer-top .footer-newsletter input[type="email"]:focus {
+  border: none !important;
+  box-shadow: none !important;
+}
+
+#footer .footer-top .footer-newsletter button {
+  background-color: transparent;
+  color: rgb(143, 142, 142);
+  font-size: 20px;
+}
+
+#footer .footer-top .footer-newsletter button:focus {
+  box-shadow: none !important;
+}
+
+#footer .footer-top .footer-newsletter button:hover {
+  color: white;
 }
 
 #footer .copyright {

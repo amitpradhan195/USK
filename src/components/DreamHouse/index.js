@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import "../../css/style.css";
+import "../../css/style.scss";
 import emailjs from 'emailjs-com';
 import NumberFormat from "react-number-format";
 import { AiOutlineClose } from "react-icons/ai";
@@ -43,7 +44,7 @@ export default function DHouse() {
 
   return (
     <>
-      <button
+      {/* <button
         data-aos="fade-right"
         type="button"
         className="btn btn-lg btn-primary mt-3 btnbuilt shadow"
@@ -51,7 +52,7 @@ export default function DHouse() {
         data-bs-target="#dreamhouseModal"
       >
         Click Here
-      </button>
+      </button> */}
       <div
         className="modal fade"
         id="dreamhouseModal"
