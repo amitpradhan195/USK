@@ -2,8 +2,16 @@ import React from "react";
 import "../../css/style.css";
 import FinanceCard from "../FinanceCard";
 import FinanceData from "../../data/finance";
+import SwiperCore, { Navigation, Pagination, Scrollbar, A11y } from 'swiper';
+import { Swiper, SwiperSlide } from 'swiper/react';
+import 'swiper/swiper.scss';
+import "swiper/components/pagination/pagination.min.css"
+
+
+SwiperCore.use([Navigation, Pagination, Scrollbar, A11y]);
 
 export default function Finance() {
+  console.log("The width of the screen is : "+window.innerWidth);
   return (
     <>
       <section className="featured-container pt-2 mb-5">
@@ -12,17 +20,42 @@ export default function Finance() {
         </h4>
         <div className="featured-title" data-aos="fade-right"></div>
       </section>
-      <div className="container-finance mb-5 mt-5">
-        {FinanceData.map((value, indno) => {
-          return (
-            <FinanceCard
-              key={indno}
-              imgsrc={value.imgsrc}
-              loan={value.loan}
-              contact={value.contact}
-            />
-          );
-        })}
+      <div className="container-finance">
+        <Swiper
+          className="align-self-center"
+          slidesPerView={1}
+          spaceBetween={20}
+          navigation
+          pagination={{ clickable: true, dynamicBullets: true }}
+          scrollbar={{ draggable: true }}
+          onSwiper={(swiper) => console.log(swiper)}
+          onSlideChange={() => console.log('slide change')}
+          breakpoints={{
+            600: {
+              slidesPerView: 2,
+            },
+            992: {
+              slidesPerView: 3,
+            },
+            1200: {
+              slidesPerView: 4,
+            }
+          }}
+        >
+            {FinanceData.map((value, indno) => {
+              return (
+                <SwiperSlide>
+                  <FinanceCard
+                    key={indno}
+                    imgsrc={value.imgsrc}
+                    loan={value.loan}
+                    contact={value.contact}
+                    />
+                </SwiperSlide>
+
+              );
+            })}
+        </Swiper>
       </div>
     </>
   );

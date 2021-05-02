@@ -578,6 +578,7 @@ nav.stroke ul li a:hover:after {
 .container-finance {
   position: relative;
   width: auto;
+  margin: auto;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -595,8 +596,8 @@ nav.stroke ul li a:hover:after {
 .container-finance .card {
   position: relative;
   background-color: aliceblue;
-  width: 284px;
-  margin: 20px;
+  max-width: 284px;
+  margin: auto;
   cursor: pointer;
   overflow: hidden;
   -webkit-box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
@@ -614,7 +615,7 @@ nav.stroke ul li a:hover:after {
 
 .container-finance .card img {
   width: 100%;
-  max-height: 150px;
+  height: 150px;
   display: block;
   -o-object-fit: cover;
      object-fit: cover;
@@ -749,18 +750,23 @@ select:focus {
   font-weight: bold;
   color: #2E4053;
 }
-.custom-select{
-  border: 1px solid rgb(221, 221, 221);
-}
-
 
 /* property listing design */
-.listingCustomSelect{
+.custom-select{
+  border: none;
+  border-bottom: 1px solid rgb(221, 221, 221);
   padding: 5px;
   text-align: center;
+  text-align-last: center;
+  -ms-text-align-last: center;
+  -moz-text-align-last: center;
 }
 
-
+.custom-select:focus{
+  box-shadow: none !important;
+  outline: none !important;  
+  border: none !important;
+}
 
 
 /* responsive using media query */
@@ -878,10 +884,6 @@ select:focus {
   .navbar-nav li a {
     text-align: right !important;
     padding-right: 10px;
-  }
-  .carousel-item {
-    width: 100vw;
-    height: auto;
   }
   .footer-info {
     border-right: none !important;
@@ -1153,6 +1155,17 @@ select:focus {
   padding: 0;
 }
 
+.heroCard .carousel-inner>.carousel-item {
+  width: 100% !important;
+  max-height:600px !important;
+  transition-duration: 3000ms;
+  -webkit-transition-duration: 3000ms;
+  -moz-transition-duration: 3000ms;
+}
+
+.heroCard .card{
+  padding: 0;
+}
 .content {
   order: 2;
   padding: 0 3em 3em 3em ;
@@ -1275,7 +1288,7 @@ select:focus {
   margin-bottom: 15px;
   background: #191919;
   color: #fff;
-  border-top: 4px solid #ffffff;
+  border-top: 4px solid #a7a7af;
   text-align: center;
   padding: 30px 20px;
 }
@@ -1335,7 +1348,6 @@ select:focus {
 }
 
 #footer .footer-top .footer-links ul span {
-  /* padding-right: 2px; */
   color: #ffffff;
   font-size: 20px;
   line-height: 0.5;
@@ -1408,7 +1420,11 @@ select:focus {
 }
 
 #footer .credits a {
-  color: #e82d2d;
+  color: #ffffff;
+}
+
+#footer .credits a:hover {
+  color: #9a9bb1;
 }
 
 @media (max-width: 575px) {

@@ -70,7 +70,7 @@ export default function Listing() {
             <form className="col-md-4">
             <div className="input-group mb-3">
               {/* <label className="input-group-text font-sm" htmlFor="inputGroupSelect01">Purpose</label> */}
-              <select className="custom-select listingCustomSelect font-sm w-50" defaultValue="All" name="purpose" onChange={onPurposeChange}>
+              <select className="custom-select mt-1 font-sm w-50" defaultValue="All" name="purpose" onChange={onPurposeChange}>
                 <option value="All">
                   Any
                 </option>

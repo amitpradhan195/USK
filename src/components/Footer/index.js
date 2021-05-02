@@ -4,15 +4,9 @@ import {BiChevronRight} from 'react-icons/bi';
 
 export default function index1() {
 
-    function handleSubscribe(e) {
+    const handleSubscribe = (e) => {
         e.preventDefault();
-        const email = e.target.name['subscriptionEmail'];
-        if (email==null){
-            alert("Please enter the email!!")
-        }
-        else{
-            alert("Thankyou for the subscription!!")
-        }
+        alert("Thankyou for the subscription!!")
     }
     return (
         <footer id="footer">
@@ -50,14 +44,12 @@ export default function index1() {
                         <div className="offset-lg-1 col-lg-4 col-md-6 footer-newsletter">
                             <h4>Our Newsletter</h4>
                             <p>Subscribe us to get notifications and be updated about us.</p>
-                            {/* <form className="text-center row">
-                                    <input type="email" placeholder="Enter your email" name="email" required/>
-                                    <button type="submit" className="btn" data-bs-toggle="tooltip" data-bs-placement="top" title="Subscribe">⟶</button> 
-                            </form> */}
-                            <div className="input-group mb-3">
-                                <input type="email" name="subscriptionEmail" className="form-control" placeholder="Enter your email" aria-label="Recipient's email" aria-describedby="button-addon2" required/>
-                                <button type="submit" onClick={handleSubscribe()} className="btn" data-bs-toggle="tooltip" data-bs-placement="top" title="Subscribe" id="button-addon2">⟶</button> 
-                            </div>
+                            <form onSubmit={handleSubscribe}>
+                                <div className="input-group mb-3">
+                                    <input type="email" name="subscriptionEmail" className="form-control" placeholder="Enter your email" aria-label="Recipient's email" aria-describedby="button-addon2" required/>
+                                    <button type="submit" className="btn" data-bs-toggle="tooltip" data-bs-placement="top" title="Subscribe" id="button-addon2">⟶</button> 
+                                </div>
+                            </form>
                         </div>
                     </div>
                 </div>
