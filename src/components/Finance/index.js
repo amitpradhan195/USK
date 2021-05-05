@@ -15,7 +15,7 @@ export default function Finance() {
   return (
     <>
       <section className="featured-container pt-2 mb-5">
-        <h4 className="text-center heading-text" data-aos="fade-down">
+        <h4 className="text-center heading-text" data-aos="fade-left">
           Finance Alliances
         </h4>
         <div className="featured-title" data-aos="fade-right"></div>
@@ -24,7 +24,7 @@ export default function Finance() {
         <Swiper
           className="align-self-center"
           slidesPerView={1}
-          spaceBetween={20}
+          spaceBetween={40}
           navigation
           pagination={{ clickable: true, dynamicBullets: true }}
           scrollbar={{ draggable: true }}
@@ -39,12 +39,16 @@ export default function Finance() {
             },
             1200: {
               slidesPerView: 4,
-            }
+            },
+            1600:{
+              slidesPerView: 5,
+
+            },
           }}
         >
             {FinanceData.map((value, indno) => {
               return (
-                <SwiperSlide>
+                <SwiperSlide className="mb-5">
                   <FinanceCard
                     key={indno}
                     imgsrc={value.imgsrc}

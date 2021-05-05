@@ -13,9 +13,22 @@ import {Player,ControlBar,BigPlayButton} from 'video-react';
 import "video-react/dist/video-react.css";
 import cardData from "../../data/Listings";
 
+
+import { Swiper, SwiperSlide } from "swiper/react";
+import SwiperCore, { EffectFade, Navigation, Thumbs } from 'swiper/core';
+// Import Swiper styles
+import "swiper/swiper.min.css";
+import "swiper/components/effect-fade/effect-fade.min.css"
+import "swiper/components/navigation/navigation.min.css"
+import "swiper/components/thumbs/thumbs.min.css"
+
+// install Swiper modules
+SwiperCore.use([EffectFade,Navigation,Thumbs]);
+
 export default function Details(props) {
   const pID = props.match.params.id;
   const [details, setDetails] = useState({});
+  const [thumbsSwiper, setThumbsSwiper] = useState(null);
 
   useEffect(() => {
     window.scrollTo(0, 0);
@@ -31,57 +44,27 @@ export default function Details(props) {
   return (
     <IconContext.Provider value={{ color: "#707070", size: "25px" }}>
         <section className="details-banner"></section>
+
         {/* slider */}
         <section className="container">
-          <section className="d-flex align-items-center details-container mb-5">
-            <div className="container-fluid">
-              <div className="row">
-                  <div className="order-1 order-lg-1 track">
-                    <ul>
-                      <li id="slide1">
-                        <img src="/propertyImages/slider1.jpg" className="img-thumbnail img-fluid"  alt="slider_image" />
-                      </li>
-                      <li id="slide2">
-                        <img src="/propertyImages/s3.jpg" className="img-thumbnail img-fluid" alt="slider_image" />
-                      </li>
-                      <li id="slide3">
-                        <img src="/propertyImages/s4.jpg" className="img-thumbnail img-fluid" alt="slider_image" />
-                      </li>
-                      <li id="slide4">
-                        <img src="/propertyImages/s5.jpg" className="img-thumbnail img-fluid" alt="slider_image" />
-                      </li>
-                      <li id="slide5">
-                        <img src="/propertyImages/slider1.jpg" className="img-thumbnail img-fluid" alt="slider_image" />
-                      </li>
-                      <li id="slide6">
-                        <img src="/propertyImages/s3.jpg" className="img-thumbnail img-fluid" alt="slider_image" />
-                      </li>
-                    </ul>
-                  </div>
-                  <div className="order-2 order-lg-2 slides">
-                    <a href="#slide1">
-                      <img src="/propertyImages/slider1.jpg" className="img-thumbnail" alt="slider_image" />
-                    </a>
-                    <a href="#slide2">
-                      <img src="/propertyImages/s3.jpg" className="img-thumbnail" alt="slider_image" />
-                    </a>
-                    <a href="#slide3">
-                      <img src="/propertyImages/s4.jpg" className="img-thumbnail" alt="slider_image" />
-                    </a>
-                    <a href="#slide4">
-                      <img src="/propertyImages/s5.jpg" className="img-thumbnail" alt="slider_image" />
-                    </a>
-                    <a href="#slide5">
-                      <img src="/propertyImages/slider1.jpg" className="img-thumbnail" alt="slider_image" />
-                    </a>
-                    <a href="#slide6">
-                      <img src="/propertyImages/s3.jpg" className="img-thumbnail" alt="slider_image" />
-                    </a>
-                  </div>
-              </div>
-            </div>
-          </section>
+            <Swiper effect={'fade'} style={{'--swiper-navigation-color': '#fff','--swiper-pagination-color': '#fff'}} spaceBetween={10} navigation={true} thumbs={{ swiper: thumbsSwiper }} className="mySwiper2 mb-1">
+              <SwiperSlide><img src="/propertyImages/slider1.jpg" /></SwiperSlide>
+              <SwiperSlide><img src="/propertyImages/s4.jpg" /></SwiperSlide>
+              <SwiperSlide><img src="/propertyImages/slider2.jpg" /></SwiperSlide>
+              <SwiperSlide><img src="/propertyImages/slider3.jpg" /></SwiperSlide>
+              <SwiperSlide><img src="/propertyImages/s5.jpg" /></SwiperSlide>
+              <SwiperSlide><img src="/propertyImages/s3.jpg" /></SwiperSlide>
+            </Swiper>
+            <Swiper onSwiper={setThumbsSwiper} spaceBetween={5} slidesPerView={6} freeMode={true} watchSlidesVisibility={true} watchSlidesProgress={true} className="mySwiper mb-3">
+              <SwiperSlide><img src="/propertyImages/slider1.jpg" /></SwiperSlide>
+              <SwiperSlide><img src="/propertyImages/s4.jpg" /></SwiperSlide>
+              <SwiperSlide><img src="/propertyImages/slider2.jpg" /></SwiperSlide>
+              <SwiperSlide><img src="/propertyImages/slider3.jpg" /></SwiperSlide>
+              <SwiperSlide><img src="/propertyImages/s5.jpg" /></SwiperSlide>
+              <SwiperSlide><img src="/propertyImages/s3.jpg" /></SwiperSlide>
+            </Swiper>
           {/* prop contact part */}
+          
           <section className="contact-info pb-4">
             <div className="contact-info-container pb-3">
               <div className="row">
@@ -157,11 +140,6 @@ export default function Details(props) {
 
           {/* reactplayer  */}
           <section className="propertyVideo pb-5">
-            {/* <ReactPlayer
-              width="auto"
-              controls
-              url={details.url}
-            /> */}
             <Player
               // poster={Poster}
               src={clip}
@@ -170,6 +148,7 @@ export default function Details(props) {
               <BigPlayButton position="center" />
             </Player>
           </section>
+
           {/* property information */}
           <section className="propertyInformation pb-2">
             <div className="propertyInformation-container">
@@ -186,9 +165,9 @@ export default function Details(props) {
 
           {/* map information */}
           <section className="mapInformation pb-5">
-            <div className="mapInformation-container">
               <h4>Map View</h4>
-              <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d1765.9289955934978!2d85.36202048236176!3d27.721670556234532!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2snp!4v1619110445708!5m2!1sen!2snp" width="600" height="450" style={{border:0}} allowfullscreen="" loading="lazy"></iframe>
+            <div className="mapInformation-container row p-2">
+                <iframe className="col-md-12" src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d1765.9289955934978!2d85.36202048236176!3d27.721670556234532!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2snp!4v1619110445708!5m2!1sen!2snp" allowfullscreen="true" loading="lazy"></iframe>
             </div>
           </section>
         </section>
