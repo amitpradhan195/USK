@@ -33,7 +33,9 @@
 
 .navbarunactive {
   max-height: 90px;
-  letter-spacing: 1.5px;
+  letter-spacing: .5px;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
 }
 
 .navbarBrandImg {
@@ -41,7 +43,7 @@
 }
 
 .navbarunactive ul li a {
-  text-transform: capitalize !important;
+  /* text-transform: capitalize !important; */
   padding: 10px 10px 10px 10px !important;
   margin-left: 15px;
   /* align-items: center; */
@@ -51,17 +53,17 @@
 
 .activenav {
   background-color: white;
-  -webkit-transition: all 1s;
-  transition: all 1s;
-  max-height: 90px;
-  letter-spacing: 1.5px;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+  max-height: 70px;
+  letter-spacing: .5px;
 }
 
 .activenav ul li a {
-  text-transform: capitalize !important;
+  /* text-transform: capitalize !important; */
   padding: 10px 10px 10px 10px !important;
   font-weight: 400;
-  color: #000000;
+  /* color: #000000; */
 }
 
 /*======================================
@@ -108,7 +110,7 @@ nav.stroke ul li a:hover:after {
 
 .navbar-toggler:focus,
 .navbar-toggler:active {
-  outline: 0;
+  box-shadow: none;
 }
 
 .navbar-toggler span {
@@ -729,7 +731,7 @@ select:focus {
 
 .inner-container .about-text {
   font-size: 0.9em;
-  color: #545454;
+  color: #d1d1d1;
   line-height: 30px;
   text-align: justify;
   margin-bottom: 40px;
@@ -846,9 +848,9 @@ select:focus {
 
 @media only screen and (min-width: 1000px) {
   .activenav ul li a {
-    text-transform: capitalize !important;
+    /* text-transform: capitalize !important; */
     margin: 0 0 0 15px !important;
-    color: #000000 !important;
+    /* color: #000000 !important; */
   }
   .slides {
     grid-gap: 5px;
@@ -1188,15 +1190,15 @@ select:focus {
   font-weight: 350;
   font-style: normal;
   letter-spacing: 0.5px;
-  color:#002856;
+  color:#000000;
 }
 
 .content h3, .content1 h3{
-  font-size: 18px;
+  font-size: 25px;
   font-weight: 600;
   font-style: normal;
   line-height: 18px;
-  color:#002856;
+  color:#000000;
   text-transform: uppercase;
 }
 
@@ -1220,13 +1222,13 @@ select:focus {
   font-size: 14px;
   line-height: 10px;
   font-weight: 500;
-  color:#002856;
+  color:#000000;
 }
 
 .propertyInfo p{
   font-size: 12px;
   font-weight: 400;
-  color:#002856;
+  color:#000000;
   letter-spacing: 0.5px;
 }
 
@@ -1285,7 +1287,7 @@ select:focus {
 # Footer
 --------------------------------------------------------------*/
 #footer {
-  background: #0c0c0c;
+  background: #333;
   padding: 0 0 30px 0;
   color: #fff;
   font-size: 14px;
@@ -1297,7 +1299,7 @@ select:focus {
 
 #footer .footer-top .footer-info {
   margin-bottom: 15px;
-  background: #191919;
+  background: rgb(68, 68, 68);
   color: #fff;
   border-top: 4px solid #a7a7af;
   text-align: center;
@@ -1310,13 +1312,15 @@ select:focus {
   padding: 2px 0 2px 0;
   line-height: 1;
   font-weight: 700;
+  letter-spacing: 1px;
 }
 
 #footer .footer-top .footer-info p {
   font-size: 14px;
-  line-height: 24px;
-  margin-bottom: 0;
-  font-family: "Raleway", sans-serif;
+  margin-bottom: auto;
+  letter-spacing: 1px;
+  line-height: 1.5;
+  font-weight: 500;
 }
 
 #footer .footer-top .social-links a {
@@ -1341,11 +1345,12 @@ select:focus {
 }
 
 #footer .footer-top h4 {
-  font-size: 16px;
+  font-size: 18px;
   font-weight: 600;
   color: #fff;
   position: relative;
   padding-bottom: 12px;
+  letter-spacing: 1.5px;
 }
 
 #footer .footer-top .footer-links {
@@ -1356,6 +1361,7 @@ select:focus {
   list-style: none;
   padding: 0;
   margin: 0;
+  letter-spacing: 0.5px;
 }
 
 #footer .footer-top .footer-links ul span {
@@ -1383,6 +1389,10 @@ select:focus {
 
 #footer .footer-top .footer-links ul a:hover {
   color: #d0d0d0;
+}
+
+#footer .footer-top .footer-newsletter p{
+  letter-spacing: 0.5px;
 }
 
 #footer .footer-top .footer-newsletter div{
@@ -1457,7 +1467,7 @@ select:focus {
 .swiper-slide {
   text-align: center;
   font-size: 18px;
-  background: #fff;
+  background: none;
 
   /* Center slide text vertically */
   display: -webkit-box;
@@ -1495,4 +1505,64 @@ select:focus {
   width: 100%;
   height: 100%;
   object-fit: cover;
+}
+
+
+/*--------------------------------------------------------------
+# Send requirements design on Home page
+--------------------------------------------------------------*/
+
+.sendRequirements{
+  border: 10px solid rgb(148, 157, 187);
+  margin: auto;
+  margin-bottom: 15vh;
+  /* padding: 50px; */
+  width: 70%;
+  height: 15em;
+}
+
+.sendRequirements p{
+  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 16px;
+  font-weight: 700;
+  margin: auto;
+  padding: 0;
+  text-align: center;
+  color: #22244e;
+}
+
+.sendRequirements button{
+  color: rgb(255, 255, 255);
+  border: #25305a 1px solid;
+  font-size: 14px;
+  margin: auto;
+  padding: 10px;
+  background-color: #25305a;
+  letter-spacing: 1.5px;
+  transition: all .7s;
+  line-height: 1.5;
+}
+
+.sendRequirements button:hover{
+  background-color: transparent;
+  border: #dddddd 1px solid;
+  color: #25305a;
+}
+
+@media (min-width:768px){
+  .sendRequirements{
+    width: 60%;
+  }
+
+  .sendRequirements button{
+    padding: 1rem 2rem;
+    margin: auto;
+    padding: 10px;
+    font-size: 18px;
+  }
+
+  .sendRequirements p{
+    font-size: 25px;
+    margin: auto;
+  }
 }

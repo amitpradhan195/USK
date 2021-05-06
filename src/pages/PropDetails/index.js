@@ -2,13 +2,11 @@ import React, { useEffect, useState } from "react";
 import "../../css/style.css";
 import { IconContext } from "react-icons";
 import { MdLocationOn } from "react-icons/md";
-import { FaPhoneAlt, FaBed, FaBath, FaCar, FaWifi, FaLightbulb } from "react-icons/fa";
+import { FaPhoneAlt, FaBed, FaBath, FaCar } from "react-icons/fa";
 import { IoMail } from "react-icons/io5";
 import { GiKnifeFork } from "react-icons/gi";
 import {BiCheckCircle, BiArea, BiBuilding} from "react-icons/bi";
-// import ReactPlayer from "react-player";
 import clip from '../../assets/videos/clip.mp4';
-// import Poster from '../../assets/posterRealEstate.jfif';
 import {Player,ControlBar,BigPlayButton} from 'video-react';
 import "video-react/dist/video-react.css";
 import cardData from "../../data/Listings";
@@ -141,7 +139,6 @@ export default function Details(props) {
           {/* reactplayer  */}
           <section className="propertyVideo pb-5">
             <Player
-              // poster={Poster}
               src={clip}
             >
               <ControlBar autoHide={false}/>

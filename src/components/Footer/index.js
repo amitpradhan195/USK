@@ -13,24 +13,22 @@ export default function index1() {
             <div className="footer-top">
                 <div className="container">
                     <div className="row">
-                        <div className="col-lg-4 col-md-6">
-                            <div className="footer-info">
-                                <h3>Lamas Group</h3>
-                                <p>
-                                    Pipalbot, Boudha <br/>
-                                    Kathmandu, Nepal<br/><br/>
-                                    <strong>Phone:</strong> +977-9841504552, +977-9813955307<br/>
-                                    <strong>Email:</strong> lamasgroup@gmail.com<br/>
-                                </p>
-                                <div className="social-links mt-3">
-                                    <a href="#" className="me-2"><RiTwitterFill/></a>
-                                    <a href="#" className="me-2"><RiFacebookFill/></a>
-                                    <a href="#" className="me-2"><RiLinkedinFill/></a>
-                                </div>
+                        <div className="col-md-5 footer-info">
+                            <h3>Lamas Group</h3>
+                            <p>
+                                Pipalbot, Boudha <br/>
+                                Kathmandu, Nepal<br/><br/>
+                                <strong>Phone:</strong> +977-9841504552, +977-9813955307<br/>
+                                <strong>Email:</strong> lamasgroup@gmail.com<br/>
+                            </p>
+                            <div className="social-links mt-3">
+                                <a href="#" className="me-2"><RiTwitterFill/></a>
+                                <a href="#" className="me-2"><RiFacebookFill/></a>
+                                <a href="#" className="me-2"><RiLinkedinFill/></a>
                             </div>
                         </div>
 
-                        <div className="offset-lg-1 col-lg-2 col-md-6 footer-links">
+                        <div className="offset-md-1 col-md-2 footer-links">
                             <h4>Useful Links</h4>
                             <ul>
                                 <li><span><BiChevronRight/></span> <a href="#">Home</a></li>
@@ -41,7 +39,7 @@ export default function index1() {
                             </ul>
                         </div>
 
-                        <div className="offset-lg-1 col-lg-4 col-md-6 footer-newsletter">
+                        <div className="col-md-4 footer-newsletter">
                             <h4>Our Newsletter</h4>
                             <p>Subscribe us to get notifications and be updated about us.</p>
                             <form onSubmit={handleSubscribe}>

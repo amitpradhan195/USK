@@ -43,22 +43,22 @@ export default function Navbar() {
           <div className="collapse navbar-collapse" id="navbarSupportedContent">
             <ul className="navbar-nav me-auto mb-2 mb-lg-0">
               <li className="nav-item">
-                <NavLink activeClassName="navbar__link--active" className="nav-link" to="/listings"> Properties </NavLink>
+                <NavLink activeClassName="navbar__link--active" className="nav-link text-capitalize" to="/listings"> Listings </NavLink>
               </li>
               <li className="nav-item">
-                <NavLink activeClassName="navbar__link--active" className="nav-link" to="/finance"> Finance </NavLink>
+                <NavLink activeClassName="navbar__link--active" className="nav-link text-capitalize" to="/finance"> Finance </NavLink>
               </li>
               <li className="nav-item">
-                <NavLink activeClassName="navbar__link--active" className="nav-link" to="/vip"> VIP </NavLink>
+                <NavLink activeClassName="navbar__link--active" className="nav-link text-capitalize" to="/vip"> Portfolio </NavLink>
               </li>
               <li className="nav-item">
-                <NavLink className="nav-link" data-bs-toggle="modal" id="three" data-bs-target="#dreamhouseModal" to="#dream-house"> DreamHouse </NavLink>
+                <NavLink className="nav-link text-capitalize" data-bs-toggle="modal" id="three" data-bs-target="#dreamhouseModal" to="#dream-house"> DreamHouse </NavLink>
               </li>
-              <li className="nav-item">
-                <NavLink className="nav-link" data-bs-toggle="modal" data-bs-target="#requirementsModal" to="#requirements">
+              {/* <li className="nav-item">
+                <NavLink className="nav-link text-capitalize" data-bs-toggle="modal" data-bs-target="#requirementsModal" to="#requirements">
                   Requirements
                 </NavLink>
-              </li>
+              </li> */}
             </ul>
             <div className="container-search">
               <input type="text" placeholder="Search..."/>

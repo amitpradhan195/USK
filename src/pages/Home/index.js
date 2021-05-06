@@ -1,10 +1,12 @@
-import React, { useEffect, useState, useRef } from "react";
+import React, { useEffect } from "react";
 import "../../css/style.css";
 import { NavLink } from "react-router-dom";
 import AOS from "aos";
 import clip from '../../assets/videos/clip.mp4';
 import "video-react/dist/video-react.css";
 import Finance from "../../components/Finance";
+import Requirements from "../../components/Requirements";
+
 
 export default function Home() {
   useEffect(() => {
@@ -158,7 +160,13 @@ export default function Home() {
         </div>
       </section>
 
-        <Finance/>
+      <Requirements></Requirements>
+      <section className="sendRequirements container row">
+        <p className="text-uppercase col-md-8">#send us your requirements</p>
+        <button data-bs-toggle="modal" data-bs-target="#requirementsModal" className="text-capitalize col-md-4">click here</button>
+      </section>
+
+      <Finance/>
 
     </>
   );

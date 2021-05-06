@@ -13,12 +13,12 @@ SwiperCore.use([Navigation, Pagination, Scrollbar, A11y]);
 export default function Finance() {
   console.log("The width of the screen is : "+window.innerWidth);
   return (
-    <>
-      <section className="featured-container pt-2 mb-5">
-        <h4 className="text-center heading-text" data-aos="fade-left">
+    <div style={{backgroundColor:'#F8F9F9'}}>
+      <section className="pt-2 mb-5">
+        <h4 className="text-center">
           Finance Alliances
         </h4>
-        <div className="featured-title" data-aos="fade-right"></div>
+        <div className="featured-title"></div>
       </section>
       <div className="container-finance">
         <Swiper
@@ -61,6 +61,6 @@ export default function Finance() {
             })}
         </Swiper>
       </div>
-    </>
+    </div>
   );
 }

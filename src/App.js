@@ -5,6 +5,7 @@ import "../node_modules/bootstrap/dist/css/bootstrap.min.css";
 import "aos/dist/aos.css";
 import "boxicons";
 import "./App.css";
+import "./css/style.scss";
 
 const Home = lazy(() => import('./pages/Home'));
 const Navbar = lazy(() => import('./components/Navbar'));
@@ -18,7 +19,7 @@ const About = lazy(() => import('./pages/About'));
 export default function App() {
   return (
     <Router className="App">
-      <Suspense fallback={<div className="vertical-center">Loading...</div>}>
+      <Suspense fallback={<div className="loader">Loading...</div>}>
         <Navbar/>
         <Switch>
           <Route exact path="/" component={Home} />
