@@ -49,7 +49,7 @@ export default function Navbar() {
                 <NavLink activeClassName="navbar__link--active" className="nav-link text-capitalize" to="/finance"> Finance </NavLink>
               </li>
               <li className="nav-item">
-                <NavLink activeClassName="navbar__link--active" className="nav-link text-capitalize" to="/vip"> Portfolio </NavLink>
+                <NavLink activeClassName="navbar__link--active" className="nav-link text-capitalize" to="/vip"> VIP </NavLink>
               </li>
               <li className="nav-item">
                 <NavLink className="nav-link text-capitalize" data-bs-toggle="modal" id="three" data-bs-target="#dreamhouseModal" to="#dream-house"> DreamHouse </NavLink>

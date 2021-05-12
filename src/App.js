@@ -15,6 +15,7 @@ const Listings = lazy(() => import('./pages/Listing'));
 const Faq = lazy(() => import('./pages/FAQ'));
 const Finance = lazy(() => import('./pages/Finance'));
 const About = lazy(() => import('./pages/About'));
+const VIP = lazy(() => import('./pages/VIP'));
 
 export default function App() {
   return (
@@ -28,6 +29,7 @@ export default function App() {
           <Route path="/faq" component={Faq} />
           <Route path="/finance" component={Finance} />
           <Route path="/about" component={About} />
+          <Route path="/vip" component={VIP} />
         </Switch>
         <Footer/>
       </Suspense>

@@ -2,11 +2,10 @@ import React, { useEffect } from "react";
 import "../../css/style.css";
 import { NavLink } from "react-router-dom";
 import AOS from "aos";
-import clip from '../../assets/videos/clip.mp4';
+import clip from "../../assets/videos/clip.mp4";
 import "video-react/dist/video-react.css";
 import Finance from "../../components/Finance";
 import Requirements from "../../components/Requirements";
-
 
 export default function Home() {
   useEffect(() => {
@@ -16,31 +15,48 @@ export default function Home() {
       anchorPlacement: "top-bottom",
     });
   }, []);
-  window.addEventListener('load', AOS.refresh);
+  window.addEventListener("load", AOS.refresh);
 
   return (
     <>
-    <section>
-      <video autoPlay muted loop className="w-100 h-100">
-        <source src={clip} type="video/mp4"/>
-      </video>
-    </section>
+      <section>
+        <video autoPlay muted loop className="w-100 h-100">
+          <source src={clip} type="video/mp4" />
+        </video>
+      </section>
 
       <section className="heroCard">
         <div className="row">
           <div className="card mb-3">
             <div className="row g-0">
               <div className="col-md-8 pb-4 imageHero">
-                <div id="carouselExampleFade" className="carousel slide carousel-fade" data-bs-pause="false" data-bs-ride="carousel">
+                <div
+                  id="carouselExampleFade"
+                  className="carousel slide carousel-fade"
+                  data-bs-pause="false"
+                  data-bs-ride="carousel"
+                >
                   <div className="carousel-inner carousel-overflow">
                     <div className="carousel-item active">
-                      <img src="/propertyImages/slider1.jpg" className="d-block img w-100 mb-3 bg-body" alt="..."/>
+                      <img
+                        src="/propertyImages/slider1.jpg"
+                        className="d-block img w-100 mb-3 bg-body"
+                        alt="..."
+                      />
                     </div>
                     <div className="carousel-item">
-                      <img src="/propertyImages/slider2.jpg" className="d-block img w-100 mb-3 bg-body" alt="..."/>
+                      <img
+                        src="/propertyImages/slider2.jpg"
+                        className="d-block img w-100 mb-3 bg-body"
+                        alt="..."
+                      />
                     </div>
                     <div className="carousel-item">
-                      <img src="/propertyImages/slider3.jpg" className="d-block img w-100 mb-3 bg-body" alt="..."/>
+                      <img
+                        src="/propertyImages/slider3.jpg"
+                        className="d-block img w-100 mb-3 bg-body"
+                        alt="..."
+                      />
                     </div>
                   </div>
                 </div>
@@ -52,18 +68,25 @@ export default function Home() {
                   </span>
                   <span className="col text-start">
                     <h6>LAMA GROUP, ON</h6>
-                    <p>Architect: <span>BONE Structure</span></p>
+                    <p>
+                      Architect: <span>BONE Structure</span>
+                    </p>
                   </span>
                 </div>
               </div>
 
               <div className="col-md-4 align-self-center align-items-center content">
                 <h3 className="pb-2">5 BHK Flat</h3>
-                <p>We also build using traditional construction methods of wood frame houses, affording freedom of design and creativity and yielding unique and beautiful results. Our hands-on approach will bring your dream to life.</p>
-                <NavLink to={"/details/"}>
+                <p>
+                  We also build using traditional construction methods of wood
+                  frame houses, affording freedom of design and creativity and
+                  yielding unique and beautiful results. Our hands-on approach
+                  will bring your dream to life.
+                </p>
+                <NavLink to={"/details/5"}>
                   <button type="button" className="btn btn-outline-secondary">
-                    View portfolio &nbsp;
-                    <span className="shift">⟶</span> 
+                    View more &nbsp;
+                    <span className="shift">⟶</span>
                   </button>
                 </NavLink>
               </div>
@@ -75,16 +98,33 @@ export default function Home() {
           <div className="card mb-3">
             <div className="row g-0">
               <div className="col-md-8 pb-4 imageHero1">
-                <div id="carouselExampleFade" className="carousel slide carousel-fade" data-bs-pause="false" data-bs-ride="carousel">
+                <div
+                  id="carouselExampleFade"
+                  className="carousel slide carousel-fade"
+                  data-bs-pause="false"
+                  data-bs-ride="carousel"
+                >
                   <div className="carousel-inner carousel-overflow">
                     <div className="carousel-item active">
-                      <img src="/propertyImages/slider1.jpg" className="d-block img w-100 mb-3 bg-body" alt="..."/>
+                      <img
+                        src="/propertyImages/slider1.jpg"
+                        className="d-block img w-100 mb-3 bg-body"
+                        alt="..."
+                      />
                     </div>
                     <div className="carousel-item">
-                      <img src="/propertyImages/slider2.jpg" className="d-block img w-100 mb-3 bg-body" alt="..."/>
+                      <img
+                        src="/propertyImages/slider2.jpg"
+                        className="d-block img w-100 mb-3 bg-body"
+                        alt="..."
+                      />
                     </div>
                     <div className="carousel-item">
-                      <img src="/propertyImages/slider3.jpg" className="d-block img w-100 mb-3 bg-body" alt="..."/>
+                      <img
+                        src="/propertyImages/slider3.jpg"
+                        className="d-block img w-100 mb-3 bg-body"
+                        alt="..."
+                      />
                     </div>
                   </div>
                 </div>
@@ -96,18 +136,25 @@ export default function Home() {
                   </span>
                   <span className="col text-start">
                     <h6>LAMA GROUP, ON</h6>
-                    <p>Architect: <span>BONE Structure</span></p>
+                    <p>
+                      Architect: <span>BONE Structure</span>
+                    </p>
                   </span>
                 </div>
               </div>
 
               <div className="col-md-4 align-self-center align-items-center content1">
                 <h3 className="pb-2">5 BHK Flat</h3>
-                <p>We also build using traditional construction methods of wood frame houses, affording freedom of design and creativity and yielding unique and beautiful results. Our hands-on approach will bring your dream to life.</p>
-                <NavLink to={"/details/"}>
+                <p>
+                  We also build using traditional construction methods of wood
+                  frame houses, affording freedom of design and creativity and
+                  yielding unique and beautiful results. Our hands-on approach
+                  will bring your dream to life.
+                </p>
+                <NavLink to={"/details/2"}>
                   <button type="button" className="btn btn-outline-secondary">
-                    View portfolio &nbsp;
-                    <span className="shift">⟶</span> 
+                    View more &nbsp;
+                    <span className="shift">⟶</span>
                   </button>
                 </NavLink>
               </div>
@@ -119,16 +166,33 @@ export default function Home() {
           <div className="card mb-3">
             <div className="row g-0">
               <div className="col-md-8 pb-4 imageHero">
-                <div id="carouselExampleFade" className="carousel slide carousel-fade" data-bs-pause="false" data-bs-ride="carousel">
+                <div
+                  id="carouselExampleFade"
+                  className="carousel slide carousel-fade"
+                  data-bs-pause="false"
+                  data-bs-ride="carousel"
+                >
                   <div className="carousel-inner carousel-overflow">
                     <div className="carousel-item active">
-                      <img src="/propertyImages/slider1.jpg" className="d-block img w-100 mb-3 bg-body" alt="..."/>
+                      <img
+                        src="/propertyImages/slider1.jpg"
+                        className="d-block img w-100 mb-3 bg-body"
+                        alt="..."
+                      />
                     </div>
                     <div className="carousel-item">
-                      <img src="/propertyImages/slider2.jpg" className="d-block img w-100 mb-3 bg-body" alt="..."/>
+                      <img
+                        src="/propertyImages/slider2.jpg"
+                        className="d-block img w-100 mb-3 bg-body"
+                        alt="..."
+                      />
                     </div>
                     <div className="carousel-item">
-                      <img src="/propertyImages/slider3.jpg" className="d-block img w-100 mb-3 bg-body" alt="..."/>
+                      <img
+                        src="/propertyImages/slider3.jpg"
+                        className="d-block img w-100 mb-3 bg-body"
+                        alt="..."
+                      />
                     </div>
                   </div>
                 </div>
@@ -140,18 +204,25 @@ export default function Home() {
                   </span>
                   <span className="col text-start">
                     <h6>LAMA GROUP, ON</h6>
-                    <p>Architect: <span>BONE Structure</span></p>
+                    <p>
+                      Architect: <span>BONE Structure</span>
+                    </p>
                   </span>
                 </div>
               </div>
 
               <div className="col-md-4 align-self-center align-items-center content">
                 <h3 className="pb-2">5 BHK Flat</h3>
-                <p>We also build using traditional construction methods of wood frame houses, affording freedom of design and creativity and yielding unique and beautiful results. Our hands-on approach will bring your dream to life.</p>
-                <NavLink to={"/details/"}>
+                <p>
+                  We also build using traditional construction methods of wood
+                  frame houses, affording freedom of design and creativity and
+                  yielding unique and beautiful results. Our hands-on approach
+                  will bring your dream to life.
+                </p>
+                <NavLink to={"/details/1"}>
                   <button type="button" className="btn btn-outline-secondary">
-                    View portfolio &nbsp;
-                    <span className="shift">⟶</span> 
+                    View more &nbsp;
+                    <span className="shift">⟶</span>
                   </button>
                 </NavLink>
               </div>
@@ -163,11 +234,16 @@ export default function Home() {
       <Requirements></Requirements>
       <section className="sendRequirements container row">
         <p className="text-uppercase col-md-8">#send us your requirements</p>
-        <button data-bs-toggle="modal" data-bs-target="#requirementsModal" className="text-capitalize col-md-4">click here</button>
+        <button
+          data-bs-toggle="modal"
+          data-bs-target="#requirementsModal"
+          className="text-capitalize col-md-4"
+        >
+          click here
+        </button>
       </section>
 
-      <Finance/>
-
+      <Finance />
     </>
   );
 }

@@ -13,7 +13,7 @@ SwiperCore.use([Navigation, Pagination, Scrollbar, A11y]);
 export default function Finance() {
   console.log("The width of the screen is : "+window.innerWidth);
   return (
-    <div style={{backgroundColor:'#F8F9F9'}}>
+    <div style={{backgroundColor:'#F8F9F9'}} className="mt-5">
       <section className="pt-2 mb-5">
         <h4 className="text-center">
           Finance Alliances

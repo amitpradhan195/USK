@@ -253,9 +253,9 @@ nav.stroke ul li a:hover:after {
 }
 
 /*======================================
-//--//-->   Carousel
+# Carousel
 ======================================*/
-
+/* 
 .carousel-item {
   width: 100vw;
   max-height: 100vh;
@@ -293,9 +293,9 @@ nav.stroke ul li a:hover:after {
     -webkit-transition: overflow 7s ease;
     transition: overflow 7s ease;
   }
-}
+} */
 
-.featured-title {
+/* .featured-title {
   width: 90px;
   border-bottom: 3px solid #707070;
   margin: 0 auto;
@@ -328,15 +328,12 @@ nav.stroke ul li a:hover:after {
 }
 
 .card .card-body .viewdetails {
-  /* background-color: #2E4053 !important; */
-  /* background-color: #707070 !important; */
   background-color: rgb(46, 64, 83, 0.8);
   color: #ffffff;
   border-radius: 16px !important;
 }
 
 .card .card-body .viewdetails:hover {
-  /* background-color: #1A5276 !important; */
   background-color: rgb(26, 82, 118, 1);
   color: #ffffff;
 }
@@ -352,9 +349,9 @@ nav.stroke ul li a:hover:after {
   display: inline-block;
   border-radius: 6px;
   z-index: 3;
-}
+} */
 
-.footer {
+/* .footer {
   background-color: #1d1d21 !important;
   background-size: contain;
   color: #fafafa !important;
@@ -365,7 +362,7 @@ nav.stroke ul li a:hover:after {
 }
 
 .footer .map-image {
-  /* max-width:100%; */
+  max-width:100%;
   height:250px;
   border-radius: 5px;
 }
@@ -393,39 +390,47 @@ nav.stroke ul li a:hover:after {
 
 .footer a {
   color: #fafafa !important;
+} */
+
+.heading-text {
+  font-family: "Roboto", sans-serif !important;
 }
 
-.filter-section a:hover {
+.facility{
+  font-weight: bold;
+  color: #2E4053;
+}
+
+/* .filter-section a:hover {
   background-color: #ffffff;
   color: #2471A3 !important;
-}
+} */
 
-.btnblue {
+/* .btnblue {
   background-color: #313131 !important;
-}
+} */
 
-.btnblue:hover {
+/* .btnblue:hover {
   color: #ffffff !important;
   background-color: #5b5b5b !important;
-}
+} */
 
-.btndark {
+/* .btndark {
   background-color: #313131 !important;
-}
+} */
 
-.btndark:hover {
+/* .btndark:hover {
   color: #ffffff !important;
   background-color: #5b5b5b !important;
-}
+} */
 
 .details-banner {
   width: 100%;
   height: 100px;
   display: inline-block;
-  color: #000000;
 }
 
-.details-container .track ul {
+/* .details-container .track ul {
   list-style-type: none;
   padding: 0;
   height: 210px;
@@ -456,9 +461,9 @@ nav.stroke ul li a:hover:after {
 
 .details-container .track ul li:target {
   opacity: 1;
-}
+} */
 
-.slides {
+/* .slides {
   display: grid;
   -ms-grid-columns: 1fr 3;
       grid-template-columns: repeat(3, 1fr);
@@ -478,7 +483,7 @@ nav.stroke ul li a:hover:after {
 
 .slides a img:hover {
   opacity: 0.5;
-}
+} */
 
 .contact-info .contact-info-container {
   border-bottom: 2px solid #707070;
@@ -501,6 +506,10 @@ nav.stroke ul li a:hover:after {
   height: 200px;
   border: 1px solid rgb(196, 196, 196);
 }
+
+/*--------------------------------------------------------------
+# Start of FAQ
+--------------------------------------------------------------*/
 
 .section-faq {
   margin-top: 2rem;
@@ -709,7 +718,13 @@ select:focus {
   border: 2px solid #969595 !important;
 }
 
-/* Start of About Us */
+/*--------------------------------------------------------------
+# End of FAQ
+--------------------------------------------------------------*/
+
+/*--------------------------------------------------------------
+# Start Of About US
+--------------------------------------------------------------*/
 .about-section {
   text-align: center;
   background: url("../assets/slider4.jpeg") no-repeat left;
@@ -744,17 +759,14 @@ select:focus {
   text-align: center;
 }
 
-/* End of About US */
-.heading-text {
-  font-family: "Roboto", sans-serif !important;
-}
+/*--------------------------------------------------------------
+# End Of About US
+--------------------------------------------------------------*/
 
-.facility{
-  font-weight: bold;
-  color: #2E4053;
-}
+/*--------------------------------------------------------------
+# Property Listing Design
+--------------------------------------------------------------*/
 
-/* property listing design */
 .custom-select{
   border: none;
   border-bottom: 1px solid rgb(221, 221, 221);
@@ -770,9 +782,13 @@ select:focus {
   outline: none !important;  
   border: none !important;
 }
+/*--------------------------------------------------------------
+# End Property Listing Design
+--------------------------------------------------------------*/
 
-
-/* responsive using media query */
+/*--------------------------------------------------------------
+# Responsive Using Media Query For All Above
+--------------------------------------------------------------*/
 
 @media only screen and (min-width: 400px) {
   .slides {
@@ -905,6 +921,9 @@ select:focus {
     grid-gap: 2px;
   }
 }
+/*--------------------------------------------------------------
+# End Responsive Using Media Query For All Above
+--------------------------------------------------------------*/
 
 /*--------------------------------------------------------------
 # Card General
@@ -968,9 +987,12 @@ select:focus {
   z-index: 1;
   background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.2) 27%, rgba(0, 0, 0, 0.65) 90%);
 }
+/*--------------------------------------------------------------
+# End Card General
+--------------------------------------------------------------*/
 
 /*======================================
-//--//-->   PROPERTY - CARD-A
+# PROPERTY - CARD
 ======================================*/
 .card-overlay-a-content {
   transition: all .5s ease-in;
@@ -1036,8 +1058,14 @@ select:focus {
   color: #000000;
   font-size: .9rem;
 }
+/*======================================
+# END PROPERTY - CARD-A
+======================================*/
 
-/*------/ Property Grid /-----*/
+/*--------------------------------------------------------------
+# Property Grid 
+--------------------------------------------------------------*/
+
 .property-grid .grid-option {
   text-align: right;
   margin-bottom: 2rem;
@@ -1139,12 +1167,19 @@ select:focus {
     padding-bottom: 1rem;
   }
 }
+/*--------------------------------------------------------------
+# End Property Grid 
+--------------------------------------------------------------*/
 
 /*--------------------------------------------------------------
 # Hero part
 --------------------------------------------------------------*/
 .heroCard{
  margin-top: 2em;
+}
+
+.heroCard > div > div  {
+  border: none;
 }
 
 .heroCard .row{
@@ -1244,7 +1279,7 @@ select:focus {
 
 @media (min-width:992px){
   .heroCard{
-    margin-top: 8em;
+    margin-top: 1em;
     padding: 0;
    }
 
@@ -1281,6 +1316,9 @@ select:focus {
     margin: auto;
   }
 }
+/*--------------------------------------------------------------
+# End Hero part
+--------------------------------------------------------------*/
 
 
 /*--------------------------------------------------------------
@@ -1326,7 +1364,7 @@ select:focus {
 #footer .footer-top .social-links a {
   font-size: 18px;
   display: inline-block;
-  background: #262626;
+  background: rgb(59, 59, 59);
   color: #fff;
   line-height: 1;
   padding: 8px 0;
@@ -1340,7 +1378,7 @@ select:focus {
 
 #footer .footer-top .social-links a:hover {
   background: #ffffff;
-  color: rgb(0, 0, 0);
+  color: rgb(68, 68, 68);
   text-decoration: none;
 }
 
@@ -1453,6 +1491,9 @@ select:focus {
     margin: -20px 0 30px 0;
   }
 }
+/*--------------------------------------------------------------
+# End Footer
+--------------------------------------------------------------*/
 
 
 /*--------------------------------------------------------------
@@ -1506,6 +1547,9 @@ select:focus {
   height: 100%;
   object-fit: cover;
 }
+/*--------------------------------------------------------------
+# End Swiper slider for properties details
+--------------------------------------------------------------*/
 
 
 /*--------------------------------------------------------------
@@ -1566,3 +1610,167 @@ select:focus {
     margin: auto;
   }
 }
+
+/*--------------------------------------------------------------
+# End Send requirements design on Home page
+--------------------------------------------------------------*/
+
+
+/*============================================================
+# VIP PAGE DESIGN
+============================================================*/
+
+h1 {
+  height: 100%;
+  margin: 0;
+  font-size: 14px;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 32px;
+  margin-bottom: 3px;
+}
+
+#loader-wrapper {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1000;
+}
+#loader {
+  display: block;
+  position: relative;
+  left: 50%;
+  top: 50%;
+  width: 150px;
+  height: 150px;
+  margin: -75px 0 0 -75px;
+  border-radius: 50%;
+  border: 3px solid transparent;
+  border-top-color: #3498db;
+  -webkit-animation: spin 2s linear infinite; /* Chrome, Opera 15+, Safari 5+ */
+  animation: spin 2s linear infinite; /* Chrome, Firefox 16+, IE 10+, Opera */
+  z-index: 1001;
+}
+
+#loader:before {
+  content: "";
+  position: absolute;
+  top: 5px;
+  left: 5px;
+  right: 5px;
+  bottom: 5px;
+  border-radius: 50%;
+  border: 3px solid transparent;
+  border-top-color: #e74c3c;
+  -webkit-animation: spin 3s linear infinite; /* Chrome, Opera 15+, Safari 5+ */
+  animation: spin 3s linear infinite; /* Chrome, Firefox 16+, IE 10+, Opera */
+}
+
+#loader:after {
+  content: "";
+  position: absolute;
+  top: 15px;
+  left: 15px;
+  right: 15px;
+  bottom: 15px;
+  border-radius: 50%;
+  border: 3px solid transparent;
+  border-top-color: #f9c922;
+  -webkit-animation: spin 1.5s linear infinite; /* Chrome, Opera 15+, Safari 5+ */
+      animation: spin 1.5s linear infinite; /* Chrome, Firefox 16+, IE 10+, Opera */
+}
+
+@-webkit-keyframes spin {
+  0%   { 
+      -webkit-transform: rotate(0deg);  /* Chrome, Opera 15+, Safari 3.1+ */
+      -ms-transform: rotate(0deg);  /* IE 9 */
+      transform: rotate(0deg);  /* Firefox 16+, IE 10+, Opera */
+  }
+  100% {
+      -webkit-transform: rotate(360deg);  /* Chrome, Opera 15+, Safari 3.1+ */
+      -ms-transform: rotate(360deg);  /* IE 9 */
+      transform: rotate(360deg);  /* Firefox 16+, IE 10+, Opera */
+  }
+}
+
+@keyframes spin {
+  0%   { 
+      -webkit-transform: rotate(0deg);  /* Chrome, Opera 15+, Safari 3.1+ */
+      -ms-transform: rotate(0deg);  /* IE 9 */
+      transform: rotate(0deg);  /* Firefox 16+, IE 10+, Opera */
+  }
+  100% {
+      -webkit-transform: rotate(360deg);  /* Chrome, Opera 15+, Safari 3.1+ */
+      -ms-transform: rotate(360deg);  /* IE 9 */
+      transform: rotate(360deg);  /* Firefox 16+, IE 10+, Opera */
+  }
+}
+
+#loader-wrapper .loader-section {
+  position: fixed;
+  top: 0;
+  width: 51%;
+  height: 100%;
+  background: #222222;
+  z-index: 1000;
+  -webkit-transform: translateX(0);  /* Chrome, Opera 15+, Safari 3.1+ */
+  -ms-transform: translateX(0);  /* IE 9 */
+  transform: translateX(0);  /* Firefox 16+, IE 10+, Opera */
+}
+
+#loader-wrapper .loader-section.section-left {
+  left: 0;
+}
+
+#loader-wrapper .loader-section.section-right {
+  right: 0;
+}
+
+/* Loaded */
+.loaded #loader-wrapper .loader-section.section-left {
+  -webkit-transform: translateX(-100%);  /* Chrome, Opera 15+, Safari 3.1+ */
+      -ms-transform: translateX(-100%);  /* IE 9 */
+          transform: translateX(-100%);  /* Firefox 16+, IE 10+, Opera */
+
+  -webkit-transition: all 0.7s 0.3s cubic-bezier(0.645, 0.045, 0.355, 1.000);  
+          transition: all 0.7s 0.3s cubic-bezier(0.645, 0.045, 0.355, 1.000);
+}
+
+.loaded #loader-wrapper .loader-section.section-right {
+  -webkit-transform: translateX(100%);  /* Chrome, Opera 15+, Safari 3.1+ */
+      -ms-transform: translateX(100%);  /* IE 9 */
+          transform: translateX(100%);  /* Firefox 16+, IE 10+, Opera */
+
+  -webkit-transition: all 0.7s 0.3s cubic-bezier(0.645, 0.045, 0.355, 1.000);  
+      transition: all 0.7s 0.3s cubic-bezier(0.645, 0.045, 0.355, 1.000);
+}
+  
+.loaded #loader {
+  opacity: 0;
+  -webkit-transition: all 0.3s ease-out;  
+      transition: all 0.3s ease-out;
+}
+
+.loaded #loader-wrapper {
+  visibility: hidden;
+
+  -webkit-transform: translateY(-100%);  /* Chrome, Opera 15+, Safari 3.1+ */
+      -ms-transform: translateY(-100%);  /* IE 9 */
+          transform: translateY(-100%);  /* Firefox 16+, IE 10+, Opera */
+
+  -webkit-transition: all 0.3s 1s ease-out;  
+          transition: all 0.3s 1s ease-out;
+}
+  
+/* JavaScript Turned Off */
+.no-js #loader-wrapper {
+  display: none;
+}
+.no-js h1 {
+  color: #222222;
+}
+
+/*============================================================
+  END VIP PAGE DESIGN
+============================================================*/
