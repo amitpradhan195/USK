@@ -7,15 +7,15 @@ import "boxicons";
 import "./App.css";
 import "./css/style.scss";
 
-const Home = lazy(() => import('./pages/Home'));
-const Navbar = lazy(() => import('./components/Navbar'));
-const Footer = lazy(() => import('./components/Footer'));
-const Details = lazy(() => import('./pages/PropDetails'));
-const Listings = lazy(() => import('./pages/Listing'));
-const Faq = lazy(() => import('./pages/FAQ'));
-const Finance = lazy(() => import('./pages/Finance'));
-const About = lazy(() => import('./pages/About'));
-const VIP = lazy(() => import('./pages/VIP'));
+const Home = lazy(() => import('./pages/Home/index.js'));
+const Navbar = lazy(() => import('./components/Navbar/index.js'));
+const Footer = lazy(() => import('./components/Footer/index.js'));
+const Details = lazy(() => import('./pages/PropDetails/index.js'));
+const Listings = lazy(() => import('./pages/Listing/index.js'));
+const Faq = lazy(() => import('./pages/FAQ/index.js'));
+const Finance = lazy(() => import('./pages/Finance/index.js'));
+const About = lazy(() => import('./pages/About/index.js'));
+const VIP = lazy(() => import('./pages/VIP/index.js'));
 
 export default function App() {
   return (
