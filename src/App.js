@@ -16,6 +16,7 @@ const Faq = lazy(() => import('./pages/FAQ/index.js'));
 const Finance = lazy(() => import('./pages/Finance/index.js'));
 const About = lazy(() => import('./pages/About/index.js'));
 const VIP = lazy(() => import('./pages/VIP/index.js'));
+const DreamHouse = lazy(() => import('./pages/DreamHouse/index.js'));
 
 export default function App() {
   return (
@@ -30,6 +31,7 @@ export default function App() {
           <Route path="/finance" component={Finance} />
           <Route path="/about" component={About} />
           <Route path="/vip" component={VIP} />
+          <Route path="/dream-house" component={DreamHouse} />
         </Switch>
         <Footer/>
       </Suspense>

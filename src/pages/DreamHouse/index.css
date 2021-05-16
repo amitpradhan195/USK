@@ -1,0 +1,124 @@
+.first-section legend {
+  font-size: 100px;
+  font-weight: 800 !important;
+  letter-spacing: 1.5 !important;
+  color: whitesmoke;
+  font-family: Arial, Helvetica, sans-serif;
+  line-height: 90px;
+}
+
+.first-section p {
+  font-size: 40px;
+  font-weight: 700;
+  color: rgb(92, 92, 92);
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.first-section span {
+  border: none;
+  background-color: transparent;
+  box-shadow: 4px 4px 10px 2px #e4e4e4;
+}
+
+.first-section input {
+  box-shadow: 10px 4px 10px 2px #e4e4e4;
+  border: none !important;
+  outline: none;
+}
+
+.first-section input:focus {
+  box-shadow: 10px 4px 10px 2px #e4e4e4 !important;
+  border: none !important;
+}
+
+.btnStart {
+  display: inline-block;
+  border-radius: 50px;
+  background-color: rgb(16, 153, 34);
+  border: none;
+  color: #ffffff;
+  text-align: center;
+  font-size: 28px;
+  padding: 10px;
+  width: 100%;
+  transition: all 0.5s;
+  cursor: pointer;
+}
+
+.btnStart span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+  box-shadow: none;
+}
+
+.btnStart span:after {
+  content: "\00bb";
+  font-size: 60px;
+  position: absolute;
+  opacity: 0;
+  top: -30px;
+  left: 100px;
+  transition: all 0.5s;
+}
+
+.btnStart:hover span {
+  padding-right: 25px;
+  color: white;
+}
+
+.btnStart:hover span:after {
+  opacity: 1;
+  right: 0;
+}
+
+.first-section img {
+  max-width: 350px;
+}
+
+.first-section form div {
+    width: 75%;
+}
+
+
+@media (max-width:991px){
+    .first-section form div {
+        width: 80%;
+    }
+
+    .first-section legend {
+        font-size: 80px;
+    }
+
+    .first-section p {
+        font-size: 25px;
+    }
+
+    .first-section img {
+        max-width: 250px;
+        margin-top: 50px;
+    }
+}
+
+@media (max-width:767px){
+    .first-section form div {
+        width: 100%;
+    }
+
+    .first-section {
+        padding: 10px;
+    }
+
+    .first-section img {
+        max-width: 350px;
+        margin: auto;
+        margin-top: 20px;
+    }
+}
+
+@media (max-width:400px){
+    .first-section img {
+        max-width: 250px;
+    }
+}

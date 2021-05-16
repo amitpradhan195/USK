@@ -8,7 +8,6 @@ export default function VIP() {
   useEffect(() => {
     setTimeout(() => {
       document.body.classList.add("loaded");
-      setClassH1("#EEEEEE");
     }, 1500);
   }, []);
 
@@ -39,21 +38,21 @@ export default function VIP() {
                       <img
                         src="/propertyImages/slider1.jpg"
                         className="d-block img w-100 mb-3 bg-body"
-                        alt="..."
+                        alt="propertyImg"
                       />
                     </div>
                     <div className="carousel-item">
                       <img
                         src="/propertyImages/slider2.jpg"
                         className="d-block img w-100 mb-3 bg-body"
-                        alt="..."
+                        alt="propertyImg"
                       />
                     </div>
                     <div className="carousel-item">
                       <img
                         src="/propertyImages/slider3.jpg"
                         className="d-block img w-100 mb-3 bg-body"
-                        alt="..."
+                        alt="propertyImg"
                       />
                     </div>
                   </div>
@@ -81,9 +80,9 @@ export default function VIP() {
                   yielding unique and beautiful results. Our hands-on approach
                   will bring your dream to life.
                 </p>
-                <NavLink to={"/details/"}>
+                <NavLink to={"/details/1"}>
                   <button type="button" className="btn btn-outline-secondary">
-                    View portfolio &nbsp;
+                    View more &nbsp;
                     <span className="shift">⟶</span>
                   </button>
                 </NavLink>
@@ -107,21 +106,21 @@ export default function VIP() {
                       <img
                         src="/propertyImages/slider1.jpg"
                         className="d-block img w-100 mb-3 bg-body"
-                        alt="..."
+                        alt="propertyImg"
                       />
                     </div>
                     <div className="carousel-item">
                       <img
                         src="/propertyImages/slider2.jpg"
                         className="d-block img w-100 mb-3 bg-body"
-                        alt="..."
+                        alt="propertyImg"
                       />
                     </div>
                     <div className="carousel-item">
                       <img
                         src="/propertyImages/slider3.jpg"
                         className="d-block img w-100 mb-3 bg-body"
-                        alt="..."
+                        alt="propertyImg"
                       />
                     </div>
                   </div>
@@ -149,9 +148,9 @@ export default function VIP() {
                   yielding unique and beautiful results. Our hands-on approach
                   will bring your dream to life.
                 </p>
-                <NavLink to={"/details/"}>
+                <NavLink to={"/details/2"}>
                   <button type="button" className="btn btn-outline-secondary">
-                    View portfolio &nbsp;
+                    View more &nbsp;
                     <span className="shift">⟶</span>
                   </button>
                 </NavLink>
@@ -175,21 +174,21 @@ export default function VIP() {
                       <img
                         src="/propertyImages/slider1.jpg"
                         className="d-block img w-100 mb-3 bg-body"
-                        alt="..."
+                        alt="propertyImg"
                       />
                     </div>
                     <div className="carousel-item">
                       <img
                         src="/propertyImages/slider2.jpg"
                         className="d-block img w-100 mb-3 bg-body"
-                        alt="..."
+                        alt="propertyImg"
                       />
                     </div>
                     <div className="carousel-item">
                       <img
                         src="/propertyImages/slider3.jpg"
                         className="d-block img w-100 mb-3 bg-body"
-                        alt="..."
+                        alt="propertyImg"
                       />
                     </div>
                   </div>
@@ -217,9 +216,9 @@ export default function VIP() {
                   yielding unique and beautiful results. Our hands-on approach
                   will bring your dream to life.
                 </p>
-                <NavLink to={"/details/"}>
+                <NavLink to={"/details/3"}>
                   <button type="button" className="btn btn-outline-secondary">
-                    View portfolio &nbsp;
+                    View more &nbsp;
                     <span className="shift">⟶</span>
                   </button>
                 </NavLink>

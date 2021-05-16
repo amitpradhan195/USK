@@ -64,24 +64,24 @@ export default function Listing() {
 
       </section>
       {/* filter section */}
-      <section className="filter-section pt-2">
+      <section className="filter-section">
         <div className="container">
           <div className="row">
             <form className="col-md-4">
-            <div className="input-group mb-3">
-              {/* <label className="input-group-text font-sm" htmlFor="inputGroupSelect01">Purpose</label> */}
-              <select className="custom-select mt-1 font-sm w-50" defaultValue="All" name="purpose" onChange={onPurposeChange}>
-                <option value="All">
-                  Any
-                </option>
-                <option value="For Sale">
-                  For Sale
-                </option>
-                <option value="For Rent">
-                  For Rent
-                </option>
-              </select>
-            </div>
+              <div className="input-group mb-3">
+                {/* <label className="input-group-text font-sm" htmlFor="inputGroupSelect01">Purpose</label> */}
+                <select className="custom-select mt-1 font-sm w-50" defaultValue="All" name="purpose" onChange={onPurposeChange}>
+                  <option value="All">
+                    Any
+                  </option>
+                  <option value="For Sale">
+                    For Sale
+                  </option>
+                  <option value="For Rent">
+                    For Rent
+                  </option>
+                </select>
+              </div>
             </form>
 
             <div className="col-md-5 mb-5" >

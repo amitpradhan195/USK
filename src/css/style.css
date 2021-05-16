@@ -230,6 +230,7 @@ nav.stroke ul li a:hover:after {
   display: inline-block;
   position: relative;
   transition: 0.5s;
+  box-shadow: none;
 }
 
 .btnSendRequirements span:after {
@@ -399,6 +400,15 @@ nav.stroke ul li a:hover:after {
 .facility{
   font-weight: bold;
   color: #2E4053;
+}
+
+.filter-section{
+  position: sticky;
+  top: 70px;
+  /* overflow: hidden; */
+  max-height: 55px;
+  z-index: 4;
+  background-color: rgb(255, 255, 255);
 }
 
 /* .filter-section a:hover {
@@ -1172,7 +1182,7 @@ select:focus {
 --------------------------------------------------------------*/
 
 /*--------------------------------------------------------------
-# Hero part
+# Hero Page And VIP Page Part 
 --------------------------------------------------------------*/
 .heroCard{
  margin-top: 2em;
@@ -1222,7 +1232,7 @@ select:focus {
 .content p, .content1 p{
   font-size: 14px;
   line-height: 22px;
-  font-weight: 350;
+  font-weight: 400;
   font-style: normal;
   letter-spacing: 0.5px;
   color:#000000;
@@ -1243,6 +1253,7 @@ select:focus {
   font-weight: 300;
   font-style: normal;
   border-radius: 0px;
+  border: none;
   letter-spacing: 2px;
   border-color: rgb(196, 192, 192);
   transition: width 0.5s;
@@ -1317,7 +1328,7 @@ select:focus {
   }
 }
 /*--------------------------------------------------------------
-# End Hero part
+# End Hero Page And VIP Page Part 
 --------------------------------------------------------------*/
 
 
@@ -1620,14 +1631,14 @@ select:focus {
 # VIP PAGE DESIGN
 ============================================================*/
 
-h1 {
+/* h1 {
   height: 100%;
   margin: 0;
   font-size: 14px;
   font-family: 'Open Sans', sans-serif;
   font-size: 32px;
   margin-bottom: 3px;
-}
+} */
 
 #loader-wrapper {
   position: fixed;

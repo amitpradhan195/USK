@@ -2,13 +2,13 @@ import React from "react";
 import "../../css/style.css";
 import FinanceCard from "../FinanceCard";
 import FinanceData from "../../data/finance";
-import SwiperCore, { Navigation, Pagination, Scrollbar, A11y } from 'swiper';
+import SwiperCore, { Pagination, Scrollbar } from 'swiper';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/swiper.scss';
 import "swiper/components/pagination/pagination.min.css"
 
 
-SwiperCore.use([Navigation, Pagination, Scrollbar, A11y]);
+SwiperCore.use([Pagination, Scrollbar]);
 
 export default function Finance() {
   console.log("The width of the screen is : "+window.innerWidth);
