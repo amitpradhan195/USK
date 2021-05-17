@@ -13,15 +13,16 @@ import cardData from "../../data/Listings";
 
 
 import { Swiper, SwiperSlide } from "swiper/react";
-import SwiperCore, { EffectFade, Navigation, Thumbs } from 'swiper/core';
+import SwiperCore, { Zoom, EffectFade, Navigation, Thumbs } from 'swiper/core';
 // Import Swiper styles
 import "swiper/swiper.min.css";
+import "swiper/components/zoom/zoom.min.css"
 import "swiper/components/effect-fade/effect-fade.min.css"
 import "swiper/components/navigation/navigation.min.css"
 import "swiper/components/thumbs/thumbs.min.css"
 
 // install Swiper modules
-SwiperCore.use([EffectFade,Navigation,Thumbs]);
+SwiperCore.use([Zoom,EffectFade,Navigation,Thumbs]);
 
 export default function Details(props) {
   const pID = props.match.params.id;
@@ -45,13 +46,13 @@ export default function Details(props) {
 
         {/* slider */}
         <section className="container">
-            <Swiper effect={'fade'} style={{'--swiper-navigation-color': '#fff','--swiper-pagination-color': '#fff'}} spaceBetween={10} navigation={true} thumbs={{ swiper: thumbsSwiper }} className="mySwiper2 mb-1">
-              <SwiperSlide><img src="/propertyImages/slider1.jpg" /></SwiperSlide>
-              <SwiperSlide><img src="/propertyImages/s4.jpg" /></SwiperSlide>
-              <SwiperSlide><img src="/propertyImages/slider2.jpg" /></SwiperSlide>
-              <SwiperSlide><img src="/propertyImages/slider3.jpg" /></SwiperSlide>
-              <SwiperSlide><img src="/propertyImages/s5.jpg" /></SwiperSlide>
-              <SwiperSlide><img src="/propertyImages/s3.jpg" /></SwiperSlide>
+            <Swiper effect={'fade'} style={{'--swiper-navigation-color': '#fff','--swiper-pagination-color': '#fff'}} spaceBetween={10} zoom={true} navigation={true} thumbs={{ swiper: thumbsSwiper }} className="mySwiper2 mb-1">
+              <SwiperSlide><div className="swiper-zoom-container"><img src="/propertyImages/slider1.jpg" /></div></SwiperSlide>
+              <SwiperSlide><div className="swiper-zoom-container"><img src="/propertyImages/s4.jpg" /></div></SwiperSlide>
+              <SwiperSlide><div className="swiper-zoom-container"><img src="/propertyImages/slider2.jpg" /></div></SwiperSlide>
+              <SwiperSlide><div className="swiper-zoom-container"><img src="/propertyImages/slider3.jpg" /></div></SwiperSlide>
+              <SwiperSlide><div className="swiper-zoom-container"><img src="/propertyImages/s5.jpg" /></div></SwiperSlide>
+              <SwiperSlide><div className="swiper-zoom-container"><img src="/propertyImages/s3.jpg" /></div></SwiperSlide>
             </Swiper>
             <Swiper onSwiper={setThumbsSwiper} spaceBetween={5} slidesPerView={6} freeMode={true} watchSlidesVisibility={true} watchSlidesProgress={true} className="mySwiper mb-3">
               <SwiperSlide><img src="/propertyImages/slider1.jpg" /></SwiperSlide>
