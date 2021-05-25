@@ -21,7 +21,7 @@ const DreamHouse = lazy(() => import('./pages/DreamHouse/index.js'));
 export default function App() {
   return (
     <Router className="App">
-      <Suspense fallback={<div className="loader">Loading...</div>}>
+      <Suspense fallback={<div className="screenLoader">Loading...</div>}>
         <Navbar/>
         <Switch>
           <Route exact path="/" component={Home} />

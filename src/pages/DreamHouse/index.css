@@ -1,3 +1,6 @@
+/*===================================
+# Start of Form User Details ======*/
+
 .first-section legend {
   font-size: 100px;
   font-weight: 800 !important;
@@ -122,3 +125,152 @@
         max-width: 250px;
     }
 }
+
+/*===================================
+  # End of Form User Details 
+===================================*/
+
+
+/* --------------------------------------------------------------
+# Start of Custom Form Pagination Design for Dream House
+--------------------------------------------------------------*/
+
+.customFormPagination {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.customFormPagination .progress-meter {
+  padding: 0;
+}
+
+ol.progress-meter {
+  padding-bottom: 9.5px;
+  list-style-type: none;
+}
+ol.progress-meter li {
+  display: inline-block;
+  text-align: center;
+  text-indent: -19px;
+  height: 38px;
+  width: 24.99%;
+  font-size: 14px;
+  border-bottom-width: 4px;
+  border-bottom-style: solid;
+}
+ol.progress-meter li:before {
+  position: relative;
+  float: left;
+  text-indent: 0;
+  left: -webkit-calc(50% - 9.5px);
+  left: -moz-calc(50% - 9.5px);
+  left: -ms-calc(50% - 9.5px);
+  left: -o-calc(50% - 9.5px);
+  left: calc(50% - 9.5px);
+}
+ol.progress-meter li.done {
+  font-size: 12px;
+}
+ol.progress-meter li.done:before {
+  content: "\2713";
+  height: 16px;
+  width: 16px;
+  bottom: -28px;
+  border: none;
+  border-radius: 19px;
+}
+ol.progress-meter li.todo {
+  font-size: 12px;
+}
+ol.progress-meter li.todo:before {
+  content: "\2B24";
+  font-size: 14px;
+  bottom: -26.95px;
+  line-height: 18.05px;
+}
+ol.progress-meter li.done {
+  color: black;
+  border-bottom-color: yellowgreen;
+}
+ol.progress-meter li.done:before {
+  color: transparent;
+  background-color: yellowgreen;
+}
+ol.progress-meter li.todo {
+  color: silver;
+  border-bottom-color: silver;
+}
+ol.progress-meter li.todo:before {
+  color: silver;
+}
+
+.customFormPagination button {
+  font-size: 28px;
+  font-weight: 900;
+}
+/*--------------------------------------------------------------
+# End of Custom Form Pagination Design for Dream House
+--------------------------------------------------------------*/
+
+h1{
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 700;
+  color: #444;
+}
+
+/*===================================
+  # Start of Form House Type
+===================================*/
+.formHouseType div div{
+  padding: 40px;
+}
+
+.formHouseType img{
+  margin: auto;
+  min-width: 160px;
+  /* padding: 50px; */
+}
+
+.formHouseType img:hover {
+ filter: invert(0.30);
+}
+
+.formHouseType h3{
+  padding: 20px;
+  /* font-weight: 500; */
+}
+
+/*===================================
+  # End of Form House Type
+===================================*/
+
+
+/*===================================
+  # Start of Form City and Area
+===================================*/
+.aanaPrepend {
+  font-weight: bold;
+  font-size: 25px;
+  color: white;
+  background-color: black;
+  padding: 10px 30px;
+}
+
+.input-group{
+  width: 75%;
+}
+
+@media (min-width:900px){
+  .input-group{
+    width: 50%;
+  }
+}
+
+@media (min-width:1300px){
+  .input-group{
+    width: 25%;
+  }
+}
+/*===================================
+  # End of Form City and Area
+===================================*/

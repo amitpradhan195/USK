@@ -141,7 +141,7 @@
 # Screen loader animation
 --------------------------------------------------------------*/
 
-.loader {
+.screenLoader {
   color: grey;
   font-family: sans-serif;
   max-height: 10vh;
@@ -196,31 +196,3 @@
   }
 }
 
-/*--------------------------------------------------------------
-# Modal Design for Dream House
---------------------------------------------------------------*/
-
-.modal {
-  z-index: 9999;
-  transform: scale(1);
-  .modal-background {
-    background: rgba(0, 0, 0, 0.6);
-    .modal {
-      animation: moveUp 0.5s cubic-bezier(0.165, 0.84, 0.44, 1) forwards;
-    }
-  }
-  + .content {
-    z-index: 1;
-    animation: slideUpLarge 0.5s cubic-bezier(0.165, 0.84, 0.44, 1) forwards;
-  }
-  &.out {
-    .modal-background {
-      .modal {
-        animation: moveDown 0.5s cubic-bezier(0.165, 0.84, 0.44, 1) forwards;
-      }
-    }
-    + .content {
-      animation: slideDownLarge 0.5s cubic-bezier(0.165, 0.84, 0.44, 1) forwards;
-    }
-  }
-}

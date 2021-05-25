@@ -1,40 +1,94 @@
-import React from 'react'
-import './index.css'
-import {FaUser,FaPhoneAlt} from 'react-icons/fa'
-import {IoIosMail} from 'react-icons/io'
-import HouseBox from '../../assets/houseBox.jpg'
+import React, {useState} from 'react'
+import FormUserDetails from './FormUserDetails'
+import FormHouseType from './FormHouseType'
+import FormFacility from './FormFacility'
+import FormAdditionalInfo from './FormAdditionalInfo'
+import FormCityAndArea from './FormCityAndArea'
+import FormConfirmation from './FormConfirmation'
+import Success from './Success'
 
-export default function index() {
-    return (
-        <div>
-            <section className="details-banner"></section>
+export default function DreamHouse() {
+    const [step, setStep] = useState(1);
+    const [formData, setFormData] = useState({
+        fullName:'',
+        phoneNumber:'',
+        email:'',
+        houseType:'',
+        location:'',
+        area:'',
+        bedrooms:'',
+        kitchen:'',
+        bathroom:'',
+        parking:'',
+        addInfo:'',
+        budget:''
+    });
 
-            <section className="container mb-5">
-                <div className="row first-section">
-                    <div className="col-md-8 p-0 m-0">
-                        <legend>HOME</legend>
-                        <p>Let's build your dream house</p>
-                        <form id="dreamHouseStart">
-                            <div className="input-group flex-nowrap mb-3">
-                                <span className="input-group-text" id="addon-wrapping"><FaUser size='1.5em'/></span>
-                                <input type="text" className="form-control p-3" placeholder="Full Name" aria-label="Fullname" aria-describedby="addon-wrapping" required/>
-                            </div>
-                            <div className="input-group flex-nowrap mb-3">
-                                <span className="input-group-text" id="addon-wrapping"><FaPhoneAlt size='1.5em'/></span>
-                                <input type="text" className="form-control p-3" placeholder="Phone Number" aria-label="Phone Number" aria-describedby="addon-wrapping" required/>
-                            </div>
-                            <div className="input-group flex-nowrap mb-3">
-                                <span className="input-group-text" id="addon-wrapping"><IoIosMail size='2em'/></span>
-                                <input type="email" className="form-control p-3" placeholder="Email Address" aria-label="Email Address" aria-describedby="addon-wrapping" required/>
-                            </div>
-                        </form>
-                    </div>
-                    <div className="col-md-4 p-0 m-0">
-                        <img src={HouseBox} alt="houseBoxImg"/>
-                        <button form='dreamHouseStart' type="submit" className="btn mt-5 btnStart"><span>START</span></button>
-                    </div>
-                </div>
-            </section>
-        </div>
-    )
+    const handleChange = (e) => {
+        setFormData({...formData, [e.target.name]:e.target.value})
+    }
+
+    const nextStep = () => setStep(prev => prev + 1);
+    const prevStep = () => setStep(prev => prev - 1);
+
+    switch (step){
+        case 1:
+            return (
+                <FormUserDetails
+                    formData = {formData}
+                    setFormData = {setFormData}
+                    nextStep = {nextStep}
+                    handleChange = {handleChange}
+                />
+            );
+        case 2:
+            return (
+                <FormHouseType
+                    formData = {formData}
+                    setFormData = {setFormData}
+                    nextStep = {nextStep}
+                    prevStep = {prevStep}
+                    handleChange = {handleChange}
+                />
+            );
+        case 3:
+            return (
+                <FormCityAndArea
+                    formData = {formData}
+                    nextStep = {nextStep}
+                    prevStep = {prevStep}
+                    handleChange = {handleChange}
+                />
+            );
+        case 4:
+            return (
+                <FormFacility
+                    formData = {formData}
+                    setFormData = {setFormData}
+                    nextStep = {nextStep}
+                    prevStep = {prevStep}
+                    handleChange = {handleChange}
+                />
+            );
+        case 5:
+            return (
+                <FormAdditionalInfo
+                    formData = {formData}
+                    setFormData = {setFormData}
+                    nextStep = {nextStep}
+                    prevStep = {prevStep}
+                />
+            );
+        case 6:
+            return (
+                <FormConfirmation
+                    formData = {formData}
+                    setFormData = {setFormData}
+                    nextStep = {nextStep}
+                    prevStep = {prevStep}
+                />
+            );
+        default:
+            return <Success/>;
+    }
 }
