@@ -27,7 +27,7 @@ export default function FormHouseType({formData, setFormData, nextStep, prevStep
     const forwardStep = (e) => {
         e.preventDefault();
         if(formData.houseType==""){
-            alert("Please select any one of the house type.");
+            alert("Please select any one of the house type.\n   Click on the picture to select.");
         }
         else{
             nextStep();

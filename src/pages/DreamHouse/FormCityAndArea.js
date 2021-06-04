@@ -23,8 +23,8 @@ export default function FormCityAndArea({
       <section className="details-banner"></section>
 
       <div className="container text-center formCityArea mb-5">
-        <form id="formCityAndArea">
-          <h1>Which City you prefer?</h1>
+        <form id="formCityAndArea" onSubmit={forwardStep}>
+          <h1 className="mb-4">Which City you prefer?</h1>
           <div className="input-group flex-nowrap mb-5 m-auto">
             <input
               type="text"
@@ -39,17 +39,17 @@ export default function FormCityAndArea({
             />
           </div>
 
-          <h1>Area Coverage</h1>
+          <h1 className="mb-4">Area Coverage</h1>
           <div className="input-group flex-nowrap mb-3 m-auto">
             <input
-              type="tel"
+              type="number"
               name="area"
-              pattern="[0-9]{10}"
+              min="1"
               defaultValue={formData.area}
               className="form-control p-3"
               onChange={handleChange}
               placeholder="e.g: 4 aana"
-              aria-label="Phone Number"
+              aria-label="Area"
               aria-describedby="addon-wrapping"
               required
             />
@@ -71,7 +71,7 @@ export default function FormCityAndArea({
         
         <div className="col-md-4 text-center">
             <button className="btn btn-secondary col-md-5" onClick={prevStep}>{'<<'}</button>
-            <button className="btn btn-secondary offset-md-1 col-md-5" onClick={forwardStep}>{'>>'}</button>
+            <button type="submit" form='formCityAndArea' className="btn btn-secondary offset-md-1 col-md-5">{'>>'}</button>
         </div>
       </div>
     </div>
