@@ -47,43 +47,43 @@ export default function FormConfirmation({ formData, nextStep, prevStep, }) {
         <div className="row">
           <div className="col-md-4 mb-4">
             <h4>Personal Details</h4>
-            <p>Name: {formData.fullName}</p>
-            <p>Email: {formData.email}</p>
-            <p>Phone Number: {formData.phoneNumber}</p>
+            <p className="ps-2">Name: {formData.fullName}</p>
+            <p className="ps-2">Email: {formData.email}</p>
+            <p className="ps-2">Phone Number: {formData.phoneNumber}</p>
           </div>
 
           <div className="col-md-4">
             <h4>House Type</h4>
-            <p>{formData.houseType}</p>
+            <p className="ps-2">{formData.houseType}</p>
 
             <h4>Location | Area</h4>
-            <p>
+            <p className="ps-2">
               {formData.location} | {formData.area} aana
             </p>
           </div>
 
           <div className="col-md-4">
             <h4>House details</h4>
-            <p>No. of Bedroom: {formData.bedroom}</p>
-            <p>No. of Kitchen: {formData.kitchen}</p>
-            <p>No. of Bathroom: {formData.bathroom}</p>
+            <p className="ps-2">No. of Bedroom: {formData.bedroom}</p>
+            <p className="ps-2">No. of Kitchen: {formData.kitchen}</p>
+            <p className="ps-2">No. of Bathroom: {formData.bathroom}</p>
           </div>
         </div>
 
         <div className="row">
           <div className="col-md-4">
             <h4>Parking:</h4>
-            <p>{parkings()}</p>
+            <p className="ps-2">{parkings()}</p>
           </div>
 
           <div className="col-md-4">
             <h4>Additional Information</h4>
-            <p>{formData.addInfo}</p>
+            <p className="ps-2">{formData.addInfo}</p>
           </div>
 
           <div className="col-md-4">
             <h4>Budget</h4>
-            <p>{formData.budget}</p>
+            <p className="ps-2">{formData.budget}</p>
           </div>
         </div>
 

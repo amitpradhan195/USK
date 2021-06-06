@@ -45,13 +45,13 @@ export default function FormUserDetails({ formData, nextStep, handleChange }) {
     <>
       <section className="details-banner"></section>
 
-      <section className="container mb-5">
+      <section className="container my-5">
         <div className="row first-section">
-          <div className="col-md-8 p-0 m-0">
+          <div className="col-md-8">
             <legend>HOME</legend>
-            <p>Let's build your dream house</p>
+            <p className="mb-4">Let's build your dream house</p>
             <form id="dreamHouseStart" onSubmit={forwardStep}>
-              <div className="input-group flex-nowrap mb-3">
+              <div className="input-group flex-nowrap mb-4">
                 <span className="input-group-text" id="addon-wrapping">
                   <FaUser size="1.5em" />
                 </span>
@@ -67,7 +67,7 @@ export default function FormUserDetails({ formData, nextStep, handleChange }) {
                   required
                 />
               </div>
-              <div className="input-group flex-nowrap mb-3">
+              <div className="input-group flex-nowrap mb-4">
                 <span className="input-group-text" id="addon-wrapping">
                   <FaPhoneAlt size="1.5em" />
                 </span>
@@ -84,7 +84,7 @@ export default function FormUserDetails({ formData, nextStep, handleChange }) {
                   required
                 />
               </div>
-              <div className="input-group flex-nowrap mb-3">
+              <div className="input-group flex-nowrap mb-4">
                 <span className="input-group-text" id="addon-wrapping">
                   <IoIosMail size="1.5em" />
                 </span>
@@ -102,7 +102,7 @@ export default function FormUserDetails({ formData, nextStep, handleChange }) {
               </div>
             </form>
           </div>
-          <div className="col-md-4 p-0 m-0">
+          <div className="col-md-4 m-auto">
             <img src={HouseBox} alt="houseBoxImg" />
             <button
               form="dreamHouseStart"
@@ -132,7 +132,7 @@ export default function FormUserDetails({ formData, nextStep, handleChange }) {
                 aria-label="Close"
               ></button>
             </div>
-            <div className="modal-body px-4">
+            <div className="modal-body px-4 mb-3">
               <div className="row">
                 <div className="col-md-6 m-auto">
                   <img src={handShake} alt="handShakeImg" />

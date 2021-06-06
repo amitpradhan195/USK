@@ -2,6 +2,7 @@ import React, {useState, useEffect} from "react";
 import "./index.css";
 import Town from "../../assets/town.png";
 import Commercial from "../../assets/commercial.png";
+import {AiOutlineDoubleLeft, AiOutlineDoubleRight} from "react-icons/ai";
 
 
 export default function FormHouseType({formData, setFormData, nextStep, prevStep}) {
@@ -69,8 +70,8 @@ export default function FormHouseType({formData, setFormData, nextStep, prevStep
         </ol>
 
         <div className="col-md-4 text-center">
-            <button className="btn btn-secondary col-md-5" onClick={prevStep}>{'<<'}</button>
-            <button className="btn btn-secondary offset-md-1 col-md-5" onClick={forwardStep}>{'>>'}</button>
+            <button className="btn btn-outline-dark col-md-5" onClick={prevStep} data-bs-toggle="tooltip" data-bs-placement="left" title="Go to Previous Step"><AiOutlineDoubleLeft size='2.5em'/></button>
+            <button className="btn btn-outline-dark offset-md-1 col-md-5" onClick={forwardStep} data-bs-toggle="tooltip" data-bs-placement="right" title="Go to Next Step"><AiOutlineDoubleRight size='2.5em'/></button>
         </div>
       </div>
     </div>

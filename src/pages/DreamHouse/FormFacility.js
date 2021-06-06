@@ -3,7 +3,8 @@ import bedroom from "../../assets/bedroom.png";
 import kitchen from "../../assets/kitchen.png";
 import bathroom from "../../assets/bathroom.png";
 import parking from "../../assets/parking.png";
-import './index.css';
+import "./index.css";
+import {AiOutlineDoubleLeft, AiOutlineDoubleRight} from "react-icons/ai";
 
 export default function FormFacility({
   formData,
@@ -11,7 +12,6 @@ export default function FormFacility({
   prevStep,
   handleChange,
 }) {
-
   const forwardStep = (e) => {
     e.preventDefault();
     if (
@@ -32,7 +32,6 @@ export default function FormFacility({
     formData.bikeParking,
     formData.carParking
   );
-
 
   return (
     <>
@@ -134,15 +133,24 @@ export default function FormFacility({
         </ol>
 
         <div className="col-md-4 text-center">
-          <button className="btn btn-secondary col-md-5" onClick={prevStep}>
-            {"<<"}
+          <button
+            className="btn btn-outline-dark col-md-5"
+            onClick={prevStep}
+            data-bs-toggle="tooltip"
+            data-bs-placement="left"
+            title="Go to Previous Step"
+          >
+            <AiOutlineDoubleLeft size='2.5em'/>
           </button>
           <button
-            className="btn btn-secondary offset-md-1 col-md-5"
+            className="btn btn-outline-dark offset-md-1 col-md-5"
             type="submit"
             form="formFacility"
+            data-bs-toggle="tooltip"
+            data-bs-placement="right"
+            title="Go to Next Step"
           >
-            {">>"}
+            <AiOutlineDoubleRight size='2.5em'/>
           </button>
         </div>
       </div>

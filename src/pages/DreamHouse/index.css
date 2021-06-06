@@ -24,21 +24,38 @@
   box-shadow: 4px 4px 10px 2px #e4e4e4;
 }
 
-.first-section input {
-  box-shadow: 10px 4px 10px 2px #e4e4e4;
+.first-section input, 
+.formCityArea input[type=text], 
+.formFacility input,
+.formAddInfoBody input, textarea {
+  box-shadow: 4px 4px 10px 2px #e4e4e4;
   border: none !important;
   outline: none;
 }
 
-.first-section input:focus {
-  box-shadow: 10px 4px 10px 2px #e4e4e4 !important;
+.first-section input:focus, 
+.formCityArea input[type=text]:focus, 
+.formFacility input:focus,
+.formAddInfoBody input:focus, textarea:focus {
+  box-shadow: 6px 4px 10px 2px #e4e4e4 !important;
+  border: none !important;
+}
+
+.formCityArea input[type=number] {
+  box-shadow: -4px 4px 10px 2px #e4e4e4;
+  border: none !important;
+  outline: none;
+}
+
+.formCityArea input[type=number]:focus {
+  box-shadow: -4px 4px 10px 2px #e4e4e4 !important;
   border: none !important;
 }
 
 .btnStart {
   display: inline-block;
   border-radius: 50px;
-  background-color: rgb(16, 153, 34);
+  background-color: #3B930C;
   border: none;
   color: #ffffff;
   text-align: center;
@@ -47,6 +64,10 @@
   width: 100%;
   transition: all 0.5s;
   cursor: pointer;
+}
+
+.btnStart:hover {
+  background-color: #555;
 }
 
 .btnStart span {
@@ -185,29 +206,24 @@ ol.progress-meter li.todo {
 }
 ol.progress-meter li.todo:before {
   content: "\2B24";
-  font-size: 14px;
+  font-size: 20px;
   bottom: -26.95px;
   line-height: 18.05px;
 }
 ol.progress-meter li.done {
   color: black;
-  border-bottom-color: yellowgreen;
+  border-bottom-color: #21618C;
 }
 ol.progress-meter li.done:before {
   color: transparent;
-  background-color: yellowgreen;
+  background-color: #21618C;
 }
 ol.progress-meter li.todo {
   color: silver;
-  border-bottom-color: silver;
+  border-bottom-color: rgb(43, 43, 43);
 }
 ol.progress-meter li.todo:before {
-  color: silver;
-}
-
-.customFormPagination button {
-  font-size: 28px;
-  font-weight: 900;
+  color: rgb(0, 0, 0);
 }
 /*==========================================================
 # End of Custom Form Pagination Design for Dream House
@@ -295,9 +311,21 @@ h1{
   # Start of Additional Information
 ===================================*/
 /* @media (max-width:768px){ */
-  .formAddInfo{
+  .formAddInfo {
     display: flex;
     margin: auto;
+    text-align: start;
+  }
+
+  @media (min-width:768px) {
+    .formAddInfoBody {
+      padding: 0px 50px;      
+      margin: auto;
+    }
+
+    .formAddInfo {
+      text-align: end;
+    }
   }
 /* } */
 /*===================================
