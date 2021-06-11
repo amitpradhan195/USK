@@ -1,6 +1,7 @@
-import React from "react";
+import React, {useEffect} from "react";
 import "./index.css";
 import {AiOutlineDoubleLeft, AiOutlineDoubleRight} from "react-icons/ai";
+import AOS from "aos";
 
 export default function FormAdditionalInfo({
   formData,
@@ -8,13 +9,20 @@ export default function FormAdditionalInfo({
   prevStep,
   handleChange,
 }) {
-  console.log("Form Values are : " + formData.addInfo + "\n" + formData.budget);
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+    AOS.init({
+      duration: 1000,
+      anchorPlacement: "top-bottom",
+    });
+  })
 
   return (
     <div>
       <section className="details-banner"></section>
 
-      <div className="container formAddInfoBody">
+      <div className="container formAddInfoBody" data-aos="fade-left">
         <form id="formAddInfos" onSubmit={nextStep}>
           <div className="row mb-5 formAddInfo">
             <div className="col-md-5">

@@ -1,10 +1,11 @@
-import React from "react";
+import React, {useEffect} from "react";
 import bedroom from "../../assets/bedroom.png";
 import kitchen from "../../assets/kitchen.png";
 import bathroom from "../../assets/bathroom.png";
 import parking from "../../assets/parking.png";
 import "./index.css";
 import {AiOutlineDoubleLeft, AiOutlineDoubleRight} from "react-icons/ai";
+import AOS from "aos";
 
 export default function FormFacility({
   formData,
@@ -12,6 +13,15 @@ export default function FormFacility({
   prevStep,
   handleChange,
 }) {
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+    AOS.init({
+      duration: 1000,
+      anchorPlacement: "top-bottom",
+    });
+  })
+
   const forwardStep = (e) => {
     e.preventDefault();
     if (
@@ -37,7 +47,7 @@ export default function FormFacility({
     <>
       <section className="details-banner"></section>
 
-      <div className="container text-center mb-5">
+      <div className="container text-center mb-5" data-aos="fade-left">
         <h1 className="mb-4">Fill the number of rooms</h1>
         <form id="formFacility" onSubmit={forwardStep}>
           <div className="row">

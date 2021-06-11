@@ -1,6 +1,7 @@
-import React from "react";
+import React, {useEffect} from "react";
 import "./index.css";
 import {AiOutlineDoubleLeft, AiOutlineDoubleRight} from "react-icons/ai";
+import AOS from "aos";
 
 export default function FormCityAndArea({
   formData,
@@ -8,6 +9,14 @@ export default function FormCityAndArea({
   prevStep,
   handleChange
 }) {
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+    AOS.init({
+      duration: 1000,
+      anchorPlacement: "top-bottom",
+    });
+  })
 
     const forwardStep = (e) => {
         e.preventDefault();
@@ -23,7 +32,7 @@ export default function FormCityAndArea({
     <div>
       <section className="details-banner"></section>
 
-      <div className="container text-center formCityArea mb-5">
+      <div className="container text-center formCityArea mb-5" data-aos="fade-left">
         <form id="formCityAndArea" onSubmit={forwardStep}>
           <h1 className="mb-4">Which City you prefer?</h1>
           <div className="input-group flex-nowrap mb-5 m-auto">

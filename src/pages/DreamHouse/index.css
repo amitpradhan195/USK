@@ -212,18 +212,18 @@ ol.progress-meter li.todo:before {
 }
 ol.progress-meter li.done {
   color: black;
-  border-bottom-color: #21618C;
+  border-bottom-color: #166EC6;
 }
 ol.progress-meter li.done:before {
   color: transparent;
-  background-color: #21618C;
+  background-color: #166EC6;
 }
 ol.progress-meter li.todo {
   color: silver;
-  border-bottom-color: rgb(43, 43, 43);
+  border-bottom-color: rgb(68, 68, 68);
 }
 ol.progress-meter li.todo:before {
-  color: rgb(0, 0, 0);
+  color: rgb(68, 68, 68);
 }
 /*==========================================================
 # End of Custom Form Pagination Design for Dream House
@@ -265,7 +265,7 @@ h1{
 /*===================================
   # Start of Form City and Area
 ===================================*/
-.aanaPrepend {
+.formCityArea .aanaPrepend {
   font-weight: bold;
   font-size: 25px;
   color: white;
@@ -273,18 +273,18 @@ h1{
   padding: 10px 30px;
 }
 
-.input-group{
+.formCityArea .input-group{
   width: 75%;
 }
 
 @media (min-width:900px){
-  .input-group{
+  .formCityArea .input-group{
     width: 50%;
   }
 }
 
 @media (min-width:1300px){
-  .input-group{
+  .formCityArea .input-group{
     width: 25%;
   }
 }
